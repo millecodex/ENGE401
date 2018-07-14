@@ -1,0 +1,139 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%          ENGINEERING MATHS - ENGE401
+%       AUCKLAND UNIVERSITY OF TECHNOLOGY
+%                COURSE MANUAL 
+%             LATEX SOURCE FILES
+%
+% version 2.0 by Jeff Nijsse, 2018
+% <jeff.nijsse@aut.ac.nz>
+% based on 
+% version 1.0 by Peter Watson, 2010
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,12pt,openany]{book}
+%
+%    Include referenced packages here.
+\usepackage{amssymb,amsmath,amsfonts,xcolor,graphicx,xspace,colortbl,ragged2e,rotating} % 
+\usepackage{fancyhdr,titlesec,geometry}  %
+\usepackage{multicol}  %
+\usepackage{tabulary}  %
+\usepackage{wrapfig}  %
+\usepackage{courier}  %
+\usepackage[]{tocloft} %
+\graphicspath{{./graphics/}} %
+%
+%
+% margin parameters must come before header info
+\geometry{voffset=-25pt,headsep=30pt,textwidth=476pt,bottom=2cm,footskip=30pt}
+%
+\raggedbottom
+%
+% fancy header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\leftmark}
+\fancyhead[RE]{ENGE 401}
+%
+% Redefine the 'plain' page-style for the first page of each chapter
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}% Line at the header invisible
+}
+%
+% paragraph formatting for math
+\setlength{\parindent}{0in}
+\setlength{\parskip}{10pt plus 1pt minus 1pt}
+%
+% heading formatting using package titlesec
+\newcommand{\hsp}{\hspace{10pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp{$\vert$}\hsp}{1pt}{\Huge\bfseries}
+%
+%\titlespacing*{command}{left}{before-sep}{after-sep}[right-sep]
+\titlespacing*{\chapter}{0pt}{0pt}{25pt}
+%
+% section heading formatting
+\titleformat{\section}[block]{\Large\bf}{\thesection\quad}{1pt}{}
+\titlespacing{\section}{0pt}{20pt}{-5pt}
+\titleformat{\subsection}[block]{\large\bf}{\thesubsection\quad}{1pt}{}
+\titlespacing{\subsection}{0pt}{20pt}{-5pt}
+%
+% depth
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{1}
+%
+\makeindex
+
+\begin{document}
+\frontmatter
+\begin{titlepage}
+\begin{center}
+
+\includegraphics[width=7cm]{AUTlogo}\\
+{\vspace{2cm}}
+ {\Large School of Engineering, Computer, and Mathematical Sciences}
+ % ----------------------------------------------------------------
+ \vspace{3cm}\\
+ {\huge Engineering Mathematics}\\
+   % ----------------------------------------------------------------
+ \vspace{1cm}
+{\huge ENGE 401} \\
+ \vspace{1cm}
+{\huge 2018 Semester 2} \\
+% ----------------------------------------------------------------
+ \vfill
+\end{center}
+\end{titlepage}
+
+\clearpage\thispagestyle{empty}
+\vspace*{\fill}
+Engineering Mathematics - ENGE401\\
+Auckland University Of Technology\\
+Course Manual\\
+
+Version 2.0 by Jeff Nijsse, 2018.\\
+$<$\texttt{jeff.nijsse@aut.ac.nz}$>$\\
+Version 1.0 by Peter Watson, 2010.
+
+%\maketitle
+%
+%    Change page number to 6 if a dedication is present.
+%\setcounter{page}{4}
+\clearpage
+\tableofcontents
+
+%    Include unnumbered chapters (preface, acknowledgments, etc.) here.
+%\include{}
+
+\mainmatter
+%    Include main chapters here.
+\include{ch1AlgebraReview}
+\include{ch2SimulEquations}
+\include{ch3Trig}
+\include{ch4Exponentials}
+\include{ch5Differentiation}
+\include{ch6Integration}
+\include{ch7DiffEqns}
+
+%\appendix
+%    Include appendix "chapters" here.
+%\include{}
+
+\backmatter
+%    Bibliography styles amsplain or harvard are also acceptable.
+%\bibliographystyle{amsalpha}
+%\bibliography{}
+%    See note above about multiple indexes.
+%\printindex
+
+\end{document}
+%
+%
+%
+%
+%
+%
+%
+% Have a good day :-)
+% -Jeff
