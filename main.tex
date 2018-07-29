@@ -16,8 +16,11 @@
 % Licenced under MIT General License (c) 2018                          %
 %                                                                      % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[a4paper,12pt,openany]{book}
-%
+% for published book output
+\documentclass[a4paper,11pt,openany]{book}
+% for pdf output
+%\documentclass[a4paper,11pt]{report}
+%\usepackage{hyperref}
 %    Include referenced packages here.
 \usepackage{amssymb,amsmath,amsfonts,xcolor,graphicx,xspace,colortbl,ragged2e,rotating} % 
 \usepackage{fancyhdr,titlesec,geometry}  %
@@ -25,12 +28,13 @@
 \usepackage{tabulary}  %
 \usepackage{wrapfig}  %
 \usepackage{courier}  %
+%\usepackage{hyperref}  %exclude for book printing
 \usepackage[]{tocloft} %
 \graphicspath{{./graphics/}} %
 %
 %
 % margin parameters must come before header info
-\geometry{voffset=-25pt,headsep=30pt,textwidth=476pt,bottom=2cm,footskip=30pt}
+\geometry{voffset=-25pt,headsep=30pt,textwidth=476pt,bottom=2cm,footskip=30pt,left=2.5cm,right=2cm}
 %
 \raggedbottom
 %
@@ -38,8 +42,8 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE,RO]{\thepage}
-\fancyhead[LO]{\leftmark}
-\fancyhead[RE]{ENGE 401}
+\fancyhead[LO]{\rightmark}
+\fancyhead[RE]{\leftmark}
 %
 % Redefine the 'plain' page-style for the first page of each chapter
 \fancypagestyle{plain}{%
@@ -117,6 +121,7 @@ Version 1.0 by Peter Watson, 2010.
 \include{ch2SimulEquations}
 \include{ch3Trig}
 \include{ch4Exponentials}
+
 \include{ch5Differentiation}
 \include{ch6Integration}
 \include{ch7DiffEqns}
