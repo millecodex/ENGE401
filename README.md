@@ -1,5 +1,5 @@
 # ENGE401
-Course manual for ENGE401 - Engineering Mathematics at\
+ENGE401 - Engineering Mathematics Course Manual at\
 AUT (Auckland University of Technology)\
 This version (2.0) by Jeff Nijsse, 2018\
 <jeff.nijsse@aut.ac.nz>\
