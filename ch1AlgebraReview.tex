@@ -1,44 +1,78 @@
-\chapter{Algebra Review}
-This is a draft chapter of the course manual and is not comprehensive. Many of the skills used in this chapter are foundational mathematical tools that you will need to keep using repeatedly both in this course and beyond. Refer to the course website $<$\texttt{blackboard.aut.ac.nz}$>$ for additional review material covering the basics of algebra.
+% General layout to be covered over four lectures:
+% factoring / expanding
+% solving for x
+% exponents 
+% linear functions
+% quadradtic functions
+% polynomials
 
- \section{Linear Functions}
+\chapter{Algebra}
+Engingeering Mathematics begins by reviewing foundational algebra. Many of the skills used in this chapter are foundational mathematical tools that you will need to keep using repeatedly both in this course and beyond. Refer to the course website $<$\texttt{blackboard.aut.ac.nz}$>$ for additional review material covering the basics of algebra.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introductory Algebra}
+\subsection{Expanding and Factorising}
+Multiplying algebraic expressions is usually called \emph{expanding}
+and the reverse process is called \emph{factorising}. We usually use the word factorising in New Zealand, however, most textbooks use the term factoring. We will use both terms interchangeably in this course. Factor(is)ing and expanding can be viewed as opposite operations; one undoes the other.  
+
+\textbf{Example:} Expand the following algebraic expression (remove the brackets): $x(x-7)$\\
+\textbf{Solution:} $x(x-7)=x^2-7x$
+
+\textbf{Example:} Expand: $(x+3)(x-3)$. Note there a mnemonic \textbf{FOIL} that may help you remember how to expand here: First, Inside, Outside, Last.\\
+\textbf{Solution:} $=x^2+3x-3x-9=x^2-9$\\
+
+\textbf{Example:} Expand: $x(x+1)(x-2)$\\
+\textbf{Solution:} Begin by expanding the first two terms:
+\begin{align*} &=(x^2+1)(x-2)\\
+&=x^3-2x^2+x-2
+\end{align*}
+
+Factoring involves removing common terms from expressions and then writing them as products. Recall that product means multiply and can be shown algebraically by writing terms in brackets. 
+
+\textbf{Example:} Factor the following algebraic expression: $2x-4x^2+6x^3$\\
+\textbf{Solution:} Remove a common factor of $2x$: $\,2x-4x^2+6x^3=2x(1-2x^2+3x^3)$
+
+\textbf{Example}
+Factorise: $x^{2} -5 x -6$. Note that this is a quadratic equation and will factor into two sets of brackets.\\
+\textbf{Solution:} For these examples you are required to find a pair of numbers that add together to give $ -5$ and multiply together to give $ -6$. In this case the numbers are $ -6$ and $ +1$. So the answer is
+\begin{equation*}x^{2} -5 x -6 =\left (x -6\right ) \left (x +1\right )
+\end{equation*}
+
+This can easily be verified by expanding the brackets.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\subsection{Solving Equations}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Indices}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Linear Functions}
  Slope of a line is often represented by the letter $m$ and can be calculated by taking any two points on the line $(x_1,y_1)$, and $(x_2,y_2)$ and using the formula: $m =\frac{y_{2} -y_{1}}{x_{2} -x_{1}}$.
  
  The standard form for an equation of a line is: $y =m x +c$ where $m$ is the slope described above, and $c$ is the $y-$intercept. Alternatively if you know the slope and any given point $(x_1,y_1)$, the equation of a line is $y -y_{1} =m (x -x_{1})$.
 
-\section{Distance between two points}
-Using the Pythagorean theorem, the distance between two points $\left (x_{1} .y_{1}\right )$ and $\left (x_{2} .y_{2}\right )$ is $$\text{dist}=\sqrt{\left (x_{1} -x_{2}\right )^{2} +\left (y_{1} -y_{2}\right )^{2}}$$ 
 
- \section{Quadratic Functions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Quadratic Functions}
  The standard for of a quadratic equation is written $a x^{2} +b x +c =0$. If we solve this equation for $x$ we get the quadratic formula:
  $$x =\frac{ -b \pm \sqrt{b^{2} -4 a c}}{2 a}$$ 
  where $a,b,$ and $c$ are coefficients ($a\ne0$). Note here there are two possible solutions because of the plus-minus sign ($\pm$).
  
- \section{Factorising}
- We usually use the word factorising in New Zealand however most textbooks use the term factoring. We will use both terms interchangeably in this course. Factor(is)ing is a fundamental skill that students must master.  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Polynomials}
  
- Multiplying algebraic expressions is usually called \emph{expanding}
- and the reverse process is called \emph{factorising}. This process of factorising is usually
- taught by going through many examples until patterns can be seen. You should carefully look at the examples posted on blackboard if you need to see how factorising is done. 
- 
- \subsubsection{Example}
- Factorise: $x^{2} -5 x -6$ 
- 
- For these examples you are required to find a pair of numbers that add together to give $ -5$ and multiply together to give $ -6$. In this case the numbers are $ -6$ and $ +1$. So the answer is
- \begin{equation*}x^{2} -5 x -6 =\left (x -6\right ) \left (x +1\right )
- \end{equation*}
- 
- This can easily be verified by expanding the brackets. 
- \section{Exponential and Logarithmic Functions}
- Laws of logarithms. This will be covered in detail in Chapter 4.\\
- $\log _{a} X Y =\log _{a} X +\log _{a} Y$ 
- 
- $\log _{a} \genfrac{(}{)}{}{}{X}{Y} =\log _{a} X -\log _{a} Y$ 
- 
- $\log _{a} X^{n} =n \log _{a} X$ 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Systems of Equations}
  
  
-\section{Foundation Algebra Exercises} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Exercises} 
  
 \begin{enumerate}
 	\item Remove the brackets 
@@ -269,7 +303,7 @@ Using the Pythagorean theorem, the distance between two points $\left (x_{1} .y_
 		\item $\log _{4} 5 +\log _{4} 2 -\log _{4} 10 +3 \log _{4} 2$ \end{enumerate}	
 \end{enumerate}
 
-\section{Some Answers}
+\section*{Some Answers}
 \begin{tabular}[c]{rrlr}1.  & (a)
 	& $ -x -y$  &  \\
 	& (b)
