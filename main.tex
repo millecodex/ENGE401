@@ -28,7 +28,14 @@
 \usepackage{tabulary}  %
 \usepackage{wrapfig}  %
 \usepackage{courier}  %
-%\usepackage{hyperref}  %exclude for book printing
+\usepackage{hyperref}  %exclude for book printing
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks,
+	linkcolor={blue!50!black},
+	citecolor={blue!50!black},
+	urlcolor={blue!50!black}
+}
 \usepackage[]{tocloft} %
 \graphicspath{{./graphics/}} %
 %
@@ -103,26 +110,27 @@ Course Manual\\
 
 This project is on GitHub, find it \\
 and download the source files at: \\
-https://github.com/millecodex/ENGE401 \\                            
+\url{https://github.com/millecodex/ENGE401} \\                            
 
-Licenced under MIT General License (c) 2018 \\   
+Licenced under MIT General License (c) 2019 \\   
 
 Version 2.1 by Jeff Nijsse, 2019.\\
-$<$\texttt{jeff.nijsse@aut.ac.nz}$>$\\
+\href{mailto:Jeff.Nijsse@aut.ac.nz}{\texttt{Jeff.Nijsse@aut.ac.nz}}\\
 Version 1.0 by Peter Watson, 2010.
 
 
 \clearpage
+\hypersetup{linkcolor={black}}
 \tableofcontents
 \mainmatter
 %    Include main chapters here.
 \include{ch1AlgebraReview}
-\include{ch2SimulEquations}
-\include{ch3Trig}
-\include{ch4Exponentials}
-\include{ch5Differentiation}
-\include{ch6Integration}
-\include{ch7DiffEqns}
+%\include{ch2SimulEquations}
+%\include{ch3Trig}
+%\include{ch4Exponentials}
+%\include{ch5Differentiation}
+%\include{ch6Integration}
+%\include{ch7DiffEqns}
 
 %\appendix
 %    Include appendix "chapters" here.
