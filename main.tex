@@ -24,11 +24,10 @@
 %    Include referenced packages here.
 \usepackage{amssymb,amsmath,amsfonts,xcolor,graphicx,xspace,colortbl,ragged2e,rotating} % 
 \usepackage{fancyhdr,titlesec,geometry,tcolorbox}  %
-\usepackage{multicol}  %
+\usepackage{multicol,wrapfig,booktabs}  %
 \usepackage{tabulary}  %
 \usepackage{subcaption,float}
-\usepackage{pgfplots}
-\usepackage{wrapfig}  %
+\usepackage{pgfplots,tikz}
 \usepackage{courier}  %
 \usepackage{hyperref}  %exclude for book printing?
 \hypersetup{
@@ -125,13 +124,12 @@ Version 1.0 by Peter Watson, 2010.
 \tableofcontents
 \mainmatter
 %    Include main chapters here.
-\include{ch1AlgebraReview}
-%\include{ch2SimulEquations}
-%\include{ch3Trig}
-%\include{ch4Exponentials}
-%\include{ch5Differentiation}
-%\include{ch6Integration}
-%\include{ch7DiffEqns}
+\include{chAlgebra}
+%\include{chTrig}
+%\include{chExponentials}
+%\include{chDifferentiation}
+%\include{chIntegration}
+%\include{chDiffEqns}
 
 %\appendix
 %    Include appendix "chapters" here.
