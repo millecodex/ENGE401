@@ -1,10 +1,3 @@
-% General layout to be covered over four lectures:
-% factoring / expanding
-% solving for x
-% exponents 
-% linear functions
-% quadradtic functions
-% polynomials
 
 \chapter{Algebra}
 Engingeering Mathematics begins by reviewing foundational algebra. Many of the skills used in this chapter are foundational mathematical tools that you will need to keep using repeatedly both in this course and beyond. Refer to the course website $<$\texttt{blackboard.aut.ac.nz}$>$ for additional review material covering the basics of algebra.
@@ -75,11 +68,10 @@ Indices go by a few different names, sometimes they are called powers or exponen
 \begin{tcolorbox}
 	\begin{itemize}
 		\item $x^n$: $x$ is called the base and $n$ the exponent (or power)
-		\item When multiply exponents of the same base, add the exponents\\
-		$x^3\times x^4=x^{3+4}=x^7$
-		\item When dividing exponents of the same base, subtract the exponents\\
+		\item When multiply exponents of the same base, add the exponents: $x^3\times x^4=x^{3+4}=x^7$
+		\item When dividing exponents of the same base, subtract the exponents:
 		$\frac{x^6}{x^5}=x^{6-5}=x^1$
-		\item If an expression is raised to \textit{another} power, multiply the exponents\\
+		\item If an expression is raised to \textit{another} power, multiply the exponents:
 		$x^{3^4}=x^{3\times 4}=x^{12}$
 	\end{itemize}
 \end{tcolorbox}	
@@ -327,8 +319,8 @@ The parabola from part (c) above was solved by factoring. Not all quadratic equa
  \includegraphics[width=0.6\textwidth]{poly}
 \end{center}
 The prefix \textit{poly} means many, and polynomials are not limited to three terms. The general form of a polynomial can be written as:
-$$ A_1x^n+A_2x^{n-1}+A_3x^{n-2}+\dots+A_nx^1+C $$
-where the terms are written in decreasing powers, with
+$$ A_1x^n+A_2x^{n-1}+A_3x^{n-2}+\dots+A_nx^1+C=0 $$
+where the terms are written in decreasing powers of $x$, with
 \vspace{-0.5cm}\begin{itemize}
 	\setlength\itemsep{0em}
 	\item $n\ge 0, n\in \mathbb{Z}$. This means the exponents must be integers.
@@ -341,93 +333,105 @@ where the terms are written in decreasing powers, with
  
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \section{Systems of Equations}
- 
- A system of equations means having more than one relationship representing the system of interest. We will study systems composed of 2 linear equations and 2 unknowns. Systems with more equations and more variables are possible and will be covered in future courses. Three approaches to solve systems of equations will be covered here:
+ A system of equations means having more than one relationship represented within a common context. Revenue and costs may have different functions but both relate to the same product. We will study systems composed of two equations and two unknowns. Systems with more equations and more variables are possible and will be covered in future courses. Three approaches to solve systems of equations will be covered here:
  \begin{itemize}
- 	\item substitution
- 	\item elimination
+ 	\setlength\itemsep{0em}
  	\item graphing
+ 	\item elimination
+ 	\item substitution
  \end{itemize}
  
- You could be asked to solve a system of 2 equations with 2 unknowns where one equation is linear and the other is not. Also you could be asked to solve a system of two nonlinear
- equations although these will be restricted to very straightforward examples. It helps if you can visualise
- the shape of the 2 equations so that the meaning of the solution is clear in your mind. An example will come later in the course when we find the area between two curves by integration where the intersection of these two curves represents the solution to a system of two equations.
+It helps if you can visualise the shape of the two functions so that the meaning of the solution is clear in your mind. Later in the course we will find the area between two curves using integration where the intersection of these two curves represents the solution to a system of two equations. See section XX.
  
  We know that linear equations in two variables are represented by straight lines. Straight
- lines will always intersect unless they are parallel. The coordinates of the point of intersection of the straight
- lines is called the solution. you could use a graphical method or one of the two algebraic methods (substitution
- or elimination) to find the solution. Parallel lines will never meet so will have no solution. Sometimes
- the two equations will be two different representations of the same line so we say that in this case the system has an infinite number of solutions. 
+ lines will always intersect unless they are parallel. The coordinates of the point of intersection of the straight lines is called the solution. you could use a graphical method or one of the two algebraic methods (substitution or elimination) to find the solution.  We will start with a graphical method. 
  
- \section*{Solution by Substitution}
- \subsubsection{Example 1}
- Consider the system of equations
+ \textbf{Example} Find the solution to the set of linear relationships given by:
+ $$2y=x-4$$
+ $$y=\frac{x}{4}$$
+  \begin{multicols}{2}
+ \textbf{Solution} 
+ 	
+ 	Here we have two linear equations (we know they are linear because the highest exponent is 1) and if the lines intersect, that point of intersection represents a solution. 
+ 	
+ 	From the plot we can see the point of intersection is $(8,2)$. Therefore the solution to the system of linear equations is $(8,2)$. Try plotting the lines yourself at \url{www.desmos.com/calculator}.
+ 	\columnbreak
+ \begin{center}
+ \begin{tikzpicture}
+ \begin{axis}[
+ grid=both,
+ minor tick num=1,
+ axis lines=center,
+ xmax=10,xmin=-2,
+ ymax=3,ymin=-3,
+ xlabel=$x$,ylabel=$y$,
+ ticklabel style={fill=white},
+ ]	
+ \node[anchor=south,fill=white] at (axis cs:2,1) {$y=\frac{x}{2}-4$};
+ \node[anchor=south,fill=white] at (axis cs:7.25,0.5) {$y=\frac{x}{4}$};
+ \addplot [<->,domain=-2:10,thick, samples=100, black] {0.5*x-2};
+ \addplot [<->,domain=-2:10,thick, samples=100, black] {0.25*x};
+ \addplot[mark=*] coordinates {(8,2)};
+ \end{axis}	
+ \end{tikzpicture}			
+\end{center}
+\end{multicols}
+ 
+ Its not always convenient to graph a system of equations to find the solution; you may not have access to a computer, or the solution may not be integers. Solving by direct substitution is the next method.\\
+ 
+ \textbf{Example} Consider the system of equations
  \begin{align}x^{2} +y^{2} &  = 25 \tag{1} \\
  3 y +x &  = 15 \tag{2}\end{align}
- 
- We rearrange equation 2 and substitute into equation 1
- \begin{align*}x &  =  15 -3 y \\
- &  =  3 \left (5 -y\right ) \\
- \text{so }\quad x^{2} &  =  9 \left (25 -10 y +y^{2}\right ) \\
- &  =  9 y^{2} -90 y +225\end{align*}
- 
- Equation 1 becomes
- \begin{align*}9 y^{2} -90 y +225 +y^{2} &  =  25 \\
- 10 y^{2} -90 y +200 &  =  0 \\
- y^{2} -9 y +20 &  = 0 \\
+ \textbf{Solution} Without knowing what the functions look like or plotting them, we can isolate a variable and substitute it into the other equation. Rearrange equation (2) to isolate $x$ and substitute into equation (1):
+$$x =  15 -3 y $$
+ Equation (1) becomes
+ \begin{align*}(15-3y)^2+y^2 &  =  25 \tag{expand and simplify}\\
+ 225-90y+9y^2+y^2&=25\\
+ 10 y^{2} -90 y +200 &  =  0 \tag{divide by 10}\\
+ y^{2} -9 y +20 &  = 0 \tag{factor the quadratic}\\
  \left (y -5\right ) \left (y -4\right ) &  =  0 \\
  \text{Either }\quad y -5 &  =  0\quad\text{ so }\quad y =5 \\
  \text{or }\quad y -4 &  =  0\quad\text{ so }\quad y =4\end{align*}
  
- Back-substitute into equation 2 
+Lastly, back-substitute the $y-$values into equation (2): 
  
  When $y =5$, $3 y +x =15 \leadsto 15 +x =15 \Longleftrightarrow x =0$. This means $\left (0 ,5\right )$ is a solution. 
  
  When $y =4$, $3 y +x =15 \leadsto 12 +x =15 \Longleftrightarrow x =3$. This means $\left (3 ,4\right )$ is a solution. 
+ Note there are two solutions here. Verify by graphing the functions.
  
- \subsubsection{Example 2}
- Now consider the system of equations
- \begin{align}x^{2} +y^{2} &  =  25 \tag{3} \\
- 4 y +3 x &  =  25 \tag{4}\end{align}
+The third method is called elimination and works by eliminating one of the variables from the equation set, then solving for the other variable.
+
+\textbf{Example} Solve the system by the method of elimination:
+
+
+ \section*{Special Cases}
+  \begin{multicols}{2}
+  Consider the parallel lines shown. What is the solution to this system? Parallel lines will never meet by definition and so will have no point of intersection. In this case the system has no solution -- which is a perfectly valid solution!
+  
+  Sometimes the two equations will be two different representations of the same line. Imagine two line plotted on top of one another. In this case the system has an infinite number of solutions because every single point on the first function is also on the second function. 
+ 	\columnbreak
+ 	\begin{center}
+ 		\begin{tikzpicture}
+ 		\begin{axis}[
+ 		grid=both,
+ 		minor tick num=1,
+ 		axis lines=center,
+ 		xmax=5,xmin=-5,
+ 		ymax=3,ymin=-4,
+ 		xlabel=$x$,ylabel=$y$,
+ 		ticklabel style={fill=white},
+ 		]	
+ 		\node[anchor=south,fill=white] at (axis cs:2,-3) {$y=\frac{x}{3}-2$};
+ 		\node[anchor=south,fill=white] at (axis cs:2.6,0) {$y=\frac{x}{3}+0.5$};
+ 		\addplot [<->,domain=-5:5,thick, samples=100, black] {0.333*x-2};
+ 		\addplot [<->,domain=-5:5,thick, samples=100, black] {0.333*x+0.5};
+ 		\end{axis}	
+ 		\end{tikzpicture}			
+ 	\end{center}
+ \end{multicols}
  
- Proceeding in the same way
- \begin{align*}3 x &  =  25 -4 y \\
- \text{So\ \ \ }9 x^{2} &  =  \left (25 -4 y\right )^{2} \\
- &  =  625 -200 y +16 y^{2} \\
- &  =  16 y^{2} -200 y +625\end{align*}
- 
- From equation 3\qquad (Multiply equation 3 by 9)
- \begin{align*}9 x^{2} +9 y^{2} &  =  225 \\
- \text{So}\quad 16 y^{2} -200 y +625 +9 y^{2} &  = 225\text{\ }{\tiny 9}{\tiny x}^{{\small 2}}\text{} \\
- \text{or}\quad 25 y^{2} -200 y +625 -225 &  =  0 \\
- 25 y^{2} -200 y +400 &  =  0\text{\ \ } \\
- \text{or} \quad y^{2} -8 y +16 &  = 0 \\
- \left (y -4\right ) \left (y -4\right ) &  = 0 \\
- \text{So}\quad y &  =  4\end{align*}
- 
- Back substitute into equation 4 
- 
- When $y =4$, $4 y +3 x =25 \leadsto 16 +3 x =25 \Longleftrightarrow x =3$. This means $\left (3 ,4\right )$ is a solution. The
- line cuts the circle in only one point. This means the line touches the circle. The
- line is a tangent to the circle. You may verify by graphing the functions.
- 
- \subsection{Exercise}
- \begin{enumerate}
- 	\item How can we invent a line parallel to $4 y +3 x =25$ that cuts the circle (in two points)? 
- 	
- 	\item How can we invent a line parallel
- 	to $4 y +3 x =25$ that misses the circle (cuts the circle in no points)? \end{enumerate}
- 
- 
- Solution:
- \ There are an infinite number of possibilities one such line that will cut the circle in two points is $4 y +3 x =24$, and a line that will miss the circle is $4 y +3 x =26$. 
- 
- \section*{Solution by Elimination}
- Refer to lecture notes.
- \section*{Solution by Graphing}
- Refer to lecture notes.
- \section*{Infinite Solutions}
- \emph{Example of a System with an Infinite Number of Solutions}\\
+ \textbf{Example}\\
  If you start with a linear equation such as $y -2 x =3$ and multiply each term by a constant you will get an equivalent equation. If you multiply the equation by another number you
  will get a further equivalent equation.
  \begin{equation*}y -2 x =3
@@ -438,69 +442,42 @@ where the terms are written in decreasing powers, with
  \end{equation*}
  
  Multiply by $ -3$
- \begin{align*} -3 y +6 x &  = &  -9 \\
- \text{or}6 x -3 y +9 &  = & 0\end{align*}
+ \begin{align*} -3 y +6 x &  =   -9 \\
+ \text{or }6 x -3 y +9 &  =  0\end{align*}
  
  We know these are both just different ways of writing the original equation $y -2 x =3$ or $y =2 x +3$. To say the system has an infinite number of solutions we are really saying every point
  on $y =2 x +3$ is a solution. 
- 
- 
- %
- %We have a further way to represent these equations which we will introduce here. It
- %is called the \emph{parametric} form of a straight line. In mathematics we like to have as
- %few variables as we can and you have already seen many instances where we have started off with two variables and by using a relationship given within the
- %problem we have reduced the number of variables to one. By introducing a \emph{parameter}
- %we can reduce from two variables ($x$ and $y$) to one. Here is a simple procedure to introduce a parameter. We
- %usually use the letter $t$ to represent a parameter ( but this is not always the case). Let $x =t$ and $y =2 t +3$ then we can immediately say that the point $\left (t ,2 t +3\right )$ lies on the line $y =2 x +3$ $ \forall t \in \mathbb{R}$ $\left [\text{The literal translation of} \forall \text{is "for all values of", so} \forall t \in \mathbb{R}\text{means "for real values of}t\text{"}\right ]$ What this means is
- %that you can take any value of $t$ you like and substitute it into $\left (t ,2 t +3\right )$ and you will get a point on the line $y =2 x +3$. 
  
  
  
  \section*{Guidelines for Solving Systems of Equations}
  These guideline provide a useful way to tackle any problems where equations are involved. 
  \begin{tcolorbox}
-  \begin{enumerate}
- 	\item Identify the variables. We often call them $x$ and $y$, but you may chose any name or letter you want. 
  	
- 	\item Express all unknown quantities
- 	in terms of the variables. 
- 	
- 	\item Set up a system of equations using the facts provided by the problem.
- 	
- 	
+  \begin{enumerate}\setlength\itemsep{0em}
+ 	\item Identify the variables. We often call them $x$ and $y$, but you may chose any name or letter you want. 	
+ 	\item Express all unknown quantities in terms of the variables. 	
+ 	\item Set up a system of equations using the facts provided by the problem.	
  	\item Solve the system of equations and use the solution to check it satisfies the conditions of the
  	problem. Write a sentence describing the answer to the original problem.  
  \end{enumerate}
 \end{tcolorbox}
  
- \subsubsection{Example}
- This is about a boat travelling with the current and against the current and depends
- on you knowing that velocities are vectors so can be added and subtracted. 
- 
- 
- \begin{description}
- 	\item [Step 1] Let the speed of the boat be $x$ \mbox{mi}$/$\mbox{h} and the speed of the current be $y$ \mbox{mi}$/$\mbox{h}. 
- 	
- 	\item [Step
- 	2]
+ \textbf{Example} It takes a boat travelling downstream 1 hour to cover the 20 mile distance. On the return trip it take the boat 2.5 hours. What is the speed of the boat and the speed of the current?\\
+ \textbf{Solution} This is about a boat travelling with the current and against the current and depends on you knowing that velocities are vectors that can be added and subtracted. Let the speed of the boat be $x$ \mbox{mi}$/$\mbox{h} and the speed of the current be $y$ \mbox{mi}$/$\mbox{h}. 
  	\begin{align*}\text{Upstream speed} &  =  x -y \\
  	\text{Downstream speed} &  =  x +y\end{align*}
- 	
- 	\item [Step 3]
  	\begin{align}\text{Speed} &  =  \frac{\text{Total distance}}{\text{Total time}} \nonumber  \\
  	\text{so Total distance} &  =  \text{Speed} \times \text{Total time} \nonumber  \\
- 	20 &  =  \left (x +y\right ) \times 1 \nonumber  \\
+ 	20 \textrm{ miles } &  =  \left (x +y\right ) \times 1 \textrm{ hour} \nonumber  \\
  	20 &=x +y \tag{1} \\
- 	\text{Also}\quad 20 &  =  \left (x -y\right ) \times \frac{5}{2} \nonumber  \\
+ 	\text{Also}\quad 20 \textrm{ miles }&  =  \left (x -y\right ) \times \frac{5}{2} \textrm{ hours}\nonumber  \\
  	8 &=x -y \tag{2}\end{align}
- 	
- 	\item [Step 4] \end{description}
- 
- Eq 1 + Eq 2
+ Now we can add equations (1) and (2) and $y$ is eliminated
  \begin{align*}28 &  =  2 x \\
- x &  =  14 \\
- y &  =  6\end{align*}
- 
+ x &  =  14\end{align*} \\
+ Back-substitute into either equations (1) or (2) to solve for $y$:
+$$ y =  6$$
  \textbf{Check:} \\\relax The boat travels
  at 14 $\mbox{mi}$/$\mbox{h}$ and the current travels at 6 $\mbox{mi}$/$\mbox{h}$ so the effective speed of the
  boat is 20 $\mbox{mi}$/$\mbox{h}$. At 20 $\mbox{mi}$/$\mbox{h}$ the 20 $\mbox{mi}$ trip took $1$ $\mbox{h}$. Upstream the speed is 8 $\mbox{mi}$/$\mbox{h}$. \
