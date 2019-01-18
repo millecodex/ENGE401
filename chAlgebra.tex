@@ -3,7 +3,7 @@
 Engingeering Mathematics begins by reviewing foundational algebra. Many of the skills used in this chapter are foundational mathematical tools that you will need to keep using repeatedly both in this course and beyond. Refer to the course website $<$\texttt{blackboard.aut.ac.nz}$>$ for additional review material covering the basics of algebra.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introductory Algebra}
+\section{Introductory Algebra}\label{sec:introAlgebra}
 Some of the foundational algebraic properties will be covered here. This section is not comprehensive, and the student should refer to an introductory algebra book if some of these properties are not clear.
 \section*{Expanding and Factorising}
 Multiplying algebraic expressions is usually called \emph{expanding}
@@ -91,7 +91,7 @@ Exponents can decimal numbers, integers, expressions, variables, and also fracti
 \end{alignat*}\end{tcolorbox}
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Functions}	
+\section{Functions}\label{sec:functions}	
 A function is a mathematical relationship between groups. Given an element in one group, the function says how to get to the other group. For example the function could be a formula that says if you have $x$, the output is $2x$. This can be written as $f(x)=2x$ where $f(x)$ is called function notation and in Cartesian coordinates also means $y=f(x)$. We can depict this function visually using $x$ and $y$ coordinates. Begin by selecting some inputs ($x$ values) and then calculate the outputs ($f(x)$ values) from the formula $f(x)=2x$.
 
 This method is called making a table of values and in this example any real number for $x$ produces exactly one output for $y$ (also a real number). The figure below plots the points on an $(x,y)$ grid. Connecting the points creates the line $y=2x$.
@@ -313,7 +313,7 @@ The parabola from part (c) above was solved by factoring. Not all quadratic equa
  $$x =\frac{ -b \pm \sqrt{b^{2} -4 a c}}{2 a}$$ 
  where $a,b,$ and $c$ are coefficients ($a\ne0$). Note here there are two possible solutions because of the plus-minus sign ($\pm$).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Polynomials}
+\section{Polynomials}\label{sec:polynomials}
  A polynomial is a type of function that comes up a lot. The quadratic equations above are all examples of polynomials. The standard form of a quadratic equation is shown below with some of the terminology.
  \begin{center}
  \includegraphics[width=0.6\textwidth]{poly}
@@ -332,15 +332,16 @@ where the terms are written in decreasing powers of $x$, with
  
  
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- \section{Systems of Equations}
+ \section{Systems of Equations}\label{sec:systemsOfEquations}
  A system of equations means having more than one relationship represented within a common context. Revenue and costs may have different functions but both relate to the same product. We will study systems composed of two equations and two unknowns. Systems with more equations and more variables are possible and will be covered in future courses. Three approaches to solve systems of equations will be covered here:
- \begin{itemize}
+ \begin{multicols}{3}
+  \begin{itemize}
  	\setlength\itemsep{0em}
- 	\item graphing
- 	\item elimination
+ 	\item graphing\columnbreak
+ 	\item elimination\columnbreak
  	\item substitution
  \end{itemize}
- 
+\end{multicols}
 It helps if you can visualise the shape of the two functions so that the meaning of the solution is clear in your mind. Later in the course we will find the area between two curves using integration where the intersection of these two curves represents the solution to a system of two equations. See section XX.
  
  We know that linear equations in two variables are represented by straight lines. Straight
@@ -350,11 +351,12 @@ It helps if you can visualise the shape of the two functions so that the meaning
  $$2y=x-4$$
  $$y=\frac{x}{4}$$
   \begin{multicols}{2}
- \textbf{Solution} 
- 	
- 	Here we have two linear equations (we know they are linear because the highest exponent is 1) and if the lines intersect, that point of intersection represents a solution. 
+ \textbf{Solution} Here we have two linear equations (we know they are linear because the highest exponent is 1) and if the lines intersect, that point of intersection represents a solution. 
  	
  	From the plot we can see the point of intersection is $(8,2)$. Therefore the solution to the system of linear equations is $(8,2)$. Try plotting the lines yourself at \url{www.desmos.com/calculator}.
+ 	
+ 	
+ 	Its not always convenient to graph a system of equations to find the solution; you may not have access to a computer, or the solution may not be integers. Solving by direct substitution is the next method.
  	\columnbreak
  \begin{center}
  \begin{tikzpicture}
@@ -376,9 +378,7 @@ It helps if you can visualise the shape of the two functions so that the meaning
  \end{tikzpicture}			
 \end{center}
 \end{multicols}
- 
- Its not always convenient to graph a system of equations to find the solution; you may not have access to a computer, or the solution may not be integers. Solving by direct substitution is the next method.\\
- 
+ \subsection*{Solution by Substitution}
  \textbf{Example} Consider the system of equations
  \begin{align}x^{2} +y^{2} &  = 25 \tag{1} \\
  3 y +x &  = 15 \tag{2}\end{align}
@@ -399,15 +399,64 @@ Lastly, back-substitute the $y-$values into equation (2):
  
  When $y =4$, $3 y +x =15 \leadsto 12 +x =15 \Longleftrightarrow x =3$. This means $\left (3 ,4\right )$ is a solution. 
  Note there are two solutions here. Verify by graphing the functions.
- 
+\subsection*{Solution by Elimination} 
 The third method is called elimination and works by eliminating one of the variables from the equation set, then solving for the other variable.
 
 \textbf{Example} Solve the system by the method of elimination:
+\begin{align*}
+4x-3y&=5\tag{1}\\
+4x+\phantom{1}y&=1\tag{2}
+\end{align*}
+\textbf{Solution} If we subtract equation (2) from equation (1) columnwise then the $x$ term is eliminated because $4x-4x=0$.
+\[\begin{array}{lrl}
+  			 &4x-3y	         &=5 \\[\jot]
+ -\phantom{1}&4x+\phantom{1}y&=1 \\
+\cmidrule{2-3}
+ & 0x-4y &=4  \\[\jot]
+\end{array}\]
+Now there is one equation with one unknown: $-4y=4$ so $y=-1$. Back-substitute into either previous equation to solve for $x=\frac{1}{2}$. Therefore the solution is $x=\frac{1}{2},y=-1$.
 
+\textbf{Example} Solve the system by the method of elimination:
+\begin{align*}
+3a-7b&=-3\tag{1}\\
+b&=\frac{6a-4}{2}\tag{2}
+\end{align*}
+\textbf{Solution} The first step is to write the equations so the variables line up in columns. Multiply equation (2) by 2 to get $2b=6a-4$ and rearrange the terms to match equation (1). 
 
+\begin{minipage}[t]{0.3\linewidth}
+The system now looks like:
+\begin{align*}
+3a-7b&=-3\tag{1}\\
+6a-2b&=\phantom{1}4\tag{3}
+\end{align*}
+We can't eliminate any variables because the coefficients are different. 
+\end{minipage}
+\hspace{\fill}
+\begin{minipage}[t]{0.3\linewidth}
+Multiply equation (1) by 2.
+\begin{align*}
+6a-14b&=-6\tag{4}\\
+6a-\phantom{1}2b&=\phantom{1}4\tag{3}
+\end{align*}
+\end{minipage}
+\hspace{\fill}
+\begin{minipage}[t]{0.3\linewidth}
+Now calculate (4) $-$ (3).	
+\[\begin{array}{lrl}
+			&	       6a-14b&=-6			\\[\jot]
+-\phantom{1}&6a-\phantom{1}2b&=\phantom{1}4 \\
+\cmidrule{2-3}
+& 0+12b&=10  \\[\jot]
+\cmidrule{2-3}
+& b&=\frac{5}{6}  \\[\jot]
+\end{array}\]	
+\end{minipage}
+
+Back-substitute $b$ into equation (1) to solve for $a$: $3a-7(\frac{5}{6})=-3$. Verify that $a=\frac{17}{18}$.	
+	
  \section*{Special Cases}
   \begin{multicols}{2}
-  Consider the parallel lines shown. What is the solution to this system? Parallel lines will never meet by definition and so will have no point of intersection. In this case the system has no solution -- which is a perfectly valid solution!
+  Consider the parallel lines shown. What is the solution to this system? Parallel lines will never meet by definition and so will have no point of intersection. In this case the system has no solution -- which is a perfectly valid solution! Notice the slope of both the lines is $\frac{1}{3}$ which means they are parallel.
   
   Sometimes the two equations will be two different representations of the same line. Imagine two line plotted on top of one another. In this case the system has an infinite number of solutions because every single point on the first function is also on the second function. 
  	\columnbreak
@@ -431,24 +480,15 @@ The third method is called elimination and works by eliminating one of the varia
  	\end{center}
  \end{multicols}
  
- \textbf{Example}\\
- If you start with a linear equation such as $y -2 x =3$ and multiply each term by a constant you will get an equivalent equation. If you multiply the equation by another number you
+ \textbf{Example} If you start with a linear equation such as $y -2 x =3$ and multiply each term by a constant you will get an equivalent equation. If you multiply the equation by another number you
  will get a further equivalent equation.
- \begin{equation*}y -2 x =3
- \end{equation*}
- 
+ \[y -2 x =\phantom{-}3 \]
  Multiply by $2$
- \begin{equation*}2 y -4 x =6
- \end{equation*}
- 
- Multiply by $ -3$
- \begin{align*} -3 y +6 x &  =   -9 \\
- \text{or }6 x -3 y +9 &  =  0\end{align*}
- 
+\[2 y -4 x =\phantom{-}6\]
+ Multiply by $-3$
+\[-3y +6x = -9\]
  We know these are both just different ways of writing the original equation $y -2 x =3$ or $y =2 x +3$. To say the system has an infinite number of solutions we are really saying every point
  on $y =2 x +3$ is a solution. 
- 
- 
  
  \section*{Guidelines for Solving Systems of Equations}
  These guideline provide a useful way to tackle any problems where equations are involved. 
@@ -487,422 +527,140 @@ $$ y =  6$$
  Therefore the speed of the boat is 14 $\mbox{mi}$/$\mbox{h}$ and the speed of the current is 6 $\mbox{mi}$/$\mbox{h}$. 
  
  
- 
- 
- 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Exercises} 
- 
-\begin{enumerate}
-	\item Remove the brackets 
-	\begin{enumerate}
-		\item $ -\left (x +y\right )$ 
-		\item $ -3 (5 x -2 y)$ \end{enumerate}
-	
-	\item Evaluate $\left (\frac{1}{3} \div \frac{1}{6}\right ) +\frac{1}{2}$ 
-	
-	\item Calculate the value of 
-	\begin{enumerate}
-		\item $\left (15.3\right )^{0}$ 
-		\item $10^{ -2}$ \end{enumerate}
-	\item Simplify 
-	\begin{enumerate}
-		\item $\left (3 a^{2} b\right )^{2}$ 
-		
-		\item $\genfrac{(}{)}{}{}{x}{3}^{3} x^{3}$ \end{enumerate}
-	
-	
-	\item Evaluate $\sqrt[{4}]{2.7}$ accurate to 2 decimal places. 
-	
-	\item Remove the brackets and simplify 
-	
-	
-	\begin{enumerate}
-		\item $\left (x^{2} +5 x -1\right ) -\left (2 x -3\right )$ 
-		
-		\item $\left (2 x -1\right ) \left (2 x +1\right )$ \end{enumerate}
-	
-	
-	\item Factorise the expressions 
-	\begin{enumerate}
-		\item $x^{2} +11 x +28$ 	
-		\item $2 x^{2} -5 x -12$ 
-		\end{enumerate}
-	\item Simplify $\frac{x^{2} +5 x +6}{x^{2} +2 x -3}$ by factorising and then cancelling 
-	
-	\item Solve the equations 
-	
-	
-	\begin{enumerate}
-		\item $7 x -16 =\frac{2}{3} x +4$ 
-		
-		\item $\left (x -2\right )^{2} =15$ \end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Exercises} %included in the \exheader
+ \exheader
+ \textbf{Section \ref{sec:introAlgebra} \nameref{sec:introAlgebra}}
+ \begin{multicols}{2}
+ \begin{exercises}
+ 	\begin{subquestions}[Remove the brackets\\]
+ 	\subquestion{$ -\left (x +y\right )$ }{$ -x -y$}\\
+ 	\subquestion{$ -3 (5 x -2 y)$}{$ -15 x +6 y$}
+ \end{subquestions}
+\begin{subquestions}[Calculate the value of\\]
+	\subquestion{$\left (15.3\right )^{0}$}{$1$}\\
+	\subquestion{$10^{ -2}$}{$0.01$}
+\end{subquestions}
+\begin{subquestions}[Simplify\\]
+	\subquestion{$\left (3 a^{2} b\right )^{2}$}{$9 a^{4} b^{2}$}\\
+	\subquestion{$\left(\frac{x}{3}\right)^{3} x^{3}$}{$\frac{x^{6}}{27}$}
+\end{subquestions}
+\begin{subquestions}[Evaluate\\]
+	\subquestion{$\sqrt[{4}]{2.7}$ accurate to 2 decimal places. }{$1.28$}\\
+	\subquestion{b}{b}
+\end{subquestions}
+\begin{subquestions}[Remove the brackets and simplify \\]
+	\subquestion{$\left (x^{2} +5 x -1\right ) -\left (2 x -3\right )$}{$x^{2} +3 x +2$}\\
+	\subquestion{$\left (2 x -1\right ) \left (2 x +1\right )$}{$4 x^{2} -1$}
+\end{subquestions}
+\begin{subquestions}[Factorise the expressions\\]
+	\subquestion{$x^{2} +11 x +28$}{$\left (x +7\right ) \left (x +4\right )$}\\
+	\subquestion{$2 x^{2} -5 x -12$}{$\left (2 x +3\right ) \left (x -4\right )$}
+\end{subquestions}
+\question{Simplify $\frac{x^{2} +5 x +6}{x^{2} +2 x -3}$ by factorising and then cancelling }{$\frac{x +2}{x -1}$}
+\begin{subquestions}[Solve the equations\\]
+	\subquestion{$7 x -16 =\frac{2}{3} x +4$ }{$3.16$}\\
+	\subquestion{$\left (x -2\right )^{2} =15$}{$ -1.87$ or $5.87$}\\
+	\subquestion{$x^{2} -2 x -8 =0$}{$4$ or $ -2$}\\
+	\subquestion{$2 x^{2} +5 x -4 =0$}{$0.637$ or $ -3.137$}
+\end{subquestions}
+\end{exercises}
+\end{multicols}
 
-	\item Solve the equations 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Section \ref{sec:functions} \nameref{sec:functions}}
+\begin{multicols}{2}
+	\begin{exercises}	
+	\begin{subquestions}[Make $t$ the subject of the equation \\]
+		\subquestion{$v =u +a t$}{$t =\frac{v -u}{a}$ }\\
+		\subquestion{$l =l_{0} \left (1 +\alpha  t\right )$}{$t =\frac{1}{\alpha } \left (\frac{l}{l_{0}} -1\right )$}
+	\end{subquestions}
+	\begin{subquestions}[If $f (x) =x^{2}$ and $g (x) =x^{3}$ evaluate\\]
+	\subquestion{$f (2)$}{$4$}\\
+	\subquestion{$f ( -2)$}{$4$}\\
+	\subquestion{$g (3)$}{$27$}\\
+	\subquestion{$g ( -3)$}{$-27$}
+\end{subquestions}
+\question{The volume of a pipe with length $l$, inner radius $r$ and outer radius $R$ is $V =\pi  \left (R^{2} -r^{2}\right ) l\text{.}$ Find the volume when $R =3.1 \mbox{m}$, $r =2.2 \mbox{m}$ and $l =5.3 \mbox{m}\text{.}$}{$79.4 \mathrm{m}^{3}$}
+	\begin{subquestions}[Sketch the following graphs (without using Desmos).\\]
+		\subquestion{$y=4x-4$}{b}\\
+		\subquestion{$2y=\frac{x}{3}+1$}{b}\\
+		\subquestion{$y =x^{2} -3$ }{b}\\
+		\subquestion{$y =-(x+1)^{2}$ }{b}
+	\end{subquestions}
+\question{ Find the distance between the points $\left (2 , -3\right )$ and $\left (5 , -1\right )\text{.}$}{$3.61$}
+\question{Find the $x$ and $y$ intercepts for the graph of $y =x^{2} -3$}{$x-$intercepts $1.73$ and $ -1.73$ and $y-$intercept $ -3$}
+	\begin{subquestions}[Use the grid provided to answer the following questions. **INSERT GRID HERE**\\]
+		\subquestion{Show the points $A \left (3 ,5\right )$ and $B \left ( -2 , -5\right )$ on the graph.}{a}%\includegraphics[ width=2.0496in, height=2.8669in,]{L4SZ2709}}\\
+		\subquestion{Calculate the slope of the line through $A$ and $B$. i.e. the slope of $\bar{AB}\text{.}$}{$2$}\\
+		\subquestion{What is the equation of the line $A B$?}{$y =2 x -1$}\\
+		\subquestion{What is the equation of the line parallel to the line $A B$ through the point $\left ( -2 ,3\right )\text{?}$ }{$y =2 x +7$}
+		\subquestion{Starting from the point $B$ on the graph frame draw a line with a slope of $\frac{4}{5}\text{.}$ }{arg2}
+	\end{subquestions}
+%	\question{Complete the table of values for the function $g (x) =x^{3} -x$ and sketch the graph\vspace{0.5cm} \\\relax
+%		\begin{tabular}[c]{cc}\hline
+%			$x$  & $g (x) =x^{3} -x$  \\
+%			\hline
+%			$ -1.5\rule[-8pt]{0pt}{24pt}$  & \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \\
+%			\hline
+%			$ -1\rule[-8pt]{0pt}{24pt}$  &  \\
+%			\hline
+%			$ -0.5\rule[-8pt]{0pt}{24pt}$  &  \\
+%			\hline
+%			$0\rule[-8pt]{0pt}{24pt}$  &  \\
+%			\hline
+%			$0.5\rule[-8pt]{0pt}{24pt}$  &  \\
+%			\hline
+%			$1\rule[-8pt]{0pt}{24pt}$  &  \\
+%			\hline
+%			$1.5\rule[-8pt]{0pt}{24pt}$  &  \\
+%			\hline
+%		\end{tabular}\\}{\begin{tabular}[c]{|c|c|}\hline
+%		$x$  & $g (x) =x^{3} -x$  \\
+%		\hline
+%		$ -1.5$  & $ -1.875\;$  \\
+%		\hline
+%		$ -1$  & $0$  \\
+%		\hline
+%		$ -0.5$  & $0.375$  \\
+%		\hline
+%		$0$  & $0$  \\
+%		\hline
+%		$0.5$  & $ -0.375$  \\
+%		\hline
+%		$1$  & $0$  \\
+%		\hline
+%		$1.5$  & $1.875$  \\
+%		\hline
+%	\end{tabular}}
 	
+\end{exercises}
+\end{multicols}
 	
-	\begin{enumerate}
-		\item $x^{2} -2 x -8 =0$ by factorising. 
-		
-		\item $2 x^{2} +5 x -4 =0$ by using the quadratic formula. \end{enumerate}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\textbf{Section \ref{sec:polynomials} \nameref{sec:polynomials}}
+	\begin{multicols}{2}
+		\begin{exercises}	
+			\begin{subquestions}[What is the degree of the polynomial?\\]
+				\subquestion{$y=x^2$}{$2$}\\
+				\subquestion{$4x^3-2x^2+6=0$}{$3$}\\
+				\subquestion{$a^{99}-99a^2=-99$}{$99$}
+			\end{subquestions}
+	\end{exercises}
+\end{multicols}	
 	
-	
-	\item
-	Make $t$ the subject of the equation 
-	
-	
-	\begin{enumerate}
-		\item $v =u +a t$ 
-		
-		\item $l =l_{0} \left (1 +\alpha  t\right )$ \end{enumerate}
-	
-	
-	\item 
-	The volume of a pipe with length $l$, inner radius $r$ and outer radius $R$ is $V =\pi  \left (R^{2} -r^{2}\right ) l\text{.}$ Find the volume when $R =3.1 \mbox{m}$, $r =2.2 \mbox{m}$ and $l =5.3 \mbox{m}\text{.}$ 
-	
-	\item  Draw the graph of $y =x^{2} -3$ 
-	
-	\item  Find the distance between the points $\left (2 , -3\right )$ and $\left (5 , -1\right )\text{.}$ 
-	
-	\item  Find the $x$ and $y$ intercepts for the graph of $y =x^{2} -3.\vspace{+5.000000cm}$ 
-	
-	\item    
-	\setlength\fboxrule{0in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=4.8663in, height=3.4956in,]{L4SZ2705}
-	}
-	\begin{enumerate}
-		\item Show the points $A \left (3 ,5\right )$ and $B \left ( -2 , -5\right )$ on the graph. 
-		
-		\item Calculate the slope of the line through $A$ and $B$. i.e. the slope of $\bar{AB}\text{.}$ 
-		
-		\item What is the equation of the line $A B$? 
-		
-		\item What is the equation of the line parallel to the line $A B$ through the point $\left ( -2 ,3\right )\text{?}$ 
-		
-		\item Starting from the point $B$ on the graph frame draw a line with a slope of $\frac{4}{5}\text{.}$ 
-	\end{enumerate}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\textbf{Section \ref{sec:systemsOfEquations} \nameref{sec:systemsOfEquations}}
+\begin{multicols}{2}
+	\begin{exercises}	
+		\begin{subquestions}[l\\]
+			\subquestion{plot something}{\rule{150pt}{100pt}}\\
+			\subquestion{a}{a}%{\includegraphics[width=2cm]{poly}}}
+			\subquestion{a}{a}
+		\end{subquestions}
+	\end{exercises}
+\end{multicols}	
 
-  	
-	\item 
-	If $f (x) =x^{2}$ and $g (x) =x^{3}$ evaluate 
-	
-	
-	\begin{enumerate}
-		\item $f (2)$ 
-		
-		\item $f ( -2)$ 
-		
-		\item $g (3)$ 
-		
-		\item $g ( -3)\vspace{+5.000000cm}$ \end{enumerate}
-	
-	
-	\item 
-	Complete the table of values for the function $g (x) =x^{3} -x$ and sketch the graph\vspace{0.5cm} \\\relax
-	\begin{tabular}[c]{cc}\hline
-		$x$  & $g (x) =x^{3} -x$  \\
-		\hline
-		$ -1.5\rule[-8pt]{0pt}{24pt}$  & \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \  \\
-		\hline
-		$ -1\rule[-8pt]{0pt}{24pt}$  &  \\
-		\hline
-		$ -0.5\rule[-8pt]{0pt}{24pt}$  &  \\
-		\hline
-		$0\rule[-8pt]{0pt}{24pt}$  &  \\
-		\hline
-		$0.5\rule[-8pt]{0pt}{24pt}$  &  \\
-		\hline
-		$1\rule[-8pt]{0pt}{24pt}$  &  \\
-		\hline
-		$1.5\rule[-8pt]{0pt}{24pt}$  &  \\
-		\hline
-	\end{tabular} \\\relax
-	\setlength\fboxrule{0in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=4.8663in, height=3.4956in,]{L4SZ2706}
-	}
-	 
-	
-	\item  Given $f (x) =\left (x +3)(x -1\right )\left (x +1\right )^{2}$ 
-	
-
-	\begin{enumerate}
-		\item What is the degree of the polynomial? 
-		
-		\item Where does
-		the graph cut the $x$-axis? (I.e. what are the zeros?) 
-		
-		\item Where does the graph cut the $y$-axis? 
-		
-		\item Sketch the graph \\\relax
-		\setlength\fboxrule{0in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=4.561in, height=3.2759in,]{L4SZ2707}
-		}
-	\end{enumerate}
-
-	\item Fill in the
-	table and draw the graph of $y =\genfrac{(}{)}{}{}{1}{2}^{x}\vspace{+0.500000cm}$ \\\relax
-	\begin{tabular}[c]{|c|c|c|c|c|c|c|c|}\hline
-		$x$  & -3  & -2  & -1
-		& 0  & 1  & 2  & 3
-		\\
-		\hline
-		$y =\genfrac{(}{)}{}{}{1}{2}^{x}$  & \ \ \ \ \ \rule[-8pt]{0pt}{24pt}
-		& \ \ \ \ \ \rule[-8pt]{0pt}{24pt}
-		& \ \ \ \ \ \rule[-8pt]{0pt}{24pt}
-		& \ \ \ \ \ \rule[-8pt]{0pt}{24pt}
-		& \ \ \ \ \ \rule[-8pt]{0pt}{24pt}
-		& \ \ \ \ \ \rule[-8pt]{0pt}{24pt}
-		& \ \ \ \ \ \rule[-8pt]{0pt}{24pt}
-		\\
-		\hline
-	\end{tabular} \\\relax
-	\setlength\fboxrule{0in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=4.4771in, height=3.2162in,]{L4SZ2708}
-	}
-	
-	
-	
-	\begin{enumerate}
-		\item [(b)] Evaluate 
-		
-		
-		\begin{enumerate}
-			\item $3^{3.4}$ 
-			
-			\item $e^{ -0.6}$ \end{enumerate}
-	\end{enumerate}
-	
-	
-	\item 
-	Write the equivalent logarithm statement. One is done for you. 
-	
-	
-	\begin{enumerate}
-		\item
-		\begin{enumerate}
-			\item $64 =2^{6} \Leftrightarrow \log _{2} 64 =6$ 
-			
-			\item $0.01 =10^{ -2} \Leftrightarrow $ \end{enumerate}
-		
-		
-		\item [(b)]
-		Write the equivalent statement using an exponent. 
-		
-		
-		\begin{enumerate}
-			\item $\log _{5} 625 =4 \Leftrightarrow $ 
-			
-			\item $\log _{a} k =t \Leftrightarrow $ \end{enumerate}
-		
-		
-		\item [(c)]
-		Calculate the value for 
-		
-		
-		\begin{enumerate}
-			\item $\log _{9} 9$ 
-			
-			\item $\log _{2} \genfrac{(}{)}{}{}{1}{8}$ 
-			
-			\item $\log  1000$ 
-			
-			\item $\ln  2.95$ 
-			
-			\item $\ln  e^{3.1}$ 
-			
-			\item $\log _{4} 0.25$ \end{enumerate}
-	\end{enumerate}
-
-	\item Write the following as the logarithm of a single number 
-	
-	
-	\begin{enumerate}
-		\item $\log _{4} 7 +\log _{4} 5$ 
-		
-		\item $\log _{5} 18 -\log _{5} 3$ 
-		
-		\item $2 \log _{3} 4$ 
-		
-		\item $\log _{4} 5 +\log _{4} 2 -\log _{4} 10 +3 \log _{4} 2$ \end{enumerate}	
-\end{enumerate}
-
-\section*{Some Answers}
-\begin{tabular}[c]{rrlr}1.  & (a)
-	& $ -x -y$  &  \\
-	& (b)
-	& $ -15 x +6 y$  &  \\
-	&  &  &  \\
-	2.
-	&  & $2\frac{1}{2}$  &  \\
-	&  &  &  \\
-	3.
-	& (a)  & $1$  &  \\
-	& (b)
-	& $0.01$  &  \\
-	&  &  &  \\
-	4.
-	& (a)  & $9 a^{4} b^{2}$  &  \\
-	& (b)
-	& $\frac{x^{6}}{27}$  &  \\
-	&  &  &  \\
-	5.
-	&  & $1.28$  &  \\
-	&  &  &  \\
-	6.
-	& (a)  & $x^{2} +3 x +2$  &  \\
-	& (b)
-	& $4 x^{2} -1$  &  \\
-	&  &  &  \\
-	7.
-	& (a)  & $\left (x +7\right ) \left (x +4\right )$  &  \\
-	& (b)
-	& $\left (2 x +3\right ) \left (x -4\right )$  &  \\
-	&  &  &  \\
-	8.
-	&  & $\frac{x +2}{x -1}$  &  \\
-	&  &  &  \\
-	9.
-	& (a)  & $3.16$  &  \\
-	& (b)
-	& $ -1.87$ or $5.87$  &  \\
-	&  &  &  \\
-	10.
-	& (a)  & $4$ or $ -2$  &  \\
-	& (b)
-	& $0.637$ or $ -3.137$  &  \\
-	&  &  &  \\
-	11.
-	& (a)  & $t =\frac{v -u}{a}$  &  \\
-	& (b)
-	& $t =\frac{1}{\alpha } \left (\frac{l}{l_{0}} -1\right )$  &  \\
-	&  &  &  \\
-	12.
-	&  & $79.4 \mathrm{m}^{3}$  &  \\
-	&  &  &  \\
-	13.
-	&  & Parabola with vertex $\left (0 , -3\right )$  & 
-\end{tabular}
-
-\relax    
-\setlength\fboxrule{0.01in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=2.0496in, height=2.8669in,]{L4SZ2709}
-}
-\\ 
-\\
-
-
-
-\begin{tabular}[c]{rrlr}14.  &  & $3.61$  &  \\
-	&  &  &  \\
-	15.
-	&  & x-intercepts $1.73$ and $ -1.73$  &  \\
-	&  & y-intercept
-	$ -3$  &  \\
-	&  &  &  \\
-	16.
-	& (a)  & On the graph below  &  \\
-	& (b)
-	& $2$  &  \\
-	& (c)
-	& $y =2 x -1$  &  \\
-	& (d)
-	& $y =2 x +7$  & 
-\end{tabular}
-
-16. (e)
-\setlength\fboxrule{0.01in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=2.8297in, height=2.8669in,]{L4SZ270A}
-}
-\\ 
-\\
-
-
-
-\begin{tabular}[c]{rrrr}17.  & (a)
-	& $4$  &  \\
-	& (b)
-	& $4$  &  \\
-	& (c)
-	& $27$  &  \\
-	& (d)
-	& $ -27$  & 
-\end{tabular}
-
-18.
-\begin{tabular}[c]{|c|c|}\hline
-	$x$  & $g (x) =x^{3} -x$  \\
-	\hline
-	$ -1.5$  & $ -1.875\;$  \\
-	\hline
-	$ -1$  & $0$  \\
-	\hline
-	$ -0.5$  & $0.375$  \\
-	\hline
-	$0$  & $0$  \\
-	\hline
-	$0.5$  & $ -0.375$  \\
-	\hline
-	$1$  & $0$  \\
-	\hline
-	$1.5$  & $1.875$  \\
-	\hline
-\end{tabular}\vspace{0.5cm} \\\relax
-\setlength\fboxrule{0.01in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=2.4656in, height=2.866in,]{L4SZ270B}
-}
-
-
-$
-\begin{tabular}[c]{rrlr}19. 
-& (a)
-& $4$
-& 
-\\
-& (b)
-& $ -3$, $1$, $ -1$ (touches) 
-& 
-\\
-& (c)
-& $ -3$
-& 
-\end{tabular}\vspace{+0.500000cm}$ 
-
-19.(d)    
-\setlength\fboxrule{0.01in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=2.3263in, height=2.866in,]{L4SZ270C}
-}
-
-
-20. (a) $8 ,4 ,2 ,1 ,\frac{1}{2} ,\frac{1}{4} ,\frac{1}{8}\vspace{+0.500000cm}$ \\\relax    
-\setlength\fboxrule{0.01in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=3.1782in, height=2.5278in,]{L4SZ270D}
-}
-
-
-
-\begin{tabular}[c]{rrrl}20.  & (b)
-	& 1.  & $41.9$  \\
-	&  & 2.
-	& $0.5488$  \\
-	&  &  &  \\
-	21.
-	& (a)  &  & $\log _{10} 0.01 = -2$  \\
-	& (b)  & 1.
-	& $625 =5^{4}$  \\
-	&  & 2.
-	& $k =a^{t}$  \\
-	& (c)  & 1.
-	& $1$  \\
-	&  & 2.
-	& $ -3$  \\
-	&  & 3.
-	& $3$  \\
-	&  & 4.
-	& $1.082$  \\
-	&  & 5.
-	& $3.1$  \\
-	&  & 6.
-	& $ -1$  \\
-	&  &  &  \\
-	22.
-	& (a)  &  & $\log _{4} 35$  \\
-	& (b)  &  & $\log _{5} 6$  \\
-	& (c)  &  & $\log _{3} 16$  \\
-	& (d)  &  & $\log _{4} 8$  \\
-	&  &  &  \\
-
-\end{tabular} 
 \clearpage
 \section*{Factoring Exercises}
 Some exercises look quite difficult on the surface but quickly look like a
