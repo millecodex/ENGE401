@@ -78,84 +78,40 @@
 \setcounter{secnumdepth}{2}
 \setcounter{tocdepth}{1}
 %
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%---------------------------------------------------------
 % exercise package code 
 % adapted from: https://tex.stackexchange.com/questions/
 % 369265/math-book-how-to-write-exercise-and-answers
-% written by user: https://tex.stackexchange.com/users/103046/tiuri
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{newfile}
-\usepackage{xifthen}
-\usepackage{enumitem}
+%---------------------------------------------------------
+\usepackage[lastexercise,answerdelayed]{exercise}
+\usepackage{ifthen}
+\newboolean{firstanswerofthechapter}%not used here  
+\usepackage{chngcntr}
+\usepackage{stackengine}
+\usepackage{tasks}
+\newlength{\longestlabel}
+\settowidth{\longestlabel}{\bfseries viii.}
+\settasks{counter-format={tsk[r].}, label-format={\bfseries}, label-width=\longestlabel,
+	item-indent=0pt, label-offset=2pt, column-sep={10pt}}
 
-\setlength{\parindent}{0pt}
-
-\newoutputstream{solutions}
-\openoutputfile{\jobname.solutions}{solutions}
-\newcounter{exblock}
-\newcounter{exquestion}
-\newcounter{exsubquestion}
-\newlist{questionlist}{enumerate}{1}
-\newlist{solutionlist}{enumerate}{1}
-\newlist{subquestionlist}{enumerate*}{1}
-\newlist{subsolutionlist}{enumerate*}{1}
-\setlist[questionlist,solutionlist]{label=\arabic*.}
-\setlist[subquestionlist,subsolutionlist]{label=(\alph*),itemjoin={},before=~}
-\newcommand{\exheader}{%
-	\ifthenelse{\value{exblock}>0}{\addtostream{solutions}{\noexpand\end{solutionlist}}}{}%
-\refstepcounter{exblock}%
-\setcounter{exquestion}{0}%
-\section{Exercises}%
-\label{ex.\arabic{exblock}}%
-\addtostream{solutions}{\noexpand\paragraph{Exercises \noexpand\ref{ex.\arabic{exblock}}, page \noexpand\pageref{ex.\arabic{exblock}}}}%
-\addtostream{solutions}{\noexpand\begin{solutionlist}}%
-}
-\newcommand{\printsolutions}{%
-	\ifthenelse{\value{exblock}>0}{\addtostream{solutions}{\noexpand\end{solutionlist}}}{}%
-\closeoutputstream{solutions}%
-\input{\jobname.solutions}%
-}
-\newenvironment{exercises}[1][]{%
-\begin{questionlist}[start=\value{exquestion}+1, #1]%
-}{%
-\end{questionlist}%
-}
-\newenvironment{exercisescol}[2][]{%
-\begin{multicols}{#2}%
-	\begin{questionlist}[start=\value{exquestion}+1, #1]%
-	}{%
-	\end{questionlist}%
-\end{multicols}%
-}
-\newcommand{\question}[2]{%
-\refstepcounter{exquestion}%
-\label{ex.\arabic{exblock}.\arabic{exquestion}}%
-\item #1%
-\addtostream{solutions}{\noexpand\item[\noexpand\ref{ex.\arabic{exblock}.\arabic{exquestion}}.] #2}%
-}
-\newenvironment{subquestions}[1][]{%
-\refstepcounter{exquestion}%
-\label{ex.\arabic{exblock}.\arabic{exquestion}}%
-\setcounter{exsubquestion}{0}%
-\addtostream{solutions}{\noexpand\item[\noexpand\ref{ex.\arabic{exblock}.\arabic{exquestion}}.]\noexpand\begin{subsolutionlist}}%
-	\item #1%
-	\begin{subquestionlist}%
-	}{%
-	\end{subquestionlist}%
-	\addtostream{solutions}{\noexpand\end{subsolutionlist}}
-}
-\newcommand{\subquestion}[2]{%
-\refstepcounter{exsubquestion}%
-\item #1%
-\addtostream{solutions}{\noexpand\item #2}%
-}
-\setlist*[questionlist]{font=\bfseries}
-\setlist*[solutionlist]{noitemsep,font=\bfseries}
-\setlist*[subquestionlist]{font=\bfseries}
-\setlist*[subsolutionlist]{noitemsep,font=\bfseries,itemjoin={\\},before={}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[lastexercise,answerdelayed]{exercise}
+\counterwithin{Exercise}{chapter}
+\counterwithin{Answer}{chapter}
+\renewcounter{Exercise}[chapter]
+\newcommand{\QuestionNB}{\bfseries\arabic{Question}.\ }
+\renewcommand{\ExerciseName}{Exercises }
+\renewcommand{\ExerciseHeader}{\noindent\def\stackalignment{l}% code from https://tex.stackexchange.com/a/195118/101651
+	\stackunder[0pt]{\colorbox{gray!50}{\textcolor{white}{\textbf{\LARGE\ExerciseHeaderNB\;\large\ExerciseName}}}}{\textcolor{gray!50}{\rule{\linewidth}{2pt}}}\medskip}
+\renewcommand{\AnswerName}{Answers to}
+\renewcommand{\AnswerHeader}{\ifthenelse{\boolean{firstanswerofthechapter}}%
+	{\bigskip\noindent{\textbf{CHAPTER \thechapter}}\newline\newline%
+		\noindent\bfseries\emph{{\AnswerName\ \ExerciseHeaderNB, page %
+				\pageref{\AnswerRef}}}\smallskip}
+	{\noindent\bfseries\emph{{\AnswerName\ \ExerciseHeaderNB, page \pageref{\AnswerRef}}}\smallskip}}
+\setlength{\QuestionIndent}{16pt}
+%---------------------------------------------------------
 % END exercise package code 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%---------------------------------------------------------
 \makeindex
 \begin{document}
 \frontmatter
@@ -224,7 +180,7 @@ Version 1.0 by Peter Watson, 2010.
 %
 %
 %
-%
+%---------------------------------------------------------
 % //end main
 % Have a good day :-)
-% -Jeff
+% -Jeff---------------------------------------------------
