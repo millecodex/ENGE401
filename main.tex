@@ -5,7 +5,7 @@
 %                            COURSE MANUAL                             %
 %                         LATEX SOURCE FILES                           %
 %                                                                      %
-% version 2.0 by Jeff Nijsse, 2018                                     %
+% version 2.0 by Jeff Nijsse, 2019                                     %
 % <jeff.nijsse@aut.ac.nz>                                              %
 % based on                                                             %
 % version 1.0 by Peter Watson, 2010                                    %  
@@ -20,21 +20,23 @@
 \documentclass[a4paper,11pt,openany]{book}
 % for pdf output
 %\documentclass[a4paper,11pt]{report}
-\usepackage{amssymb,amsmath,amsfonts,xcolor,graphicx,xspace,colortbl,ragged2e,rotating} % 
-\usepackage{fancyhdr,titlesec,geometry,tcolorbox}  %
-\usepackage{multicol,wrapfig,booktabs}  %
-\usepackage{tabulary}  %
+\usepackage{amssymb,amsmath,amsfonts,textcomp,siunitx}%
+\usepackage{xcolor,graphicx,xspace,colortbl,ragged2e,rotating}% 
+\usepackage{fancyhdr,titlesec,geometry}%
+\usepackage{multicol,wrapfig,booktabs,tabulary,tcolorbox}%
 \usepackage{import}%may not work for answers
-\usepackage{subcaption,float}
-\usepackage{pgfplots,tikz}
-\usepackage{courier}  %
-\usepackage{hyperref}  %exclude for book printing?
+\usepackage{subcaption,float}%
+\usepackage{pgfplots,tikz}%
+\usepackage{courier}%
+\usepackage{hyperref}%exclude for book printing?
 \hypersetup{
 	colorlinks,
 	linkcolor={blue!50!black},
 	citecolor={blue!50!black},
 	urlcolor={blue!50!black}
 }
+\newcommand{\desmos}{\href{http://www.desmos.com/calculator}{\texttt{desmos}}}%
+\newcommand{\Desmos}{\href{http://www.desmos.com/calculator}{\texttt{Desmos}}}%
 \usepackage[]{tocloft} %
 \graphicspath{{./graphics/}} %
 %
@@ -85,30 +87,33 @@
 %---------------------------------------------------------
 \usepackage[lastexercise,answerdelayed]{exercise}
 \usepackage{ifthen}
-\newboolean{firstanswerofthechapter}%not used here  
+\newboolean{firstanswerofthechapter} 
 \usepackage{chngcntr}
 \usepackage{stackengine}
 \usepackage{tasks}
 \newlength{\longestlabel}
-\settowidth{\longestlabel}{\bfseries viii.}
-\settasks{counter-format={tsk[r].}, label-format={\bfseries}, label-width=\longestlabel,
-	item-indent=0pt, label-offset=2pt, column-sep={10pt}}
-
+\settowidth{\longestlabel}{\bfseries 1111}
+\settasks{counter-format=(tsk[a]), label-format={\bfseries}, label-width=\longestlabel,
+	item-indent=0pt, label-offset=2pt, column-sep={10pt}, before-skip = {0pt} , after-item-skip={0ex}}
+%
 \usepackage[lastexercise,answerdelayed]{exercise}
 \counterwithin{Exercise}{chapter}
 \counterwithin{Answer}{chapter}
 \renewcounter{Exercise}[chapter]
 \newcommand{\QuestionNB}{\bfseries\arabic{Question}.\ }
-\renewcommand{\ExerciseName}{Exercises }
-\renewcommand{\ExerciseHeader}{\noindent\def\stackalignment{l}% code from https://tex.stackexchange.com/a/195118/101651
-	\stackunder[0pt]{\colorbox{gray!50}{\textcolor{white}{\textbf{\LARGE\ExerciseHeaderNB\;\large\ExerciseName}}}}{\textcolor{gray!50}{\rule{\linewidth}{2pt}}}\medskip}
-\renewcommand{\AnswerName}{Answers to}
+\renewcommand{\ExerciseName}{}%Exercises }
+\renewcommand{\ExerciseHeader}{\def\stackalignment{l}
+	\stackunder[0pt]{\colorbox{gray!20}{\textbf{\large\textsection\ExerciseHeaderNB\ExerciseHeaderTitle\qquad}}}{\textcolor{gray!50}{\rule{\linewidth}{2pt}}}\medskip}
+\renewcommand{\AnswerName}{\textsection}
 \renewcommand{\AnswerHeader}{\ifthenelse{\boolean{firstanswerofthechapter}}%
 	{\bigskip\noindent{\textbf{CHAPTER \thechapter}}\newline\newline%
-		\noindent\bfseries\emph{{\AnswerName\ \ExerciseHeaderNB, page %
-				\pageref{\AnswerRef}}}\smallskip}
-	{\noindent\bfseries\emph{{\AnswerName\ \ExerciseHeaderNB, page \pageref{\AnswerRef}}}\smallskip}}
-\setlength{\QuestionIndent}{16pt}
+		\noindent\bfseries\colorbox{gray!20}{{\AnswerName\ \ExerciseHeaderNB, Page 				\pageref{\AnswerRef}}}\smallskip}
+	   {\noindent\bfseries\colorbox{gray!20}{{\AnswerName\ \ExerciseHeaderNB, Page     \pageref{\AnswerRef}}}\smallskip}}
+\setlength{\QuestionIndent}{18pt}
+\setlength{\QuestionBefore}{-5pt}
+\setlength{\AnswerSkipBefore}{-10pt}
+%\setlength{\ExerciseSkipBefore}{0\baselineskip}
+%\setlength{\ExerciseSkipAfter}{0pt}
 %---------------------------------------------------------
 % END exercise package code 
 %---------------------------------------------------------
@@ -137,14 +142,14 @@
 \clearpage\thispagestyle{empty}
 \vspace*{\fill}
 Engineering Mathematics - ENGE401\\
-Auckland University Of Technology\\
 Course Manual\\
+Auckland University Of Technology\\
 
 This project is on GitHub, find it \\
 and download the source files at: \\
 \url{https://github.com/millecodex/ENGE401} \\                            
 
-Licenced under MIT General License (c) 2019 \\   
+Licenced under MIT General License \copyright \,2019 \\   
 
 Version 2.1 by Jeff Nijsse, 2019.\\
 \href{mailto:Jeff.Nijsse@aut.ac.nz}{\texttt{Jeff.Nijsse@aut.ac.nz}}\\
@@ -156,8 +161,8 @@ Version 1.0 by Peter Watson, 2010.
 \tableofcontents
 \mainmatter
 %    Include main chapters here.
-\include{chAlgebra}
-%\include{chTrig}
+%\include{chAlgebra}
+\include{chTrig}
 %\include{chExponentials}
 %\include{chDifferentiation}
 %\include{chIntegration}
