@@ -4,9 +4,22 @@ In the first half of this chapter the three trigonometric functions (sine, cosin
 %---------------------------------------------------
 % pythagorean theorem
 %---------------------------------------------------
-\section{Pythagoras}
-Pythagoras is one of the most well known historical figures in mathematics and philosophy, primarily for the his eponymous theorem.
-
+\section*{Pythagoras}
+Pythagoras is one of the most well known historical figures in mathematics and philosophy, primarily for the his eponymous theorem. Given a right-angled triangle, the hypotenuse squared equals the sum of the squares of the other sides.
+\begin{tcolorbox}[colback=white]
+	\begin{multicols}{2}
+		\begin{center}
+			The Pythagorean Theorem:\\
+			
+			\vspace{1cm}$a^2+b^2=c^2$
+		\end{center}
+\columnbreak
+\begin{center}
+	\includegraphics[width=6cm]{trigPythagoras}
+\end{center}
+	\end{multicols}
+\end{tcolorbox}
+This diagram will be the basis for a lot of our study of triangles. We will return to the Pythagorean theorem in section~\ref{sec:identities} when discussing some special trigonometry relationships.
 %---------------------------------------------------
 % the unit circle and radians
 %---------------------------------------------------
@@ -14,7 +27,7 @@ Pythagoras is one of the most well known historical figures in mathematics and p
 It should come as no surprise that the convention for measuring angles should be the same as for measuring
 the distance around the perimeter of the unit circle.. An angle is measured in degrees and is the amount of
 rotation between two rays about a vertex. If the vertex is placed at the point $\left (0 ,0\right )$ and one ray is placed along the positive $x$-axis then we let the second ray go through the point $P (x ,y)$ on the unit circle so that the relationship between the angle and the arc length $t$ can be established. The convention is that the positive direction for measuring
-angles is anticlockwise and the negative direction for measuring angles is clockwise. You will be aware that one complete cycle measures 360$\mbox{{\ensuremath{{}^\circ}}}$. One degree therefore is $\frac{1}{360}$\ of one complete cycle. In this subject the word revolution is often used instead of cycle. Other terms with which you might be familiar are "a quarter turn" for $90 \mbox{{\ensuremath{{}^\circ}}}$ and "a half turn" for $180 \mbox{{\ensuremath{{}^\circ}}}$. 
+angles is anticlockwise and the negative direction for measuring angles is clockwise. You will be aware that one complete cycle measures \ang{360}. One degree therefore is $\frac{1}{360}$\ of one complete cycle. In this subject the word revolution is often used instead of cycle. Other terms with which you might be familiar are ``a quarter turn" for \ang{90} and ``a half turn" for \ang{180}. 
 
 If you draw a unit circle (centre $\left (0 ,0\right )$ radius $1$) then you can draw the ray through any terminal point and show the relationship between $t$ and the angle at the vertex $\left (0 ,0\right )$. 
 
@@ -24,148 +37,232 @@ The abbreviation for radians is \textit{rad}. This abbreviation will be used in 
 Some books uses the term ``angles in standard position" to describe this situation. We
 will not define this term unless it is unavoidable and will stick to rad.
 
-Using the language of geometry, the unit circle is cut by two rays one through the points $\left (0 ,0\right )$ and $\left (1 ,0\right )$ and the other through the points $\left (0 ,0\right )$ and $P \left (x ,y\right )$.  
 \columnsep =30pt
 \begin {multicols}{2}
-\setlength\fboxrule{0in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=2.469in, height=2.4275in,]{L4SZ281A}}
-$t$ is referred to as "the length of the arc". The
-angle $\theta $ between the two rays is referred to as "the angle \emph{subtended} at the point $\left (0 ,0\right )$". We will often leave out the word "subtended" however as it is implied. 
+\includegraphics[width=6cm]{L4SZ281A}
+\columnbreak
+
+Using the language of geometry, the unit circle is cut by two rays one through the points $\left (0 ,0\right )$ and $\left (1 ,0\right )$ and the other through the points $\left (0 ,0\right )$ and $P \left (x ,y\right )$. 
+
+$t$ is referred to as "the length of the arc". The angle $\theta $ between the two rays is referred to as "the angle \emph{subtended} at the point $\left (0 ,0\right )$". We will often leave out the word "subtended" however as it is implied. 
 \end {multicols}
 We can say therefore that the angle measured in radians is related to the same angle measured in degrees. the relationship between these two measures must be understood and must be able to be derived. 
 
 \subsection*{Relationship between Degrees and Radians}
-One complete revolution is 360$\mbox{{\ensuremath{{}^\circ}}}$ if the angle is measured in degrees and $2 \pi $ if the angle is measured in radians. So
-\begin{align*}2 \pi \text{}\mbox{rad} &  =  360 \mbox{{\ensuremath{{}^\circ}}} \\
-\text{or\  \ }\pi \text{}\mbox{rad} &  =  180 \mbox{{\ensuremath{{}^\circ}}}\end{align*}
+One complete revolution is \ang{360} if the angle is measured in degrees and $2 \pi $ if the angle is measured in radians. So
+\begin{align*}2 \pi \text{}\mbox{rad} &  =  \ang{360} \\
+\text{or\  \ }\pi \text{}\mbox{rad} &  =  \ang{180}
+\end{align*}
 You should derive this formula whenever you are asked to convert degrees to radians or radians
 to degrees. 
 
 \textbf{Example}
-(a) Convert 36$\mbox{{\ensuremath{{}^\circ}}}$ to radians 
+(a) Convert \ang{36} to radians 
 (b) Convert $\frac{\pi }{3}$ $\mbox{rad}$ to degrees 
 (c) Convert $1$ $\mbox{rad}$ to degrees 
-\textbf{Solution}(a)
-\begin{align*}180 \mbox{{\ensuremath{{}^\circ}}} &  =  \pi \text{}\mbox{rad} \\
-1 \mbox{{\ensuremath{{}^\circ}}} &  =  \frac{\pi }{180}\text{}\mbox{rad} \\
-36 \mbox{{\ensuremath{{}^\circ}}} &  =  \frac{\pi }{180} \times 36 =\frac{\pi }{5}\text{}\mbox{rad}\end{align*}
-(b)
-\begin{align*}\pi  \mbox{rad} &  =  180 \mbox{{\ensuremath{{}^\circ}}} \\
-\frac{\pi }{3} \mbox{rad} &  = \frac{180 \mbox{{\ensuremath{{}^\circ}}}}{3} =60 \mbox{{\ensuremath{{}^\circ}}}\end{align*}
-(c)
-\begin{align*}\pi  \mbox{rad} &  =  180 \mbox{{\ensuremath{{}^\circ}}} \\
-1 \mbox{rad} &  =  \frac{180 \mbox{{\ensuremath{{}^\circ}}}}{\pi } \\
- &  \approx   57.29577951 \mbox{{\ensuremath{{}^\circ}}} \\
- &  \approx   57.3 \mbox{{\ensuremath{{}^\circ}}}\end{align*}
 
-Note the similarity between the answers to (b) and (c). This is because $\frac{\pi }{3} =1.047197551$ so you would expect the values in degrees to be similar.  With this terminology we leave out the word measured when we talk about measuring angles. We say "the angle is $60 \mbox{{\ensuremath{{}^\circ}}}$" when we mean it has been measured as $60 \mbox{{\ensuremath{{}^\circ}}}$ or "the angle is $\frac{\pi }{3}$" to mean it has been measured as $\frac{\pi }{3}$ $\mbox{rad}$. Notice we always put in the degree symbol and often omit the units when the angle is measured in radians. Should units be omitted assume the angle is measured in radians. We often use the Greek symbol $\theta $\ for the angle subtended at the centre of the unit circle so $\theta  =60 \mbox{{\ensuremath{{}^\circ}}}$ or $\theta  =\frac{\pi }{3}$ are further examples of terminology that is commonly used.
+\textbf{Solution}\begin{tasks}[before-skip = {0ex} , after-skip={-5ex}](3)
+\task \begin{align*}\ang{180}  &  =  \pi \text{}\mbox{rad} \\
+\ang{1}  &  =  \frac{\pi }{180}\text{}\mbox{rad} \\
+\ang{36}  &  =  \frac{\pi }{180} \times 36 =\frac{\pi }{5}\text{}\mbox{rad}\end{align*}
+\task
+\begin{align*}\pi  \mbox{rad} &  =  \ang{180}  \\
+\frac{\pi }{3} \mbox{rad} &  = \frac{\ang{180} }{3} =\ang{60} \end{align*}
+\task
+\begin{align*}\pi  \mbox{rad} &  =  \ang{180} \\
+1 \mbox{rad} &  =  \frac{\ang{180} }{\pi } \\
+ &  \approx   \ang{57.29577951}  \\
+ &  \approx   \ang{57.3} \end{align*}
+\end{tasks}
+Note the similarity between the answers to (b) and (c). This is because $\frac{\pi }{3} =1.047197551$ so you would expect the values in degrees to be similar.  With this terminology we leave out the word measured when we talk about measuring angles. We say ``the angle is $\ang{60} $" when we mean it has been measured as $\ang{60} $ or ``the angle is $\frac{\pi }{3}$" to mean it has been measured as $\frac{\pi }{3}$ $\mbox{rad}$. Notice we always put in the degree symbol and often omit the units when the angle is measured in radians. Should units be omitted assume the angle is measured in radians. We often use the Greek symbol $\theta $\ for the angle subtended at the centre of the unit circle so $\theta  =\ang{60} $ or $\theta  =\frac{\pi }{3}$ are further examples of terminology that is commonly used.
 
 \subsection*{Arc Length}
-Arc length here.
+Let $\theta $ be the angle subtended at the centre for the ends of an arc of any circle then the fraction of the circumference of the circle is $\frac{\theta }{2 \pi }$ if $\theta $ is measured in radians and $\frac{\theta }{\ang{360}}$ if $\theta $ is measured in degrees. 
 
+The length of the circumference of any circle whose radius is $r$ is $2 \pi  r$. If $\theta $ is measured in radians
+\begin{equation*}\text{Length of arc} =\frac{\theta }{2 \pi } \times 2 \pi  r =\theta  r\text{or}r \theta 
+\end{equation*}
+
+If $\theta $ is measured in degrees
+\begin{equation*}\text{Length of arc} =\frac{\theta }{\ang{360}} \times 2 \pi  r
+\end{equation*}
+
+The simplicity of the first formula shows why working with radians is preferred. 
+
+\textbf{Example} Find the length of an arc that subtends an angle of \ang{45} at the centre of a circle whose radius is 9 cm. 
+
+\textbf{Solution} \begin{tasks}[counter-format=(tsk[1]),before-skip = {0ex},after-skip={-5ex}](2)
+	\task Method 1:\begin{eqnarray*}\text{Length of arc} &  = & \frac{\theta }{360 \mbox{{\ensuremath{{}^\circ}}}} \times 2 \pi  r \\
+	&  = & \frac{45}{360} \times 2 \pi  \times 9 \\
+	&  = & 2.25 \pi \text{}\mbox{cm} \\
+	&  \approx  & 7.07\text{}\mbox{cm}\end{eqnarray*}
+If an exact answer is required you should\\ leave the answer as $2.25 \pi $ $\mbox{cm}$. (Or $\frac{9 \pi }{4}$ $\mbox{cm}\text{.}$) 
+
+\task Method 2: Change degrees to radians first
+\begin{eqnarray*}180 \mbox{{\ensuremath{{}^\circ}}} &  = & \pi \text{}\mbox{rad} \\
+	1 \mbox{{\ensuremath{{}^\circ}}} &  = & \frac{\pi }{180} \\
+	45 \mbox{{\ensuremath{{}^\circ}}} &  = & \frac{\pi }{180} \times 45 \\
+	&  = & \frac{\pi }{4}\end{eqnarray*}
+Now, the length of arc $= r \theta = 9 \times \frac{\pi }{4} =\frac{9 \pi }{4}\text{}\mbox{cm}$.
+\end{tasks}
 %---------------------------------------------------
-% trig ratios
+% Right-Angled Triangles: trig ratios
 %---------------------------------------------------
 \section{Right-Angled Triangles}
-In this section we will use sine, cosine and tangent. You should have at your fingertips the definitions of sine, cosine and tangent for a right angled triangle:
-\begin{equation*}\sin  \theta  =\frac{\text{opposite}}{\text{hypotenuse}}\text{,}\cos  \theta  =\frac{\text{adjacent}}{\text{hypotenuse}}\text{and}\tan  \theta  =\frac{\text{opposite}}{\text{adjacent}}
-\end{equation*}
-You should be able to solve problems involving right angled triangles. A right angled triangle is uniquely defined, if as well as the right angle, you are given two other facts about the triangle. 
-\begin{enumerate}
-\item Given one side and one angle 
-\item Given two sides \end{enumerate}
-To be given two angles does not constitute two other facts as the two angles are complementary so that given one angle the other one is known.
+A right angled triangle is uniquely defined, if as well as the \ang{90} angle, you are given one side and one angle or two sides. To be given two angles does is not enough information as the scale of the triangle is not known. The sides of the triangle have names with respect to the angle of interest, $\theta$ in the diagram. 
+\begin{multicols}{2}
+\begin{center}
+	\includegraphics[width=7cm]{rightTriangle}
+\end{center}
+\columnbreak
+Notice that if $\theta$ changes, then the sides opposite and adjacent are reversed. These side names are helpful in defining the trigonometric ratios of sine, cosine and tangent. The phrase \textbf{SOH-CAH-TOA} is useful to remember the ratios.
+\end{multicols}
 
-% perhaps move this paragraph somewhere more appropriate
-The calculator gives approximate values of the trigonometric ratios. You must look at your question to check whether angles are in degrees or radians and ensure the calculator is first set in the right \emph{mode}. Remember all questions where degrees are to be used will give angles marked with a $\mbox{{\ensuremath{{}^\circ}}}$ symbol. You could assume though that when you are dealing with a static problem (i.e. one where a triangle is given and sides and angles are required) then the angle will be measured in degrees. 
 
-When you are required to find a side you select the trigonometric ratio and either multiply or divide. When you are required to find an angle you select the appropriate trigonometry ratio and use \emph{shift} with sin, cos or tan to find $\sin ^{ -1}$, $\cos ^{ -1}$ or $\tan ^{ -1}$ because $\sin ^{ -1}$ is said "the angle whose sine is" etc. 
+\begin{tcolorbox}
+\begin{equation*}\text{sine }  \theta  =\frac{\text{opposite}}{\text{hypotenuse}}\text{;}\qquad\text{cosine }  \theta  =\frac{\text{adjacent}}{\text{hypotenuse}}\text{;}\qquad\text{tangent }  \theta  =\frac{\text{opposite}}{\text{adjacent}}
+\end{equation*}\medskip
+\hspace{2.5cm}S O H\hspace{3cm}C A H\hspace{4cm}T O A
+\end{tcolorbox}
 
 %----------------------------------------------------
-\textbf{Example 1}
-The height of a steep cliff is to be measured from a point on the opposite side of the river.  The
-following diagram shows the measurements taken. Estimate the height of the cliff. 
-\columnsep =30pt
+\begin{multicols}{2}
+	\textbf{Example 1} Find the unknown side $x$\\
+	\begin{center}
+		\includegraphics[width=8cm]{trigSide1}
+	\end{center}
+
+	\columnbreak
+\textbf{Solution} Write the sine ratio and solve for $x$.\\
+\begin{align*}\sin 14 &= \frac{x}{17}\\
+x&=17\sin 14\\
+x&=4.11\end{align*}
+\end{multicols}
+
+\begin{multicols}{2}
+\textbf{Example 2} Find the unknown side $x$\\
+\begin{center}
+	\includegraphics[width=6cm]{trigSide2}
+\end{center}
+	\columnbreak
+\textbf{Solution} Write the tangent ratio and solve for $x$.
+\begin{align*}\tan 48 = \frac{x}{15}\\
+x=15\tan 28\\
+x=16.7\end{align*}
+\end{multicols}
+
+The calculator gives approximate values of the trigonometric ratios. You must look at your question to check whether angles are in degrees or radians and ensure the calculator is first set in the right mode. Questions where degrees are to be used will give angles marked with a $^\circ$ symbol. 
+
+
+When solving for an angle on your calculator you select the appropriate trigonometry ratio and use the \emph{shift} button with sin, cos or tan to find $\sin ^{ -1}$, $\cos ^{ -1}$ or $\tan ^{ -1}$. 
+%----------------------------------------------------
+\begin{multicols}{2}
+	\textbf{Example 3} Find the unknown angle $x$\\
+	\begin{center}
+		\includegraphics[width=7cm]{trigAngle1}
+	\end{center}
+	
+	\columnbreak
+	\textbf{Solution} Write the sine ratio and solve for $\theta$.\\
+	\begin{align*}\sin \theta &= \frac{8}{10}\\
+	\sin\theta&=0.8\\
+	\theta&=\sin^{-1}(0.8)\\
+	\theta&=\ang{53.1}
+	\end{align*}
+\end{multicols}
+
+\begin{multicols}{2}
+	\textbf{Example 4} Find the unknown angle $x$\\
+	\begin{center}
+		\includegraphics[width=4cm]{trigAngle2}
+	\end{center}
+	\columnbreak
+	\textbf{Solution} Write the cosine ratio and solve for $\theta$.
+	\begin{align*}\cos \theta = \frac{7}{11}\\
+	\theta=\cos^{-1} \left(\frac{7}{11}\right)\\
+	\theta=\ang{50.5}
+	\end{align*}
+\end{multicols}
+
+%----------------------------------------------------
+\textbf{Example 5}
+The height of a steep cliff is to be measured from a point on the opposite side of the river. The following diagram shows the measurements taken. Estimate the height of the cliff.
+
 \begin {multicols}{2}
-\setlength\fboxrule{0in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=9cm]{L4SZ281H}
-}
-\begin{align*}\frac{d}{58.2} &  =  \tan  50.0 \mbox{{\ensuremath{{}^\circ}}} \\
-d &  =  58.2 \times \tan  50.0 \mbox{{\ensuremath{{}^\circ}}} \\
-\frac{h}{d} &  =  \tan  76.3 \mbox{{\ensuremath{{}^\circ}}} \\
-h &  =  d \times \tan  76.3 \mbox{{\ensuremath{{}^\circ}}} \\
- &  =  58.2 \times \tan  50.0 \mbox{{\ensuremath{{}^\circ}}} \times \tan  76.3 \mbox{{\ensuremath{{}^\circ}}} \\
+\includegraphics[width=8cm]{L4SZ281H}
+\columnbreak
+\begin{align*}\frac{d}{58.2} &  =  \tan  \ang{50.0}  \\
+d &  =  58.2 \times \tan  \ang{50.0}  \\
+\frac{h}{d} &  =  \tan  \ang{76.3}  \\
+h &  =  d \times \tan  \ang{76.3}  \\
+ &  =  58.2 \times \tan  \ang{50.0}  \times \tan  \ang{76.3}  \\
  &  \approx   284.526397 \\
  &  \approx   284.5 \mbox{m}\end{align*}
 \end {multicols}
 
 %----------------------------------------------------
-\textbf{Example 2}
-To estimate the height of a mountain above a level plane the angle of elevation of the top of the mountain is measured to be $30 \mbox{{\ensuremath{{}^\circ}}}$. $600 \mbox{m}$ closer to the mountain across the plane it is found that the angle of elevation is $36 \mbox{{\ensuremath{{}^\circ}}}$. Estimate the height of the mountain. 
-\setlength\fboxrule{0in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=12cm]{L4SZ281I}}
-
-\begin{equation*}\frac{h}{x} =\tan  36 \mbox{{\ensuremath{{}^\circ}}}\text{and}\frac{h}{x +600} =\tan  30 \mbox{{\ensuremath{{}^\circ}}}
+\textbf{Example 6}
+To estimate the height of a mountain above a level plane the angle of elevation of the top of the mountain is measured to be $\ang{30} $. $600 \mbox{m}$ closer to the mountain across the plane it is found that the angle of elevation is $\ang{36} $. Estimate the height of the mountain. \\
+\includegraphics[width=10cm]{L4SZ281I}
+\begin{equation*}\frac{h}{x} =\tan  \ang{36} \text{and}\frac{h}{x +600} =\tan  \ang{30} 
 \end{equation*}
-
 We want $h$ so we eliminate $x$ between these two equations
-\begin{align*}x &  =  \frac{h}{\tan  36 \mbox{{\ensuremath{{}^\circ}}}}\text{and}x +600 =\frac{h}{\tan  30 \mbox{{\ensuremath{{}^\circ}}}} \\
-\frac{h}{\tan  30 \mbox{{\ensuremath{{}^\circ}}}} &  =  \frac{h}{\tan  36 \mbox{{\ensuremath{{}^\circ}}}} +600 \\
-\frac{h}{\tan  30 \mbox{{\ensuremath{{}^\circ}}}} -\frac{h}{\tan  36 \mbox{{\ensuremath{{}^\circ}}}} &  =  600 \\
-h \left (\frac{1}{\tan  30 \mbox{{\ensuremath{{}^\circ}}}} -\frac{1}{\tan  36 \mbox{{\ensuremath{{}^\circ}}}}\right ) &  =  600 \\
-h \genfrac{(}{)}{}{}{\tan  36 \mbox{{\ensuremath{{}^\circ}}} -\tan  30 \mbox{{\ensuremath{{}^\circ}}}}{\tan  30 \mbox{{\ensuremath{{}^\circ}}} \tan  36 \mbox{{\ensuremath{{}^\circ}}}} &  =  600 \\
-h &  =  600 \times \frac{\tan  30 \mbox{{\ensuremath{{}^\circ}}} \tan  36 \mbox{{\ensuremath{{}^\circ}}}}{\tan  36 \mbox{{\ensuremath{{}^\circ}}} -\tan  30 \mbox{{\ensuremath{{}^\circ}}}} \\
+\begin{align*}x &  =  \frac{h}{\tan  \ang{36} }\text{and}x +600 =\frac{h}{\tan  \ang{30} } \\
+\frac{h}{\tan  \ang{30} } &  =  \frac{h}{\tan  \ang{36} } +600 \\
+\frac{h}{\tan  \ang{30} } -\frac{h}{\tan  \ang{36} } &  =  600 \\
+h \left (\frac{1}{\tan  \ang{30} } -\frac{1}{\tan  \ang{36} }\right ) &  =  600 \\
+h \genfrac{(}{)}{}{}{\tan  \ang{36}  -\tan  \ang{30} }{\tan  \ang{30}  \tan  \ang{36} } &  =  600 \\
+h &  =  600 \times \frac{\tan  \ang{30}  \tan  \ang{36} }{\tan  \ang{36}  -\tan  \ang{30} } \\
  &  \approx   600 \times 2.811603815 \\
  &  \approx   1687 \mbox{m}\end{align*}
 
 %---------------------------------------------------
 % identities
 %---------------------------------------------------
-\subsection*{Identities}
-\subsection*{The Fundamental Pythagorean Identity}
-The unit circle has equation $x^{2} +y^{2} =1$ and we define $x =\cos  t$ and $y =\sin  t$ so
-\begin{equation*}x^{2} +y^{2} =1 \leadsto \left (\cos  t\right )^{2} +\left (\sin  t\right )^{2} =1
+\subsection*{Identities}\label{sec:identities}
+The unit circle has equation $x^{2} +y^{2} =1$ and we define $x =\cos  \theta$ and $y =\sin  \theta$ so
+\begin{equation*}x^{2} +y^{2} =1 \leadsto \left (\cos  \theta\right )^{2} +\left (\sin  \theta\right )^{2} =1
 \end{equation*}
-
 This is always written
-\begin{equation*}\sin ^{2} t +\cos ^{2} t =1
-\end{equation*}
-
-This is an \emph{identity} which means it is true for all values of $t$. 
-
-We will only cover these two identities: $\tan  t =\frac{\sin  t}{\cos  t}$ and $\sin ^{2} t +\cos ^{2} t =1$. 
+\begin{tcolorbox}\[\sin ^{2} \theta +\cos ^{2} \theta =1\]
+\end{tcolorbox}
+This is an \emph{identity} which means it is true for all values of $\theta$. There are many identities in trigonometry, we will only use the Pythagorean identity (above) and one more.
+Given $\sin =\frac{\text{opp}}{\text{adj}}$ we can solve for $\text{opp}=(\sin)(\text{hyp})$. Similarly from cosine:  $\text{adj}=(\cos)(\text{hyp})$. Substituting these into the tangent relationship:
+\begin{tcolorbox}\[\tan=\frac{\text{opp}}{\text{adj}}=\frac{(\sin)(\text{hyp})}{(\cos)(\text{hyp})}=\frac{\sin}{\cos}\]
+\end{tcolorbox}
+The sine and cosine law are two more unique relationships that we will cover in section~\ref{sec:applications}.
 
 %---------------------------------------------------
 % trig functions
 %---------------------------------------------------
-%\section{The Trigonometric Functions of Angles}
-In the previous section the angles were between $0 \mbox{{\ensuremath{{}^\circ}}}$ and $90 \mbox{{\ensuremath{{}^\circ}}}$. In this section the angles can take any value.
-\ Initially we consider angles between $0 \mbox{{\ensuremath{{}^\circ}}}$ and $360 \mbox{{\ensuremath{{}^\circ}}}$ and relate these to the radian measure between $0$ and $2 \pi $. We remind you that angles are measured anticlockwise from the positive $x$-axis. 
+\subsection*{All Students Take Calculus}
+In the previous section the angles were between $\ang{0} $ and $\ang{90} $. In this section the angles can take any value. Initially we consider angles between $\ang{0} $ and $\ang{360} $ and relate these to the radian measure between $0$ and $2 \pi $. We remind you that angles are measured anticlockwise from the positive $x$-axis. 
 
 If the point $P (x ,y)$ is in the first quadrant, $\theta $ is the angle between $OP$ and the positive $x$-axis and we complete the right triangle then we have created the following situation.  
-\columnsep =30pt
+
 \begin {multicols}{2}
-\setlength\fboxrule{0in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=3.774in, height=2.3454in,]{L4SZ281S}}
+\includegraphics[ width=3.774in, height=2.3454in,]{L4SZ281S}
 
 Let the hypotenuse be $r$ then
 \begin{equation*}r =\sqrt{x^{2} +y^{2}}
 \end{equation*}
-\end {multicols}
 Therefore
 \begin{equation*}\sin  \theta  =\frac{y}{r}\text{}\cos  \theta  =\frac{x}{r}\text{and}\tan  \theta  =\frac{y}{x}
 \end{equation*}
+\end {multicols}
+\begin {multicols}{2}
 We now let $\theta $ be any angle and define sine, cosine and tangent in the same way. For instance
 if $P (x ,y)$ is in the second quadrant:    
-\setlength\fboxrule{0in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=3.9868in, height=1.8161in,]{L4SZ281T}}
 
 $\sin  \theta  =\frac{y}{r}$ because $y$ is positive $\sin  \theta $ will be positive. ($r$ is positive by convention.) 
 
 $\cos  \theta  =\frac{x}{r}$ because $x$ is negative $\cos  \theta $ will be negative. 
 
 $\tan  \theta  =\frac{y}{x}$ because $y$ is positive and $x$ is negative $\tan  \theta $ will be negative. 
-
+\includegraphics[ width=3.9868in, height=1.8161in,]{L4SZ281T}
+\end{multicols}
 This pattern can be extended to quadrants 3 and 4. The mnemonic (\textbf{A}ll \textbf{S}tudents \textbf{T}ake \textbf{C}alculus) might help you remember which one is positive although you can always work it out if you need to. 
 
-%%%%----------------------------------------------------
-\textbf{Moved from previous section, check continuity}
-%%%%%----------------------------------------------------
 The value of a trigonometric function consists of two parts the numerical part and the sign. you must get both parts correct. In the previous section you related the values of a terminal point to another point in the first quadrant. A point on the unit circle could be in any one of the four quadrants. 
 
 \qquad \qquad \qquad \qquad
@@ -182,88 +279,77 @@ The value of a trigonometric function consists of two parts the numerical part a
 	\hline
 \end{tabular}
 
-Some people learn this as a mnemonic All sin tan cos. (Meaning all are positive in the first quadrant, only sine is positive in the second quadrant, only tangent is positive in the third quadrant and only cosine is positive in the fourth quadrant.) Two little sentences that are sometimes seen to help you to get this right are "\textbf{A}ll \textbf{s}tudents \textbf{t}ake \textbf{c}alculus," and "\textbf{ACTS} clockwise." This means that as soon as you know which quadrant the terminal point is in you know the sign of the trigonometric function.
+Some people learn this as a mnemonic All sin tan cos. (Meaning all are positive in the first quadrant, only sine is positive in the second quadrant, only tangent is positive in the third quadrant and only cosine is positive in the fourth quadrant.) 
 
 \subsection*{The Area of a Triangle}
-The fundamental formula for the area of a triangle is
-\begin{equation*}\text{Area} =\frac{1}{2} \times \text{base} \times \text{height}
-\end{equation*}
-
-Using the trigonometric functions the height can be replaced and the formula becomes
+The fundamental formula for the area of a triangle is $\text{Area} =\frac{1}{2} \times \text{base} \times \text{height}$ Using the trigonometric functions the height can be replaced and the formula becomes:
 \begin{equation*}\text{Area} =\frac{1}{2} \times \text{product of two sides} \times \text{sine of the included angle}
 \end{equation*}
-
 The formula is particularly easy to remember in symbolic form. Let the triangle have vertices $A$, $B$ and $C$, so the the sides opposite these angles are $a$, $b$ and $c$ respectively. Then the area can be expressed symbolically as
 \begin{equation*}\text{Area} =\frac{1}{2} a b \sin  C =\frac{1}{2} b c \sin  A =\frac{1}{2} a c \sin  B
 \end{equation*}
 
 \columnsep =30pt
 \begin {multicols}{2} 
-\setlength\fboxrule{0in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=3.1012in, height=1.9415in,]{L4SZ281U}}
+\includegraphics[width=8cm]{L4SZ281U}
 
-\begin{align*}\sin  A &  = \frac{h}{c}\text{so}h =c \sin  A \\
+\begin{align*}\sin  A &  = \frac{h}{c}\text{ and }h =c \sin  A \\
 \text{Area} &  =  \frac{1}{2} \times \text{base} \times \text{height} \\
  &  =  \frac{1}{2} \times b \times c \sin  A =\frac{1}{2} b c \sin  A
  \end{align*}
 \end {multicols}
-
-It depends where you draw $h$ and which angle you choose to use as to which formula you finish up with. The key point to remember is $b$ and $c$ are two sides and $A$ is the angle between them. The triangle above shows $A$ as an acute angle (between $0$ and $90 \mbox{{\ensuremath{{}^\circ}}}$). If the angle is obtuse (between $90 \mbox{{\ensuremath{{}^\circ}}}$ and $180 \mbox{{\ensuremath{{}^\circ}}}$) the formula still holds. 
-   
-\setlength\fboxrule{0in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=3.6573in, height=1.6769in,]{L4SZ281V}}
-
+It depends where you draw $h$ and which angle you choose to use as to which formula you finish up with. The key point to remember is $b$ and $c$ are two sides and $A$ is the angle between them. The triangle above shows $A$ as an acute angle (between $\ang{0}$ and $\ang{90} $). If the angle is obtuse (between $\ang{90} $ and $\ang{180} $) the formula still holds. 
+\begin{multicols}{2}
+\includegraphics[ width=8cm]{L4SZ281V}
 The angle is in the second quadrant and $\sin  (180 -\theta ) =\sin  \theta $, so $\sin  (180 -\theta ) =\frac{h}{c}$ can be written as $\sin  \theta  =\frac{h}{c}$ or $h =c \sin  \theta $ or $h =c \sin  A$ where $A$ is obtuse. So the area is $\frac{1}{2} b c \sin  A$ 
-
-\textbf{Example 5}
-A triangle has two sides of $5 \mbox{cm}$ and $8 \mbox{cm}$ and the angle between them is $150 \mbox{{\ensuremath{{}^\circ}}}$. Find its area.
-\begin{equation*}\text{Area} =\frac{1}{2} \times 5 \times 8 \times \sin  150 \mbox{{\ensuremath{{}^\circ}}}
+\end{multicols}
+\textbf{Example} A triangle has two sides of $5 \mbox{cm}$ and $8 \mbox{cm}$ and the angle between them is $\ang{150} $. Find its area.
+\begin{equation*}\text{Area} =\frac{1}{2} \times 5 \times 8 \times \sin  \ang{150} 
 \end{equation*}
 
 It helps to remember that $\sin  150 =\sin  30 =\frac{1}{2}$
-\begin{equation*}\text{Area} =\frac{1}{2} \times 5 \times 8 \times \frac{1}{2} =10 cm^{2}
+\begin{equation*}\text{Area} =\frac{1}{2} \times 5 \times 8 \times \frac{1}{2} =10 \text{ cm}^{2}
 \end{equation*}
-
-
 
 %---------------------------------------------------
 % TRIG FUNCTIONS & GRAPHS
 %---------------------------------------------------
 \section{Trig Functions of Real Numbers}
-In this next part of the chapter the three main trigonometric functions (sine, cosine and tangent) will be studied. They will be viewed as functions of real numbers. This means that the domains of the functions are the real numbers. The first half viewed the functions in terms of angles. This
-means that the domains of the functions will be angles. The trigonometric functions defined in these two ways are identical and there is a simple rule connecting the domains. Why do we show you the two approaches? Trigonometry will be used to solve a variety of problems and these can be divided into two groups, dynamic problems and static problems. When dynamic problems (such as problems involving motion) are being solved real numbers will be used. When static problems (such as finding distances and angles for triangles) are being solved angles will be used. 
+In this next part of the chapter the three main trigonometric functions (sine, cosine and tangent) will be studied. They will be viewed as functions of real numbers rather than angles. The trigonometric functions defined in these two ways are identical and there is a simple rule connecting the domains. Why do we show you the two approaches? Trigonometry will be used to solve a variety of problems and these can be divided into two groups, dynamic problems and static problems. When dynamic problems (such as problems involving motion) are being solved real numbers will be used. When static problems (such as finding distances and angles for triangles) are being solved angles will be used. 
 
 %---------------------------------------------------
 % trig graphs
 %---------------------------------------------------
 %\section{Trigonometric Functions}
-You should be familiar with the fundamental graphs of $y =\sin  t$ and $y =\cos  t$. These graphs are the basis of this section. \desmos can easily show you the shape of $y =\sin  t$ and $y =\cos  t$ so if you are asked to draw a rough sketch of these curves you should plot a few key points and draw a smooth curve between them. You will usually be given the required domain however if you are not you would choose to draw these for one complete cycle ($0 -2 \pi $). To sketch $y =\sin  t$ it is enough to select as key points $t =0$, $\frac{\pi }{2}$, $\pi $, $\frac{3 \pi }{2}$, $2 \pi $. 
+You should be familiar with the fundamental graphs of $y =\sin  x$ and $y =\cos  x$. These graphs are the basis of this section. \Desmos can easily show you the shape of $y =\sin  x$ and $y =\cos  x$ so if you are asked to draw a rough sketch of these curves you should plot a few key points and draw a smooth curve between them. You will usually be given the required domain however if you are not you would choose to draw these for one complete cycle ($0 -2 \pi $). To sketch $y =\sin  x$ it is enough to select as key points $x =0$, $\frac{\pi }{2}$, $\pi $, $\frac{3 \pi }{2}$, $2 \pi $. 
 
 
 \begin{tabular}[c]{|l|l|l|l|l|l|}\hline
-	$t$  & $0$  & $\frac{\pi }{2}$  & $\pi $  & $\frac{3 \pi }{2}$  & $2 \pi $  \\
+	$x$  & $0$  & $\frac{\pi }{2}$  & $\pi $  & $\frac{3 \pi }{2}$  & $2 \pi $  \\
 	\hline
-	$y =\sin  t$  & $0$  & $1$  & $0$  & $ -1$  & $0$  \\
+	$y =\sin  x$  & $0$  & $1$  & $0$  & $ -1$  & $0$  \\
 	\hline
 \end{tabular}
 
-Similarly to sketch $y =\cos  t$ the same values of $t$ give 
+Similarly to sketch $y =\cos x$ the same values of $x$ give 
 
 
 \begin{tabular}[c]{|l|l|l|l|l|l|}\hline
-	$t$  & $0$  & $\frac{\pi }{2}$  & $\pi $  & $\frac{3 \pi }{2}$  & $2 \pi $  \\
+	$x$  & $0$  & $\frac{\pi }{2}$  & $\pi $  & $\frac{3 \pi }{2}$  & $2 \pi $  \\
 	\hline
-	$y =\cos  t$  & $1$  & $0$  & $ -1$  & $0$  & $1$  \\
+	$y =\cos  x$  & $1$  & $0$  & $ -1$  & $0$  & $1$  \\
 	\hline
 \end{tabular}
 
-You will be aware that these curves repeat this pattern every $2 \pi $ where $t$ extends in both the positive and negative directions. 
+You will be aware that these curves repeat this pattern every $2 \pi $ where $x$ extends in both the positive and negative directions. 
 
 $0 -2 \pi $ represents one complete cycle. Mathematically we say
-\begin{align*}\sin  \left (t +2 n \pi \right ) &  = \sin  t\text{\  for any integer}n \\
-	\cos  \left (t +2 n \pi \right ) &  = \cos  t\text{\  for any integer}n\end{align*}
+\begin{align*}\sin  \left (x +2 n \pi \right ) &  = \sin  x\text{\  for any integer}n \\
+	\cos  \left (x +2 n \pi \right ) &  = \cos  x\text{\  for any integer}n\end{align*}
 
 Aside: instead of "for any integer $n$" we can write $ \forall n \in \mathbb{Z}$. 
 
-A function that displays this characteristic is described as \emph{periodic} and for $y =\sin  t$ and $y =\cos  t$ the \emph{period} is $2 \pi $. 
+A function that displays this characteristic is described as \emph{periodic} and for $y =\sin x$ and $y =\cos x$ the \emph{period} is $2 \pi $. 
 
 You will often be asked to state the period of a trigonometric function so for sine and cosine it
 is wise to remember that often the period is $2 \pi $. This means you need only worry about the distinctly different class of examples
@@ -273,7 +359,7 @@ You will sometimes be asked to sketch a graph for a given number of periods or a
 
 \subsection{Transformations}
 The following six transformations can be applied to any function including sine, cosine, and tangent. 
-\begin{tasks}[counter-format=tsk[1].,label-format={},](3)
+\begin{tasks}[style=itemize](3)
 \task Vertical shift 
 \task Horizontal shift 
 \task Vertical stretch 
@@ -283,55 +369,43 @@ The following six transformations can be applied to any function including sine,
 \end{tasks}
 
 \textbf{Example 1}
-Sketch $y =\sin  \left (t -\frac{\pi }{2}\right ) +3$ 
-1. This may be considered as a sine curve shifted $\frac{\pi }{2}$ to the right and $3$ upwards. 
-\textbf{Definition:} A horizontal shift of a sine curve or cosine curve is called a \emph{phase shift}. 
-2. Transform the 5 point summary 
-\begin{tabular}[c]{|l|l|l|l|l|l|}\hline
-	$t$  & $0$  & $\frac{\pi }{2}$  & $\pi $  & $\frac{3 \pi }{2}$  & $2 \pi $  \\
-	\hline
-	$\sin  t$  & $0$  & $1$  & $0$  & $ -1$  & $0$  \\
-	\hline
-	$\sin  \left (t -\frac{\pi }{2}\right )$  & $ -1$  & $0$  & $1$  & $0$  & $ -1$  \\
-	\hline
-	$\sin  \left (t -\frac{\pi }{2}\right ) +3$  & $2$  & $3$  & $4$  & $3$  & $2$  \\
-	\hline
+Sketch $y =\sin  \left (x -\frac{\pi }{2}\right ) +3$ \\
+1. This may be considered as a sine curve shifted $\frac{\pi }{2}$ to the right and $3$ upwards.\\ 
+\textbf{Definition:} A horizontal shift of a sine curve or cosine curve is called a \emph{phase shift}. \\
+2. Transform the 5 point summary \\
+\begin{tabular}{llllll}\toprule
+	$x$  & $0$  & $\frac{\pi }{2}$  & $\pi $  & $\frac{3 \pi }{2}$  & $2 \pi $  \\
+	\midrule
+	$\sin  x$  & $0$  & $1$  & $0$  & $ -1$  & $0$  \\
+	\midrule
+	$\sin  \left (x -\frac{\pi }{2}\right )$  & $ -1$  & $0$  & $1$  & $0$  & $ -1$  \\
+	\midrule
+	$\sin  \left (x -\frac{\pi }{2}\right ) +3$  & $2$  & $3$  & $4$  & $3$  & $2$  \\
+	\bottomrule
 \end{tabular}
+
 3. The difference between this approach and the previous one is that the values are calculated
-from the 5 values of $t$. Maybe an additional row containing $t -\frac{\pi }{2}$ values will help. 
-\begin{tabular}[c]{|l|l|l|l|l|l|}\hline
-	$t$  & $0$  & $\frac{\pi }{2}$  & $\pi $  & $\frac{3 \pi }{2}$  & $2 \pi $  \\
-	\hline
-	$t -\frac{\pi }{2}$  & $ -\frac{\pi }{2}$  & $0$  & $\frac{\pi }{2}$  & $\pi $  & $\frac{3 \pi }{2}$  \\
-	\hline
-	$\sin  \left (t -\frac{\pi }{2}\right ) +3$  & $2$  & $3$  & $4$  & $3$  & $2$  \\
-	\hline
-\end{tabular}
-4. Desmos confirms this 
-\setlength\fboxrule{0.01in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=4.427in, height=2.3886in,]{L4SZ270G}}
-You would select the most appropriate way to tackle a problem based on the information given and the outcome expected. 
-
-\textbf{Example 2} Sketch $y =\cos  (x -\frac{\pi }{6})$ 
-
-You could use a table of values however this is $y =\cos  x$ with a horizontal shift of $\frac{\pi }{6}$ to the right. 
-
-Complete the following to show the answer. (This is the graph of $y =\cos  x .)$ 
-
-
-\setlength\fboxrule{0.01in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=4.9095in, height=2.4275in,]{L4SZ270H}}
-
-\textbf{Example 3} Sketch $y =2 \cos  t$ \\
-\begin{tabular}[c]{|l|l|l|l|l|l|}\hline
-	$t$  & $0$  & $\frac{\pi }{2}$  & $\pi $  & $\frac{3 \pi }{2}$  & $2 \pi $  \\
-	\hline
-	$\cos  t$  & $1$  & $0$  & $ -1$  & $0$  & $1$  \\
-	\hline
-	$2 \cos  t$  & $2$  & $0$  & $ -2$  & $0$  & $2$  \\
-	\hline
+from the 5 values of $x$. Maybe an additional row containing $x -\frac{\pi }{2}$ values will help. \\
+\begin{tabular}{llllll}\toprule
+	$x$  & $0$  & $\frac{\pi }{2}$  & $\pi $  & $\frac{3 \pi }{2}$  & $2 \pi $  \\
+	\midrule
+	$x -\frac{\pi }{2}$  & $ -\frac{\pi }{2}$  & $0$  & $\frac{\pi }{2}$  & $\pi $  & $\frac{3 \pi }{2}$  \\
+	\midrule
+	$\sin  \left (x -\frac{\pi }{2}\right ) +3$  & $2$  & $3$  & $4$  & $3$  & $2$  \\
+	\bottomrule
 \end{tabular}
 
-This is a vertical stretch of 2. You could roughly sketch this or use Desmos. 
-\setlength\fboxrule{0.01in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=3.09in, height=2.0669in,]{L4SZ270I}}
+4. Desmos confirms this. The plot shows $y=\sin x$ as reference.\\
+\begin{center}
+\includegraphics[width=8cm]{trigShift1}
+\end{center}
+
+
+\textbf{Example 2} Sketch $y =\cos  (x -\frac{\pi }{6})$.
+\textbf{Solution} You could use a table of values however this is $y =\cos  x$ with a horizontal shift of $\frac{\pi }{6}$ to the right. Sketch the transformation on top of the graph of $y =\cos  x $.
+\begin{center}
+\includegraphics[width=10cm]{L4SZ270H}
+\end{center}
 
 In general $y =a \sin  x$ represents a vertical stretch of $y =\sin  x$ by $a$. If $a$ is negative the transformation can either be described as a negative stretch or (preferably) as a \emph{stretch}
 of $\left \vert a\right \vert $ followed by a \emph{reflection} in the $x$-axis. Recall the reflection of $y =f \left (x\right )$ in the $x$-axis is $y = -f \left (x\right )$. The number $\left \vert a\right \vert $ is called the \emph{amplitude} for both $y =\sin  x$ and $y =\cos  x\text{.}$ 
@@ -343,58 +417,14 @@ $y =\sin  x$ has a maximum value of $1$ and a minimum value of $ -1$. the curve 
 
 Recall the reflection of $y =f (x)$in the $y$-axis is $y =f ( -x)$ so you would expect $y =\cos  ( -t)$ to be the reflection of $y =\cos  t$ in the $y$-axis. 
 
-\begin{tabular}[c]{|l|l|l|l|l|l||l|l|l|l|l|l|l}
-	$t$  & $0$  & $\frac{\pi }{2}$  & $\pi $  & $\frac{3 \pi }{2}$  & $2 \pi $  &  & $t$  & $0$  & $\frac{\pi }{2}$  & $\pi $  & $\frac{3 \pi }{2}$  & $2 \pi $  \\
-	$ -t$  & $0$  & $ -\frac{\pi }{2}$  & $ -\pi $  & $ -\frac{3 \pi }{2}$  & $ -2 \pi $  &  & $\cos  t$  & $1$  & $0$  & $ -1$  & $0$  & $1$  \\
-	$\cos  \left ( -t\right )$  & $1$  & $0$  & $ -1$  & $0$  & $1$  &  &  &  &  &  &  &  \\
-	\multicolumn{1}{|l}{
-	}
-\end{tabular}
-You can see from the table at the right that this looks exactly the same as
-$y =\cos  t$ so $\cos  t$ is an \emph{even} function. When the $y$-axis is an axis of symmetry the function is an \emph{even} function. 
-\setlength\fboxrule{0.01in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=4.587in, height=2.1689in,]{L4SZ270J}}
 
-\textbf{Example 5} Sketch $y =\sin  \frac{1}{2} x$ 
+\textbf{Example 5} Sketch $y =\sin \left( \frac{1}{2}x\right)$ 
 
-\begin{tabular}[c]{|l|l|l|l|l|l|l|l|l|l|}\hline
-	$x$  & $0$  & $\frac{\pi }{2}$  & $\pi $  & $\frac{3 \pi }{2}$  & $2 \pi $  & $\frac{5 \pi }{2}$  & $3 \pi $  & $\frac{7 \pi }{2}$  & $4 \pi $  \\
-	\hline
-	$\frac{1}{2} x$  & $0$  & $\frac{\pi }{4}$  & $\frac{\pi }{2}$  & $\frac{3 \pi }{4}$  & $\pi $  & $\frac{5 \pi }{4}$  & $\frac{3 \pi }{2}$  & $\frac{7 \pi }{4}$  & $2 \pi $  \\
-	\hline
-	$\sin  \frac{1}{2} x$  & $0$  &  & $1$  &  & $0$  &  & $ -1$  &  & $0$  \\
-	\hline
-\end{tabular}
 
-In this case one cycle is achieved only after $x$ has reached $4 \pi $. The period therefore is $4 \pi $. 
-\setlength\fboxrule{0.01in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=4.0698in, height=1.9372in,]{L4SZ270K}}
+\textbf{Example 6} Sketch $y =\cos(2x)$ 
 
-\textbf{Example 6} Sketch $y =\cos  2 x$ 
 
-\begin{tabular}[c]{|l|l|l|l|l|l|}\hline
-	$x$  & $0$  & $\frac{\pi }{2}$  & $\pi $  & $\frac{3 \pi }{2}$  & $2 \pi $  \\
-	\hline
-	$2 x$  & $0$  & $\pi $  & $2 \pi $  & $3 \pi $  & $4 \pi $  \\
-	\hline
-	$\cos  2 x$  & $1$  & $ -1$  & $1$  & $ -1$  & $1$  \\
-	\hline
-\end{tabular}
 
-Maybe this is enough to enable you to sketch the curve. You notice the zeros that you usually get
-in the table are missing and the way to include them is to select intermediate $x$ values. 
-
-\begin{tabular}[c]{|l|l|l|l|l|l|}\hline
-	$x$  & $0$  & $\frac{\pi }{4}$  & $\frac{\pi }{2}$  & $\frac{3 \pi }{4}$  & $\pi $  \\
-	\hline
-	$2 x$  & $0$  & $\frac{\pi }{2}$  & $\pi $  & $\frac{3 \pi }{2}$  & $2 \pi $  \\
-	\hline
-	$\cos  2 x$  & $1$  & $0$  & $ -1$  & $0$  & $1$  \\
-	\hline
-\end{tabular}
-\setlength\fboxrule{0.01in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=3.0666in, height=1.9614in,]{L4SZ270L}}
-
-Notice by sketching from $0$ to $2 \pi $ $2$ cycles are drawn. The period here is $\pi $. There is a pattern emerging. Given $y =\sin  k x$ or $y =\cos  k x$. The value of $k$ tells you how many cycles in $2 \pi $. If $k =2$ there are $2$ cycles in $2 \pi $ so one cycle takes $\pi $. If $k =\frac{1}{2}$ there is $\frac{1}{2}$ cycle in $2 \pi $ therefore one cycle will take $4 \pi $. Looking at this the other way. The period is the interval required for one cycle so when $k =2$ the period $ =\pi $ and when $k =\frac{1}{2}$ the period $ =4 \pi \text{.}$ 
-
-In general given $y =\sin  k x$ or $y =\cos  k x$ the period is $\frac{2 \pi }{k}$. In a test or exam, questions will be set to test these concepts, however, the topic can be complicated very easily and in these cases Desmos or other software should be used to sketch the graph. 
 
 \subsection{Tangent}
 This section in the textbook covers the tangent, cotangent, secant and cosecant functions. In this course we will concentrate on the tangent function. the remaining three functions (often called the reciprocal functions) will only be covered when they are needed. By focussing on sine, cosine and tangent the majority of problems we encounter can be solved. Furthermore these are the functions we can evaluate immediately by pressing appropriate keys on the calculator. 
@@ -436,7 +466,7 @@ Aside: You must not confuse $y =\tan  x$ with $y =x^{3}$. While they may appear 
 %---------------------------------------------------
 % sine rule and cosing rule
 %---------------------------------------------------
-\section{Applications}
+\section{Applications}\label{sec:applications}
 \subsection{The Sine Rule}
 In this section we use the Sine Rule to find the sides and angles in triangles without a right angle. In the next section we use the Cosine Rule to find sides and angles in triangles also, so as you study these two sections you need to learn which problems require the Sine Rule and which require the Cosine Rule. 
 
@@ -507,16 +537,16 @@ Fractions can always be inverted as long as the same process is applied to each 
 }
 \\\relax (a) To find $c$
 \begin{align*}\frac{c}{\sin  C} &  = \frac{b}{\sin  B} \\
-\frac{c}{\sin  43 \mbox{{\ensuremath{{}^\circ}}}} &  = \frac{5}{\sin  35 \mbox{{\ensuremath{{}^\circ}}}} \\
-c &  = \frac{5 \sin  43 \mbox{{\ensuremath{{}^\circ}}}}{\sin  35 \mbox{{\ensuremath{{}^\circ}}}} \\
+\frac{c}{\sin  43 } &  = \frac{5}{\sin  35 } \\
+c &  = \frac{5 \sin  43 }{\sin  35 } \\
 &  \approx   5.945139277 \approx 5.9 \mbox{cm}\text{(1 dp)}\end{align*} \\\relax (b) To find $a$ 
 
-(i) $A =180 \mbox{{\ensuremath{{}^\circ}}} -(35 \mbox{{\ensuremath{{}^\circ}}} +43 \mbox{{\ensuremath{{}^\circ}}}) =180 \mbox{{\ensuremath{{}^\circ}}} -78 \mbox{{\ensuremath{{}^\circ}}} =102 \mbox{{\ensuremath{{}^\circ}}}$ 
+(i) $A =\ang{180}  -(\ang{35}  +\ang{43} ) =\ang{180}  -\ang{78}  =\ang{102} $ 
 
 (ii) It is usually wise to go back to the original data (i.e. use $b$ and $B$ rather than $c$ and $C$).
 \begin{align*}\frac{a}{\sin  A} &  = \frac{b}{\sin  B} \\
-\frac{a}{\sin  102 \mbox{{\ensuremath{{}^\circ}}}} &  = \frac{5}{\sin  35 \mbox{{\ensuremath{{}^\circ}}}} \\
-a &  = \frac{5 \sin  102 \mbox{{\ensuremath{{}^\circ}}}}{\sin  35 \mbox{{\ensuremath{{}^\circ}}}} \\
+\frac{a}{\sin  102 } &  = \frac{5}{\sin  35 } \\
+a &  = \frac{5 \sin  102 }{\sin  35 } \\
 &  \approx   8.526741501 \approx 8.5 \mbox{cm}\text{(1 dp)}\end{align*}
 
 These two calculations illustrate the first two cases in which the Sine Rule is used. You will notice that the triangle has been completely solved in the course of this example. We started with one side and two angles and we found the other two sides and the other angle. 
@@ -538,7 +568,7 @@ The two solutions case is often referred to as the ambiguous case. The discussio
 \begin{equation*}b \sin  A <a <b
 \end{equation*}
 
-\textbf{Example 2} Given $a =30 \mbox{{\ensuremath{{}^\circ}}}$, $a =8$ and $b =7$ solve the triangle (i.e. find $B$, $C$ and $c$).    
+\textbf{Example 2} Given $a =\ang{30} $, $a =8$ and $b =7$ solve the triangle (i.e. find $B$, $C$ and $c$).    
 \setlength\fboxrule{0in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=4.2739in, height=1.2202in,]{L4SZ281Z}}
 
 Because $8 >7$ this is the one solution case. 
@@ -546,21 +576,21 @@ Because $8 >7$ this is the one solution case.
 1. Find $B$
 \begin{align*}\frac{\sin  B}{b} &  = \frac{\sin  A}{a} \\
 \sin  B &  = \frac{b \sin  A}{a} \\
-&  = \frac{7 \sin  30 \mbox{{\ensuremath{{}^\circ}}}}{8} =0.4375 \\
-B &  = \sin ^{ -1} 0.4375 \approx 25.94 \mbox{{\ensuremath{{}^\circ}}}\end{align*}
+&  = \frac{7 \sin  30 }{8} =0.4375 \\
+B &  = \sin ^{ -1} 0.4375 \approx \ang{25.94} \end{align*}
 
 2. Find $C$
-\begin{align*}C &  = 180 \mbox{{\ensuremath{{}^\circ}}} -(30 \mbox{{\ensuremath{{}^\circ}}} +25.94 \mbox{{\ensuremath{{}^\circ}}}) \\
-&  = 124.06 \mbox{{\ensuremath{{}^\circ}}}\end{align*}
+\begin{align*}C &  = \ang{180}  -(\ang{30}  +\ang{25.94} ) \\
+&  = \ang{124.06} \end{align*}
 
 3. Find $c$
 \begin{align*}\frac{c}{\sin  C} &  = \frac{a}{\sin  A} \\
 c &  = \frac{a \sin  C}{\sin a} \\
-&  = \frac{8 \sin  124.06 \mbox{{\ensuremath{{}^\circ}}}}{\sin  30 \mbox{{\ensuremath{{}^\circ}}}} \\
+&  = \frac{8 \sin  124.06 }{\sin  30 } \\
 &  \approx   13.3\end{align*}
 
 %--------ambiguous case example---------------------------
-\textbf{Example 3 - The Ambiguous Case} Given $A =30 \mbox{{\ensuremath{{}^\circ}}}$, $a =6$ and $b =7$ solve the triangle. 
+\textbf{Example 3 - The Ambiguous Case} Given $A =\ang{30} $, $a =6$ and $b =7$ solve the triangle. 
 
 In this case $b \sin  A =3.5$ and $b =7$ so as $a$ lies between $3.5$ and $7$. This is the ambiguous case, therefore there are two solutions. 
 \columnsep =30pt
@@ -577,36 +607,36 @@ It is best to visualise these two solutions on the same diagram so that the isos
 1. Find $B$
 \begin{align*}\frac{\sin  B}{b} &  = \frac{\sin  A}{a} \\
 \sin  B &  = \frac{b \sin  A}{a} \\
-&  = \frac{7 \sin  30 \mbox{{\ensuremath{{}^\circ}}}}{6} =0.58 \dot{3} \\
-B &  = \sin ^{ -1} 0.58 \dot{3} \approx 35.69 \mbox{{\ensuremath{{}^\circ}}}\end{align*}
+&  = \frac{7 \sin  30 }{6} =0.58 \dot{3} \\
+B &  = \sin ^{ -1} 0.58 \dot{3} \approx \ang{35.69} \end{align*}
 
 2. Find $C$
-\begin{align*}C &  = 180 \mbox{{\ensuremath{{}^\circ}}} -(30 \mbox{{\ensuremath{{}^\circ}}} +35.69 \mbox{{\ensuremath{{}^\circ}}}) \\
-&  = 114.31 \mbox{{\ensuremath{{}^\circ}}}\end{align*}
+\begin{align*}C &  = \ang{180}  -(\ang{30}  +\ang{35.69} ) \\
+&  = \ang{114.31} \end{align*}
 
 3. Find $c$
 \begin{align*}\frac{c}{\sin  C} &  = \frac{a}{\sin  A} \\
 c &  = \frac{a \sin  C}{\sin  A} \\
-&  = \frac{6 \sin  114.31 \mbox{{\ensuremath{{}^\circ}}}}{\sin  30 \mbox{{\ensuremath{{}^\circ}}}} \\
+&  = \frac{6 \sin  114.31 }{\sin  30 } \\
 &  \approx   10.9\end{align*}
 
 \textbf{Second solution} 
 1. Find the second value of $B$ 
 
-\begin{equation*}B =180 \mbox{{\ensuremath{{}^\circ}}} -35.69 \mbox{{\ensuremath{{}^\circ}}} =144.31 \mbox{{\ensuremath{{}^\circ}}}
+\begin{equation*}B =\ang{180}  -\ang{35.69}  =\ang{144.31} 
 \end{equation*}
 
 2. Find $C$
-\begin{equation*}C =180 \mbox{{\ensuremath{{}^\circ}}} -(30 \mbox{{\ensuremath{{}^\circ}}} +144.31 \mbox{{\ensuremath{{}^\circ}}}) =180 \mbox{{\ensuremath{{}^\circ}}} -174.31 \mbox{{\ensuremath{{}^\circ}}} =5.69 \mbox{{\ensuremath{{}^\circ}}}
+\begin{equation*}C =\ang{180} -(\ang{30}  +\ang{144.31} ) =\ang{180}  -\ang{174.31}  =\ang{5.69} 
 \end{equation*}
 
 (Or if you remember the rule that the exterior angle of a triangle is the sum of the two interior
-opposite angles $C +30 \mbox{{\ensuremath{{}^\circ}}} =35.69 \mbox{{\ensuremath{{}^\circ}}}$ so $C =35.69 \mbox{{\ensuremath{{}^\circ}}} -30 \mbox{{\ensuremath{{}^\circ}}} =5.69 \mbox{{\ensuremath{{}^\circ}}}$) 
+opposite angles $C +\ang{30}  =\ang{35.69} $ so $C =\ang{35.69}  -\ang{30}  =\ang{5.69} $) 
 
 3. Find $c$
 \begin{align*}\frac{c}{\sin  C} &  = \frac{a}{\sin  A} \\
 c &  = \frac{a \sin  C}{\sin  A} \\
-&  = \frac{6 \sin  5.69 \mbox{{\ensuremath{{}^\circ}}}}{\sin  30 \mbox{{\ensuremath{{}^\circ}}}} \\
+&  = \frac{6 \sin  5.69 }{\sin  30 } \\
 &  \approx   1.2\end{align*}
 
 \subsection{The Cosine Rule}
@@ -643,17 +673,17 @@ c^{2} &  = a^{2} +b^{2} -2 a b \cos  C\end{align*}
 In this course you will only be given one formula and you will have to know what sides and angles to assign to the variables. 
 
 \textbf{Example 1}
-Given $a =5$, $b =6$ and $C =50 \mbox{{\ensuremath{{}^\circ}}}$, find $c$.
+Given $a =5$, $b =6$ and $C =\ang{50} $, find $c$.
 \begin{align*}c^{2} &  = a^{2} +b^{2} -2 a b \cos  C \\
-&  = 5^{2} +6^{2} -2 \times 5 \times 6 \times \cos  50 \mbox{{\ensuremath{{}^\circ}}} \\
+&  = 5^{2} +6^{2} -2 \times 5 \times 6 \times \cos  50  \\
 &  \approx   22.43274342 \\
 c &  \approx   \sqrt{22.43274342} \\
 &  \approx   4.736321718 \approx 4.7 \left (1\text{dp}\right )\end{align*}
 
 \textbf{Example 2}
-Given $a =5$, $b =6$ and $C =130 \mbox{{\ensuremath{{}^\circ}}}$, find $c$.
+Given $a =5$, $b =6$ and $C =\ang{130} $, find $c$.
 \begin{align*}c^{2} &  = a^{2} +b^{2} -2 a b \cos  C \\
-&  = 5^{2} +6^{2} -2 \times 5 \times 6 \times \cos  130 \mbox{{\ensuremath{{}^\circ}}} \\
+&  = 5^{2} +6^{2} -2 \times 5 \times 6 \times \cos  130  \\
 &  \approx   99.56725658 \\
 c &  \approx   \sqrt{99.56725658} \\
 &  \approx   9.97833937 \approx 10.0 \left (1\text{dp}\right )\end{align*}
@@ -668,11 +698,12 @@ Because $a$ is the smallest side $A$ will most certainly be an acute angle.
 &  = \frac{6^{2} +9^{2} -5^{2}}{2 \times 6 \times 9} \\
 &  \approx 0.851851851 \\
 A &  \approx \cos ^{ -1} \left (0.851851851\right ) \\
-&  \approx 31.6 \mbox{{\ensuremath{{}^\circ}}}
+&  \approx \ang{31.6} 
 \end{align*}
 
-
-
+%---------------------------------------------------
+% Chapter Exercises in a separate file
+%---------------------------------------------------
 \section{Chapter Exercises}
 \subimport{}{TrigExercises}
 
