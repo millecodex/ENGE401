@@ -331,7 +331,7 @@ You should be familiar with the fundamental graphs of $y =\sin  x$ and $y =\cos 
 	\hline
 \end{tabular}
 
-Similarly to sketch $y =\cos x$ the same values of $x$ give 
+Similarly to sketch $y =\cos x$ the same values of $x$ give: 
 
 
 \begin{tabular}[c]{|l|l|l|l|l|l|}\hline
@@ -341,21 +341,11 @@ Similarly to sketch $y =\cos x$ the same values of $x$ give
 	\hline
 \end{tabular}
 
-You will be aware that these curves repeat this pattern every $2 \pi $ where $x$ extends in both the positive and negative directions. 
+You will be aware that these curves repeat this pattern every $2 \pi $ where $x$ extends in both the positive and negative directions. $0$ to $2\pi $ represents one complete cycle. Mathematically we say
+\begin{align*}\sin  \left (x +2 n \pi \right ) &  = \sin  x\text{\  for any integer }n \\
+	\cos  \left (x +2 n \pi \right ) &  = \cos  x\text{\  for any integer }n\end{align*}
 
-$0 -2 \pi $ represents one complete cycle. Mathematically we say
-\begin{align*}\sin  \left (x +2 n \pi \right ) &  = \sin  x\text{\  for any integer}n \\
-	\cos  \left (x +2 n \pi \right ) &  = \cos  x\text{\  for any integer}n\end{align*}
-
-Aside: instead of "for any integer $n$" we can write $ \forall n \in \mathbb{Z}$. 
-
-A function that displays this characteristic is described as \emph{periodic} and for $y =\sin x$ and $y =\cos x$ the \emph{period} is $2 \pi $. 
-
-You will often be asked to state the period of a trigonometric function so for sine and cosine it
-is wise to remember that often the period is $2 \pi $. This means you need only worry about the distinctly different class of examples
-of sine and cosine where the period is not $2 \pi $. 
-
-You will sometimes be asked to sketch a graph for a given number of periods or a given number of cycles. These are two different ways of saying the same thing. 
+Aside: instead of ``for any integer $n$" we can write $ \forall n \in \mathbb{Z}$. A function that displays this characteristic is described as \emph{periodic} and for $y =\sin x$ and $y =\cos x$ the \emph{period} is $2 \pi $. 
 
 \subsection{Transformations}
 The following six transformations can be applied to any function including sine, cosine, and tangent. 
@@ -368,34 +358,20 @@ The following six transformations can be applied to any function including sine,
 \task Reflection in the $y$-axis 
 \end{tasks}
 
-\textbf{Example 1}
-Sketch $y =\sin  \left (x -\frac{\pi }{2}\right ) +3$ \\
-1. This may be considered as a sine curve shifted $\frac{\pi }{2}$ to the right and $3$ upwards.\\ 
-\textbf{Definition:} A horizontal shift of a sine curve or cosine curve is called a \emph{phase shift}. \\
-2. Transform the 5 point summary \\
-\begin{tabular}{llllll}\toprule
-	$x$  & $0$  & $\frac{\pi }{2}$  & $\pi $  & $\frac{3 \pi }{2}$  & $2 \pi $  \\
-	\midrule
-	$\sin  x$  & $0$  & $1$  & $0$  & $ -1$  & $0$  \\
-	\midrule
-	$\sin  \left (x -\frac{\pi }{2}\right )$  & $ -1$  & $0$  & $1$  & $0$  & $ -1$  \\
-	\midrule
-	$\sin  \left (x -\frac{\pi }{2}\right ) +3$  & $2$  & $3$  & $4$  & $3$  & $2$  \\
-	\bottomrule
+\textbf{Example 1} Sketch $y =\sin  \left (x -\frac{\pi }{2}\right ) +3$. This may be considered as a sine curve shifted $\frac{\pi }{2}$ units to the right. Note for periodic functions like a sine wave a horizontal shift is called a \textit{phase shift}. and $3$ units upwards.\\ 
+\textbf{Solution} 1. Beginning with the special points for $\sin x$, a table shows the evolution of the points. \\
+\begin{tabular}{llllllc}\cmidrule{1-6}
+	$x$  & $0$  & $\frac{\pi }{2}$  & $\pi $  & $\frac{3 \pi }{2}$  & $2 \pi $ & $\leftarrow x$-values, plot these \\
+	\cmidrule{1-6}
+	$\sin  x$  & $0$  & $1$  & $0$  & $ -1$  & $0$ & \\
+	\cmidrule{1-6}
+	$\sin  \left (x -\frac{\pi }{2}\right )$  & $ -1$  & $0$  & $1$  & $0$  & $ -1$&  \\
+	\cmidrule{1-6}
+	$\sin  \left (x -\frac{\pi }{2}\right ) +3\qquad$  & $2$  & $3$  & $4$  & $3$  & $2$&$\leftarrow y$-values, plot these  \\
+	\cmidrule{1-6}
 \end{tabular}
 
-3. The difference between this approach and the previous one is that the values are calculated
-from the 5 values of $x$. Maybe an additional row containing $x -\frac{\pi }{2}$ values will help. \\
-\begin{tabular}{llllll}\toprule
-	$x$  & $0$  & $\frac{\pi }{2}$  & $\pi $  & $\frac{3 \pi }{2}$  & $2 \pi $  \\
-	\midrule
-	$x -\frac{\pi }{2}$  & $ -\frac{\pi }{2}$  & $0$  & $\frac{\pi }{2}$  & $\pi $  & $\frac{3 \pi }{2}$  \\
-	\midrule
-	$\sin  \left (x -\frac{\pi }{2}\right ) +3$  & $2$  & $3$  & $4$  & $3$  & $2$  \\
-	\bottomrule
-\end{tabular}
-
-4. Desmos confirms this. The plot shows $y=\sin x$ as reference.\\
+2. Plot the transformed values with the original special points and connect with a smooth, continuous line. \Desmos confirms our transformation. The dashed plot shows $y=\sin x$ as reference.\\
 \begin{center}
 \includegraphics[width=8cm]{trigShift1}
 \end{center}
@@ -408,111 +384,72 @@ from the 5 values of $x$. Maybe an additional row containing $x -\frac{\pi }{2}$
 \end{center}
 
 In general $y =a \sin  x$ represents a vertical stretch of $y =\sin  x$ by $a$. If $a$ is negative the transformation can either be described as a negative stretch or (preferably) as a \emph{stretch}
-of $\left \vert a\right \vert $ followed by a \emph{reflection} in the $x$-axis. Recall the reflection of $y =f \left (x\right )$ in the $x$-axis is $y = -f \left (x\right )$. The number $\left \vert a\right \vert $ is called the \emph{amplitude} for both $y =\sin  x$ and $y =\cos  x\text{.}$ 
+of $\left \vert a\right \vert $ followed by a \emph{reflection} in the $x$-axis. Recall the reflection of $y =f \left (x\right )$ in the $x$-axis is $y = -f \left (x\right )$. The number $\left \vert a\right \vert $ is called the \emph{amplitude} for both $y =\sin  x$ and $y =\cos  x$ shown below. 
 
 If $0 <a <1$ the fractional stretch causes the curve to shrink vertically. For instance the curve
 $y =\sin  x$ has a maximum value of $1$ and a minimum value of $ -1$. the curve $y =\frac{1}{2} \sin  x$ has a maximum value of $\frac{1}{2}$ and a minimum value of $ -\frac{1}{2}$. 
+\columnsep=10pt
+\begin{multicols}{3}
+\textbf{Example 4} \\Sketch $y =\cos  ( -t)$\\ 
+\includegraphics[width=5.5cm]{trigTrans1}
 
-\textbf{Example 4} Sketch $y =\cos  ( -t)\text{.}$ 
+\columnbreak
 
-Recall the reflection of $y =f (x)$in the $y$-axis is $y =f ( -x)$ so you would expect $y =\cos  ( -t)$ to be the reflection of $y =\cos  t$ in the $y$-axis. 
+\textbf{Example 5} \\Sketch $y =\sin \left( \frac{1}{2}x\right)$\\
+\includegraphics[width=5.5cm]{trigTrans2}
+\columnbreak
 
+\textbf{Example 6} \\Sketch $y =\cos(2x)$\\
+\includegraphics[width=5.5cm]{trigTrans3}
+\end{multicols}
 
-\textbf{Example 5} Sketch $y =\sin \left( \frac{1}{2}x\right)$ 
+\subsection*{Tangent}
+ There are other trig functions that we will not be covering here, for example the reciprocal functions are cosecant$=\frac{1}{\sin\theta}$, secant$=\frac{1}{\cos\theta}$, and the inverse tangent function, cotangent$=\frac{1}{\tan\theta}$. By focussing on sine, cosine and tangent the majority of problems we encounter can be solved. Tangent is the odd function out of the trio of common ones.
 
-
-\textbf{Example 6} Sketch $y =\cos(2x)$ 
-
-
-
-
-\subsection{Tangent}
-This section in the textbook covers the tangent, cotangent, secant and cosecant functions. In this course we will concentrate on the tangent function. the remaining three functions (often called the reciprocal functions) will only be covered when they are needed. By focussing on sine, cosine and tangent the majority of problems we encounter can be solved. Furthermore these are the functions we can evaluate immediately by pressing appropriate keys on the calculator. 
-
-Previously we learnt that the period for the sine and cosine functions was $2 \pi $. Tangent is also a periodic function and it has a period of $\pi $ (not $2 \pi $). This means that it goes through one complete cycle every $2 \pi $. Recall $\tan  t =\frac{\sin  t}{\cos  t}$. To analyse the behaviour of the tangent function it helps if you know what you are looking for. You should know the shape of $y =\tan  t$ from previous courses. Some key values of tangent will show the pattern. 
-
-
-\begin{tabular}[c]{|l|l|l|l|}\hline
-	$t$  & $\sin  t$  & $\cos  t$  & $\tan  t$  \\
-	\hline
-	$ -\frac{\pi }{2}$  & $ -1$  & $0$  & $\frac{ -1}{0} = -\infty $  \\
-	\hline
-	$ -\frac{\pi }{4}$  & $ -\frac{\sqrt{2}}{2}$  & $\frac{\sqrt{2}}{2}$  & $ -\frac{\sqrt{2}}{2} \div \frac{\sqrt{2}}{2} = -1$  \\
-	\hline
-	$0$  & $0$  & $1$  & $\frac{0}{1} =0$  \\
-	\hline
-	$\frac{\pi }{4}$  & $\frac{\sqrt{2}}{2}$  & $\frac{\sqrt{2}}{2}$  & $\frac{\sqrt{2}}{2} \div \frac{\sqrt{2}}{2} =1$  \\
-	\hline
-	$\frac{\pi }{2}$  & $1$  & $0$  & $\frac{1}{0} =\infty $  \\
-	\hline
+Previously we learnt that the period for the sine and cosine functions was $2 \pi $. Tangent is also a periodic function and it has a period of $\pi $ (not $2 \pi $). This means that it goes through one complete cycle every $\pi$. Recall $\tan  x =\frac{\sin  x}{\cos  x}$. To analyse the behaviour of the tangent function it helps if you know what you are looking for. Some key values of tangent will show the pattern. 
+\begin{center}
+\begin{tabular}{lrrrl}\toprule
+	$x$  & $\qquad\sin  x$  & $\qquad\cos  x$  &\qquad& $\tan  x$  \\
+	\midrule
+	$ -\frac{\pi }{2}$  & $ -1$  & $0$  && $\frac{ -1}{0} = -\infty $  \\
+	\midrule
+	$ -\frac{\pi }{4}$  & $ -\frac{\sqrt{2}}{2}$  & $\frac{\sqrt{2}}{2}$  && $ -\frac{\sqrt{2}}{2} \div \frac{\sqrt{2}}{2} = -1$  \\
+	\midrule
+	$0$  & $0$  & $1$  && $\frac{0}{1} =0$  \\
+	\midrule
+	$\frac{\pi }{4}$  & $\frac{\sqrt{2}}{2}$  & $\frac{\sqrt{2}}{2}$  && $\frac{\sqrt{2}}{2} \div \frac{\sqrt{2}}{2} =1$  \\
+	\midrule
+	$\frac{\pi }{2}$  & $1$  & $0$  && $\frac{1}{0} =\infty $  \\
+	\bottomrule
 \end{tabular}
+\end{center}
 
-As $t$ takes values from $ -\frac{\pi }{2}$ to $\frac{\pi }{2}$, $\tan  t$ takes values from $ -\infty $ to $\infty $. This pattern is repeated every $\pi $. Mathematically we say
-\begin{equation*}\tan  \left (t +n \pi \right ) =\tan  t\text{\  } \forall n \in \mathbb{Z}
-\end{equation*}
 
-Furthermore $y =\tan  t$ is an \emph{odd function} so
-\begin{equation*}\tan  \left ( -t\right ) = -\tan  t
-\end{equation*}
-
-A Desmos graph can show this relationship 
-
-\setlength\fboxrule{0.01in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=5.9646in, height=2.8772in,]{L4SZ270M}}
-
+As $x$ takes values from $ -\frac{\pi }{2}$ to $\frac{\pi }{2}$, $\tan(x)$ takes values from $ -\infty $ to $\infty $. This pattern is repeated every $\pi $. 
+A Desmos graph can show this relationship. The dashed lines are the asymptotes.
+\begin{center}
+\includegraphics[width=12cm]{trigTan}\end{center}
 The graph can be seen to have point symmetry. If you rotate the tangent curve through a half turn using the origin as axis the curve will lie on top of itself. This is a pictorial representation of an odd function.
 
-Aside: You must not confuse $y =\tan  x$ with $y =x^{3}$. While they may appear to be similar in shape the only similarities are that they both pass through the origin and continue towards $\infty $ in the first quadrant and $ -\infty $ in the third quadrant. Important differences that you should identify if you are asked to sketch these graphs are the slope of the curves at the origin and the behaviour as $y \leadsto  \pm \infty $. 
+Aside: You must not confuse $y =\tan  x$ with $y =x^{3}$. While they may appear to be similar in shape the only similarities are that they both pass through the origin and continue towards $\infty $ in the first quadrant and $ -\infty $ in the third quadrant. 
 
 %---------------------------------------------------
 % sine rule and cosing rule
 %---------------------------------------------------
 \section{Applications}\label{sec:applications}
-\subsection{The Sine Rule}
-In this section we use the Sine Rule to find the sides and angles in triangles without a right angle. In the next section we use the Cosine Rule to find sides and angles in triangles also, so as you study these two sections you need to learn which problems require the Sine Rule and which require the Cosine Rule. 
-
-Previously, we met the formula for the area of a triangle. given two sides and the included angle $\left ( =\frac{1}{2} a b \sin  C\right )$. The Sine Rule and Cosine Rule also require specific combinations of sides and angles. 
-
-The easiest way to visualise the situations in which the two rules are used is to use the labelling we met in section $3.3$. Let the triangle be $ \Delta A B C$ and let the sides be $a$, $b$ and $c$ where $a$ is opposite $\angle A$ etc. 
-
-\setlength\fboxrule{0in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=3.1358in, height=2.4171in,]{L4SZ281W}}
-
-\begin{tabular}[c]{lll}\textbf{Sine Rule}  &  & \textbf{Cosine
-		Rule}  \\
-	Given a side and the angle opposite the side  &  & \textbf{(a)}
-	Given two sides and the included angle  \\
-	\textbf{(a)} If a second angle is
-	given the Sine Rule  &  & the Cosine Rule allows us to find the
-	side  \\
-	allows us the side opposite that angle  &  & opposite
-	the angle  \\
-	Given $A$, $a$ and $B$ use the Sine Rule to find $b\text{.}$  &  & Given $a$, $b$ and $C$ use the Cosine Rule to find $c\text{.}$  \\
-	\textbf{(b)} If a second
-	angle is given and the side that  &  & \textbf{(b)} Given three
-	sides the Cosine Rule allows  \\
-	is not opposite that angle is required then first  &  & us
-	to find any angle.  \\
-	find the third angle then use (a).  &  & Given
-	$a$, $b$ and $c$ use the Cosine Rule to find $A$  \\
-	Given $A$, $a$ and $B$ where $c$ is required  &  & or $B$ or $C$.  \\
-	1. $C =180 -(A +B)$  &  &  \\
-	2.
-	Use the Sine Rule to find $c$.  &  &  \\
-	\textbf{(c)} If a second side is given the Sine Rule  &  &  \\
-	allows
-	us to find the angle opposite that side.  &  &  \\
-	Given
-	$A$, $a$, and $b$ use the Sine Rule to find $B$.  &  &  \\
-\end{tabular}
-
-Textbooks may use the term ``The Law of Sines" whereas in these notes the term ``The Sine Rule will be used. 
-
+\subsection*{The Sine Rule}
+The Sine Rule is a relationship that allows you to find the sides and angles in triangles \textit{without} a right angle. In the next section we use the Cosine Rule to find sides and angles in triangles also, so as you study these two sections you need to learn which problems require the Sine Rule and which require the Cosine Rule. Previously, we met the formula for the area of a triangle given two sides and the included angle $\left ( \text{area}=\frac{1}{2} a b \sin  C\right )$. The Sine Rule and Cosine Rule also require specific combinations of sides and angles. Using standard side and angle labelling for a triangle $\rightarrow$ $\Delta A B C$ and let the sides be $a$, $b$ and $c$ where $a$ is opposite $\angle A$ etc. 
+\begin{center}
+\includegraphics[width=6cm]{L4SZ281W}
+\end{center}
 \begin{tcolorbox}
 	The Sine Rule states that in any triangle
-	\begin{equation*}\frac{\sin  A}{a} =\frac{\sin  B}{b} =\frac{\sin  C}{c}
+	\begin{equation*}\frac{\sin  A}{a} =\frac{\sin  B}{b} =\frac{\sin  C}{c}\qquad%
+	\text{ or, inversely as: }%
+	\qquad\frac{a}{\sin  A} =\frac{b}{\sin  B} =\frac{c}{\sin  C}
 	\end{equation*}\end{tcolorbox}
-This can also be written inversely:
-\begin{equation*}\frac{a}{\sin  A} =\frac{b}{\sin  B} =\frac{c}{\sin  C}
-\end{equation*}
+Textbooks may use the term ``The Law of Sines" whereas in these notes the term ``The Sine Rule will be used. 
+
 
 \subsection*{Proof of the Sine Rule}
 The Sine Rule is easy to prove from the formula for the area of a triangle
@@ -527,27 +464,25 @@ Divide right through by $a b c$
 \begin{equation*}\frac{\sin  A}{a} =\frac{\sin  B}{b} =\frac{\sin  C}{c}
 \end{equation*}
 
-Fractions can always be inverted as long as the same process is applied to each fraction.
-\begin{equation*}\frac{a}{\sin  A} =\frac{b}{\sin  B} =\frac{c}{\sin  C}
-\end{equation*}
+\begin{multicols}{2}
+\textbf{Example 1}\\ Find side lengths $a$ and $c$ in the following \\triangle.
 
-\textbf{Example 1} Find side lengths $a$ and $c$ in the following triangle.
+\includegraphics[ width=2.6143in, height=2.0159in,]{L4SZ281X}
 
-\setlength\fboxrule{0in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=2.6143in, height=2.0159in,]{L4SZ281X}
-}
-\\\relax (a) To find $c$
+\columnbreak
+\textbf{Solution} \\(a) To find $c$
 \begin{align*}\frac{c}{\sin  C} &  = \frac{b}{\sin  B} \\
 \frac{c}{\sin  43 } &  = \frac{5}{\sin  35 } \\
 c &  = \frac{5 \sin  43 }{\sin  35 } \\
-&  \approx   5.945139277 \approx 5.9 \mbox{cm}\text{(1 dp)}\end{align*} \\\relax (b) To find $a$ 
+&  \approx   5.95 \mbox{cm}\text{(2 dp)}\end{align*} \\
 
+(b) To find $a$ 
 (i) $A =\ang{180}  -(\ang{35}  +\ang{43} ) =\ang{180}  -\ang{78}  =\ang{102} $ 
-
 (ii) It is usually wise to go back to the original data (i.e. use $b$ and $B$ rather than $c$ and $C$).
 \begin{align*}\frac{a}{\sin  A} &  = \frac{b}{\sin  B} \\
 \frac{a}{\sin  102 } &  = \frac{5}{\sin  35 } \\
 a &  = \frac{5 \sin  102 }{\sin  35 } \\
-&  \approx   8.526741501 \approx 8.5 \mbox{cm}\text{(1 dp)}\end{align*}
+&  \approx   8.53 \mbox{cm}\text{(2 dp)}\end{align*}\end{multicols}
 
 These two calculations illustrate the first two cases in which the Sine Rule is used. You will notice that the triangle has been completely solved in the course of this example. We started with one side and two angles and we found the other two sides and the other angle. 
 
@@ -555,7 +490,7 @@ The third case is not as straight forward. Given two sides and an angle there co
 
 \columnsep =30pt
 \begin {multicols}{2}
-\setlength\fboxrule{0in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=2.9577in, height=2.2061in,]{L4SZ281Y}}
+\includegraphics[ width=2.9577in, height=2.2061in,]{L4SZ281Y}
 
 It is no surprise that the length $a$ to create this situation is $a =b \sin  A\text{.}$ 
 
@@ -572,74 +507,70 @@ The two solutions case is often referred to as the ambiguous case. The discussio
 \setlength\fboxrule{0in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=4.2739in, height=1.2202in,]{L4SZ281Z}}
 
 Because $8 >7$ this is the one solution case. 
-
-1. Find $B$
+\begin{tasks}[counter-format=(tsk[1]),before-skip = {0ex},after-skip={-5ex}](3)
+\task Find $B$
 \begin{align*}\frac{\sin  B}{b} &  = \frac{\sin  A}{a} \\
 \sin  B &  = \frac{b \sin  A}{a} \\
 &  = \frac{7 \sin  30 }{8} =0.4375 \\
 B &  = \sin ^{ -1} 0.4375 \approx \ang{25.94} \end{align*}
 
-2. Find $C$
+\task Find $C$
 \begin{align*}C &  = \ang{180}  -(\ang{30}  +\ang{25.94} ) \\
 &  = \ang{124.06} \end{align*}
 
-3. Find $c$
+\task Find $c$
 \begin{align*}\frac{c}{\sin  C} &  = \frac{a}{\sin  A} \\
 c &  = \frac{a \sin  C}{\sin a} \\
 &  = \frac{8 \sin  124.06 }{\sin  30 } \\
 &  \approx   13.3\end{align*}
-
+\end{tasks}
 %--------ambiguous case example---------------------------
-\textbf{Example 3 - The Ambiguous Case} Given $A =\ang{30} $, $a =6$ and $b =7$ solve the triangle. 
+\textbf{Example 3 - The Ambiguous Case} \\
+Given $A =\ang{30} $, $a =6$ and $b =7$ solve the triangle. 
 
-In this case $b \sin  A =3.5$ and $b =7$ so as $a$ lies between $3.5$ and $7$. This is the ambiguous case, therefore there are two solutions. 
+In this case $b \sin  A =3.5$ and $b =7$ so as $a$ lies between $3.5$ and $7$. This is the ambiguous case, therefore there are two solutions as the side lengths and angle can product two different trianges.
 \columnsep =30pt
 \begin {multicols}{2}
-\setlength\fboxrule{0in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=2.8885in, height=1.2825in,]{L4SZ2820}}
-
-\setlength\fboxrule{0in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=2.9308in, height=1.3015in,]{L4SZ2821}}
+\includegraphics[ width=2.8885in, height=1.2825in,]{L4SZ2820}
+\includegraphics[ width=2.9308in, height=1.3015in,]{L4SZ2821}
 \end {multicols}
 It is best to visualise these two solutions on the same diagram so that the isosceles triangle can help lead to the two results. 
-
-\setlength\fboxrule{0in}\setlength\fboxsep{0.2in}\fcolorbox[HTML]{000000}{FFFFFF}{\includegraphics[ width=2.9585in, height=1.3136in,]{L4SZ2822}}
+\includegraphics[ width=2.9585in, height=1.3136in,]{L4SZ2822}
 
 \textbf{First solution} (Proceed as before) 
-1. Find $B$
+\begin{tasks}[counter-format=(tsk[1]),before-skip = {0ex},after-skip={-5ex}](3)
+	\task Find $B$
 \begin{align*}\frac{\sin  B}{b} &  = \frac{\sin  A}{a} \\
 \sin  B &  = \frac{b \sin  A}{a} \\
 &  = \frac{7 \sin  30 }{6} =0.58 \dot{3} \\
 B &  = \sin ^{ -1} 0.58 \dot{3} \approx \ang{35.69} \end{align*}
 
-2. Find $C$
+\task Find $C$
 \begin{align*}C &  = \ang{180}  -(\ang{30}  +\ang{35.69} ) \\
 &  = \ang{114.31} \end{align*}
 
-3. Find $c$
+\task Find $c$
 \begin{align*}\frac{c}{\sin  C} &  = \frac{a}{\sin  A} \\
 c &  = \frac{a \sin  C}{\sin  A} \\
 &  = \frac{6 \sin  114.31 }{\sin  30 } \\
 &  \approx   10.9\end{align*}
-
+\end{tasks}
 \textbf{Second solution} 
-1. Find the second value of $B$ 
-
-\begin{equation*}B =\ang{180}  -\ang{35.69}  =\ang{144.31} 
-\end{equation*}
-
-2. Find $C$
-\begin{equation*}C =\ang{180} -(\ang{30}  +\ang{144.31} ) =\ang{180}  -\ang{174.31}  =\ang{5.69} 
-\end{equation*}
-
-(Or if you remember the rule that the exterior angle of a triangle is the sum of the two interior
+\begin{tasks}[counter-format=(tsk[1]),before-skip = {0ex},after-skip={-5ex}](2)
+	\task Find the second value of $B$ \\
+$B =\ang{180}  -\ang{35.69}  =\ang{144.31} $
+\task Find $C$\\
+$C =\ang{180} -(\ang{30}  +\ang{144.31} ) =\ang{180}  -\ang{174.31}  =\ang{5.69} $
+\task*[](Or if you remember the rule that the exterior angle of a triangle is the sum of the two interior
 opposite angles $C +\ang{30}  =\ang{35.69} $ so $C =\ang{35.69}  -\ang{30}  =\ang{5.69} $) 
-
-3. Find $c$
+\task*[(3)] Find $c$
 \begin{align*}\frac{c}{\sin  C} &  = \frac{a}{\sin  A} \\
 c &  = \frac{a \sin  C}{\sin  A} \\
 &  = \frac{6 \sin  5.69 }{\sin  30 } \\
 &  \approx   1.2\end{align*}
+\end{tasks}
 
-\subsection{The Cosine Rule}
+\subsection*{The Cosine Rule}
 In this section we will state and prove the Cosine Rule (which is called "The Law of Cosines" in the textbook). The proof is given here for completeness. You will not be tested on your ability to reproduce it. The section will give examples where the Cosine Rule is used to solve problems using the \emph{triangle of vectors} and we will include revision of \emph{bearings} and the use of trigonometry in \emph{navigation}. 
 
 \begin{tcolorbox}
