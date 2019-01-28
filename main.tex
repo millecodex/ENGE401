@@ -35,8 +35,8 @@
 	citecolor={blue!50!black},
 	urlcolor={blue!50!black}
 }
-\newcommand{\desmos}{\href{http://www.desmos.com/calculator}{\texttt{desmos}}}%
-\newcommand{\Desmos}{\href{http://www.desmos.com/calculator}{\texttt{Desmos}}}%
+\newcommand{\desmos}{\href{http://www.desmos.com/calculator}{\texttt{desmos\,}}}%
+\newcommand{\Desmos}{\href{http://www.desmos.com/calculator}{\texttt{Desmos\,}}}%
 \usepackage[]{tocloft} %
 \graphicspath{{./graphics/}} %
 %
@@ -50,8 +50,8 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE,RO]{\thepage}
-\fancyhead[LO]{\rightmark}
-\fancyhead[RE]{\leftmark}
+\fancyhead[LO]{ \nouppercase {\rightmark}}
+\fancyhead[RE]{\nouppercase {\leftmark}}
 %
 % Redefine the 'plain' page-style for the first page of each chapter
 \fancypagestyle{plain}{%
@@ -73,7 +73,7 @@
 % section heading formatting
 \titleformat{\section}[block]{\Large\bf}{\thesection\quad}{1pt}{}
 \titlespacing{\section}{0pt}{20pt}{-5pt}
-\titleformat{\subsection}[block]{\large\bf}{\thesubsection\quad}{1pt}{}
+\titleformat{\subsection}[block]{\Large\bf}{\thesubsection\quad}{1pt}{}
 \titlespacing{\subsection}{0pt}{20pt}{-5pt}
 %
 % depth
@@ -161,8 +161,8 @@ Version 1.0 by Peter Watson, 2010.
 \tableofcontents
 \mainmatter
 %    Include main chapters here.
-%\include{chAlgebra}
-%\include{chTrig}
+\include{chAlgebra}
+\include{chTrig}
 \include{chExponentials}
 %\include{chDifferentiation}
 %\include{chIntegration}
