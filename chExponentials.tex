@@ -117,12 +117,35 @@ function.
 %---------------------------------------------------
 %\section{\texorpdfstring{$e^x$}{}}
 \section[$e^x$]{The Natural Exponential Function}
-The \emph{natural exponential function} has wide application in mathematics and is a particular example of the exponential function. We have defined $f (x) =a^{x}$ and there is a particular value of $a$ that we denote by the letter $e$. This will turn up again and again in future courses and later it will be carefully defined for you. In this course we will meet some of the applications that use $e$. $e$ is an irrational number (like $\pi $, $\sqrt{2}$ etc.). It can be found on the calculator and to 20 decimal places it is
-\begin{equation*}e \approx 2.71828182845904523536\dots
-\end{equation*}
+The \emph{natural exponential function} has wide application in mathematics engineering. It arises naturally and crops up in applications such as finance, population, radioactivity, charge on a capacitor, and more. We have defined $f (x) =a^x$ and there is a particular value of $a$ that we denote by the letter $e$. It is an irrational number (like $\pi $, $\sqrt{2}$ etc.) and has a button on your calculator. To 10 decimal places it is
+\[e \approx 2.7182818285\dots\]
+The natural exponential function $f (x) =e^x$ is often simply referred to as \textit{the} exponential function. 
 
-The natural exponential function $f (x) =e^{x}$ is often simply referred to as \textit{the exponential function}. 
+Compound interest can demonstrate an example of  how the value above is found. Imagine a bank that pays 100\% interest on your money. Given an initial deposit of \$1, at the end of year you will receive \$1 in interest payment and have a total of \$2. Compounded interest allows this to happen at intervals smaller than 1 year. If the interest is compounded twice per year, then after 6 months, you will receive 50\% interest and have \$1.50. In the second half of the year you now have an additional \$0.50 available to earn the second half interest. Now, $\$1.50\times50\%=\$0.75$, so at the end of the year you have \$1.50+\$0.75=\$2.25.
 
+Lets say the interest is compounded monthly, then after 1 month you will receive $\frac{1}{12}\times 100\%=8.33\%$ interest for \$1+\$0.0833=\$1.0833. The second month will earn the same rate (8.33\%) on \$1.0833, for a total of \$1.1736. After 12 months, your dollar will now be worth $\$1.00\times\left(1+\frac{1}{12}\right)^{12}=\$2.6130$. 
+\begin{center}
+\begin{tabular}{cll}
+	\toprule
+	compounding periods&interest (\$)&total (\$)\\
+	\midrule
+	1 (yearly)&1.00&2.00\\
+	2&1.25&2.25\\
+	3&1.3704 &2.3704\\
+	4 (quarterly)& 1.4414 & 2.4414 \\
+	5& 1.48832 & 2.48832 \\
+	6& 1.521626&2.521626\\\midrule
+	12 (monthly)& 1.613035&2.613035 \\\midrule
+	52 (weekly)&1.692597 &2.692597\\\midrule
+	365 (daily)&1.714567 &2.714567\\\midrule
+	continuous& 1.718282&\textbf{2.718282$\dots$}\\
+	\bottomrule
+\end{tabular}
+\end{center}
+
+As a function this is plotted below:
+
+This comes up again in the following chapters.
 
 
 %---------------------------------------------------
@@ -368,8 +391,7 @@ x &  = \frac{1}{5} \log  1.25 \\
 \begin{align*}1 +e^{ -x} &  = \frac{10}{3} \\
 e^{ -x} &  = \frac{10}{3} -1 \\
 &  = \frac{10 -3}{3} =\frac{7}{3} \\
-\text{}{\scriptsize e}\text{} -x &  = \ln  7 -\ln  3 \\
-&  \approx 0.84729786 \\
+-x &  = \ln  7 -\ln  3 \\
 x &  \approx  -0.85\text{(2 dp)}\end{align*}
 
 
@@ -420,7 +442,7 @@ Check:
 \begin{align*}\text{LHS} &  = \log  5 +\log  4 =\log  \left (5 \times 4\right ) =\log  20 \\
 \text{RHS} &  = \log  4 \times 5 =\log  20 =\text{LHS}\end{align*}
 
-\task[Example 4] The velocity of a sky diver $t$ seconds after jumping is given by
+\task[Example 4] The velocity of a sky diver $t$ \\seconds after jumping is given by
 \begin{equation*}v \left (t\right ) =80 \left (1 -e^{ -0.2 t}\right )
 \end{equation*}
 
@@ -437,31 +459,30 @@ t &  = \frac{\ln  0.125}{ -0.2} \approx 10.39\text{}\mbox{s}\end{align*}
 % Exponential Modelling
 %---------------------------------------------------
 \section{Exponential Modelling}
+The natural exponential function, $e^x$, is used in a variety of situations where there is exponential growth or decay. 
+
 \textbf{Example} The exponential function can be used to model the way populations grow and diseases spread. The following
 example is about the spread of an infectious disease in a small city whose population is $10,000$. After $t$ days the number of people who have caught the disease is modelled by the function
 \begin{equation*}f (t) =\frac{10000}{5 +2495 e^{ -0.84 t}}
 \end{equation*}
 
 
-\begin{description}
-	\item [(a)] How many people had the disease initially? 
+\begin{tasks}
+	\task How many people had the disease initially? 
+	\textbf{Solution} \textit{Initially} in this sense means right at the beginning, or when the clock is still at zero. Substitute $t=0$ into the function:
+	\[f(0)=\frac{10000}{5+2495e^0}=\frac{10000}{2500}=4\text{ people}\]
+	\task How many people have the disease after 1 day?
+	\textbf{Solution} Substitute $t=1$ into the function:
+	\[f(1)=\frac{10000}{5+2495e^{-0.84}}=\frac{10000}{5+2495(0.4317)}=\frac{10000}{1082.1}\approx 9.24;\text{ 9 people}\]
+	\task How many people have the disease after 5 days? 
+	\textbf{Solution} Following from part (b), find $f(5)$:\\
+	\[f(5)=\frac{10000}{5+2495e^{-0.84(5)}}=\frac{10000}{42.41}\approx 235.77;\text{ 236 people}\]
 	
-	\item [(b)]
-	How many people have the disease after $1$ day? 
-	
-	\item [(c)] How many people
-	have the disease after $5$ days? 
-	
-	\item [(d)] Use Desmos
-	to graph the function. 
-	
-	\item [(e)] Describe the behaviour
-	of the function. \end{description}
+	\task Use desmos to graph the function and describe its behaviour. \\
+	\includegraphics[width=\textwidth]{modelling1}
+\end{tasks}
 
-The graph has distinctive characteristics. It
-starts at a particular nonzero value (when $t =0$) and increases slowly at first then more rapidly. It slows down after a time and
-levels off because the exponential function in the denominator $ \leadsto 0$ when $t \leadsto \infty $. Graphs with these characteristics are called logistic curves. The
-particular model is called a logistic growth model. 
+The graph has distinctive characteristics. It starts at a particular nonzero value (when $t =0$) and increases slowly at first then more rapidly. It slows down after a time and levels off because the exponential function in the denominator $ \leadsto 0$ when $t \leadsto \infty $. Graphs with these characteristics are called logistic curves. The particular model is called a logistic growth model. 
 
 %---------------------------------------------------
 % Chapter Exercises in a separate file
