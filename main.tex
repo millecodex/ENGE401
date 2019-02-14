@@ -24,11 +24,12 @@
 \usepackage{xcolor,graphicx,xspace,colortbl,ragged2e,rotating}% 
 \usepackage{fancyhdr,titlesec,geometry}%
 \usepackage{multicol,wrapfig,booktabs,tabulary,tcolorbox}%
-\usepackage{import}%may not work for answers
+\usepackage{import}% may not work for answers
 \usepackage{subcaption,float}%
 \usepackage{pgfplots,tikz}%
 \usepackage{courier}%
-\usepackage{hyperref}%exclude for book printing?
+\usepackage[makeroom]{cancel}% math strikethrough for fractions
+\usepackage{hyperref}% exclude for book printing?
 \hypersetup{
 	colorlinks,
 	linkcolor={blue!50!black},
@@ -161,8 +162,8 @@ Version 1.0 by Peter Watson, 2010.
 \tableofcontents
 \mainmatter
 %    Include main chapters here.
-\include{chAlgebra}
-\include{chTrig}
+%\include{chAlgebra}
+%\include{chTrig}
 \include{chExponentials}
 %\include{chDifferentiation}
 %\include{chIntegration}
