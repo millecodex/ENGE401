@@ -16,169 +16,141 @@ Average speed $ =\frac{s (b) -s (a)}{b -a}$
 \end{center}\par
 Finding the average rate of change is important in many contexts and in fact the average rate of change can be defined for any function. 
 
-The average rate of change of the function $y =f (x)$ is $\frac{\text{change in}y}{\text{change in}x}$ or $\frac{f (b) -f (a)}{b -a}$ 
+The average rate of change of the function $y =f (x)$ is $\frac{\text{change in }y}{\text{change in }x}$ or $\frac{f (b) -f (a)}{b -a}$\hfill(1) 
 
 The average rate of change is the slope of the \textbf{secant line} between $x =a$ and $x =b$ on the graph of $f$,\ that is the slope of the line that passes through $(a ,f (a))$ and $(b ,f (b))$. 
 
-\textbf{Example} Calculate the average rate of change for the function $f (x) =x^{2} +4$ between the following points
-\begin{enumerate}
-\item $x =2$ and $x =6$ 
+\textbf{Example} Calculate the average rate of change for the function $f (x) =x^{2} +4$ between the following points:
+\begin{tasks}[counter-format=(tsk[1]),column-sep=3em](3)
+\task $x =2$ and $x =6$ \\
+\textbf{Solution}\\ Using the function notation in (1) above, \[\frac{f(2)-f(6)}{2-6}=\frac{8-40}{-4}\]
+\[=\frac{-32}{-4}=8\]
 
-\item $x =5$ and $x =10$ 
+\task $x =5$ and $x =10$ \\
+\textbf{Solution}\\
+\[\frac{f(5)-f(10)}{5-10}=\frac{29-104}{-5}=15\]
 
-\item $x =a$ and $x =a +h$ ($h \neq 0$) 
-\end{enumerate}
+\task $x =a$ and $x =a +h$\\ ($h \neq 0$) \\
+\textbf{Solution}\\
+\[\frac{f(a)-f(a+h)}{a-(a+h)}\]
+\[=\frac{a^2+4-([a+h]^2-4)}{a+h}\]
+Can this be simplified further?
+\end{tasks}
 
 %---------------------------------------------------
 % 
 %---------------------------------------------------
 \subsection*{Tangents}
-We now investigate the process of changing the value of $(b -a)$ in the formula 
+We now investigate the process of changing the value of $(b -a)$ in formula (1). As $(b -a)$ is made smaller and smaller the slope of the secant approaches the slope of the tangent at $x =a$. The notation for this process is as follows. 
 
-The average rate of change of the function
-$y =f (x)$ is $\frac{\text{change in}y}{\text{change in}x}$ or $\frac{f (b) -f (a)}{b -a}$. 
-
-As $(b -a)$ is made smaller and smaller the slope of the secant approaches the slope of the tangent at $x =a$. The notation for this process is as follows. 
-
-\textbf{Definition:} The tangent line to the curve $y =f (x)$ at the point $P (a ,f (a))$ is the line through $P$ with slope $m =\underset{x \rightarrow a}{\lim }\frac{f (x) -f (a)}{x -a}$ provided that limit exists. Limits do not exist at sharp transitions in a graph, or where the function does not exist (think of piecewise functions). Limits are beyond the scope of this course and will be taken up again in ENGE501.
+\textbf{Definition:} The tangent line to the curve $y =f (x)$ at the point $P (a ,f (a))$ is the line through $P$ with slope $m =\Lim{x\to a}\frac{f (x) -f (a)}{x -a}$ provided that the \textit{limit} exists. This means that as the value of $x$ gets close to $a$ the function remains smooth. Imagine zooming in on a function, from far away it may appear smooth, but up close it could have some gaps or discontinuities.  Limits do not exist at sharp transitions in a graph, or where the function does not exist (think of piecewise functions). 
 
 We sometimes refer to the slope of the tangent line to a curve at a point as the slope of the curve at that point. The idea is that if we zoom in far enough towards the point then the curve looks almost like a straight line. The more we zoom in the more the parabola looks like a straight line. 
 
-Using function notation for the tangent line is usually easier to use and is often preferred. 
-
-Slope of the secant line between $x =a$ and $x =a +h$ is $\displaystyle \frac{f (a +h) -f (a)}{h}$ 
-
-Slope of the tangent line in the above definition now becomes
+Using function notation for the tangent line is usually easier to use and is often preferred. The slope of the secant line between $x =a$ and $x =a +h$ is $\displaystyle \frac{f (a +h) -f (a)}{h}$. This looks familiar from \textsc{example} 3 above. We can now use this as a definition:
 
 \begin{tcolorbox}
-\begin{center}
-$\text{slope }=m =\underset{h \rightarrow 0}{\lim }\frac{f (a +h) -f (a)}{h}$
-\end{center}
+$$\text{slope }=m=\Lim{h\to 0} \frac{f(a+h)-f(a)}{h}$$
 \end{tcolorbox}
-Note that if $h=0$ the function is now undefined (math error) and so the value is allowed to get close to zero, but not actually be zero.
+This is limit notation, $\Lim{h\to 0} $, and we would say `the limit as $h$ approaches $0$'. Note that if $h=0$ the function is now undefined (math error). So $h$ is allowed to get close to zero, but not actually equal zero.
 
 \subsection*{Velocities}
 When this process is applied to the average velocity the result of computing the average velocity over shorter and shorter time intervals produces the \textbf{instantaneous velocity}.\ Let $s =f (t)$ be the displacement at time $t$ then the \textbf{instantaneous velocity} is 
+$$v (a) =\Lim{h\to 0}\frac{f (a +h) -f (a)}{h}$$
+This is often referred to as the \textit{velocity at} $t=a$. 
 
-\begin{center}
-$v (a) =\underset{h \rightarrow 0}{\lim }\frac{f (a +h) -f (a)}{h}$
-\end{center}\par
-This is often referred to as the \textbf{velocity at} $t=a$. 
+Suppose $y$ is a quantity that depend on another quantity $x$. Thus $y$ is a function of $x$ and we write $y =f (x)$. If we change from $x_{1}$ to $x_{2}$ then the change in $x$ is called an increment in $x$ and is denoted by $ \Delta x =x_{2} -x_{1}$ and the corresponding increment in y is denoted by $ \Delta y =y_{2} -y_{1}$. 
 
-Suppose $y$ is a quantity that depend on another quantity $x$. Thus $y$ is a function of $x$ and we write $y =f (x)$. If we change from $x_{1}$ to $x_{2}$ then the change in $x$ is called an increment in $x$ and is denoted by 
-
-\begin{center}
-$ \Delta x =x_{2} -x_{1}$
-\end{center}\par
-and the corresponding increment in y is denoted by 
-
-\begin{center}
-$ \Delta y =y_{2} -y_{1}$
-\end{center}\par
 The average rate of change of $y$ with respect to $x$ over the interval $\left [x_{1} ,x_{2}\right ]$ is denoted by 
-
-\begin{center}
-$\frac{ \Delta y}{ \Delta x} =\frac{f (x_{2}) -f (x_{1})}{x_{2} -x_{1}}$
-\end{center}\par
+$$\frac{ \Delta y}{ \Delta x} =\frac{f (x_{2}) -f (x_{1})}{x_{2} -x_{1}}$$
 and can be interpreted geometrically as the slope of the secant line. As we did with velocities we can compute the average rate of change over smaller and smaller intervals by letting $x_{2}$ approach $x_{1}$ and therefore letting $ \Delta x$ approach $0$. The limit of this process is called the instantaneous rate of change of $y$ with respect to $x$ at $x =x_{1}$. This is interpreted geometrically as the slope of the tangent to the curve $y =f (x)$ at $(x_{1} ,f (x_{1}))$. 
 
 \begin{tcolorbox}
-\begin{center}
-Instantaneous rate of change $ =\underset{ \Delta x \rightarrow 0}{\lim }\frac{ \Delta y}{ \Delta x} =\underset{x_{2} \rightarrow x_{1}}{\lim }\frac{f (x_{2}) -f (x_{1})}{x_{2} -x_{1}}$
-\end{center}
+$$\text{Instantaneous rate of change }=\Lim{\Delta x \to 0} \frac{ \Delta y}{ \Delta x} =\Lim{x_2 \to x_1}\frac{f (x_{2}) -f (x_{1})}{x_{2} -x_{1}}$$
 \end{tcolorbox}
 
-
-\section{Derivatives from 1st Principles}
 %---------------------------------------------------
 % Derivatives from 1st Principles
 %---------------------------------------------------
-Because the expression $\underset{h \rightarrow 0}{\lim }\frac{f (a +h) -f (a)}{h}$ occurs so widely it is given a special name and notation. 
+\section{Derivatives from 1st Principles}
+Because the expression $\Lim{h \to 0}\frac{f (a +h) -f (a)}{h}$ occurs so widely it is given a special name and notation. 
 
-The \textbf{derivative} of a function at a number $a$, denoted by $f^{ \prime } (a)$ is 
+The derivative of a function at a number $a$, denoted by $f^{ \prime } (a)$ is 
 \begin{tcolorbox}
-\begin{center}
-$f^{ \prime } (a) =\underset{h \rightarrow 0}{\lim }\frac{f (a +h) -f (a)}{h}$
-\end{center}
+Definition of the derivative:\qquad$\displaystyle f^{ \prime } (a) =\Lim{h \to 0}\frac{f (a +h) -f (a)}{h}$
 \end{tcolorbox}
 
-The process of finding the derivative using $f^{ \prime } (a) =\underset{h \rightarrow 0}{\lim }\frac{f (a +h) -f (a)}{h}\text{,}$ without using a formula that gives a short-cut to the answer, is called finding the derivative \textbf{from first principles}. So far we have found a derivative of a function $f$ at a fixed number $a$. If we replace $a$ in this equation with a variable $x$ we obtain 
-
-\begin{center}
-$f^{ \prime } (x) =\underset{h \rightarrow 0}{\lim }\frac{f (x +h) -f (x)}{h}$
-\end{center}\par
-Given any number $x$ for which this limit exists. We assign to $x$ the number $f^{ \prime } \left (x\right )$. So we can regard $f^{ \prime }$ as a new function which we call the \textbf{derived function} or the \textbf{derivative of }$x$. 
+The process of finding the derivative using the above definition is called finding the derivative \textit{from first principles}. So far we have found a derivative of a function $f$ at a fixed number $a$. If we replace $a$ in this equation with a variable $x$ we obtain 
+\[f^{ \prime } (x) =\Lim{h \to 0}\frac{f (x +h) -f (x)}{h}\]
+given any number $x$ for which this limit exists. We assign to $x$ the number $f^{ \prime } \left (x\right )$. So we can regard $f^{ \prime }$ as a new function which we call the derived function or the derivative of $x$. 
 
 \subsection*{Alternate Notation for the Derived Function}
-Given the notation $y =f (x)$ for the function the following alternative notations for $f^{ \prime } \left (x\right )$ are common 
-
-\begin{center}
-$f^{ \prime } (x) =y^{ \prime } =\frac{d y}{d x} =\frac{d f}{d x} =\frac{d}{d x} f (x)$ also $ =D f (x) =D_{x} f (x)$\\
-\end{center}
-The symbols $D$ and $\frac{d}{d x}$ are called \textbf{differential operators.} 
+Given the notation $y =f (x)$ for the function the following alternative notations for $f^{ \prime } \left (x\right )$ are common: 
+$$f^{ \prime } (x) =y^{ \prime } =\frac{d y}{d x} =\frac{d f}{d x} =\frac{d}{d x} f (x) \text{, also } =D f (x) =D_{x} f (x)$$
+The symbols $D$ and $\frac{d}{d x}$ are called \textit{differential operators.} 
 
 
 \subsection*{Derivatives of Polynomial Functions}
-The constant function $f (x) =c$ is still considered a polynomial. Find the derivative  from first principles as follows: 
+The constant function $f (x) =c$ is considered a polynomial of degree zero. Using the method of first principles we can find the derivative as follows: 
+$$f^{ \prime } (x) =\Lim{h\to 0}\frac{f (x +h) -f (x)}{h} =\Lim{h\to 0}\frac{c -c}{h} =\Lim{h\to 0}0 =0$$
 
-\begin{center}
-$f^{ \prime } (x) =\underset{h \rightarrow 0}{\lim }\frac{f (x +h) -f (x)}{h} =\underset{h \rightarrow 0}{\lim }\frac{c -c}{h} =\underset{h \rightarrow 0}{\lim }0 =0$
-\end{center}\par
 
 
 \subsection*{Higher Power Polynomials}
 When $f (x) =x$ it can be shown from first principles that $f^{ \prime } (x) =1$. Similarly when $f (x) =x^{2\text{}}$it can be shown that $f^{ \prime } (x) =2 x$ and when $f (x) =x^{3}$ it can be shown that $f^{ \prime } (x) =3 x^{2}$. 
 
 As an example let us prove the formula for $f (x) =x^{4}$ from first principles
-\begin{align*}f^{ \prime } (x) &  = \underset{h \rightarrow 0}{\lim }\frac{f (x +h) -f (x)}{h} \\
- &  = \underset{h \rightarrow 0}{\lim }\frac{(x +h)^{4} -x^{4}}{h} \\
- &  = \underset{h \rightarrow 0}{\lim }\frac{x^{4} +4 x^{3} h +6 x^{2} h^{2} +4 x h^{3} +h^{4} -x^{4}}{h} \\
- &  = \underset{h \rightarrow 0}{\lim }\frac{4 x^{3} h +6 x^{2} h^{2} +4 x h^{3} +h^{4}}{h} \\
- &  = \underset{h \rightarrow 0}{\lim }(4 x^{3} +6 x^{2} h +4 x h^{2} +h^{3}) \\
- &  = 4 x^{3}\end{align*}
+\begin{align*}f^{ \prime } (x) &  = \Lim{h\to 0}\frac{f (x +h) -f (x)}{h} \\
+ &  = \Lim{h\to 0}\frac{(x +h)^{4} -x^{4}}{h} \\
+ &  = \Lim{h\to 0}\frac{x^{4} +4 x^{3} h +6 x^{2} h^{2} +4 x h^{3} +h^{4} -x^{4}}{h} \\
+ &  = \Lim{h\to 0}\frac{4 x^{3} h +6 x^{2} h^{2} +4 x h^{3} +h^{4}}{h} \\
+ &  = \Lim{h\to 0}(4 x^{3} +6 x^{2} h +4 x h^{2} +h^{3})\text{ here, substitute }h=0 \\
+ f'(x)&  = 4 x^{3}\end{align*}
 
-This pattern is usually remembered in the following form: If $f (x) =x^{n}$ then $f^{ \prime } (x) =n x^{n -1}$. Or alternatively 
+This pattern will follow for any similar polynomial: If $f (x) =x^{n}$ then $f^{ \prime } (x) =n x^{n -1}$. Or alternatively 
 \begin{tcolorbox}
-	\begin{center}
-$\frac{d}{d x} (x^{n}) =n x^{n -1}$. 
-\end{center}
+The Power Rule for Differentiation:\qquad$\displaystyle \frac{d}{d x} (x^{n}) =n x^{n -1}$
 \end{tcolorbox}
 	
 This pattern implies that $n$ must be a positive integer. It can be shown that from the definition of a derivative $\frac{d}{d x} \genfrac{(}{)}{}{}{1}{x} = -\frac{1}{x^{2}}$ or $y =x^{ -1}$ then $\frac{d y}{d x} = -1 \times x^{ -2}$, which proves the power rule for $n = -1$. 
 
-Similarly if the exponent is a fraction it can be shown that the power rule holds e.g. if $f (x) =\sqrt{x}$ then $f^{ \prime } (x) =\frac{1}{2 \sqrt{x}}$ or $f (x) =x^{\frac{1}{2}}$ then $f^{ \prime } (x) =\frac{1}{2} x^{ -\frac{1}{2}}$. 
-
-It can be shown that the power rule holds for any real number $n$. 
+Similarly if the exponent is a fraction it can be shown that the power rule holds e.g. if $f (x) =\sqrt{x}$ then $f^{ \prime } (x) =\frac{1}{2 \sqrt{x}}$ or $f (x) =x^{\frac{1}{2}}$ then $f^{ \prime } (x) =\frac{1}{2} x^{ -\frac{1}{2}}$. It can be shown that the power rule holds for any real number $n$. 
 
 %---------------------------------------------------
 % Standard Derivatives
 %---------------------------------------------------
 \section{Standard Derivatives}
-The basic functions have easily repeatable patterns to find their derivatives. The common ones we cover here are summarized in the table below:
+The basic functions have easily repeatable patterns to find their derivatives. The common ones are summarized in the table below:
+\begin{center}
+\begin{tabular}{ccll}	
+	\toprule
+	Function& Derivative&&Notes\\\midrule
+	$f(x)$ & $f'(x)$  &&notation\\ \midrule
+	$x^n$ & $nx^{n-1}$ &&`power rule'\\ \midrule
+	$e^x$ & $e^x$  && exponential\\ \midrule
+	$\ln(x)$ & $\frac{1}{x}$ &&logarithmic\\ \midrule
+	$\sin(x)$ & $\cos(x)$  && \\ \cmidrule{1-2}
+	$\cos(x)$ & $-\sin(x)$ && trigonmetric\\ \cmidrule{1-2}
+	$\tan(x)$ & $\sec^2(x)$ && \\ \bottomrule
+\end{tabular}
+\end{center}
 
-***TABLE HERE***
-***TABLE HERE***
-***TABLE HERE***
-***TABLE HERE***
-***TABLE HERE***
 
-We defined the natural exponential function in the last chapter. Here we can see why precisely it is so special.
-
-$e$ is the number such that $\underset{h \rightarrow 0}{\lim }\frac{e^{h} -1}{h} =1$ 
+\subsection*{The Natural Exponential}
+Recall the natural exponential function from section~\ref{sec:naturalExponential}. Here we can see why precisely it is so special. Using limit notation, we can say that $e$ is the number such that $\Lim{h\to 0}\frac{e^{h} -1}{h} =1$. The derivative is:
 
 \begin{tcolorbox}
 The Derivative of the Natural Exponential Function
-\begin{equation*}\frac{d}{d x} \left (e^{x}\right ) =e^{x}
-\end{equation*}
+$$\frac{d}{d x} \left (e^{x}\right ) =e^{x}$$
 \end{tcolorbox}
 
-The natural exponential function is unique in that it had the property that it is its own derivative. Geometrically this means that the slope of the tangent at any point is the same as the y-coordinate of that point. 
+The natural exponential function is unique becuse \textbf{it has its own derivative!} Geometrically this means that the slope of the tangent at any point is the same as the y-coordinate, $f(x)$, of that point. 
 
 %---------------------------------------------------
 % max, min and tangents
 %---------------------------------------------------
-\section{max, min and tangents}
-\subsection{What does $f^{ \prime }$ tell you about $f$?}
+\section{Maximums, Minimums, and Tangents}
+\subsection*{What does $f^{ \prime }$ tell you about $f$?}
 Because $f^{ \prime } (x)$ represents the slope of the curve $y =f (x)$ at the point $\left (x ,f \left (x\right )\right )$ it tells us about the direction the curve is proceeding at that
 point. $f^{ \prime } (x)$ therefore gives us information about $f (x)$. $f^{ \prime } (x) >0$ means that the tangent line has a positive slope and $f^{ \prime } (x) <0$ means that the tangent line has a negative slope. 
 
@@ -220,7 +192,7 @@ place is also called a \emph{point of inflection}.
 %---------------------------------------------------
 % The Product, quotient and chain rules
 %---------------------------------------------------
-\section{The Product, Quotient, and Chain rules}
+\section{The Product, Quotient, and Chain Rules}
 
 %-----------------------------------------------
 \subsection{The Product Rule}
@@ -530,5 +502,5 @@ to reduce the expression in step 4 until is becomes a relationship between the u
 %---------------------------------------------------
 % Chapter Exercises in a separate file
 %---------------------------------------------------
-\section{Chapter Exercises}
-\subimport{}{differentiationExercises}
+% \section{Chapter Exercises}
+% \subimport{}{differentiationExercises}

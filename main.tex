@@ -16,10 +16,8 @@
 % Licenced under MIT General License (c) 2019                          %
 %                                                                      % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% for published book output
-\documentclass[a4paper,11pt,openany]{book}
-% for pdf output
-%\documentclass[a4paper,11pt]{report}
+% for published book output; can use oneside/twoside depending on situation
+\documentclass[a4paper,11pt,openany,twoside]{book}
 \usepackage{amssymb,amsmath,amsfonts,textcomp,siunitx}%
 \usepackage{xcolor,graphicx,xspace,colortbl,ragged2e,rotating}% 
 \usepackage{fancyhdr,titlesec,geometry}%
@@ -63,7 +61,8 @@
 % paragraph formatting for math
 \setlength{\parindent}{0in}
 \setlength{\parskip}{10pt plus 1pt minus 1pt}
-%
+% redefine limit notation
+\newcommand{\Lim}[1]{\raisebox{0.5ex}{\scalebox{0.8}{$\displaystyle \lim_{#1}\;$}}}
 % heading formatting using package titlesec
 \newcommand{\hsp}{\hspace{10pt}}
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp{$\vert$}\hsp}{1pt}{\Huge\bfseries}
@@ -164,11 +163,11 @@ Version 1.0 by Peter Watson, 2010.
 %    Include main chapters here.
 %\include{chAlgebra}
 %\include{chTrig}
-\include{chExponentials}
-%\include{chDifferentiation}
+%\include{chExponentials}
+\include{chDifferentiation}
 %\include{chIntegration}
 %\include{chDiffEqns}
-\include{chAnswers}
+%\include{chAnswers}
 %\appendix
 %    Include appendix "chapters" here.
 %\include{}
