@@ -1,21 +1,4 @@
 %-------------------------------------------------------------------
-% QUESTIONS Rate of Change
-%-------------------------------------------------------------------
-\begin{Exercise}[title={Rate of Change},label=exRateOfChange]
-	\Question Find the equation of the tangent line to the parabola $y =x^{2} +4$ at the point $(1 ,5)$. %$y =2 x +3$ 
-
-\end{Exercise}
-%---------------------------------------------
-%--ANSWERS----Rate of Change------------------
-%---------------------------------------------
-\setboolean{firstanswerofthechapter}{true}
-\begin{Answer}[ref={exRateOfChange}]
-	\Question %Find the equation of the tangent line to the  %
-	$y =2 x +3$ 
-\end{Answer}%Rate of Change
-\setboolean{firstanswerofthechapter}{false}
-
-%-------------------------------------------------------------------
 % QUESTIONS First Principles
 %-------------------------------------------------------------------
 \begin{Exercise}[title={Differentiation from First Principles},label=exFirstPrinciples]
@@ -36,13 +19,12 @@ What is the order of $f (x)$? What is the order of $f^{ \prime } (x)$?%Use Desmo
 
 \Question The graph of $f (x) =e^{x}$ is drawn below. On the same set of axes, sketch the graph of the derived function, $f^{ \prime } (x)\vspace{+0.500000cm}$ \\
 \includegraphics[ width=\textwidth]{L4SZ2836}\\
-What is the shape of the graph of the derived function?
-\clearpage	
-\Question The graph of $f (x) =10 x^{2} e^{x} (x +1)$is drawn below. On the same set of axes, sketch the graph of the derived function, $f^{ \prime } (x)\vspace{+0.500000cm}$ \\
-\includegraphics[ width=13cm]{L4SZ2837}%Use Desmos to check
+What is the shape of the graph of the derived function?	
+\Question The graph of $f (x) =10 x^{2} e^{x} (x +1)$ is drawn below. On the same set of axes, sketch the graph of the derived function, $f^{ \prime } (x)\vspace{+0.500000cm}$ \\
+\includegraphics[width=13cm]{L4SZ2837}%Use Desmos to check
 
 	\Question Differentiate
-\begin{tasks}(2)
+\begin{tasks}(3)
 	\task  $f (x) =\frac{1}{x^{2}}$ % $f^{ \prime } (x) = -2 x^{ -3} =\frac{ -2}{x^{3}}$
 	\task $y =\sqrt[{3}]{x^{2}}$ %$f^{ \prime } \left (x\right ) =\frac{2}{3} x^{ -\frac{1}{3}} =\frac{2}{3 \sqrt[{3}]{x}}$ 
 	\task $y =x^{5}$ % $y^{ \prime } =5 x^{4}$
@@ -55,6 +37,7 @@ What is the shape of the graph of the derived function?
 %---------------------------------------------
 %--ANSWERS----First Principles----------------
 %---------------------------------------------
+\setboolean{firstanswerofthechapter}{true}
 \begin{Answer}[ref={exFirstPrinciples}]
 \Question %Find the derivative of the function 
 \begin{tasks}
@@ -81,7 +64,7 @@ What is the shape of the graph of the derived function?
 	
 \end{tasks}
 \end{Answer}%First Principles
-
+\setboolean{firstanswerofthechapter}{false}
 %-------------------------------------------------------------------
 % QUESTIONS Standard Derivatives
 %-------------------------------------------------------------------
@@ -251,6 +234,20 @@ $\frac{d x}{d \theta } =5 \mathrm{m}/\mbox{rad}$
 % QUESTIONS min, max, & tangents
 %-------------------------------------------------------------------
 \begin{Exercise}[title={Maximums, Minimums, and Tangents},label=exMinMax]
+	\Question The function $y=7x-3$ has no turning point. Why? % $y=7x-3$ is a linear function and so has no maximum or minimum value. Its derivative is \emph{constant}.
+	\Question Turning points are sometimes referred to as stationary points. Find the stationary points of the following functions:
+	\begin{tasks}(3)
+		\task $y=\frac{x^3}{3}-4x$ %$(2,0)$ and $(-2,0)$
+		\task $y=x^2+\frac{16}{x}$ %$(2,12)$
+		\task $f(x)=-x^4+4x^3-4x^2+1$ %$(0,1)$ and $(1,0)$ and $(2,1)$
+	\end{tasks}
+\Question Find the turning points and use the second derivative test to show if they are local maxima or local minima:
+\begin{tasks}(3)
+	\task $y=4-(3-x)^2$ %ans: $(3,4)$ is a local maximum
+	\task $y=\frac{x^3}{3}-x$ %ans:$(-1,0.667)$ is a local maximum and $(1,-0.667)$ is a local minimum
+	\task $f(x)=(3-x)(x+2)(x+5)$ %ans:$(-3.67,-14.82)$ min and $(1,36)$ max$
+\end{tasks}
+\Question Consider $f(x)=xe^x$. Do you think this function has a local max or min? Think of the graph of $y=e^x$. Plot the function using Desmos and find the turning point. %There is a local minimum at $(-1,-0.368)$. If you know how to use the product rule for differentiation you can find out without using desmos.
 \Question Find the equations of the	tangent line and the normal line to the curve $y =x \sqrt{x}$ at the point $(1 ,1)$. % Tangent line is $2 y -3 x +1 =0$ \\\relax Normal line is $3 y +2 x -5 =0$ 
 \Question Find the points on the curve $y =x^{4} -6 x^{2} +4$ where the tangent line is horizontal. %$\left (0 ,4\right ) ,\text{\quad \quad }\left (\sqrt{3} , -5\right ) ,\text{\quad \quad }\left ( -\sqrt{3} , -5\right )$
 \Question At what point on the curve $y =e^{x}$ is the tangent line parallel to the line $y =2 x$? %$\left (\ln  2 ,2\right ) \approx \left (0.69 ,2\right )$
@@ -266,6 +263,27 @@ $\frac{d x}{d \theta } =5 \mathrm{m}/\mbox{rad}$
 %--ANSWERS----min, max, & tangents------------
 %---------------------------------------------
 \begin{Answer}[ref={exMinMax}]
+		\Question %The function $y=7x-3$ has no turning point. Why? % 
+		$y=7x-3$ is a linear function and so has \\
+		no maximum or minimum value. Its deriva-\\
+		tive is \emph{constant}.
+	\Question %Turning points are sometimes referred to as stationary points. Find the stationary points of the following functions:
+	\begin{tasks}
+		\task $(2,0)$ and $(-2,0)$
+		\task $(2,12)$
+		\task $(0,1)$ and $(1,0)$ and $(2,1)$
+	\end{tasks}
+	\Question %Find the turning points and use the second derivative test to show if they are local maxima or local minima:
+	\begin{tasks}
+		\task $(3,4)$ is a local maximum
+		\task $(-1,0.667)$ is a local maximum and\\ $(1,-0.667)$ is a local minimum
+		\task $(-3.67,-14.82)$ min and $(1,36)$ max
+	\end{tasks}
+	\Question %Consider $f(x)=xe^x$. Do you think this function has a local max or min? Think of the graph of $y=e^x$. Plot the function using Desmos and find the turning point. %
+			  There is a local minimum at $(-1,-0.368)$\\
+			  If you know how to use the product rule \\
+			  for differentiation you can find out \\
+			  without using desmos.
 \Question %Find the equations of the tangent line and the normal line to the curve $y =x \sqrt{x}$ at the point $(1 ,1)$. %
 Tangent line is $2 y -3 x +1 =0$ \\\relax Normal line is $3 y +2 x -5 =0$ 
 \Question %Find the points on the curve $y =x^{4} -6 x^{2} +4$ where the tangent line is horizontal. %
@@ -495,14 +513,14 @@ Tangent $y =x$\qquad Normal $y = -x$
 %--ANSWERS-----parametric differentiation-----
 %---------------------------------------------
 \begin{Answer}[ref={exParametric}]
-\Question %Use \desmos to sketch the parametric curves
-\begin{tasks}
-	\task Check with desmos
-	\task Check with desmos
-	\task Check with desmos
-	\task Check with desmos
-	\task Check with desmos
-\end{tasks}
+\Question Check with desmos%Use \desmos to sketch the parametric curves
+%\begin{tasks}
+%	\task Check with desmos
+%	\task Check with desmos
+%	\task Check with desmos
+%	\task Check with desmos
+%	\task Check with desmos
+%\end{tasks}
 
 \Question %Given $y =2 t$ and $x =t^{2}$ 
 \begin{tasks}
@@ -512,11 +530,12 @@ Tangent $y =x$\qquad Normal $y = -x$
 \end{tasks}
 
 \Question %Given $x =\cos  t$ and $y =\sin  t$ find the equation of the tangent line at the point $\left (\frac{\sqrt{2}}{2} ,\frac{\sqrt{2}}{2}\right )$. Where does this curve	have horizontal or vertical tangent lines? % 
-$y +x =\sqrt{2}\text{,}$ Horizontal when $t =\frac{\pi }{2}$ or $\frac{3 \pi }{2}\text{,}$\\ Vertical when $t =0$ or $\pi $ 
+$y +x =\sqrt{2}\text{,}$ horizontal when $t =\frac{\pi }{2}$ or $\frac{3 \pi }{2}\text{,}$ \\Vertical when $t =0$ or $\pi $ 
 
 \Question %Given $x =\cos  t$ and $y =\sin  2 t$ find the equation of the tangent line at the point $\left (\frac{\sqrt{3}}{2} ,\frac{\sqrt{3}}{2}\right )$. Where does this curve have horizontal or vertical tangent lines? % 
-$2 y +4 \sqrt{3} x =6 +\sqrt{3}\text{,}$ Horizontal when $t =\frac{\pi }{4}\text{,}$ $\frac{3 \pi }{4}\text{,}$\\
- $\frac{5 \pi }{4}\text{,}$ $\frac{7 \pi }{4}$ Vertical when $t =0\text{,}$ $\pi $
+$2 y +4 \sqrt{3} x =6 +\sqrt{3}\text{,}$ horizontal when \\
+$t =\frac{\pi }{4}\text{,}$ $\frac{3 \pi }{4}\text{,}$
+ $\frac{5 \pi }{4}\text{,}$ $\frac{7 \pi }{4}$ vertical when $t =0\text{,}$ $\pi $
 
 \Question %Find $\frac{d y}{d x}$ in terms of the parameter 
 \begin{tasks}
@@ -585,10 +604,10 @@ $\frac{800 \sqrt{5}}{3} \approx 596.3 km/\mbox{h}$
 	\Question Divide $50$ into two parts such that the product of the two parts is a maximum. % $25$ and $25$
 	\Question Find the number that exceeds its square by the greatest amount. %  $\frac{1}{2}$ 
 	\Question A farmer has $2400 \mbox{m}$ of fencing and wants to fence off a rectangular field that borders a straight river. He needs no fence along the river. What are the dimensions of the field that has the greatest area? % $1200 \mbox{m}$ by $600 \mbox{m}$
-	\clearpage
 	\Question A farmer wishes to fence off a corner of a field where there is an existing hedge on two sides. The hedge is to be used to fence the two sides. If he has $300 \mbox{m}$ of fencing available, find the dimensions $a$ and $b$ so that he encloses the maximum area.\\ 
 	 \includegraphics[ width=2.5711in, height=1.8498in,]{L4SZ2838}\\ % $150 \mbox{m}$ by $150 \mbox{m}$ 
-	\Question A cylindrical can is to be made to hold $1\,$L of oil. Find the dimensions that will minimise the cost of the metal to manufacture the can. (Hint: 1\thinspace L = $1000 cm^{3}$) % $r =\sqrt[{3}]{\frac{500}{\pi }} \approx 5.4 \mbox{cm}\text{,}$ and $h =2 r$ 
+	\Question The volume of the cone is given by the formula $V(r)= \frac{10\pi r^2}{3}-\frac{\pi r^3}{3}$. Find the radius of the cone at its maximum volume.%ans:$\frac{20}{3}$ cm
+	\Question The total cost of holding a large event is composed of the venue hire, $V$, times the venue tax, $T$, plus the entertainment, $E$. These values can all be estimated based on the number of people attending the event, $p$, such that: $V(p)=50p+80$, $T(p)=0.002p-0.4$, and $E(p)=36000-60p$. Find the minimum cost.%ans:\$20032 for 399 people 
 	\Question Find the area of the greatest rectangle that can be inscribed in a semicircle	of radius $r$. % Area $ =r^{2}$ 
 	\Question If $1200 cm^{2}$ of material is available to make a box with a square base and an open top. Find the largest possible volume of the box. (Hint: There is no wasted material.) %Dimensions are 20 by 20 by 10, Volume $ =4000 cm^{3}$ 
 
@@ -606,8 +625,10 @@ $1200 \mbox{m}$ by $600 \mbox{m}$
 \Question %A farmer wishes to fence off a corner of a field where there is an existing hedge on two sides. The hedge is to be used to fence the two sides. If he has $300 \mbox{m}$ of fencing available, find the dimensions $a$ and $b$ so that he encloses the maximum area.\\ 
 %\includegraphics[ width=2.5711in, height=1.8498in,]{L4SZ2838}\\ % 
 $150 \mbox{m}$ by $150 \mbox{m}$ 
-\Question %A cylindrical can is to be made to hold $1\,$L of oil. Find the dimensions that will minimise the cost of the metal to manufacture the can. (Hint: 1\thinspace L = $1000 cm^{3}$) % 
-$r =\sqrt[{3}]{\frac{500}{\pi }} \approx 5.4 \mbox{cm}\text{,}$ and $h =2 r$ 
+\Question %The volume of the cone is given by the formula $V(r)= \frac{10\pi r^2}{3}-\frac{\pi r^3}{3}$. Find the radius of the cone at its maximum volume.%
+$\frac{20}{3}$ cm
+\Question %The total cost of holding a large event is composed of the venue hire, $V$, times the venue tax, $T$, plus the entertainment, $E$. These values can all be estimated based on the number of people attending the event, $p$, such that: $V(p)=50p+80$, $T(p)=0.002p-0.4$, and $E(p)=36000-60p$. Find the minimum cost.%
+\$20,032.00 for 399 people
 \Question %Find the area of the greatest rectangle that can be inscribed in a semicircle	of radius $r$. %
  Area $ =r^{2}$ 
 \Question %If $1200 cm^{2}$ of material is available to make a box with a square base and an open top. Find the largest possible volume of the box. (Hint: There is no wasted material.) %

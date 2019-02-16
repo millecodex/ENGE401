@@ -3,7 +3,7 @@
 %---------------------------------------------------
 \chapter[Differentiation]{Differentiation}
 
-\section{Rate of Change}
+\section*{Rate of Change}
 We are all familiar with the concept of average speed. If you travel a distance of 120 km in 2 hours then your average speed is 60 kph. There is a formula that you will have met 
 
 \begin{center}
@@ -20,18 +20,18 @@ The average rate of change of the function $y =f (x)$ is $\frac{\text{change in 
 
 The average rate of change is the slope of the \textbf{secant line} between $x =a$ and $x =b$ on the graph of $f$,\ that is the slope of the line that passes through $(a ,f (a))$ and $(b ,f (b))$. 
 
-\textbf{Example} Calculate the average rate of change for the function $f (x) =x^{2} +4$ between the following points:
+\example Calculate the average rate of change for the function $f (x) =x^{2} +4$ between the following points:
 \begin{tasks}[counter-format=(tsk[1]),column-sep=3em](3)
 \task $x =2$ and $x =6$ \\
-\textbf{Solution}\\ Using the function notation in (1) above, \[\frac{f(2)-f(6)}{2-6}=\frac{8-40}{-4}\]
+\solution\\ Using the function notation in (1) above, \[\frac{f(2)-f(6)}{2-6}=\frac{8-40}{-4}\]
 \[=\frac{-32}{-4}=8\]
 
 \task $x =5$ and $x =10$ \\
-\textbf{Solution}\\
+\solution\\
 \[\frac{f(5)-f(10)}{5-10}=\frac{29-104}{-5}=15\]
 
 \task $x =a$ and $x =a +h$\\ ($h \neq 0$) \\
-\textbf{Solution}\\
+\solution\\
 \[\frac{f(a)-f(a+h)}{a-(a+h)}\]
 \[=\frac{a^2+4-([a+h]^2-4)}{a+h}\]
 Can this be simplified further?
@@ -81,7 +81,7 @@ Definition of the derivative:\qquad$\displaystyle f^{ \prime } (a) =\Lim{h \to 0
 \end{tcolorbox}
 
 The process of finding the derivative using the above definition is called finding the derivative \textit{from first principles}. So far we have found a derivative of a function $f$ at a fixed number $a$. If we replace $a$ in this equation with a variable $x$ we obtain 
-\[f^{ \prime } (x) =\Lim{h \to 0}\frac{f (x +h) -f (x)}{h}\]
+\[f^{ \prime } (x) =\Lim{h \to 0}\frac{f (x +h) -f (x)}{h}\tag*{*Note the difference from above}\]
 given any number $x$ for which this limit exists. We assign to $x$ the number $f^{ \prime } \left (x\right )$. So we can regard $f^{ \prime }$ as a new function which we call the derived function or the derivative of $x$. 
 
 \subsection*{Alternate Notation for the Derived Function}
@@ -89,18 +89,16 @@ Given the notation $y =f (x)$ for the function the following alternative notatio
 $$f^{ \prime } (x) =y^{ \prime } =\frac{d y}{d x} =\frac{d f}{d x} =\frac{d}{d x} f (x) \text{, also } =D f (x) =D_{x} f (x)$$
 The symbols $D$ and $\frac{d}{d x}$ are called \textit{differential operators.} 
 
-
 \subsection*{Derivatives of Polynomial Functions}
 The constant function $f (x) =c$ is considered a polynomial of degree zero. Using the method of first principles we can find the derivative as follows: 
 $$f^{ \prime } (x) =\Lim{h\to 0}\frac{f (x +h) -f (x)}{h} =\Lim{h\to 0}\frac{c -c}{h} =\Lim{h\to 0}0 =0$$
 
-
-
 \subsection*{Higher Power Polynomials}
 When $f (x) =x$ it can be shown from first principles that $f^{ \prime } (x) =1$. Similarly when $f (x) =x^{2\text{}}$it can be shown that $f^{ \prime } (x) =2 x$ and when $f (x) =x^{3}$ it can be shown that $f^{ \prime } (x) =3 x^{2}$. 
 
-As an example let us prove the formula for $f (x) =x^{4}$ from first principles
-\begin{align*}f^{ \prime } (x) &  = \Lim{h\to 0}\frac{f (x +h) -f (x)}{h} \\
+\example Find $f'(x)$ for $f (x) =x^{4}$ from first principles.
+
+\solution \begin{align*}f^{ \prime } (x) &  = \Lim{h\to 0}\frac{f (x +h) -f (x)}{h} \\
  &  = \Lim{h\to 0}\frac{(x +h)^{4} -x^{4}}{h} \\
  &  = \Lim{h\to 0}\frac{x^{4} +4 x^{3} h +6 x^{2} h^{2} +4 x h^{3} +h^{4} -x^{4}}{h} \\
  &  = \Lim{h\to 0}\frac{4 x^{3} h +6 x^{2} h^{2} +4 x h^{3} +h^{4}}{h} \\
@@ -150,44 +148,131 @@ The natural exponential function is unique becuse \textbf{it has its own derivat
 % max, min and tangents
 %---------------------------------------------------
 \section{Maximums, Minimums, and Tangents}
-\subsection*{What does $f^{ \prime }$ tell you about $f$?}
-Because $f^{ \prime } (x)$ represents the slope of the curve $y =f (x)$ at the point $\left (x ,f \left (x\right )\right )$ it tells us about the direction the curve is proceeding at that
-point. $f^{ \prime } (x)$ therefore gives us information about $f (x)$. $f^{ \prime } (x) >0$ means that the tangent line has a positive slope and $f^{ \prime } (x) <0$ means that the tangent line has a negative slope. 
+Turning points occur at the boundary between regions in a function.  A function that transitions from increasing to decreasing must have a turning point. In the function below, $f(-1)=2$ means the point $(-1,2)$ is a turning point. More specifically this is a local maximum of our function. It is the highest point in its \emph{local} neighbourhood. Notice that the other boundary has different properties: it is the lowest point. So $f(1)=-2$ means the point $(1,-2)$ is a local minimum.
 
-When $f^{ \prime } (x) >0$ on an interval then $f$ is increasing on that interval 
+\begin{multicols}{2}
+The boundary means that the slope of the \textit{tangent} has gone from increasing to decreasing. Or from positive to negative. During this transition it had to go through zero, and so a turning point can be found anywhere the slope is equal to zero: $f'(x)=0$. Remember that the first derivative represents the slope of the function.  \\
 
-When $f^{ \prime } (x) <0$ on an interval then $f$ is decreasing on that interval. 
+\example Find the turning points for \[f(x)=x^3-3x\]
+\columnbreak
+	\begin{center}
+		\begin{tikzpicture}
+		\begin{axis}[
+		axis lines=center,
+		ymax=4,ymin=-4,
+		xmax=3,xmin=-3,
+		xtick={-2,...,2},xticklabels={-2,-1,0,1,2},
+		ytick={-2,...,2},yticklabels={-2,-1,0,1,2},
+		xlabel=$x$,ylabel=$y$,
+		]
+		\addplot [<->,domain=-2.19:2.19,thick, samples=200, black] {x^3-3*x};
+		\addplot [dashed,domain=0:2.5,thick, samples=200, black] {-2};
+		\addplot [dashed,domain=-2.5:-0.5,thick, samples=200, black] {2};
+		\addplot[mark=*] coordinates {(1,-2)};
+		\addplot[mark=*] coordinates {(-1,2)};
+		\node[anchor=south] at (axis cs:1,-3.1) {$f'(1)=0$};
+		\node[anchor=south] at (axis cs:1.2,-3.6) {\footnotesize{local minimum}};
+		\node[anchor=south] at (axis cs:-1.6,2.1) {$f'(-1)=0$};
+		\node[anchor=south] at (axis cs:-1.6,3) {\footnotesize{local maximum}};
+		\end{axis}
+		\end{tikzpicture}
+	\end{center}
+\end{multicols}
+\solution 
+\begin{multicols}{2}
+Set the derivative equal to zero and solve for values of $x$.
+\begin{align*}
+\frac{dy}{dx}&=3x^2-3\\
+0&=3x^2-3\\
+3&=3x^2\\
+1&=x^2\\
+x&=1, \,\mathrm{ and }\, x=-1
+\end{align*}
+Therefore the $x-$values of the turning points are 1 and $-1$. Note there are two turning points in our function so there should be two corresponding solutions.\\
+\begin{align*}
+f(1)&=(1)^3-3(1)\\
+&=1-3=-2
+\end{align*}
+Therefore $(1,-2)$ is the first turning point. Similarly, $(-1,2)$ is found as the other turning point. These are both shown in the figure above.\end{multicols}
 
-When $f^{ \prime } (x) =0$ the tangent is horizontal (i.e. parallel to the $x$-axis). We call the point where this occurs a turning point.. 
+\subsection*{Second Derivative Test}\label{sec:2ndDerivativeTest}
+We know from the graph that these turning points are maximum and minimum. The graph is not always provided to identify maxima and minima, so it helps to have a test to determine if a point is a max or min. 
 
-When
-to the left of a turning point $f^{ \prime } (x) >0$ and to the right of the turning point $f^{ \prime } (x) <0$ the turning point is called a \emph{local maximum}. 
+We know first derivative represents the slope of the function. Looking at the parabola $y=x^2$ and following the function from left to right we can plot some values of the first derivative. The graph tells us that the turning point is at $(0,0)$ and is a minimum. The value of the 1st derivative is -2,-1,0,1,2 : these numbers are increasing. This trend is always true for a local minimum. 
 
-When to the left of a turning point
-$f^{ \prime } (x) <0$ and to the right of the turning point $f^{ \prime } (x) >0$ the turning point is called a \emph{local minimum}. 
+How do we test for this trend of increasing slopes? The rate of change of the \emph{slopes} is the second derivative, and if this number (at the point $(0,0)$) is positive, then the point is a minimum.
 
-When to the left of a turning point
-$f^{ \prime } (x) >0$ then to the right of the turning point $f^{ \prime } (x) >0$ the turning point is called a \emph{point of inflection}. 
-
-Finally $f^{ \prime } (x)$ could be $ <0$ to the left of the turning point and to the right also. This is also called a \emph{point
-	of inflection}. 
-
-\subsection*{What does $f^{ \prime  \prime }$ tell you about $f$?}
-We know that $f^{ \prime  \prime } (x) =\left (f^{ \prime } (x)\right )^{ \prime }$ so $f^{ \prime  \prime }$ is related to $f^{ \prime }$ in the same way as $f^{ \prime }$ is related to $f$. 
-
-When $f^{ \prime  \prime } (x) >0$ on an interval then $f^{ \prime }$ is increasing on that interval. A curve that is \emph{concave upwards}
-has this characteristic. To the left of the turning point the slope is negative and approaches zero as the value
-of $x$ approaches the turning point. To the right of the turning point the slope is positive
-and increases as the value of $x$ increases. 
-
-When $f^{ \prime  \prime } (x) <0$ on an interval then $f^{ \prime }$ is decreasing on that interval. A curve that is \emph{concave downwards} has this characteristic. 
-
-Whenever
-a curve changes from concave upwards to concave downwards, the point at which this takes place is called a \emph{point of inflection}.
-\ Similarly whenever a curve changes from concave downwards to concave upwards, the point at which this takes
-place is also called a \emph{point of inflection}. 
+This is called the second derivative test.\\
+%maybe highlight box here%
+\begin{tcolorbox}
+	Second Derivative Test
+	\begin{itemize}
+		\item If $f'(x)=0$, and $f''(x)>0$, then the point $(x,f(x))$ is a local minimum. The graph in this neighbourhood is concave up.\\
+		\item If $f'(x)=0$, and $f''(x)<0$, then the point $(x,f(x))$ is a local maximum. The graph in this neighbourhood is concave down.\\                          
+	\end{itemize}
+\end{tcolorbox}
 
 
+%Example level: EASY
+\example Use the second derivative test to determine if the turning point $(-1,2)$ is a maximum or minimum on the function $f(x)=x^3-3x$\\
+\solution Find the second derivative and substitute the turning point.
+\begin{align*}
+f'(x)&=3x^2-3\\
+f''(x)&=6x\\
+f''(-1)&=6(-1)=-6\\
+-6&<0
+\end{align*}therefore the turning point $(-1,2)$ is a local maximum.
+
+\subsection*{Points of Inflection}\label{sec:PointsOfInflection}
+There is one last feature of the initial function that can be found. There is a point in between the maximum and minimum points where the change in slopes of the function change from decreasing to increasing. This is called a point of inflection. It is where the concavity of the function changes between down and up.
+% include the plot file for
+% point of inflection graph
+\begin{center}
+	\begin{tikzpicture}
+	\begin{axis}[
+	axis lines=center,
+	ymax=4,ymin=-4,
+	xmax=3,xmin=-3,
+	xtick=\empty,ytick=\empty,
+	xlabel=$x$,ylabel=$y$,
+	]
+	\addplot [<->,domain=-2.05:2.05,thick, samples=200, black] {x^3-3*x};
+	\addplot[mark=*] coordinates {(0,0)};
+	\addplot[mark=*] coordinates {(0,-3.5)};
+	\addplot [dashed,<->,domain=-3:3,thick, samples=200, black] {-3.5};
+	\node[anchor=south] at (axis cs:1.5,-3.5) {\footnotesize{concave up}};
+	\node[anchor=south] at (axis cs:-1.5,-3.5) {\footnotesize{concave down}};
+	\node[anchor=south] at (axis cs:1.5,2.5) {\footnotesize{point of inflection}};
+	\draw[<-](axis cs:0.1,0.1)--(axis cs:1,2.5);
+	\end{axis}
+	\end{tikzpicture}
+\end{center}
+The second derivative test can be used to determine if a function is concave-up ($>0$) or concave down ($<0$). Note there is no $=$ in these inequalities. In between is where the point of inflection can be found:
+\begin{tcolorbox}
+	Second Derivative Test for Concavity
+	\begin{itemize}
+		\item If $f''(x)=0$, then the point $(x,f(x))$ is a point of inflection.\\                         
+	\end{itemize}
+\end{tcolorbox}
+
+%Example level: EASY
+\example Find where the function changes from concave-up to concave-down.\\
+\[f(x)=3x^3-12x^2+7\]
+\solution Find the second derivative and set equal to zero to find the point of inflection.
+\begin{multicols}{2}
+\begin{align*}
+f'(x)&=9x^2-24x\\
+f''(x)&=18x-24\\
+0&=18x-24\\
+\frac{4}{3}&=x
+\end{align*}
+Sub back into $f(x)$ to find the $y-$value:\\
+\begin{align*}
+f\left(\frac{4}{3}\right)&=3\left(\frac{4}{3}\right)^3-12\left(\frac{4}{3}\right)^2+7\\
+&=-7\tfrac{2}{9}
+\end{align*}
+Therefore, the point $\left(\tfrac{4}{3},-7\frac{2}{9}\right)$ is a point of inflection.
+\end{multicols}
 
 %---------------------------------------------------
 % The Product, quotient and chain rules
@@ -195,41 +280,33 @@ place is also called a \emph{point of inflection}.
 \section{The Product, Quotient, and Chain Rules}
 
 %-----------------------------------------------
-\subsection{The Product Rule}
+\subsection*{The Product Rule}
 Let $f (x) =x$ and $g (x) =x^{2}$. What is the derivative of $f (x) \times g (x)$? The question helps to show that the answer is NOT $f^{ \prime } (x) \times g^{ \prime } (x)$ 
 
 $f (x) \times g (x) =x \times x^{2} =x^{3}$ and we know the derivative of $x^{3}$ is $3 x^{2}$. Also we know that $f^{ \prime } (x) =1$ and $g^{ \prime } (x) =2 x$ so $f^{ \prime } (x) \times g^{ \prime } (x) =1 \times 2 x =2 x$ not $3 x^{2}$. 
 
 So the derivative of the product of two functions is not the product of the derivatives of each function. In symbols this can be written 
+\[\left (f g\right )^{ \prime } \neq f^{ \prime } g^{ \prime }\]
+\textbf{Theorem} If $f$ and $g$ are both differentiable then 
+\begin{tcolorbox}
+	\[\frac{d}{d x} \left [f (x) g (x)\right ] =f (x) \frac{d}{d x} \left [g (x)\right ] +g (x) \frac{d}{d x} \left [f (x)\right ]\]
+	\end{tcolorbox}
+The Product rule is often seen in an abbreviated form as $\displaystyle \left(u v\right)^{\prime} =uv^{\prime} +vu^{\prime}$.
 
-\begin{center}
-$\left (f g\right )^{ \prime } \neq f^{ \prime } g^{ \prime }$
-\end{center}\par
-\textbf{Theorem} 
-
-If $f$ and $g$ are both differentiable then $\frac{d}{d x} \left [f (x) g (x)\right ] =f (x) \frac{d}{d x} \left [g (x)\right ] +g (x) \frac{d}{d x} \left [f (x)\right ]$ 
-
-
-
-The Product rule is often seen in an abbreviated form as
-\begin{equation*}\left (u v\right )^{ \prime } =u v^{ \prime } +v u^{ \prime }
+%-----------------------------------------------
+\subsection*{The Quotient Rule}
+Let $u =f (x)$ and $v =g (x)$ be differentiable functions of $x$ then we can show that
+\begin{tcolorbox}
+	\[\frac{d}{d x} \genfrac{[}{]}{}{}{f (x)}{g (x)} =\frac{g (x) \frac{d}{d x} \left [f (x)\right ] -f (x) \frac{d}{d x} \left [g (x)\right ]}{\left [g (x)\right ]^{2}}
+\]
+\end{tcolorbox}
+or in abbreviated form as
+\begin{equation*}\genfrac{(}{)}{}{}{u}{v}^{ \prime } =\frac{v u^{ \prime } -u v^{ \prime }}{v^{2}}
 \end{equation*}
 
-In words the Product Rule states that \textit{the derivative of the product of two functions is the first function times the derivative of the second function plus the second function times the derivative of the first function.} 
-
-
-
+\example See blackboard course notes for examples of the product and quotient rules.
 %-----------------------------------------------
-\subsection{The Quotient Rule}
-Let $u =f (x)$ and $v =g (x)$ be differentiable functions of $x$ then we can show that
-\begin{equation*}\frac{d}{d x} \genfrac{[}{]}{}{}{f (x)}{g (x)} =\frac{g (x) \frac{d}{d x} \left [f (x)\right ] -f (x) \frac{d}{d x} \left [g (x)\right ]}{\left [g (x)\right ]^{2}}
-\end{equation*}or in abbreviated form
-\begin{equation*}\genfrac{(}{)}{}{}{u}{v}^{ \prime } =\frac{v u^{ \prime } -u v^{ \prime }}{v^{2}}
-\end{equation*}or in words \textit{the derivative of a quotient is the denominator times the derivative of the numerator minus the numerator times the derivative of the denominator, all divided by the square of the denominator.}
-
-
-%-----------------------------------------------
-\subsection{Chain Rule}
+\subsection*{Chain Rule}
 When functions are combined with other functions, they are often called composite functions. These require special treatment when differentiating.
 
 Let $f (x) =x^{2}$ and $g (x) =2 x +1$ then $\left (f \circ g\right )$ This means $f$ `composed of' $g$ is $f \left (g \left (x\right )\right ) =f (2 x +1) =\left (2 x +1\right )^{2}$. 
@@ -270,13 +347,9 @@ a function etc. e.g.
 \begin{align*}\text{Let}y &  = f (u)\text{,}u =g (v)\text{and}v =h (x) \\
 \text{Then}\frac{d y}{d x} &  = \frac{d y}{d u} \cdot \frac{d u}{d v} \cdot \frac{d v}{d x}\end{align*}
 
-\textbf{Example} 
-
-Find $F^{ \prime } (x)$ when $F (x) =\frac{1}{x^{2} +1}$. 
-
-Using the function notation 
-
-$F (x) =\left (f \circ g\right ) (x) =f (g (x))$ where $f (u) =u^{ -1}$ and $g (x) =x^{2} +1$
+\example Find $F^{ \prime } (x)$ when $F (x) =\frac{1}{x^{2} +1}$. \\
+\solution Using function notation $F (x) =\left (f \circ g\right ) (x) =f (g (x))$ \\
+where $$f (u) =u^{ -1} \text{ and }g (x) =x^{2} +1$$
 \begin{equation*}f^{ \prime } (u) = -u^{ -2}\text{and}g^{ \prime } (x) =2 x
 \end{equation*}
 and 
@@ -292,22 +365,18 @@ is recommended that you use the variable $u$ wherever possible so that you follo
 
 In summary: if $g$ is differentiable at $x$ and $f$ is differentiable at $g (x)$, then the composite function $F =f \circ g$ defined by $F (x) =f (g (x))$ is differentiable at $x$ and $F^{ \prime }$ is given by the product
 \begin{tcolorbox}
-	\begin{center}
-		$F^{ \prime } (x) =f^{ \prime } (g (x)) \cdot g^{ \prime } (x)$
-	\end{center}
+\[F^{ \prime } (x) =f^{ \prime } (g (x)) \cdot g^{ \prime } (x)\]
 \end{tcolorbox}
 In Leibniz notation, if $y =f (u)$ and $u =g (x)$ are both differentiable functions, then
 \begin{tcolorbox}
-	\begin{center}
-$\frac{d y}{d x} =\frac{d y}{d u} \cdot \frac{d u}{d x}$
-	\end{center}
+\[\frac{d y}{d x} =\frac{d y}{d u} \cdot \frac{d u}{d x}\]
 \end{tcolorbox}
 
 The Chain Rule will be found in many situations where functions are added, subtracted, multiplied or divided. As an example we will focus on combining the Chain Rule with the Product Rule, however any combination of these rules could be found in a problem. 
 
-\textbf{Example} Differentiate $x e^{ -x^{2}}$. 
+\example Differentiate $x e^{ -x^{2}}$. 
 
-We can see that there is a product of two functions present in this example, i.e. $f (x) =x$ and $g (x) =e^{ -x^{2}}$. Also $g (x)$ is a composite function. 
+\solution We can see that there is a product of two functions present in this example, i.e. $f (x) =x$ and $g (x) =e^{ -x^{2}}$. Also $g (x)$ is a composite function. 
 
 We have from the Product Rule
 \begin{equation*}\left (f g\right )^{ \prime } =f g^{ \prime } +g f^{ \prime }
@@ -322,7 +391,7 @@ Let $u = -x^{2}$ then $\frac{d u}{d x} = -2 x$. Also $g (u) =e^{u}$ so $\frac{d 
  &  = e^{u} \cdot  -2 x \\
  &  = e^{ -x^{2}} \cdot  -2 x \\
  &  =  -2 x\; e^{ -x^{2}} \\
-\text{So}g^{ \prime } (x) &  =  -2 x\; e^{ -x^{2}}\end{align*}
+\text{So }g^{ \prime } (x) &  =  -2 x\; e^{ -x^{2}}\end{align*}
 
 Putting this all together
 \begin{align*}\left (f g\right )^{ \prime } &  = f g^{ \prime } +g f^{ \prime } \\
@@ -349,22 +418,21 @@ provided $y$ is also a differentiable function of $x$. So provided $\frac{d x}{d
 \begin{align*}\frac{d y}{d x} &  = \frac{d y}{d t} \div \frac{d x}{d t} \\
  &  = \frac{d y}{d t} \times \frac{d t}{d x}\end{align*}
 
-
-
+\example See blackboard course notes for examples of parametric differentiation.
+%---------------------------------------------------
+% Related Rates
+%---------------------------------------------------
 \section{Related Rates}
 The concept of related rates is best understood by exploring some examples. 
 
-\subsubsection{Example 1}
-Air is being pumped into a spherical balloon so that its volume is increasing at a rate of 100 $cm^{3}$/$\mbox{s}$. How fast is the radius of
+\example 1. Air is being pumped into a spherical balloon so that its volume is increasing at a rate of 100 $cm^{3}$/$\mbox{s}$. How fast is the radius of
 the balloon increasing when the diameter is 50 $\mbox{cm}$? 
 
 You have to find the related rates in the question. Let
 $V$ be the volume and $r$ be the radius at time $t$. The volume is increasing at the rate of 100 $cm^{3}$/$\mbox{s}$ so $\frac{d V}{d t} =100$. The question asks how fast is the radius increasing. In
 other words what is $\frac{d r}{d t}$? 
 
-\textbf{Solution:} 
-
-We need a formula that connects $V$ and $r$ if we are to find the relationship between $\frac{d V}{d t}$ and $\frac{d r}{d t}$. 
+\solution We need a formula that connects $V$ and $r$ if we are to find the relationship between $\frac{d V}{d t}$ and $\frac{d r}{d t}$. 
 
 The formula
 \begin{equation*}V =\frac{4}{3} \pi  r^{3}
@@ -389,14 +457,11 @@ Now we substitute $r =25$. (Diameter $ =50$ so radius $ =25$)
 
 So the radius is increasing at the rate of $\frac{1}{25 \pi } \mbox{cm}$/$\mbox{s}$ 
 
-\subsubsection{Example 2}
-A ladder $5$ $\mbox{m}$ long rests against a vertical wall. If
+\example 2. A ladder $5$ $\mbox{m}$ long rests against a vertical wall. If
 the bottom of the ladder slides away from the wall at the rate of $0.5$ $\mbox{m}$/$\mbox{s}$ how fast is the top of the ladder sliding down the wall when the bottom
 of the ladder is $3$ $\mbox{m}$ from the wall? 
 
-\textbf{Solution:} 
-
-Let the origin be placed at the corner where the wall meets the floor, let $x$ be the distance of the foot of the ladder from the wall and let $y$ be the distance of the top of the ladder from the corner. The ladder forms a right
+\solution Let the origin be placed at the corner where the wall meets the floor, let $x$ be the distance of the foot of the ladder from the wall and let $y$ be the distance of the top of the ladder from the corner. The ladder forms a right
 angled triangle whose sides are $x$, $y$ and with hypotenuse $5$. We are given that $\frac{d x}{d t} =0.5$ and are asked to find $\frac{d y}{d t}$ when $x =3$. 
 
 Pythagoras theorem gives
@@ -419,14 +484,10 @@ Substitute $\frac{d x}{d t} =0.5$, $x =3$ and $y =4$
 
 The top of the ladder is moving vertically downwards at the rate of 0.375 $\mbox{m}$/$\mbox{s}$ 
 
-\subsubsection{Example 3}
-A water tank has the shape of an inverted circular cone with a base radius of $2$ $\mbox{m}$ and height of $4$ $\mbox{m}$. If water is being pumped into
+\example 3. A water tank has the shape of an inverted circular cone with a base radius of $2$ $\mbox{m}$ and height of $4$ $\mbox{m}$. If water is being pumped into
 the tank at a rate of $2$ $\mathrm{m}^{3}$/$\mbox{min}$ find the rate at which the water level is rising when the water is $3$ $\mbox{m}$ deep. 
 
-\textbf{Solution:} 
-
-Let
-$V$, $r$ and $h$ be the volume of water the radius of the surface and the height at time $t$. We are given
+\solution Let $V$, $r$ and $h$ be the volume of water the radius of the surface and the height at time $t$. We are given
 \begin{equation*}\frac{d V}{d t} =2\text{}\mathrm{m}^{3}/\mbox{min}
 \end{equation*}
 
@@ -461,39 +522,110 @@ The water level is rising at the rate of $\frac{8}{9 \pi }$ $\mbox{m}$/$\mbox{mi
 %---------------------------------------------------
 % Optimisation
 %---------------------------------------------------
-\section{Optimisation}
-This group of problems is often called \emph{optimisation} problems. We are finding
-the optimum (best) way to do something. We could be finding for example the maximum size or maximum velocity
-or we could be finding the minimum cost etc. 
+\section{Optimisation}\label{sec:Optimisation}
+Optimisation is the process of using calculus to find the best result for a situation involving a changing quantity (variable). Examples include  maximizing profit, minimizing cost, maximizing volume, minimizing amount materials used, and so on. As long as the quantities in question can be represented by a function, calculus can used to find the special points of the function and their nature.
 
-\subsection*{Method 1}
-Find $f^{ \prime } (x)$. Then find values of $x$ that are solutions of the equation $f^{ \prime } (x) =0$. Test values near each value of $x$ to find whether the slope of the tangent goes from positive through zero to negative (local maximum) or negative through zero
-to positive (local minimum). 
+\begin{tcolorbox}
+	A general method to approach an optimisation problem             
+	\begin{enumerate}
+		\item Write down the known variables and draw a diagram
+		\item Form an equation of the situation by placing the unknown variable in terms of the known variables
+		\item Use the facts of the problem to reduce the expression until it becomes a relationship between the unknown quantity and one of the known quantities
+		\item Optimize by finding a maximum or minimum value
+	\end{enumerate}
+\end{tcolorbox}
 
-\subsection*{Method 2}
-Find $f^{ \prime } (x)$ and $f^{ \prime  \prime } (x)$. Then find values of $x$ that are solutions of the equation $f^{ \prime } (x) =0$. Substitute each of these values of $x$ in $f^{ \prime  \prime } (x)$. If $f^{ \prime  \prime } (x) >0$ the point is a local minimum. If $f^{ \prime  \prime } (x) <0$ the point is a local maximum. Also if $f^{ \prime  \prime } (x) =0$ the point is a point of inflection.\vspace{1cm} 
+%Example level: EASY
+\example A farmer wishes to fence a paddock using an existing wall as one side of the paddock. She has 100 meters of fencing and wants to know the dimensions of the paddock to enclose the maximum area.
+% include the plot file for
+% optimisation paddock
+\begin{center}
+	\begin{tikzpicture}
+	\usetikzlibrary{patterns}
+	\draw [thick](0,0) -- (0,3) -- (5,3) -- (5,0);
+	\draw [dashed](-2,0) -- (7,0);
+	\draw[pattern=north west lines, pattern color=gray!50, draw=none] (0,0) rectangle (5,3);
+	\node at (2.5,-0.5) {existing wall};
+	\draw [<->,thick] (5.3,0)--(5.3,3);
+	\node at (7,1.5){fence length 1};
+	\draw [<->,thick] (0,3.3)--(5,3.3);
+	\node at (2.5,3.7){fence length 2};
+	\node [text width=2cm, fill=white]at (2.5,1.5){area of the paddock};
+	\end{tikzpicture}	
+\end{center}
+\solution Following the steps outlined above, draw a diagram and label the variables. Let $T$ represent the total fence length which cannot be more than 100m. Write this as an equation: $T=100$. There are 3 individual lengths that make up the total, so let $l$ represent the long side of the paddock, and $w$ represent the short side. 
+\begin{align*}
+T&=l+2w\\
+100&=l+2w
+\end{align*}
+The quantity to be optimised is area ($A$) of the paddock (remember it is a rectangle):
+\begin{align*}
+A=lw
+\end{align*}
+The next step is to represent the quantity to be optimised (area) as a function of one other variable. We can rearrange our earlier equation to solve for length: $l=100-2w$. This can now be substituted into the area equation:
+\begin{align*}
+A&=lw\\
+&=\left(100-2w\right)w\\
+&=100w-2w^2
+\end{align*}
+This is now an equation that can optimised using calculus.
+\begin{align*}
+\frac{dA}{dw}&=100-4w\\
+0&=100-4w\\
+w&=25
+\end{align*}
+Therefore the paddock width is 25 meters to maximize the total area. Going back to the original constraint of 100m total length means that the paddock length is $100-2(25)=50$ meters.\\
 
-\subsection*{Steps to Solve an Optimisation Problem}
-\begin{enumerate}
-\item Understand the problem. What is the unknown? What
-are the given quantities? What are the given conditions? 
+%Example level: EASY
+\example A cylindrical can is to be made to hold 1 litre of oil. Find the dimensions that will minimise the cost of the aluminium to manufacture the can. Note that 1 L = 1000 cm$^3$.\\
 
-\item Draw
-a diagram. This can be a very useful step. 
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}[h]{0.4\textwidth}
+		\includegraphics[width=\textwidth]{graphics/oilCan}
+	\end{subfigure}
+	\begin{subfigure}[h]{0.4\textwidth}
+		\begin{tikzpicture}
+		\draw [thick](0,-1)rectangle(3,4);
+		\draw [<->,thick] (0,-1.3)--(3,-1.3) node[below,xshift=-1.5cm]{height of can};
+		\draw [<->,thick] (0.5,-1)--(0.5,4) node[below,yshift=-2.5cm,rotate=90]{circumference};
+		\draw [thick](-1.5,1.5) circle [radius=1.5];
+		\draw [thick](4.5,1.5) circle [radius=1.5];
+		\draw[->,thick](-1.5,1.5)--(-0.25,2.3);
+		\node at (-.9,1.5){$r$};
+		\filldraw (-1.5,1.5) circle (2pt) ;
+		\end{tikzpicture}	
+	\end{subfigure}
+\end{figure}	
 
-\item Assign
-symbols to the quantities. (Both the known and unknown quantities.) 
+\solution The minimum cost of the aluminium will be the minimum surface area of the cylinder. The can can be deconstructed into two circles and a rectangle. We will label the variables required to calculate area.
 
-\item Express the symbol for the
-unknown quantity in terms of the symbols for the known quantities. 
-
-\item Use the facts of the problem
-to reduce the expression in step 4 until is becomes a relationship between the unknown quantity and \emph{one} of the known quantities.
-
-
-\item Use one of the methods given above to find the maximum or minimum value.\vspace{1cm}
-\end{enumerate}
-
+Let $SA$ represent surface area of the can. The total surface area is:
+\begin{align*}
+SA&=\pi r^2 + \pi r^2 + \left(\textrm{height}*\textrm{circumference}\right)\\
+&=2\pi r^2+2\pi rh
+\end{align*}
+Note that we have 2 variables that are unknown, $r$, and $h$. We need to express one variable in terms of the other in order to proceed. Use the additional information in the problem. The volume of the can must be 1000 cm$^3$.
+\begin{align*}
+V&=\pi r^2 h\\
+1000&=\pi r^2 h\\
+h&=\frac{1000}{\pi r^2}
+\end{align*}
+Substitute this form for $h$ into the surface area function:
+\begin{align*}
+SA&=2\pi r^2+2\pi rh\\
+&=2\pi r^2+2\pi r\left(\frac{1000}{\pi r^2} \right)\\
+&=2\pi r^2+\frac{2000}{r}
+\end{align*}
+This function is now the surface area in terms of a single variable, $r$, and can be optimised:
+\begin{align*}
+\frac{dSA}{dr}&=4\pi r-\frac{2000}{r^2}\\
+0&=4\pi r-\frac{2000}{r^2}\\
+&=4\pi r^3-2000\\
+r^3&=\frac{2000}{4\pi}\\
+r&=5.419 \,\textrm{cm}
+\end{align*}
+Therefore the final dimensions of the can optimised for minimum cost are radius$=5.42$ cm, and height$=10.8$ cm. 
 %---------------------------------------------------
 % Chapter Exercises in a separate file
 %---------------------------------------------------
