@@ -143,30 +143,24 @@ Lets say the interest is compounded monthly, then after 1 month you will receive
 \end{tabular}
 \end{center}
 
-As a function this is plotted below:
-
-This comes up again in the following chapters.
-
-
+As a functio,n $f(x)=e^x$, is plotted below:
+\begin{center}
+	\includegraphics[width=10cm]{exp1}
+\end{center}
 %---------------------------------------------------
 % Logarithmic Functions
 %---------------------------------------------------
 \section{Logarithmic Functions}
-The \emph{logarithmic function} is the inverse of the function $f (x) =a^{x}$. Recall the inverse of a function is the reflection of the function in the line $y =x$. Mathematically this is equivalent to swapping the $x$ and the y in $y =a^{x}$. So $x =a^{y}$ is the inverse of $y =a^{x}$. We have another notation for the inverse of a function, which is a little more complicated.
-\ let $y =f (x)$ be a function of $x$ then $y =f^{ -1} (x)$ is the inverse of this function. Sometimes the inverse of the function is also a function.
-\ For example the inverse of $y =x^{2}$ is $x =y^{2}$. $y =x^{2}$ is a function (vertical line test always applies), whereas $x =y^{2}$ is not a function (vertical line test is broken). 
+The \emph{logarithmic function} is the inverse of the function $f (x) =a^{x}$. Recall the inverse of a function is the reflection of the function in the line $y =x$. Mathematically this is equivalent to swapping the $x$ and the y in $y =a^{x}$. So $x =a^{y}$ is the inverse of $y =a^{x}$. We have another notation for the inverse of a function, which is a little more complicated. Let $y =f (x)$ be a function of $x$ then $y =f^{ -1} (x)$ is the inverse of this function. 
 
+Sometimes the inverse of the function is also a function. For example the inverse of $y =x^{2}$ is $x =y^{2}$. $y =x^{2}$ is a function (vertical line test always applies), whereas $x =y^{2}$ is not a function (vertical line test is broken). 
 
+\begin{multicols}{2}
 \includegraphics[ width=3.032in, height=2.4275in,]{L4SZ2832}
-
-
+\includegraphics[ width=2.3419in, height=2.4267in,]{L4SZ2833}
+\end{multicols}
 
 The inverse of $y =10^{x}$ is $x =10^{y}$. $y =10^{x}$ is a function (vertical line test always applies) and so is $x =10^{y}$. 
-
-
-\includegraphics[ width=2.3419in, height=2.4267in,]{L4SZ2833}
-
-
 
 Another useful fact to remember about inverses concerns the domain and range. The \emph{domain}
 of $f$ is the \emph{range} of $f^{ -1}$ and the \emph{range} of $f$ is the \emph{domain} of $f^{ -1}$. 
@@ -211,7 +205,7 @@ Make a comment about each statement below.
 	\end{tasks}
 
 \textbf{Graphing Exercise Solution} Using \desmos we can see the different plots. Plots (b) and (d) are equivalent, so are on top of each other.\\
-\begin{center}\vspace{-1cm}
+\begin{center}
 \includegraphics[width=14cm]{logGraph1}\\
 \end{center}
 
@@ -222,7 +216,7 @@ Make a comment about each statement below.
 	\task $y =\log _{4} x$ 
 	\task $y =\log _{10} x$ \end{tasks}
 \textbf{Graphing Exercise Solution} Using \desmos we can see the relationship between the different bases in the log equation:\\
-\begin{center}\vspace{-1cm}\includegraphics[width=14cm]{logGraph2}\end{center}
+\begin{center}\includegraphics[width=14cm]{logGraph2}\end{center}
 Notice the point that is common to all curves and the behaviour of the family of curves for $x >1$ and for $0 <x <1$. 
 
 \textbf{Property 1}: A property of logarithms is $\log _{a} 1 =0$ and this can be seen on the graphs where every graph goes through $\left (1 ,0\right )$. 
@@ -234,7 +228,7 @@ The pattern you observe as the base gets bigger might not be evident for values 
 \task $y =\log _{\frac{1}{3}} x$ 
 	\task $y =\log _{\frac{1}{4}} x$ 
 	\task $y =\log _{\frac{1}{5}} x$ \end{tasks}
-\begin{center}\vspace{-0.5cm}\includegraphics[width=14cm]{logGraph3}\end{center}
+\begin{center}\includegraphics[width=14cm]{logGraph3}\end{center}
 To say the pattern is the same you have to be careful to describe the base. Explain how changing the base gives the same pattern as for (a) to (d).
 
 \textbf{Property 2:} A second property of logarithms is $\log _{a} a =1$. That is $a^{1} =a$ or the power to which you have to raise $a$ to get $a$ is $1$. On your curves above locate a point on each curve that shows this. You
@@ -281,12 +275,14 @@ Use Desmos to sketch the following. Describe in words how each curve is related 
 It is a useful exercise to prove these laws as the proofs show the
 connection between the laws for exponents and the laws for logarithms. 
 
-\textbf{Proof of Law 1} \\\relax Let
-$\log _{a} X =u$ so $a^{u} =X$ \\\relax and $\log _{a} Y =v$ so $a^{v} =Y$ \\\relax $X Y =a^{u} a^{v} =a^{u +v}$ \\\relax Take logarithms of both sides to the base $a$ \\\relax $\log _{a} X Y =\log _{a} a^{u +v} =u +v$ {\scriptsize (property 3)} $ =\log _{a} X +\log _{a} Y$ 
+\textbf{Proof of Law 1} \\
+Let $\log _{a} X =u$ so $a^{u} =X$ \\\relax and $\log _{a} Y =v$ so $a^{v} =Y$ \\\relax $X Y =a^{u} a^{v} =a^{u +v}$ \\\relax Take logarithms of both sides to the base $a$ \\\relax $\log _{a} X Y =\log _{a} a^{u +v} =u +v$ {\scriptsize (property 3)} $ =\log _{a} X +\log _{a} Y$ \\
 
-\textbf{Proof of Law 2} \\\relax $\frac{X}{Y} =\frac{a^{u}}{a^{v}} =a^{u -v}$ \\\relax Take logarithms of both sides to the base $a$ \\\relax $\log _{a} \frac{X}{Y} =\log _{a} a^{u -v} =u -v$ {\scriptsize (property 3)} $ =\log _{a} X -\log _{a} Y$ 
+\textbf{Proof of Law 2} \\
+$\frac{X}{Y} =\frac{a^{u}}{a^{v}} =a^{u -v}$ \\\relax Take logarithms of both sides to the base $a$ \\\relax $\log _{a} \frac{X}{Y} =\log _{a} a^{u -v} =u -v$ {\scriptsize (property 3)} $ =\log _{a} X -\log _{a} Y$ \\
 
-\textbf{Proof of Law 3} \\\relax $X^{c} =\left (a^{u}\right )^{c} =a^{u c} =a^{c u}$ \\\relax Take logarithms of both sides to the base $a$ \\\relax $\log _{a} X^{c} =\log _{a} a^{c u} =c u$ {\scriptsize (property 3)} $ =c \log _{a} X$ 
+\textbf{Proof of Law 3} \\
+ $X^{c} =\left (a^{u}\right )^{c} =a^{u c} =a^{c u}$ \\\relax Take logarithms of both sides to the base $a$ \\\relax $\log _{a} X^{c} =\log _{a} a^{c u} =c u$ {\scriptsize (property 3)} $ =c \log _{a} X$ //
 
 \textbf{Example 1}
 Expand using the logarithm laws 
