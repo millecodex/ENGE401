@@ -1,0 +1,162 @@
+%-------------------------------------------------------------------
+% Differential Equations
+%-------------------------------------------------------------------
+\begin{Exercise}[title={Differential Equations},label=exDiffEqns]
+	\Question Solve the following differential equations and use the given conditions to find the particular solution. 
+	\begin{tasks}(2)
+	\task $\frac{d y}{d t} =e^{t} +2 t\text{\quad \quad }y (0) =2$ %$\;y =e^{t} +t^{2} +1$ 
+	\task $\frac{d y}{d x} =\sin  2 x +\cos  2 x\text{\quad \quad }y (0) =0$ %$\;y =\frac{1}{2} \left (\sin  2 x -\cos  2 x +1\right )$
+	\task $t \frac{d y}{d t} =1 -t^{2}\text{\quad \quad }y \left (0\right ) =2$ % $\;y =\ln  \left \vert t\right \vert  -\frac{t^{2}}{2} +1$ 
+	\task $x^{2} \frac{d P}{d x} =2 +x\text{\quad \quad }P (1) =2$ %$\;P = -\frac{2}{x} +\ln  \left \vert x\right \vert  +4$ 
+	\end{tasks}
+
+\Question Show that $y =x +\frac{1}{x}$ is a solution of the differential equation $x y^{ \prime } +y =2 x$  % 
+\Question Verify that $y =\sin  x \cos  x -\cos  x$ is a solution of the initial-value problem
+\begin{equation*}y^{ \prime } +\left (\tan  x\right ) y =\cos ^{2} x\qquad y (0) = -1
+\end{equation*} on the interval $\frac{ -\pi }{2} <x <\frac{\pi }{2}$. %
+
+\Question Which of the following functions are solutions of the differential
+equation $y^{ \prime  \prime } +y =\sin  x$ \\\relax (a)  $y =\sin  x\text{\quad \quad }$(b)  $y =\cos  x\text{\quad \quad }$(c)  $y =\frac{1}{2} x \sin  x\text{\quad \quad }$(d)  $y = -\frac{1}{2} x \cos  x$ %$\;y = -\frac{1}{2} x \cos  x$
+
+\Question A mass falling to earth with a constant acceleration of $9.8 \mathrm{m}/\mathrm{s}^{2}$ satisfies the differential equation
+\begin{equation*}\frac{d v}{d t} =9.8
+\end{equation*} \\\relax where $v$ is the velocity at time $t$.  Find an expression for $v$ if 
+\begin{tasks}
+	\task The mass is dropped from a stationary position. 
+	\task The mass is fired towards earth with an initial velocity of $100 \mathrm{m}/\mbox{s}\text{.}$ \end{tasks}
+%(a) $\;v =9.8 t\text{\quad \quad }$(b) $\;v =9.8 t +100$
+
+\Question The angular velocity
+$\omega $ of a flywheel under constant braking torque of $N$ is given by the differential equation
+\begin{equation*}I \frac{d \omega }{d t} +N =0.
+\end{equation*}where $I$ is the moment of inertia ($I$ is a constant) 
+\begin{tasks}
+	\task Find $\omega $\ in terms of $t$ given that $\omega  =\omega _{0}$ when $t =0$. 	
+	\task Calculate the time taken to bring the flywheel to rest from an initial
+	speed of $60 \pi  rad/\mbox{s}$ given that the moment of inertia is $100 kg \centerdot \mathrm{m}^{2}$ under a braking torque of $40 \mathrm{N} \centerdot \mbox{m}\text{.}$ \end{tasks}
+%(a) $\;\omega  =\omega _{0} -\frac{N}{I} t\text{\quad \quad }$(b) $\;47.1 \mbox{s}$
+
+\end{Exercise}
+%---------------------------------------------
+%--ANSWERS---- Diff Eqns -------------------
+%---------------------------------------------
+\setboolean{firstanswerofthechapter}{true}
+\begin{Answer}[ref={exDiffEqns}]
+\Question %Solve the following differential equations and use the given conditions to find the particular solution. 
+\begin{tasks}
+	\task $\;y =e^{t} +t^{2} +1$ 
+	\task $\;y =\frac{1}{2} \left (\sin  2 x -\cos  2 x +1\right )$
+	\task $\;y =\ln  \left \vert t\right \vert  -\frac{t^{2}}{2} +1$ 
+	\task $\;P = -\frac{2}{x} +\ln  \left \vert x\right \vert  +4$ 
+\end{tasks}
+
+\Question %Show that $y =x +\frac{1}{x}$ is a solution of the differential equation $x y^{ \prime } +y =2 x$  % 
+\Question %Verify that $y =\sin  x \cos  x -\cos  x$ is a solution of the initial-value problem
+
+\Question %Which of the following functions are solutions of the differential equation $y^{ \prime  \prime } +y =\sin  x$ \\\relax (a)  $y =\sin  x\text{\quad \quad }$(b)  $y =\cos  x\text{\quad \quad }$(c)  $y =\frac{1}{2} x \sin  x\text{\quad \quad }$(d)  $y = -\frac{1}{2} x \cos  x$ %
+$\;y = -\frac{1}{2} x \cos  x$
+
+\Question %A mass falling to earth with a constant acceleration of $9.8 
+(a) $\;v =9.8 t$ (b) $\;v =9.8 t +100$
+
+\Question %The angular velocity
+(a) $\;\omega  =\omega _{0} -\frac{N}{I} t$ \\
+(b) $\;47.1 \mbox{s}$
+\end{Answer}%diff eqns
+\setboolean{firstanswerofthechapter}{false}
+
+%-------------------------------------------------------------------
+% Separable Equations
+%-------------------------------------------------------------------
+\begin{Exercise}[title={Separable Equations},label=exSepEqns]
+	\Question Solve the following differential equations  
+	\begin{tasks}
+		\task  $y \frac{d y}{d x} =x\text{\quad \quad }$given $y =4$ when $x =0$ %$y^{2} =x^{2} +16$
+		\task $\frac{1}{t} \frac{d v}{d t} =2\text{\quad \quad }$given $v =2$ when $t =1$ %$\;v =t^{2} +1$ 
+		\task $e^{x} \frac{d y}{d x} +2 =0\text{\quad \quad }$given $y =5$ when $x =0$ %$y =2 e^{ -x} +3$
+		\task $\left (x +2\right ) \frac{d y}{d x} =y +3\text{\quad \quad }$given $y =0$ when $x =0$ %$y =\frac{3}{2} x$
+		\task $\frac{d i}{d t} +i =1\text{\quad \quad }$given $i =10$ when $t =0$ %$i =-(9e)^{ -t} +1$
+		\task $\frac{d y}{d x} -2 x =0\text{\quad \quad }y (0) =2$ %$y =x^2+2$ 
+	\end{tasks}
+	
+
+\Question The rate at which the atoms of a radioactive substance split up is given by $\frac{d N}{d t} = -\lambda  N\text{,}$ where $N$ is the number of atoms present after $t$ seconds and $\lambda $\ is a constant. 
+\begin{tasks}
+	\task Show that $N =N_{0} e^{ -\lambda  t}$ where $N_{0}$ is the number of atoms present initially (i.e. when $t =0$). 
+	
+	\task Find the time in years for half of the atoms of a given mass of
+	radium to disintegrate if $\lambda  =1.37 \times 10^{ -11}$\ for radium. \end{tasks}
+
+%$5 \times 10^{10}\,$years 
+\Question A body falling in a medium where the resistance is proportional to the velocity $v$ at time $t$ obeys the differential equation $\frac{d v}{d t} =10 -0.2 v$ 
+\begin{tasks}
+	\task If the body falls from rest find $v$ in terms of $t$ and show that as $t \rightarrow \infty $ the velocity approaches $50 \mathrm{m}/\mbox{s}$. 
+	
+	\task How long would it take for the body to reach a velocity of $25 \mathrm{m}/\mbox{s}$? \end{tasks}
+
+%()a)  $v =50 -50 e^{ -0.2 t}\text{\quad \quad }$(b)  $3.47 \mbox{s}$
+\Question On a hot summer's day a bottle of beer is placed in a fridge set at $4 \mbox{{\ensuremath{{}^\circ}}C}$.  The rate of change of the bottle's temperature $\theta  \mbox{{\ensuremath{{}^\circ}}C}$ after $t$ minutes is given by Newton's Law of Cooling, $\frac{d \theta }{d t} = -k \left (\theta  -4\right )$ where $k$ is a constant that is specific to the beer. 
+
+\begin{tasks}
+	\task Find $\theta $ in terms of $t$.  If the initial temperature ($t =0$)\ of the bottle of beer was $22 \mbox{{\ensuremath{{}^\circ}}C}$ and it took $10 \mbox{min}$ to cool to $20 \mbox{{\ensuremath{{}^\circ}}C}\text{,}$ find the value of $k$, and the particular solution. 
+	
+	\task How long would it take the bottle to
+	reach the ideal drinking temperature of $8 \mbox{{\ensuremath{{}^\circ}}C}$? \end{tasks}
+%(a)  $\theta  =4 +18 e^{ -k t}\text{\quad \quad }k =0.011778303$ 
+%(b)  $127.6989838 \approx 128\min $ (3sf) 
+\Question Brine containing $2$ grams of salt per litre flows into a tank initially filled with $50$ litres of water containing $10$ grams of salt.  The brine enters the tank at $5$ litres/$\mbox{min}$, the concentration is kept constant by stirring and the mixture flows out through a tap at the same rate so that the tank at all times continues to contain $50\,$L of mixture.  Let there be $Q$ grams of salt in the tank after $t$ minutes. 
+
+\begin{tasks}
+	\task Show that $\frac{d Q}{d t} =10 -\frac{Q}{10}$ 
+	\task Solve this differential equation to obtain an expression for $Q$ in terms of $t$. 
+	\task How much salt is in the tank after $10$ minutes? 
+	\task Sketch the graph of $Q$ against $t$. 
+	\task What happens to $Q$ as $t \rightarrow \infty $? \end{tasks}
+
+%(b)  $Q =100 -90 e^{ -0.1 t}\text{\quad \quad }$(c)  $66.9 \mbox{g}$
+%(e)  $Q \rightarrow 100 \mbox{g}$ 
+\Question A rectangular tank is divided into two equal compartments by a vertical porous membrane.  Liquid in one compartment, initially at a depth of $40 \mbox{cm}$, passes into the other compartment which is initially empty, at a rate proportional to the difference in levels 
+
+\begin{tasks}
+	\task If the depth of the liquid in the second compartment is $x \mbox{cm}$ after $t$ minutes show that  \\\relax $\frac{d x}{d t} =k \left (40 -2 x\right )\text{.}$ 
+	\task Show that the solution of this differential equation is $x =20 \left (1 -e^{ -2 k t}\right )\text{.}$ 
+	\task If the level in the second compartment rises $2 \mbox{cm}$ in the first $5$ minutes, after how much time will the difference in levels be $2 \mbox{cm}$? 
+	\task Interpret what is happening. \end{tasks}
+%(c)  $142.165794 \approx 142 \mbox{min}$ (3sf)
+\Question Under certain conditions the relative density $\rho $ of a gas and its temperature $T \mbox{{\ensuremath{{}^\circ}}C}$ satisfies the differential equation $\frac{d \rho }{d T} = -n^{2} \rho ^{2}$  \ (where $n$ is a constant).  Express $\rho $\ in terms of $T$ given that $\rho \; =0.002$ when $T =30 \mbox{{\ensuremath{{}^\circ}}C}$ and $\rho \; =0.0016$ when $T =45 \mbox{{\ensuremath{{}^\circ}}C}$. 
+%$\rho  =\left (8\frac{1}{3} t +250\right )^{ -1}$ 
+
+\end{Exercise}
+%---------------------------------------------
+%--ANSWERS----Separable Equations-------------
+%---------------------------------------------
+\begin{Answer}[ref={exSepEqns}]
+\Question %Solve the following differential equations  
+\begin{tasks}
+	\task $y^{2} =x^{2} +16$
+	\task $\;v =t^{2} +1$ 
+	\task $y =2 e^{ -x} +3$
+	\task $y =\frac{3}{2} x$
+	\task $i =-(9e)^{ -t} +1$
+	\task $y =x^2+2$ 
+\end{tasks}
+
+\Question %The rate at which the atoms of a radioactive substance split
+$5 \times 10^{10}\,$ years 
+\Question% A body falling in a medium where the resistance is proportional 
+(a)  $v =50 -50 e^{ -0.2 t}$\\
+(b)  $3.47 \mbox{s}$
+\Question %On a hot summer's day a bottle of beer is placed in a 
+(a)  $\theta  =4 +18 e^{ -k t}\qquad k =0.011778303$ \\
+(b)  $127.6989838 \approx 128\min $ (3sf) 
+\Question %Brine containing $2$ grams of salt per litre flows 
+(b)  $Q =100 -90 e^{ -0.1 t}$\\
+(c)  $66.9 \mbox{g}$\\
+(e)  $Q \rightarrow 100 \mbox{g}$ 
+\Question %A rectangular tank is divided into two equal compartments 
+(c)  $142.165794 \approx 142 \mbox{min}$ 
+\Question %Under certain conditions the relative density 
+$\rho  =\left (8\frac{1}{3} t +250\right )^{ -1}$ 
+\end{Answer}%Separable Equations
+
+
