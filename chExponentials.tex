@@ -2,11 +2,9 @@
 % Exponential (& Logarithmic) Functions
 %---------------------------------------------------
 \chapter[Exponential Functions]{Exponential \& Logarithmic \\Functions}
-%\section{placeholder}
-We defined $a^{x}$ where $a >0$ in chapter 1, however $x$ was restricted to rational numbers. We now want to explore $a^{x}$ where $a >0$ and $x$ is any real number. 
+We defined the polynomial $a^{x}$ in chapter 1, however $x$ was restricted to rational numbers. We now want to explore $a^{x}$ where and $x$ is any real number. 
 
-We can show that values exist simply by pressing buttons on the calculator or drawing
-a graph using Desmos, however an intuitive understanding can be obtained by considering appropriate values. 
+We can show that values exist simply by pressing buttons on the calculator or drawing a graph using \desmos, however an intuitive understanding can be obtained by considering appropriate values. 
 
 Consider $2^{\pi }$. We know $\pi  =3.141592654 \ldots $. $2^{\pi }$ should be between $2^{3}$\ and $2^{4}$. That is between $8$ and $16$. We can evaluate 
 
@@ -22,8 +20,7 @@ Consider $2^{\pi }$. We know $\pi  =3.141592654 \ldots $. $2^{\pi }$ should be b
 	$2^{3.141592654}$  & $8.82497783$
 \end{tabular}
 
-We could continue this process. If
-we enter $2^{\pi }$ on the calculator the answer obtained is
+We could continue this process. If we enter $2^{\pi }$ on the calculator the answer obtained is
 \begin{equation*}2^{\pi } =8.824977827
 \end{equation*}
 
@@ -60,9 +57,9 @@ Let $y =a^{x}$ where $a >0$
 $f (x) =a^{x}$ is called an \emph{exponential} function. $a$ is called the \emph{base} of the exponential function. The domain
 is $\mathbb{R}$. the range is $\left (0 ,\infty \right )$. The $x$-axis is an asymptote. 
 
-\textbf{Example 1} Find the equation of the exponential function that passes through $\left (0 ,1\right )$ and $\left (3 ,125\right )$. 
+\example Find the equation of the exponential function that passes through $\left (0 ,1\right )$ and $\left (3 ,125\right )$. 
 
-\textbf{Solution} An exponential function that passes through $\left (0 ,1\right )$ is of the form $f (x) =a^{x}$. As $f (3) =125$ we substitute $x =3$ and get
+\solution An exponential function that passes through $\left (0 ,1\right )$ is of the form $f (x) =a^{x}$. As $f (3) =125$ we substitute $x =3$ and get
 \begin{align*}a^{3} &  = 125 \\
 a &  = \sqrt[{3}]{125} =5\\
 \therefore f(x)&=5^x \text{ satisfies the conditions.}
@@ -110,6 +107,7 @@ function.
 	\item (Challenge) Reflection in $x =1\vspace{+4.000000cm}$ \end{enumerate}
 
 \end {multicols}
+\columnseprule =0pt
 \medskip\medskip\medskip\medskip
 
 %---------------------------------------------------
@@ -143,7 +141,7 @@ Lets say the interest is compounded monthly, then after 1 month you will receive
 \end{tabular}
 \end{center}
 
-As a functio,n $f(x)=e^x$, is plotted below:
+As a function, $f(x)=e^x$, is plotted below:
 \begin{center}
 	\includegraphics[width=10cm]{exp1}
 \end{center}
@@ -176,7 +174,7 @@ In $x =a^{y}$ substitute $y =\log _{a} x$ and we get $x =a^{\log _{a} x}$. This 
 
 Problems involving logarithms will often require us to switch back and forth between $y =\log _{a} x$ and $x =a^{y}$, however it is also helpful if you can remember to substitute for $y$ and write $x =a^{\log _{a} x}$ so that you can say ``the logarithm is the power". 
 
-\textbf{Example 1}
+\example
 \begin{description}
 	\item [(a)] $\log _{10} 100 =2$ because $10^{2} =100$ 
 	
@@ -284,15 +282,14 @@ $\frac{X}{Y} =\frac{a^{u}}{a^{v}} =a^{u -v}$ \\\relax Take logarithms of both si
 \textbf{Proof of Law 3} \\
  $X^{c} =\left (a^{u}\right )^{c} =a^{u c} =a^{c u}$ \\\relax Take logarithms of both sides to the base $a$ \\\relax $\log _{a} X^{c} =\log _{a} a^{c u} =c u$ {\scriptsize (property 3)} $ =c \log _{a} X$ //
 
-\textbf{Example 1}
+\example
 Expand using the logarithm laws 
 \begin{description}
 	\item [(a)] $\log  \sqrt{3} =\log  3^{\frac{1}{2}} =\frac{1}{2} \log  3$ 
 	
 	\item [(b)] $\ln  \genfrac{(}{)}{}{}{a \sqrt{b}}{\sqrt[{3}]{c}} =\ln  \left (a b^{\frac{1}{2}} c^{ -\frac{1}{3}}\right ) =\ln  a +\ln  b^{\frac{1}{2}} +\ln  c^{ -\frac{1}{3}} =\ln  a +\frac{1}{2} \ln  b -\frac{1}{3} \ln  c$ \end{description}
 
-\textbf{Example 2}
-Evaluate
+\example Evaluate
 \begin{description}
 	\item [(a)] $\log _{2} 112 -\log _{2} 7 =\log _{2} \frac{112}{7} =\log _{2} 16 =\log _{2} 2^{4} =4 \log _{2} 2 =4$ 
 	
@@ -302,8 +299,7 @@ Evaluate
 	
 	\item [(d)] $e^{2 \ln  4} =\left (e^{\ln  4}\right )^{2} =4^{2} =16\text{\quad \quad }($Let $\ln  4 =x$ then $e^{x} =4$ so $e^{\ln  x} =4)$ \end{description}
 
-\textbf{Example 3}
-Rewrite as a single logarithm term using the logarithm laws 
+\example Rewrite as a single logarithm term using the logarithm laws 
 \begin{description}
 	\item [(a)] $\log  12 +\frac{1}{2} \log  5 -\log  3 =\log  \frac{12 \sqrt{5}}{3} =\log  4 \sqrt{5}$ 
 	
@@ -318,9 +314,7 @@ Rewrite as a single logarithm term using the logarithm laws
 The types of problems we meet in this section will be able to be rearranged so that they look like
 \begin{equation*}a^{f (x)} =b
 \end{equation*}
-
 Where $a$ and $b$ are real numbers, $x$ is the unknown variable we are trying to find and $f (x)$ is an expression in $x$. The technique we will use will be the same for every problem we solve. 
-
 
 \begin{description}
 	\item [Step 1] Our first step is to inspect the problem to see if the unknown
@@ -344,8 +338,8 @@ Where $a$ and $b$ are real numbers, $x$ is the unknown variable we are trying to
 	\item [Step 4]
 	Solve the equation you obtain. \end{description}
 
-\textbf{Example 1} Solve $3^{x} =5$. This is an example of case $3$ above.\\ 
-\textbf{Solution} 
+\textbf{Example 1} Solve $3^{x} =5$. This is an example of case $3$ above.\medskip\\ 
+\solution Two methods will be explored below:
 \begin{tasks}[label-width={5em}](2)
 \task[Method 1] \\Take logarithms to the base $10$\\
 \begin{align*}\log  3^{x} &  = \log  5 \\
@@ -362,7 +356,7 @@ This shows it is immaterial whether you take logarithms to base $10$ or logarith
 \begin{tasks}[label-width={6em}](2)
 \task[Example 2]
 Solve $3^{2 x +1} =5$\\
-\textbf{Solution} Take logarithms to the base 10:
+\solution Take logarithms to the base 10:
 \begin{align*}\log  3^{2 x +1} &  = \log  5 \\
 \left (2 x +1\right ) \log  3 &  = \log  5 \\
 2 x +1 &  = \frac{\log  5}{\log  3} \\
@@ -372,7 +366,7 @@ x &  = \frac{1}{2} \left (\frac{\log  5}{\log  3} -1\right ) \\
 
 \task[Example 3]
 Solve $4 \left (1 +10^{5 x}\right ) =9$\\
-\textbf{Solution} This must first be rearranged:
+\solution This must first be rearranged:
 \begin{align*}1 +10^{5 x} &  = \frac{9}{4} =2.25 \\
 10^{5 x} &  = 2.25 -1 =1.25 \\
 \text{}{\scriptsize 10}\text{}\log  10^{5 x} &  = \log  1.25 \\
@@ -381,7 +375,8 @@ x &  = \frac{1}{5} \log  1.25 \\
 &  \approx 0.019382002 \approx 0.019\text{(3 dp)}\end{align*}
 \end{tasks}
 
-\textbf{Example 4} Solve $\frac{10}{1 +e^{ -x}} =3$.
+\textbf{Example 4} Solve $\frac{10}{1 +e^{ -x}} =3$.\medskip\\
+\solution
 \begin{align*}1 +e^{ -x} &  = \frac{10}{3} \\
 e^{ -x} &  = \frac{10}{3} -1 \\
 &  = \frac{10 -3}{3} =\frac{7}{3} \\
@@ -405,13 +400,13 @@ Whereas exponential equations have the unknown variable in an exponent, logarith
 	\item [Step 4] Solve the equation.
 	($a$ and $b$ are known and $X$ is an expression containing the unknown variable.) \end{description}
 
-\textbf{Example 1} Solve $\ln  x =5$ .\\
-\textbf{Solution} Take antilogarithms with base $e$:
+\textbf{Example 1} Solve $\ln  x =5$ .\medskip\\
+\solution Take antilogarithms with base $e$:
 \begin{align*}e^{5} &  = x \\
 x &  \approx 148.4131591 \approx 148.4\text{(1 dp)}\end{align*}
 
-\textbf{Example 2} Solve $5 +4 \log  \left (5 x\right ) =17$.\\
-\textbf{Solution} Isolate the log and solve:
+\textbf{Example 2} Solve $5 +4 \log  \left (5 x\right ) =17$.\medskip\\
+\solution Isolate the log and solve:
 \begin{align*}4 \log  \left (5 x\right ) &  = 17 -5 =12 \\
 \log  5 x &  = 3 \\
 \text{}10^{3} &  = 5 x \\
@@ -424,14 +419,12 @@ Check:\ Substitute $x =200$
 
 \begin{tasks}[label-width={6em}](2)
 	\task[Example 3]\\
-Solve $\log  x +\log  \left (x -1\right ) =\log  4 x$
+Solve $\log  x +\log  \left (x -1\right ) =\log  4 x$\\ \solution
 \begin{align*}\log  x +\log  \left (x -1\right ) -\log  4 x &  = 0 \\
 \log  \frac{x \left (x -1\right )}{4 x} &  = 0 \\
 \log  \frac{1}{4} \left (x -1\right ) &  = 0 \\
 \text{}10^{0} &  = \frac{1}{4} \left (x -1\right ) =1 \\
-x -1 &  = 4 \\
-x &  = 5\end{align*}
-
+x -1 &  = 4;\, x=5\end{align*}
 Check:
 \begin{align*}\text{LHS} &  = \log  5 +\log  4 =\log  \left (5 \times 4\right ) =\log  20 \\
 \text{RHS} &  = \log  4 \times 5 =\log  20 =\text{LHS}\end{align*}
@@ -439,8 +432,7 @@ Check:
 \task[Example 4] The velocity of a sky diver $t$ \\seconds after jumping is given by
 \begin{equation*}v \left (t\right ) =80 \left (1 -e^{ -0.2 t}\right )
 \end{equation*}
-
-After how many seconds is the velocity $70$ $\mbox{ft}$/$\mbox{s}$?
+After how many seconds is the velocity $70$ $\mbox{ft}$/$\mbox{s}$?\solution
 \begin{align*}70 &  = 80 \left (1 -e^{ -0.2 t}\right ) \\
 \frac{70}{80} &  = 1 -e^{ -0.2 t} \\
 e^{ -0.2 t} &  = 1 -\frac{70}{80} \\
@@ -455,29 +447,27 @@ t &  = \frac{\ln  0.125}{ -0.2} \approx 10.39\text{}\mbox{s}\end{align*}
 \section{Exponential Modelling}
 The natural exponential function, $e^x$, is used in a variety of situations where there is exponential growth or decay. 
 
-\textbf{Example} The exponential function can be used to model the way populations grow and diseases spread. The following
+\example The exponential function can be used to model the way populations grow and diseases spread. The following
 example is about the spread of an infectious disease in a small city whose population is $10,000$. After $t$ days the number of people who have caught the disease is modelled by the function
 \begin{equation*}f (t) =\frac{10000}{5 +2495 e^{ -0.84 t}}
 \end{equation*}
 
 
 \begin{tasks}
-	\task How many people had the disease initially? 
-	\textbf{Solution} \textit{Initially} in this sense means right at the beginning, or when the clock is still at zero. Substitute $t=0$ into the function:
+	\task How many people had the disease initially?
+	\textit{Initially} in this sense means right at the beginning, or when the clock is still at zero. Substitute $t=0$ into the function:
 	\[f(0)=\frac{10000}{5+2495e^0}=\frac{10000}{2500}=4\text{ people}\]
 	\task How many people have the disease after 1 day?
-	\textbf{Solution} Substitute $t=1$ into the function:
+	Substitute $t=1$ into the function:
 	\[f(1)=\frac{10000}{5+2495e^{-0.84}}=\frac{10000}{5+2495(0.4317)}=\frac{10000}{1082.1}\approx 9.24;\text{ 9 people}\]
 	\task How many people have the disease after 5 days? 
-	\textbf{Solution} Following from part (b), find $f(5)$:\\
-	\[f(5)=\frac{10000}{5+2495e^{-0.84(5)}}=\frac{10000}{42.41}\approx 235.77;\text{ 236 people}\]
-	
+	Following from part (b), find $f(5)$:\\
+	\[f(5)=\frac{10000}{5+2495e^{-0.84(5)}}=\frac{10000}{42.41}\approx 235.77;\text{ 236 people}\]	
 	\task Use desmos to graph the function and describe its behaviour. \\
-	%\includegraphics[width=\textwidth]{modelling1}
-	\includegraphics[width=\textwidth]{logGraph1}
+	\includegraphics[width=\textwidth]{modelling1}
 \end{tasks}
 
-The graph has distinctive characteristics. It starts at a particular nonzero value (when $t =0$) and increases slowly at first then more rapidly. It slows down after a time and levels off because the exponential function in the denominator $ \leadsto 0$ when $t \leadsto \infty $. Graphs with these characteristics are called logistic curves. The particular model is called a logistic growth model. 
+The graph has distinctive characteristics. It starts at a particular non-zero value (when $t =0$) and increases slowly at first then more rapidly. It slows down after a time and levels off because the exponential function in the denominator $ \leadsto 0$ when $t \leadsto \infty $. Graphs with these characteristics are called logistic curves. The particular model is called a logistic growth model. 
 
 %---------------------------------------------------
 % Chapter Exercises in a separate file

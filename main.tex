@@ -17,7 +17,7 @@
 %                                                                      % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % for published book output; can use oneside/twoside depending on situation
-\documentclass[a4paper,11pt,openany,twoside]{book}
+\documentclass[a4paper,11pt,openany,oneside]{book}
 \usepackage{amssymb,amsmath,amsfonts,textcomp,siunitx}%
 \usepackage{xcolor,graphicx,xspace,colortbl,ragged2e,rotating}% 
 \usepackage{fancyhdr,titlesec,geometry}%
@@ -165,7 +165,7 @@ Version 1.0 by Peter Watson, 2010.
 
 
 \clearpage
-\hypersetup{linkcolor={black}}
+%\hypersetup{linkcolor={black}}
 \tableofcontents
 \mainmatter
 %    Include main chapters here.
@@ -181,10 +181,8 @@ Version 1.0 by Peter Watson, 2010.
 %\include{}
 
 \backmatter
-%    Bibliography styles amsplain or harvard are also acceptable.
 %\bibliographystyle{amsalpha}
 %\bibliography{}
-%    See note above about multiple indexes.
 %\printindex
 
 \end{document}

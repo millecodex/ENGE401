@@ -278,7 +278,7 @@ the net sum of the positive and negative areas. To find the total area you drop 
 
 To illustrate this point consider $y =x^{3} -x$. \medskip\\
 \example Find the area under the curve $y =x^{3} -x$ between $x = -1$ and $x =1$.\medskip\\
-\solution This can be factorised to give $y =x (x +1) (x -1)$. This cubic curve crosses the x-axis at $ -1$, $0$, and $1$. Here, this area must be found in two parts. (Refer to the figure on the next page.)
+\solution This can be factorised to give $y =x (x +1) (x -1)$. This cubic curve crosses the x-axis at $ -1$, $0$, and $1$. Here, this area must be found in two parts. (Refer to the figure on the next page.)\clearpage
 \begin{SCfigure}[1][h]
 	\includegraphics[width=0.6\textwidth]{area3}
 	\caption*{Figure: A cubic showing how area `under' the curve is evaluated. The area for $-1\leq x\leq 0$ is positive (above the axis), and the area for $0\leq x\leq 1$ is negative.}
@@ -288,22 +288,20 @@ To illustrate this point consider $y =x^{3} -x$. \medskip\\
 	$\int _{0}^{1}(x^{3} -x) dx$\\
 	$=\frac{x^4}{4}-\frac{x^2}{2}\vert_{0}^1$\\
 	$=[\frac{1}{4}-\frac{1}{2}]-0$\\
-	$=-\frac{1}{4}$\\
-	
+	$=-\frac{1}{4}$
 	\task[\phantom{a}]\\ 
 	$\int _{ -1}^{0}(x^{3} -x) d x$ \\
 	$=\frac{x^4}{4}-\frac{x^2}{2}\vert_{-1}^0$\\
 	$=0-[\frac{1}{4}-\frac{1}{2}]$\\
-	$=+\frac{1}{4}$\\
-	
+	$=+\frac{1}{4}$
 	\task[\phantom{a}]\\ 
 	Therefore the total area is\\
 	 $|-\frac{1}{4}|+\frac{1}{4}=\frac{1}{2}$.
-	\end{tasks}
+\end{tasks}
 We will compare with a single integral from $-1$ to $1$.	
 \[\int _{ -1}^{1}(x^{3} -x) d x=\frac{x^4}{4}-\frac{x^2}{2}\vert_{-1}^1 =-\frac{1}{4}-(-\frac{1}{4})=0\]
-Area must be non-negative, and so this result is nonsensical given the context.  
-
+Area must be non-negative, and so this result is nonsensical given the context.\\  
+\rule{6.8cm}{0.5pt}\\
 \example 
 \begin{multicols}{2}
 The energy, or electrical charge, that a capacitor can discharge is found by taking the integral of the voltage-time function. This can neatly be represented as the area under the voltage-time curve. Find the total discharge from the capacitor after 5 seconds. The units for charge are coulombs.\\
@@ -333,7 +331,7 @@ The energy, or electrical charge, that a capacitor can discharge is found by tak
 	\end{tikzpicture}
 \end{center}
 \end{multicols}
-
+\rule{6.8cm}{0.5pt}\\
 \example A logo is formed by the shaded area between the cubic function  $ f(x)=4x -x^3$ and a parabola $g(x)=2x-x^2$. The two curves intersects at $x=0$ and $x=2$. Find the shaded area.\\
 \begin{multicols}{2}
 	\begin{tikzpicture}
@@ -403,7 +401,7 @@ You have estimated the function to be:\\
 	&=\pi\int_{-1.5}^{2}\left(\frac{x^4}{25}-\frac{2x^2}{5}+1\right)dx\\
 	&=\pi\left(\frac{x^5}{125}-\frac{2x^3}{15}+x\right)  \Bigg|_{-1.5}^2\\
 	&=\pi\left[\left(\frac{32}{125}-\frac{16}{15}+2\right)-\left(-0.06075--0.45-1.5\right)\right]=2.3\pi\approx 7.23\, \text{ cm}^3\end{align*}
-\rule{6.8cm}{0.5pt}\\	
+\\	
 \begin{multicols}{2}
 \example Calculate the volume of the container found by rotating the curve $y=\sqrt{x^3}$ around the $y-$axis for $0\leq y \leq 5$.\\
 
@@ -464,7 +462,7 @@ The Substitution Rule can be stated formally as follows. If $u =g (x)$ is a diff
  &  =  -\frac{1}{2} \cos  \left (x^{2}\right ) +C\end{align*}
 
 It is clear the challenge of the Substitution Rule is to come up with a suitable substitution. Earlier examples often have fairly obvious substitutions but they can quickly become quite complicated and result in many false starts. 
-
+\rule{6.8cm}{0.5pt}\\
 \example Find $\int \frac{x}{\sqrt{1 -x^{2}}}\; d x$\medskip\\
 \solution Let $u =1 -x^{2}$. Then $d u = -2 x\; d x$. So $x\; d x = -\frac{1}{2} d u$. These are now substituted into the original expression
 $$\int \frac{x}{\sqrt{1 -x^{2}}}\; d x = -\frac{1}{2} \int \frac{1}{\sqrt{u}}\; d u = -\frac{1}{2} \int u^{ -1/2}\; d u = -\frac{1}{2} \left (2 u^{1/2}\right ) +C = -\sqrt{1 -x^{2}} +C$$
