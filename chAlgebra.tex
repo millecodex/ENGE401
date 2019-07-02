@@ -11,12 +11,12 @@ and the reverse process is called \emph{factorising}. We usually use the word fa
 \example Expand the following algebraic expression (remove the brackets): $x(x-7)$\medskip\\
 \solution $x(x-7)=x^2-7x$\\
 \rule{6.8cm}{0.5pt}\\
-\example Expand: $(x+3)(x-3)$. Note there is a mnemonic \textbf{\sc{FOIL}} that may help you remember how to expand here: First, Inside, Outside, Last.\medskip\\
+\example Expand: $(x+3)(x-3)$. Note there is a mnemonic \textbf{\sc{FOIL}} that may help you remember how to expand here: First, Outside, Inside, Last.\medskip\\
 \solution $=x^2+3x-3x-9=x^2-9$\\
 \rule{6.8cm}{0.5pt}\\
 \example Expand: $x(x+1)(x-2)$\medskip\\
 \solution Begin by expanding the first two terms:
-\begin{align*} &=(x^2+1)(x-2)\\
+\begin{align*} &=(x^2+x)(x-2)\\
 &=x^3-2x^2+x-2
 \end{align*}
 
@@ -116,7 +116,7 @@ $2$ & $f(2)=2(2)$&$=4$ \\
 \begin{center}
 \begin{tikzpicture}
 \begin{axis}[
-scale=1.1,
+scale=1.2,
 axis lines=center,
 ymax=4,ymin=-4,
 xmax=4,xmin=-4,
@@ -136,28 +136,29 @@ xlabel=$x$,ylabel=$y$,
 \end{multicols}
 
 Lets write a precise definition of a function:
-\begin{tcolorbox}
+\begin{tcolorbox}\begin{center}
 	A function $f(x)$ has exactly one output value, $y$, for any given input value, $x$.
-\end{tcolorbox}
+\end{center}\end{tcolorbox}
 In the line plotted above, we see that every $x$ value has only one corresponding $y$ value. This means that $y=2x$ is a function. Conversely, a relationship that has two or more output values is \textbf{not} a function. \\ 
 \begin{multicols}{2}
 	\begin{center}
 \resizebox{0.5\textwidth}{0.5\textwidth}{%
 	\begin{tikzpicture}
 	\begin{axis}[
-	scale=1.1,
+	scale=1.2,
 	axis lines=center,%width=4cm,height=4cm,
 	ymax=3,ymin=-3,
 	xmax=3,xmin=-3,
 	xlabel=$x$,ylabel=$y$,%	ytick=\empty,	
 	]
-	\addplot [domain=-180:180, samples=100] ({2*cos(x)},{2*sin(x)});
+	\addplot[domain=-180:180, samples=100] ({2*cos(x)},{2*sin(x)});
 	\addplot[mark=*] coordinates {(1,1.732)};
 	\addplot[mark=*] coordinates {(1,-1.732)};
 	\addplot [mark=none,dashed] coordinates {(1, -3) (1, 3)};
 	\end{axis}
 	\end{tikzpicture}
-}	\end{center}
+}
+	\end{center}
 \columnbreak
 The circle has two output values at $x=1$: both $y=+\sqrt{3}$ and $y=-\sqrt{3}$ are points on the circle.
 
@@ -213,7 +214,7 @@ Linear functions have a few characteristics that we will get used to manipulatin
 
 \begin{tcolorbox}
 	\begin{center}
-	slope$=$m$=$gradient$=\frac{rise}{run}=\frac{\Delta y}{\Delta x}=\frac{y_{2} -y_{1}}{x_{2} -x_{1}}$
+	slope $=$ m $=$ gradient $=\frac{rise}{run}=\frac{\Delta y}{\Delta x}=\frac{y_{2} -y_{1}}{x_{2} -x_{1}}$
 \end{center}\end{tcolorbox}	
 
  
@@ -221,7 +222,7 @@ Linear functions have a few characteristics that we will get used to manipulatin
 
 Note that a vertical line has an \textit{undefined} slope. Using the formula above, a vertical line has a slope of $m=\frac{\Delta y}{0}$ because it has the same $x$ values everywhere. Dividing by zero is undefined (try on your calculator) and therefore a vertical line is not considered a function.
 
-\textbf{Question} Does a vertical line pass or fail the vertical line test? Why?\\
+\textbf{Question:} Does a vertical line pass or fail the vertical line test? Why?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Quadratic Functions}
@@ -312,7 +313,7 @@ The parabola from part (c) above was solved by factoring. Not all quadratic equa
 \section{Polynomials}\label{sec:polynomials}
  A polynomial is a type of function that comes up a lot. The quadratic equations above are all examples of polynomials. The standard form of a quadratic equation is shown below with some of the terminology.
  \begin{center}
- \includegraphics[width=0.6\textwidth]{poly}
+ \includegraphics[width=0.5\textwidth]{poly}
 \end{center}
 The prefix \textit{poly} means many, and polynomials are not limited to three terms. The general form of a polynomial can be written as:
 $$ A_1x^n+A_2x^{n-1}+A_3x^{n-2}+\dots+A_nx^1+C=0 $$
@@ -338,7 +339,7 @@ where the terms are written in decreasing powers of $x$, with
  	\item substitution
  \end{itemize}
 \end{multicols}
-It helps if you can visualise the shape of the two functions so that the meaning of the solution is clear in your mind. Later in the course we will find the area between two curves using integration where the intersection of these two curves represents the solution to a system of two equations. See section XX.
+It helps if you can visualise the shape of the two functions so that the meaning of the solution is clear in your mind. Later in the course we will find the area between two curves using integration where the intersection of these two curves represents the solution to a system of two equations.
  
  We know that linear equations in two variables are represented by straight lines. Straight
  lines will always intersect unless they are parallel. The coordinates of the point of intersection of the straight lines is called the solution. you could use a graphical method or one of the two algebraic methods (substitution or elimination) to find the solution.  We will start with a graphical method. 
@@ -452,7 +453,7 @@ Back-substitute $b$ into equation (1) to solve for $a$: $3a-7(\frac{5}{6})=-3$. 
 	
  \section*{Special Cases}
   \begin{multicols}{2}
-  Consider the parallel lines shown. What is the solution to this system? Parallel lines will never meet by definition and so will have no point of intersection. In this case the system has no solution -- which is a perfectly valid solution! Notice the slope of both the lines is $\frac{1}{3}$ which means they are parallel.
+  Consider the parallel lines shown. What is the solution to this system? Parallel lines will never meet by definition and so will have no point of intersection. In this case the system has no solution -- which is a perfectly valid solution! Notice the slope of both lines is $\frac{1}{3}$ which means they are parallel.
   
   Sometimes the two equations will be two different representations of the same line. Imagine two line plotted on top of one another. In this case the system has an infinite number of solutions because every single point on the first function is also on the second function. 
  	\columnbreak

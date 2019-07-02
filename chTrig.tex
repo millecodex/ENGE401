@@ -43,15 +43,17 @@ will not define this term unless it is unavoidable and will stick to rad.
 
 Using the language of geometry, the unit circle is cut by two rays one through the points $\left (0 ,0\right )$ and $\left (1 ,0\right )$ and the other through the points $\left (0 ,0\right )$ and $P \left (x ,y\right )$. 
 
-$t$ is referred to as "the length of the arc". The angle $\theta $ between the two rays is referred to as "the angle \emph{subtended} at the point $\left (0 ,0\right )$". We will often leave out the word "subtended" however as it is implied. 
+$t$ is referred to as "the length of the arc". The angle $\theta $ between the two rays is referred to as ``the angle \emph{subtended} at the point $\left (0 ,0\right )$". We will often leave out the word "subtended" however as it is implied. 
 \end {multicols}
 We can say therefore that the angle measured in radians is related to the same angle measured in degrees. the relationship between these two measures must be understood and must be able to be derived. 
 
 \subsection*{Relationship between Degrees and Radians}
-One complete revolution is \ang{360} if the angle is measured in degrees and $2 \pi $ if the angle is measured in radians. So
-\begin{align*}2 \pi \text{}\mbox{rad} &  =  \ang{360} \\
-\text{or\  \ }\pi \text{}\mbox{rad} &  =  \ang{180}
+One complete revolution is \ang{360} which is equivalent to $2 \pi $ radians.
+\begin{tcolorbox}\begin{align*}
+2\pi \text{ radians} &=  \ang{360}\\
+\text{or\,  \ }\pi \text{ radians} &=  \ang{180}
 \end{align*}
+\end{tcolorbox}
 You should derive this formula whenever you are asked to convert degrees to radians or radians
 to degrees. 
 
@@ -79,15 +81,11 @@ Note the similarity between the answers to (b) and (c). This is because $\frac{\
 Let $\theta $ be the angle subtended at the centre for the ends of an arc of any circle then the fraction of the circumference of the circle is $\frac{\theta }{2 \pi }$ if $\theta $ is measured in radians and $\frac{\theta }{\ang{360}}$ if $\theta $ is measured in degrees. 
 
 The length of the circumference of any circle whose radius is $r$ is $2 \pi  r$. If $\theta $ is measured in radians
-\begin{equation*}\text{Length of arc} =\frac{\theta }{2 \pi } \times 2 \pi  r =\theta  r\text{or}r \theta 
+\begin{equation*}\text{length of arc} =\frac{\theta }{2 \pi } \times 2 \pi  r =\theta  r
 \end{equation*}
-
-If $\theta $ is measured in degrees
-\begin{equation*}\text{Length of arc} =\frac{\theta }{\ang{360}} \times 2 \pi  r
+And if $\theta $ is measured in degrees
+\begin{equation*}\text{length of arc} =\frac{\theta }{\ang{360}} \times 2 \pi  r
 \end{equation*}
-
-The simplicity of the first formula shows why working with radians is preferred. 
-
 \example Find the length of an arc that subtends an angle of \ang{45} at the centre of a circle whose radius is 9 cm. 
 
 \solution \begin{tasks}[counter-format=(tsk[1]),before-skip = {0ex},after-skip={-5ex}](2)
@@ -111,10 +109,10 @@ Now, the length of arc $= r \theta = 9 \times \frac{\pi }{4} =\frac{9 \pi }{4}\t
 A right angled triangle is uniquely defined, if as well as the \ang{90} angle, you are given one side and one angle or two sides. To be given two angles does is not enough information as the scale of the triangle is not known. The sides of the triangle have names with respect to the angle of interest, $\theta$ in the diagram. 
 \begin{multicols}{2}
 \begin{center}
-	\includegraphics[width=5.5cm]{rightTriangle}
+	\includegraphics[width=5cm]{rightTriangle}
 \end{center}
 \columnbreak
-Notice that if $\theta$ changes, then the sides opposite and adjacent are reversed. These side names are helpful in defining the trigonometric ratios of sine, cosine and tangent. \end{multicols}
+Notice that if $\theta$ moves to the other corner then the sides opposite and adjacent are \textit{reversed}. These names are helpful in defining the trigonometric ratios of sine, cosine and tan. \end{multicols}
 
 The phrase \textbf{SOH-CAH-TOA} is useful to remember the ratios.
 \begin{tcolorbox}
@@ -136,7 +134,7 @@ The phrase \textbf{SOH-CAH-TOA} is useful to remember the ratios.
 x&=17\sin 14\\
 x&=4.11\end{align*}
 \end{multicols}
-
+\rule{\textwidth}{0.5pt}
 \begin{multicols}{2}
 \example Find the unknown side $x$\\
 \begin{center}
@@ -148,9 +146,7 @@ x&=4.11\end{align*}
 x=15\tan 28\\
 x=16.7\end{align*}
 \end{multicols}
-
 The calculator gives approximate values of the trigonometric ratios. You must look at your question to check whether angles are in degrees or radians and ensure the calculator is first set in the right mode. Questions where degrees are to be used will give angles marked with a $^\circ$ symbol. 
-
 
 When solving for an angle on your calculator you select the appropriate trigonometry ratio and use the \emph{shift} button with sin, cos or tan to find $\sin ^{ -1}$, $\cos ^{ -1}$ or $\tan ^{ -1}$. 
 %----------------------------------------------------
@@ -181,10 +177,11 @@ When solving for an angle on your calculator you select the appropriate trigonom
 	\theta=\ang{50.5}
 	\end{align*}
 \end{multicols}
+\rule{\textwidth}{0.5pt}
 %----------------------------------------------------
 \example The height of a steep cliff is to be measured from a point on the opposite side of the river. The following diagram shows the measurements taken. Estimate the height of the cliff.
 \begin {multicols}{2}
-\includegraphics[width=8cm]{L4SZ281H}
+\includegraphics[width=9cm]{L4SZ281H}
 \columnbreak\\
 \solution 
 \begin{align*}\frac{d}{58.2} &  =  \tan  \ang{50.0}  \\
@@ -194,11 +191,11 @@ h &  =  d \times \tan  \ang{76.3}  \\
  &  =  58.2 \times \tan  \ang{50.0}  \times \tan  \ang{76.3}  \\
  &  \approx   284.526397 \\
  &  \approx   284.5 \mbox{m}\end{align*}
-\end {multicols}\rule{6.8cm}{0.5pt}\\
+\end{multicols}
 
 %----------------------------------------------------
-\example To estimate the height of a mountain above a level plane the angle of elevation of the top of the mountain is measured to be $\ang{30} $. $600 \mbox{m}$ closer to the mountain across the plane it is found that the angle of elevation is $\ang{36} $. Estimate the height of the mountain. \\
-\includegraphics[width=10cm]{L4SZ281I}\\
+\clearpage\example To estimate the height of a mountain above a level plane the angle of elevation of the top of the mountain is measured to be $\ang{30} $. $600 \mbox{m}$ closer to the mountain across the plane it is found that the angle of elevation is $\ang{36} $. Estimate the height of the mountain. \\
+\begin{center}\includegraphics[width=11cm]{L4SZ281I}\end{center}
 \solution
 \begin{equation*}\frac{h}{x} =\tan  \ang{36} \text{and}\frac{h}{x +600} =\tan  \ang{30} 
 \end{equation*}
@@ -210,7 +207,7 @@ h \left (\frac{1}{\tan  \ang{30} } -\frac{1}{\tan  \ang{36} }\right ) &  =  600 
 h \genfrac{(}{)}{}{}{\tan  \ang{36}  -\tan  \ang{30} }{\tan  \ang{30}  \tan  \ang{36} } &  =  600 \\
 h &  =  600 \times \frac{\tan  \ang{30}  \tan  \ang{36} }{\tan  \ang{36}  -\tan  \ang{30} } \\
  &  \approx   600 \times 2.811603815 \\
- &  \approx   1687 \mbox{m}\end{align*}
+ &  \approx   1687 \mbox{ m}\end{align*}
 
 %---------------------------------------------------
 % identities
@@ -224,7 +221,7 @@ This is always written
 \end{tcolorbox}
 This is an \emph{identity} which means it is true for all values of $\theta$. There are many identities in trigonometry, we will only use the Pythagorean identity (above) and one more.
 Given $\sin =\frac{\text{opp}}{\text{adj}}$ we can solve for $\text{opp}=(\sin)(\text{hyp})$. Similarly from cosine:  $\text{adj}=(\cos)(\text{hyp})$. Substituting these into the tangent relationship:
-\begin{tcolorbox}\[\tan=\frac{\text{opp}}{\text{adj}}=\frac{(\sin)(\text{hyp})}{(\cos)(\text{hyp})}=\frac{\sin}{\cos}\]
+\begin{tcolorbox}\[\tan=\frac{\text{opp}}{\text{adj}}=\frac{(\sin)(\cancel{\text{hyp}})}{(\cos)(\cancel{\text{hyp}})}=\frac{\sin}{\cos}\]
 \end{tcolorbox}
 The sine and cosine law are two more unique relationships that we will cover in section~\ref{sec:applications}.
 
@@ -558,8 +555,7 @@ c &  = \frac{a \sin  C}{\sin  A} \\
 $B =\ang{180}  -\ang{35.69}  =\ang{144.31} $
 \task Find $C$\\
 $C =\ang{180} -(\ang{30}  +\ang{144.31} ) =\ang{180}  -\ang{174.31}  =\ang{5.69} $
-\task*[](Or if you remember the rule that the exterior angle of a triangle is the sum of the two interior
-opposite angles $C +\ang{30}  =\ang{35.69} $ so $C =\ang{35.69}  -\ang{30}  =\ang{5.69} $) 
+\task*[](Or if you remember the rule that the exterior angle of a triangle is the sum of the two interior opposite angles $C +\ang{30}  =\ang{35.69} $ so $C =\ang{35.69}  -\ang{30}  =\ang{5.69} $) 
 \task*[(3)] Find $c$
 \begin{align*}\frac{c}{\sin  C} &  = \frac{a}{\sin  A} \\
 c &  = \frac{a \sin  C}{\sin  A} \\
@@ -602,33 +598,33 @@ c^{2} &  = a^{2} +b^{2} -2 a b \cos  C\end{align*}
 \solution
 \begin{align*}c^{2} &  = a^{2} +b^{2} -2 a b \cos  C \\
 &  = 5^{2} +6^{2} -2 \times 5 \times 6 \times \cos  50  \\
-&  \approx   22.43274342 \\
-c &  \approx   \sqrt{22.43274342} \\
-&  \approx   4.736321718 \approx 4.7 \left (1\text{dp}\right )\end{align*}
+&  \approx   22.433 \\
+c &  \approx   \sqrt{22.433} \\
+&  \approx   4.736 \end{align*}
 \rule{6.8cm}{0.5pt}\\
 \example Given $a =5$, $b =6$ and $C =\ang{130} $, find $c$.\medskip\\
 \solution
 \begin{align*}c^{2} &  = a^{2} +b^{2} -2 a b \cos  C \\
 &  = 5^{2} +6^{2} -2 \times 5 \times 6 \times \cos  130  \\
-&  \approx   99.56725658 \\
-c &  \approx   \sqrt{99.56725658} \\
-&  \approx   9.97833937 \approx 10.0 \left (1\text{dp}\right )\end{align*}
+&  \approx   99.567 \\
+c &  \approx   \sqrt{99.567} \\
+&  \approx   9.978\end{align*}
 
 These two examples show that when the two sides and the included angle are given the third side
-(opposite the given angle) can be found. 
-
+(opposite the given angle) can be found. \\
+\rule{6.8cm}{0.5pt}\\
 \example Find the angle given three side lengths; given $a =5$, $b =6$ and $c =9$, find $A$. \medskip\\
 \solution Because $a$ is the smallest side $A$ will most certainly be an acute angle.
 \begin{align*}\cos  A &  = \frac{b^{2} +c^{2} -a^{2}}{2 b c} \\
 &  = \frac{6^{2} +9^{2} -5^{2}}{2 \times 6 \times 9} \\
-&  \approx 0.851851851 \\
-A &  \approx \cos ^{ -1} \left (0.851851851\right ) \\
+&  \approx 0.852 \\
+A &  \approx \cos ^{ -1} \left (0.852\right ) \\
 &  \approx \ang{31.6} 
 \end{align*}
 
 %---------------------------------------------------
 % Chapter Exercises in a separate file
 %---------------------------------------------------
-\section{Chapter Exercises}
+\clearpage\section{Chapter Exercises}
 \subimport{}{TrigExercises}
 
