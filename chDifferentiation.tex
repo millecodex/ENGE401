@@ -387,7 +387,7 @@ By inspection we can see that of the four expressions on the right side of this 
 $g (x)$ is a composite function so $g^{ \prime } (x)$ is computed using the Chain Rule. 
 
 Let $u = -x^{2}$ then $\frac{d u}{d x} = -2 x$. Also $g (u) =e^{u}$ so $\frac{d g}{d u} =e^{u}$.
-\begin{align*}\frac{d g}{d x} &  = \frac{d g}{d u} \frac{d u}{d x} \\
+\begin{align*}\frac{d g}{d x} &  = \frac{d g}{\cancel{d u}}\cdot \frac{\cancel{d u}}{d x} \\
  &  = e^{u} \cdot  -2 x \\
  &  = e^{ -x^{2}} \cdot  -2 x \\
  &  =  -2 x\; e^{ -x^{2}} \\
@@ -415,8 +415,9 @@ Given\ the parametric equations $x =f (t)$ and $y =g (t)$ define a parametric cu
 \end{equation*}
 
 provided $y$ is also a differentiable function of $x$. So provided $\frac{d x}{d t} \neq 0$
-\begin{align*}\frac{d y}{d x} &  = \frac{d y}{d t} \div \frac{d x}{d t} \\
- &  = \frac{d y}{d t} \times \frac{d t}{d x}\end{align*}
+\[\frac{d y}{d x} = \frac{d y}{d t} \div \frac{d x}{d t}\]
+When dividing fractions remember to `invert and multiply'\\
+\[\frac{d y}{d t} \times \frac{d t}{d x}=\frac{dy}{dx}\]
 
 \example See blackboard course notes for examples of parametric differentiation.
 %---------------------------------------------------
@@ -464,11 +465,11 @@ of the ladder is $3$ $\mbox{m}$ from the wall?
 \solution Let the origin be placed at the corner where the wall meets the floor, let $x$ be the distance of the foot of the ladder from the wall and let $y$ be the distance of the top of the ladder from the corner. The ladder forms a right
 angled triangle whose sides are $x$, $y$ and with hypotenuse $5$. We are given that $\frac{d x}{d t} =0.5$ and are asked to find $\frac{d y}{d t}$ when $x =3$. 
 
-Pythagoras theorem gives
+Pythagoras' theorem gives
 \begin{equation}x^{2} +y^{2} =5^{2}\tag{1}
 \end{equation}
 
-Differentiate equation (1) with respect to $t$
+Differentiate equation (1) with respect to $t$. Note that this derivative uses a technique called implicit differentiation. 
 \begin{equation*}2 x \frac{d x}{d t} +2 y \frac{d y}{d t} =0
 \end{equation*}
 
@@ -476,7 +477,7 @@ Solve for $\frac{d y}{d t}$
 \begin{equation*}\frac{d y}{d t} = -\frac{x}{y} \cdot \frac{d x}{d t}
 \end{equation*}
 
-Using Pythagoras theorem when $x =3$ and the hypotenuse $ =5$, $y =4$ 
+Using the Pythagorean theorem with $x=3$ and the hypotenuse $=5$, $y=4$ 
 
 Substitute $\frac{d x}{d t} =0.5$, $x =3$ and $y =4$
 \begin{align*}\frac{d y}{d t} &  =  -\frac{3}{4} \cdot 0.5 \\
@@ -613,13 +614,13 @@ h&=\frac{1000}{\pi r^2}
 \end{align*}
 Substitute this form for $h$ into the surface area function:
 \begin{align*}
-SA&=2\pi r^2+2\pi rh\\
+\text{SA}&=2\pi r^2+2\pi rh\\
 &=2\pi r^2+2\pi r\left(\frac{1000}{\pi r^2} \right)\\
 &=2\pi r^2+\frac{2000}{r}
 \end{align*}
 This function is now the surface area in terms of a single variable, $r$, and can be optimised:
 \begin{align*}
-\frac{dSA}{dr}&=4\pi r-\frac{2000}{r^2}\\
+\frac{d(\text{SA})}{dr}&=4\pi r-\frac{2000}{r^2}\\
 0&=4\pi r-\frac{2000}{r^2}\\
 &=4\pi r^3-2000\\
 r^3&=\frac{2000}{4\pi}\\

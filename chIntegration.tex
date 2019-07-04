@@ -10,15 +10,15 @@ In mathematics we are often given a function $f$ and asked to find a function $F
 
 \item Because $y =x^{2} +1$ gives $y^{ \prime } =2 x$ we can say that another integral of $2 x$ is $x^{2} +1$. 
 
-\item Because $y =x^{2} +c$ where $c$ is a constant gives $y^{ \prime } =2 x$ we can say that an integral of $2 x$ is $x^{2} +c$. 
+\item Because $y =x^{2} +C$ where $C$ is a constant gives $y^{ \prime } =2 x$ we can say that an integral of $2 x$ is $x^{2} +C$. 
 
-\item Because $y =e^{x}$ gives $y^{ \prime } =e^{x}$ we can say that an integral of $e^{x}$ is $e^{x}$. In fact we say that the integrals of $e^{x}$ are $e^{x} +c$ where $c$ is a constant. 
+\item Because $y =e^{x}$ gives $y^{ \prime } =e^{x}$ we can say that an integral of $e^{x}$ is $e^{x}$. In fact we say that the integrals of $e^{x}$ are $e^{x} +C$ where $C$ is a constant. 
 
-\item Because $y =\ln  x +c$ where $c$ is a constant gives $y^{ \prime } =\frac{1}{x}$ we can say that a family of integrals of $\frac{1}{x}$ is $\ln  x +c$. This is often written $\ln  k x$ where $c =\ln  k$ is the constant 
+\item Because $y =\ln  x +C$ where $C$ is a constant gives $y^{ \prime } =\frac{1}{x}$ we can say that a family of integrals of $\frac{1}{x}$ is $\ln  x +C$. This is often written $\ln  k x$ where $C =\ln  k$ is the constant 
 
-\item This can be generalised. $y =\ln  \left \vert x\right \vert  +c$ also gives $y^{ \prime } =\frac{1}{x}$ so in general the integrals of $\frac{1}{x}$ are $\ln  \left \vert x\right \vert  +c$. \end{enumerate}
+\item This can be generalised. $y =\ln  \left \vert x\right \vert  +C$ also gives $y^{ \prime } =\frac{1}{x}$ so in general the integrals of $\frac{1}{x}$ are $\ln  \left \vert x\right \vert  +C$. \end{enumerate}
 
-The process of `reversing' or `undoing' a derivate has its own symbol, the integrand.
+The process of `reversing' or `undoing' a derivative has its own symbol, the integrand: $\displaystyle\int$
 \begin{tcolorbox}
 	\[\int f'(x) dx = f(x)\]
 \end{tcolorbox}
@@ -29,65 +29,40 @@ The process of `reversing' or `undoing' a derivate has its own symbol, the integ
 \section{Standard Integrals}
 The examples shown above begin the process of establishing the start of a list of integration rules. It
 is not the intention here to list all of the rules that are required however at this stage let us explore the Power Rule to establish a rule for antedifferentiating
-an expression of the form $y =x^{n}$ 
+an expression of the form $y =x^{n}$\medskip  \\
 
-\bigskip 
 \begin{center}
-\begin{tabular}[c]{ll}\hline
-$f$  & $f^{ \prime }$  \\
-\hline
+\begin{tabular}[c]{p{1.5cm}p{1.5cm}}\toprule
+function $f(x)$  & derivative $f'(x)$  \\
+\midrule
 $x$  & $1$  \\
-\hline
 $x^{2}$  & $2 x$  \\
-\hline
 $x^{3}$  & $3 x^{2}$  \\
-\hline
 $x^{4}$  & $4 x^{3}$  \\
-\hline
+\bottomrule
 \end{tabular}\ or
 \
-\begin{tabular}[c]{ll}\hline
-$f$  & $f^{ \prime }$  \\
-\hline
+\begin{tabular}[c]{ll}\toprule
+ $f$  & $f'$  \\
+\midrule
 $x$  & $1$  \\
-\hline
 $\frac{1}{2} x^{2}$  & $x$  \\
-\hline
 $\frac{1}{3} x^{3}$  & $x^{2}$  \\
-\hline
 $\frac{1}{4} x^{4}$  & $x^{3}$  \\
-\hline
-\end{tabular}\ so
-we can say \
-\begin{tabular}[c]{ll}\hline
-$f^{ \prime }$  & $f$  \\
-\hline
-$1$  & $x +c$  \\
-\hline
-$x$  & $\frac{1}{2} x^{2} +c$  \\
-\hline
-$x^{2}$  & $\frac{1}{3} x^{3} +c$  \\
-\hline
-$x^{3}$  & $\frac{1}{4} x^{4} +c$  \\
-\hline
-\end{tabular}\ or
-\
-\begin{tabular}[c]{ll}\hline
-$f$  & $F$  \\
-\hline
-$1$  & $x +c$  \\
-\hline
-$x$  & $\frac{1}{2} x^{2} +c$  \\
-\hline
-$x^{2}$  & $\frac{1}{3} x^{3} +c$  \\
-\hline
-$x^{3}$  & $\frac{1}{4} x^{4} +c$  \\
-\hline
-\end{tabular}\end{center}
-
+\bottomrule
+\end{tabular}\ now, in reverse \
+\begin{tabular}[c]{p{2cm}p{2.5cm}}\toprule
+derivative $f'(x)$  &  integral $\int f'(x)=f(x)$  \\\midrule
+$1$  & $x +C$  \\
+$x$  & $\frac{1}{2} x^{2} +C$  \\
+$x^{2}$  & $\frac{1}{3} x^{3} +C$  \\
+$x^{3}$  & $\frac{1}{4} x^{4} +C$  \\
+\bottomrule
+\end{tabular}
+\end{center}
 \bigskip This establishes the pattern and if you think about the rule for differentiating $y =x^{n}$ you can soon establish the rule for integrating $x^{n}$.
 \begin{tcolorbox}
-	The \textbf{Power Rule} for Integrating
+	The \textbf{Power Rule} for integrating polynomials
 \[\int x^n dx = \frac{x^{n +1}}{n +1} +c, \text{ where }n \neq  -1
 \]
 \end{tcolorbox}
@@ -99,16 +74,17 @@ $x^{3}$  & $\frac{1}{4} x^{4} +c$  \\
 
 
 All of the differentiation rules we have met so far lead to integration rules. For instance we can establish standards for $\sin  x$, $\cos  x$, and $\sec ^{2} x\text{.}$ The standard integrals are summarized in the table below.
+\renewcommand\arraystretch{1.5}
 \begin{center}
 	\begin{tabular}{cc}
 		\toprule
 		function&integral\\
 		$f(x)$  &  $\int f(x)dx$ \\ \midrule
-		$x^n, n \neq -1$ & $\frac{x^{n+1}}{n+1}+C$\\ \midrule
-		$e^x$ & $e^x+C$\\ \midrule
-		$\frac{1}{x}$ & $\ln|x|+C$\\ \midrule
-		$\sin(x)$ & $-\cos(x)+C$ \\ \midrule
-		$\cos(x)$ & $\sin(x)+C$ \\ \midrule
+		$x^n, n \neq -1$ & $\frac{x^{n+1}}{n+1}+C$\\ 
+		$e^x$ & $e^x+C$\\ 
+		$\frac{1}{x}$ & $\ln|x|+C$\\ 
+		$\sin(x)$ & $-\cos(x)+C$ \\ 
+		$\cos(x)$ & $\sin(x)+C$ \\ 
 		$\sec^2(x)$ & $\tan(x)+C$ \\ \bottomrule
 	\end{tabular}
 \end{center}
@@ -124,7 +100,7 @@ This is easily extended to the sum or difference of a number of functions.
 \[\int c f (x)\; d x =c \int f (x)\; d x
 \]\end{tcolorbox}
 
-clearpage
+\clearpage
 \example Integrate the following functions; find $\displaystyle\int f(x)$.
 \begin{tasks}(2)
 	\task $f(x) =3x^{2}$ \medskip\\
@@ -146,7 +122,11 @@ clearpage
 \int f(x)\,dx &= \int(\frac{1}{2 \sqrt{x}}) \,dx+\int(\frac{1}{\sqrt{2}}) \,dx\\
 &=\frac{1}{2}\int x^{-\frac{1}{2}}+\frac{1}{\sqrt{2}}x+C\\
 &=\sqrt{x}+\frac{x}{\sqrt{2}}+C\\
-\end{align*}\end{tasks}
+\end{align*}
+
+\task! $f(x)=0$\medskip\\
+\solution Any constant differentiates to zero, so $\int 0\, dx=C$
+\end{tasks}
 
 \rule{6.8cm}{0.5pt}\\
 \example Find $f (x)$ given $f^{ \prime  \prime } (x) =6$\medskip\\
@@ -165,9 +145,8 @@ The previous two examples of equations involving derivatives. Any equation invol
 % Area
 %---------------------------------------------------
 \section{Area}
-In this section we attempt to find the area under a curve. That is the area that lies between a curve
-and the $x$-axis from $x =a$ to $x =b$. The area is bounded by the $x$-axis, a continuous curve $y =f (x)$ and the two vertical lines $x =a$ and $x =b$. This is shown in the figure below with the area shaded in.
-\clearpage
+In this section we attempt to find the area under a curve. That is the area that lies between a curve and the $x$-axis from $x =a$ to $x =b$. The area is bounded by the $x$-axis, a continuous curve $y =f (x)$ and the two vertical lines $x =a$ and $x =b$. This is shown in the figure below with the area shaded in.
+%\clearpage
 \begin{SCfigure}[1][h]
 	\includegraphics[width=0.6\textwidth]{area1}
 	\caption*{Figure: A parabola showing the area under the curve between $x=0$, and $x=1.5$. Note the area stops at the axis. Area as calculated by integration is always in reference to the axis.}
@@ -448,20 +427,19 @@ If we now look back at the original question we are ready to substitute expressi
  &  = \frac{u^{\frac{1}{2} +1}}{\frac{1}{2} +1} +C \\
  &  = \frac{u^{\frac{3}{2}}}{\frac{3}{2}} +C\end{align*}
 \begin{align*} &  = \frac{2 \sqrt{u^{3}}}{3} +C \\
- &  = \frac{2 \sqrt{\left (1 +x^{2}\right )^{3}}}{3} +C \\
-\text{or} &  = \frac{2}{3} \left (1 +x^{2}\right )^{3/2} +C\end{align*}Notice the last few steps are tidy-up steps. It is usual to begin and end with an expression in $x$ so at the end we back-substitute the expression we substituted with $u$. \\
+ &  = \frac{2 \sqrt{\left (1 +x^{2}\right )^{3}}}{3} +C \text{ or }= \frac{2}{3} \left (1 +x^{2}\right )^{3/2} +C\end{align*}Notice the last few steps are tidy-up steps. It is usual to begin and end with an expression in $x$ so at the end we back-substitute the expression we substituted with $u$. \\
 \rule{6.8cm}{0.5pt}\\
 The Substitution Rule can be stated formally as follows. If $u =g (x)$ is a differentiable function whose range is an interval $I$ and $f$ is continuous on $I$, then $\int f \left (g \left (x\right )\right ) g^{ \prime } \left (x\right )\; d x =\int f \left (u\right )\; d u$. $d x$ and $d u$ are known as differentials. The Substitution Rule permits us to replace $g^{ \prime } \left (x\right )\; d x$ with $d u$. 
 
 \example Find $\int x \sin  \left (x^{2}\right )\; dx$\medskip\\
 \solution Using the procedure from the previous example try $u =x^{2}$. This gives $d u =2 x\; d x\text{.}$
 \begin{align*}\int x \sin  \left (x^{2}\right )\; d x &  = \int \sin  \left (x^{2}\right ) \cdot x\; d x \\
- &  = \int \sin  u \cdot \frac{1}{2}\; d u \\
+ &  = \int \sin  u \cdot x\cdot\frac{du}{2x} \\
  &  = \frac{1}{2} \int \sin  u\; d u \\
  &  =  -\frac{1}{2} \cos  u +C \\
  &  =  -\frac{1}{2} \cos  \left (x^{2}\right ) +C\end{align*}
 
-It is clear the challenge of the Substitution Rule is to come up with a suitable substitution. Earlier examples often have fairly obvious substitutions but they can quickly become quite complicated and result in many false starts. 
+It is clear the challenge of the Substitution Rule is to come up with a suitable substitution. Earlier examples often have fairly obvious substitutions but they can quickly become quite complicated and result in many false starts. \\
 \rule{6.8cm}{0.5pt}\\
 \example Find $\int \frac{x}{\sqrt{1 -x^{2}}}\; d x$\medskip\\
 \solution Let $u =1 -x^{2}$. Then $d u = -2 x\; d x$. So $x\; d x = -\frac{1}{2} d u$. These are now substituted into the original expression
@@ -629,7 +607,7 @@ Substitute $t =0$ because we are given the initial displacement i.e. $s (0) =5$
 s (t) &  = \frac{2}{3} t^{3} +t^{2} -4 t +5\end{align*}
 
 You should know about the gravitational force near the earth that produces a downwards acceleration
-given the symbol $g$. We assume $g$ is constant and about $9.8 \mbox{m}$/$\mathrm{s}^{2}$ 
+given the symbol $g$. We assume $g$ is constant and about $9.8 \mbox{m}$/$\mathrm{s}^{2}$ \\
 \rule{6.8cm}{0.5pt}\\
 \example A ball is thrown vertically upwards with a speed of $24.5 \mbox{m}$/$\mbox{s}$ from the edge of a cliff that is $147 \mbox{m}$ above the ground. 
 \begin{tasks}(2)
@@ -639,47 +617,40 @@ given the symbol $g$. We assume $g$ is constant and about $9.8 \mbox{m}$/$\mathr
 \task When does the ball hit the ground? \end{tasks}
 
 \solution
-(a) It is usual to choose the positive direction
+\begin{tasks}(2)
+	\task! It is usual to choose the positive direction
 to be upwards this means that the acceleration due to gravity must be $ -9.8 \mbox{m}$/$\mathrm{s}^{2}$.
-\begin{align*}\text{So}a (t) &  = v^{ \prime } (t) = -9.8\text{therefore} \\
+\begin{align*}\text{So}a (t) &  = v^{ \prime } (t) = -9.8\text{ therefore} \\
 v (t) &  =  -9.8 t +C_{1}\end{align*}
-
 Substituting $v (0) =24.5$ we get that $C_{1} =24.5$ so
 \begin{equation*}v (t) = -9.8 t +24.5
 \end{equation*}
-
-Because $s^{ \prime } (t) =v (t)$ we antidifferentiate $v (t)$
+Because $s^{ \prime } (t) =v (t)$ we integrate $v (t)$
 \begin{equation*}s (t) = -9.8 \frac{t^{2}}{2} +24.5 t +C_{2}
 \end{equation*}
-
 Substitute $s (0) =147$. We get $C_{2} =147$.
-\begin{equation*}\text{So}s (t) = -4.9 t^{2} +24.5 t +147
+\begin{equation*}s(t) = -4.9 t^{2} +24.5 t +147
 \end{equation*}
+This expression will hold true until the ball hits the ground provided you assume the ball continues on its trajectory without striking the cliff. 
 
-This expression will hold true until the ball hits the ground provided you assume the ball continues
-on its trajectory without striking the cliff. 
-
-(b) The maximum height is reached when $v (t) =0$.
+\task The maximum height is reached when\\ $v (t) =0$.
 \begin{align*} -9.8 t +24.5 &  = 0 \\
 24.5 &  = 9.8 t \\
 t &  = \frac{24.5}{9.8} \\
- &  = 2.5\end{align*}
+ &  = 2.5\text{ s}\end{align*}
 
-So the maximum height is reached after $2.5 \mbox{s}$. 
-
-(c) The maximum height is found by substituting
+\task The maximum height is found by substituting
 $t =2.5$ in $s (t)$
 \begin{align*}s (2.5) &  =  -4.9 \cdot 2.5^{2} +24.5 \cdot 2.5 +147 \\
  &  =  -30.625 +61.25 +147 =177.625 \mbox{m}\end{align*}
 
-(d) The ball hits the ground when $s (t) =0$
+\task! The ball hits the ground when $s (t) =0$
 \begin{align*}\text{So} -4.9 t^{2} +24.5 t +147 &  = 0 \\
 t^{2} -5 t -30 &  = 0\end{align*}
-
-Use the quadratic formula $t =\frac{ -b \pm \sqrt{b^{2} -4 a c}}{2 a}$
+Solve for $t$ using the quadratic formula: 
 \begin{align*}t &  = \frac{5 \pm \sqrt{25 -4 \times 1 \times  -30}}{2} \\
  &  = \frac{5 \pm \sqrt{145}}{2} \\
- &  \approx 8.5\text{}\mbox{s}\text{ or } -3.5\text{}\mbox{s}\end{align*}
+ &  \approx 8.5\text{}\mbox{s}\text{ or } -3.5\text{}\mbox{s}\end{align*}\end{tasks}
 You will be aware that the position function is a parabola so it is not surprising that the theoretical result shows a solution about $3.5 \mbox{ s}$ before the ball is thrown. The
 answer is that the ball hits the ground about $8.5 \mbox{ s}$ after it is thrown. You will also be aware that we did not test whether the value of $t$ when $v (t) =0$ gives a maximum or minimum. This is also because we are aware of the behaviour of a parabola with a negative $t^{2}$ coefficient. 
 
