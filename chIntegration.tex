@@ -4,32 +4,16 @@
 \chapter[Integration]{Integration $<\int>$}
 In mathematics we are often given a function $f$ and asked to find a function $F$ whose derivative is $f$. $\;F$ in this situation is called the integral of $f$. It is usual to develop a list of integrals by differentiating a range of functions then using those to work backwards. The terms integration and anti-differentiation are synonymous. Generally we will use the term integration, however, both are acceptable.
 
-\textbf{Using derivatives to infer the integral}
-\begin{enumerate}
-\item Because $y =x^{2}$ gives $y^{ \prime } =2 x$ we can say that an integral of $2 x$ is $x^{2}$. 
-
-\item Because $y =x^{2} +1$ gives $y^{ \prime } =2 x$ we can say that another integral of $2 x$ is $x^{2} +1$. 
-
-\item Because $y =x^{2} +C$ where $C$ is a constant gives $y^{ \prime } =2 x$ we can say that an integral of $2 x$ is $x^{2} +C$. 
-
-\item Because $y =e^{x}$ gives $y^{ \prime } =e^{x}$ we can say that an integral of $e^{x}$ is $e^{x}$. In fact we say that the integrals of $e^{x}$ are $e^{x} +C$ where $C$ is a constant. 
-
-\item Because $y =\ln  x +C$ where $C$ is a constant gives $y^{ \prime } =\frac{1}{x}$ we can say that a family of integrals of $\frac{1}{x}$ is $\ln  x +C$. This is often written $\ln  k x$ where $C =\ln  k$ is the constant 
-
-\item This can be generalised. $y =\ln  \left \vert x\right \vert  +C$ also gives $y^{ \prime } =\frac{1}{x}$ so in general the integrals of $\frac{1}{x}$ are $\ln  \left \vert x\right \vert  +C$. \end{enumerate}
-
 The process of `reversing' or `undoing' a derivative has its own symbol, the integrand: $\displaystyle\int$
 \begin{tcolorbox}
-	\[\int f'(x) dx = f(x)\]
+	\[\int f'(x) dx = f(x)+C\]
 \end{tcolorbox}
 
 %---------------------------------------------------
 % Standard Integrals
 %---------------------------------------------------
 \section{Standard Integrals}
-The examples shown above begin the process of establishing the start of a list of integration rules. It
-is not the intention here to list all of the rules that are required however at this stage let us explore the Power Rule to establish a rule for antedifferentiating
-an expression of the form $y =x^{n}$\medskip  \\
+It is not the intention here to list all of the rules that are required however at this stage let us explore the Power Rule to establish a rule for integrating an expression of the form $y =x^{n}$ \\
 
 \begin{center}
 \begin{tabular}[c]{p{1.5cm}p{1.5cm}}\toprule
@@ -67,12 +51,8 @@ $x^{3}$  & $\frac{1}{4} x^{4} +C$  \\
 \]
 \end{tcolorbox}
 
-
 \begin{equation*}\text{ If }f (x) =x^{ -1}\text{ then the integral of }f\text{ is }\ln  \left \vert x\right \vert  +c\text{ or }\ln  \left \vert k x\right \vert
 \end{equation*}
-
-
-
 All of the differentiation rules we have met so far lead to integration rules. For instance we can establish standards for $\sin  x$, $\cos  x$, and $\sec ^{2} x\text{.}$ The standard integrals are summarized in the table below.
 \renewcommand\arraystretch{1.5}
 \begin{center}
@@ -100,7 +80,6 @@ This is easily extended to the sum or difference of a number of functions.
 \[\int c f (x)\; d x =c \int f (x)\; d x
 \]\end{tcolorbox}
 
-\clearpage
 \example Integrate the following functions; find $\displaystyle\int f(x)$.
 \begin{tasks}(2)
 	\task $f(x) =3x^{2}$ \medskip\\
@@ -257,7 +236,7 @@ the net sum of the positive and negative areas. To find the total area you drop 
 
 To illustrate this point consider $y =x^{3} -x$. \medskip\\
 \example Find the area under the curve $y =x^{3} -x$ between $x = -1$ and $x =1$.\medskip\\
-\solution This can be factorised to give $y =x (x +1) (x -1)$. This cubic curve crosses the x-axis at $ -1$, $0$, and $1$. Here, this area must be found in two parts. (Refer to the figure on the next page.)\clearpage
+\solution This can be factorised to give $y =x (x +1) (x -1)$. This cubic curve crosses the x-axis at $ -1$, $0$, and $1$. Here, this area must be found in two parts.
 \begin{SCfigure}[1][h]
 	\includegraphics[width=0.6\textwidth]{area3}
 	\caption*{Figure: A cubic showing how area `under' the curve is evaluated. The area for $-1\leq x\leq 0$ is positive (above the axis), and the area for $0\leq x\leq 1$ is negative.}
@@ -382,7 +361,7 @@ You have estimated the function to be:\\
 	&=\pi\left[\left(\frac{32}{125}-\frac{16}{15}+2\right)-\left(-0.06075--0.45-1.5\right)\right]=2.3\pi\approx 7.23\, \text{ cm}^3\end{align*}
 \\	
 \begin{multicols}{2}
-\example Calculate the volume of the container found by rotating the curve $y=\sqrt{x^3}$ around the $y-$axis for $0\leq y \leq 5$.\\
+\examq Calculate the volume of the container found by rotating the curve $y=\sqrt{x^3}$ around the $y-$axis for $0\leq y \leq 5$.\\
 
 Here the volume is created by rotation about the $y$-axis, and therefore we need to adjust our formula. First we will solve the equation $y=\sqrt{x^3}$ for $x$, and then integrate.
 \columnbreak
@@ -416,26 +395,32 @@ Earlier we stated that every differentiation rule leads to an integration rule. 
 A series of examples will illustrate how integration by substitution works.
 
 \example Find the integral: $\int 2 x \sqrt{1 +x^{2}}\; d x$.\medskip\\
-\solution This cannot be integrated using the techniques discussed so far. This is an example of a function that can be integrated using the substitution rule. They are often recognised by noting the presence of a composite function. In this example the $\sqrt{1 +x^{2}}$ is a composite function. We introduce a new variable which simplifies the composite function.
+\solution This cannot be integrated using the techniques discussed so far. This is an example of a function that can be integrated using the substitution rule. They are often recognised by noting the presence of a composite function; the $\sqrt{1 +x^{2}}$ can be seen as $\sqrt{u}$ where the $1+x^2$ under the root is replaced by a new variable.
 
-Let $u =1 +x^{2}$. We then differentiate$\frac{d u}{d x} =2 x$. You have probably noticed that we have throughout the chapter on integration written expressions like $\int 2 x \sqrt{1 +x^{2}}\; d x$ where the $d x$ has been placed at the right of the expression we are integrating to denote we are integrating with respect to the variable $x$. We now write the expression $\frac{d u}{d x} =2 x$ as $d u =2 x\; d x$. In this course we accept that this can be done and leave the proof to a later course.
+Let $u=1+x^2$. The integral now becomes $\int 2x\sqrt{u}\; dx$. This is not yet ready because there are two different variables: $u$ \textbf{and} $x$. Lets differentiate the new equation:
+\begin{align*}
+u&=1+x^2\\
+\frac{du}{dx}&=2x
+\end{align*}
+And we can isolate the $dx$ with the intention of replacing it in the original integral, so $\displaystyle dx=\frac{du}{2x}$.
 
 If we now look back at the original question we are ready to substitute expressions containing $u$ for expressions containing $x$.
-\begin{align*}\int 2 x \sqrt{1 +x^{2}}\; d x &  = \int \sqrt{1 +x^{2}} \cdot 2 x\; d x \\
- &  = \int \sqrt{u}\; d u \\
+\begin{align*}
+\int 2 x \sqrt{1 +x^{2}}\; d x &  = \int \sqrt{u} \cdot 2 x\; d x \\
+ &  = \int \sqrt{u}\cdot \cancel{2x}\; \frac{du}{\cancel{2x}}\\
  &  = \int u^{\frac{1}{2}}\; d u \\
- &  = \frac{u^{\frac{1}{2} +1}}{\frac{1}{2} +1} +C \\
- &  = \frac{u^{\frac{3}{2}}}{\frac{3}{2}} +C\end{align*}
-\begin{align*} &  = \frac{2 \sqrt{u^{3}}}{3} +C \\
- &  = \frac{2 \sqrt{\left (1 +x^{2}\right )^{3}}}{3} +C \text{ or }= \frac{2}{3} \left (1 +x^{2}\right )^{3/2} +C\end{align*}Notice the last few steps are tidy-up steps. It is usual to begin and end with an expression in $x$ so at the end we back-substitute the expression we substituted with $u$. \\
-\rule{6.8cm}{0.5pt}\\
+ &  = \frac{u^{\frac{1}{2} +1}}{\frac{1}{2} +1}= \frac{2}{3}\sqrt[2]{u^3}+C
+ \end{align*}
+ One last step is to switch back to the original variable $x$. Make the final substitution $u=1+x^2$.
+ \[ = \frac{2 \sqrt{\left (1 +x^{2}\right )^{3}}}{3} +C \]
+ 
 The Substitution Rule can be stated formally as follows. If $u =g (x)$ is a differentiable function whose range is an interval $I$ and $f$ is continuous on $I$, then $\int f \left (g \left (x\right )\right ) g^{ \prime } \left (x\right )\; d x =\int f \left (u\right )\; d u$. $d x$ and $d u$ are known as differentials. The Substitution Rule permits us to replace $g^{ \prime } \left (x\right )\; d x$ with $d u$. 
 
 \example Find $\int x \sin  \left (x^{2}\right )\; dx$\medskip\\
 \solution Using the procedure from the previous example try $u =x^{2}$. This gives $d u =2 x\; d x\text{.}$
 \begin{align*}\int x \sin  \left (x^{2}\right )\; d x &  = \int \sin  \left (x^{2}\right ) \cdot x\; d x \\
- &  = \int \sin  u \cdot x\cdot\frac{du}{2x} \\
- &  = \frac{1}{2} \int \sin  u\; d u \\
+ &  = \int \sin(u) \cdot \cancel{x}\cdot\frac{du}{2\cancel{x}} \\
+ &  = \frac{1}{2} \int \sin(u)\; d u \\
  &  =  -\frac{1}{2} \cos  u +C \\
  &  =  -\frac{1}{2} \cos  \left (x^{2}\right ) +C\end{align*}
 
@@ -692,7 +677,6 @@ The total work done is
 As we did with area we find the limit as $n \rightarrow \infty $ of this sum. As this is a Riemann sum the limit is a definite integral
 \begin{equation}W =\sum _{i =1}^{n}f (x_{i}^{ \ast })  \Delta x =\int _{a}^{b}f (x)\; d x\tag{4}
 \end{equation}
-\rule{6.8cm}{0.5pt}\\
 \example If the force on a particle is given by the equation $f (x) =3 x^{2} -2 x \mbox{N}$, how much work is done moving the particle from $x =2$ to $x =3$?
 
 \solution The graph of $f (x) =3 x^{2} -2 x$ shows that for the interval $\left [2 ,3\right ]$ the area is above the $x$-axis.
@@ -721,6 +705,7 @@ The work done in stretching the spring from $12 \mbox{cm}$ to $13 \mbox{cm}$ is
 %---------------------------------------------------
 % Chapter Exercises in a separate file
 %---------------------------------------------------
+\clearpage
 \section{Chapter Exercises}
 \subimport{}{integrationExercises}
 

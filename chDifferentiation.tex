@@ -2,15 +2,16 @@
 % Differentiation
 %---------------------------------------------------
 \chapter[Differentiation]{Differentiation}
-
+\begin{figure}[h]\begin{center}
+		\includegraphics[width=14cm]{smooth}
+		\caption{The function is smooth everywhere, there are no gaps or sharp transitions, and therefore it has a well defined tangent line at any point. One of these tangents is shown. The function that defines \textit{all} possible tangents is called the derivative.}\end{center}
+\end{figure}
 \section*{Rate of Change}
-We are all familiar with the concept of average speed. If you travel a distance of 120 km in 2 hours then your average speed is 60 kph. There is a formula that you will have met 
-
+We will begin with the concept of average speed. If you travel a distance of 120 km in 2 hours then your average speed is 60 kph. 
 \begin{center}
 Average speed $ =\frac{\text{distance travelled}}{\text{time elapsed}}$
 \end{center}\par
 A distance/time graph can be drawn. The average speed can be expressed using function notation 
-
 \begin{center}
 Average speed $ =\frac{s (b) -s (a)}{b -a}$
 \end{center}\par
@@ -36,6 +37,10 @@ The average rate of change is the slope of the \textbf{secant line} between $x =
 \[=\frac{a^2+4-([a+h]^2-4)}{a+h}\]
 Can this be simplified further?
 \end{tasks}
+\begin{figure}\begin{center}
+\includegraphics[width=12cm]{secant}
+\caption{As the two points come closer together the secant line $ab$ gets shorter. When $b$ is at $a$ the secant line becomes a tangent line. See this \href{https://www.desmos.com/calculator/1zlwbppkuh}{animated with Desmos} (check the link on blackboard).}\end{center}
+\end{figure}
 
 %---------------------------------------------------
 % 
@@ -47,6 +52,11 @@ We now investigate the process of changing the value of $(b -a)$ in formula (1).
 
 We sometimes refer to the slope of the tangent line to a curve at a point as the slope of the curve at that point. The idea is that if we zoom in far enough towards the point then the curve looks almost like a straight line. The more we zoom in the more the parabola looks like a straight line. 
 
+\begin{figure}\begin{center}
+		\includegraphics[width=12cm]{secant2tangent}
+		\caption{A tangent can only touch the curve once. The slope of the tangent is perpendicular to the radius at the tangent point. This slope is called the rate of change or \textit{derivative} of the function at the point. See this \href{https://www.desmos.com/calculator/ialy1tknoo}{animated with Desmos} (check the link on blackboard).}\end{center}
+\end{figure}
+
 Using function notation for the tangent line is usually easier to use and is often preferred. The slope of the secant line between $x =a$ and $x =a +h$ is $\displaystyle \frac{f (a +h) -f (a)}{h}$. This looks familiar from \textsc{example} 3 above. We can now use this as a definition:
 
 \begin{tcolorbox}
@@ -54,20 +64,7 @@ $$\text{slope }=m=\Lim{h\to 0} \frac{f(a+h)-f(a)}{h}$$
 \end{tcolorbox}
 This is limit notation, $\Lim{h\to 0} $, and we would say `the limit as $h$ approaches $0$'. Note that if $h=0$ the function is now undefined (math error). So $h$ is allowed to get close to zero, but not actually equal zero.
 
-\subsection*{Velocities}
-When this process is applied to the average velocity the result of computing the average velocity over shorter and shorter time intervals produces the \textbf{instantaneous velocity}.\ Let $s =f (t)$ be the displacement at time $t$ then the \textbf{instantaneous velocity} is 
-$$v (a) =\Lim{h\to 0}\frac{f (a +h) -f (a)}{h}$$
-This is often referred to as the \textit{velocity at} $t=a$. 
 
-Suppose $y$ is a quantity that depend on another quantity $x$. Thus $y$ is a function of $x$ and we write $y =f (x)$. If we change from $x_{1}$ to $x_{2}$ then the change in $x$ is called an increment in $x$ and is denoted by $ \Delta x =x_{2} -x_{1}$ and the corresponding increment in y is denoted by $ \Delta y =y_{2} -y_{1}$. 
-
-The average rate of change of $y$ with respect to $x$ over the interval $\left [x_{1} ,x_{2}\right ]$ is denoted by 
-$$\frac{ \Delta y}{ \Delta x} =\frac{f (x_{2}) -f (x_{1})}{x_{2} -x_{1}}$$
-and can be interpreted geometrically as the slope of the secant line. As we did with velocities we can compute the average rate of change over smaller and smaller intervals by letting $x_{2}$ approach $x_{1}$ and therefore letting $ \Delta x$ approach $0$. The limit of this process is called the instantaneous rate of change of $y$ with respect to $x$ at $x =x_{1}$. This is interpreted geometrically as the slope of the tangent to the curve $y =f (x)$ at $(x_{1} ,f (x_{1}))$. 
-
-\begin{tcolorbox}
-$$\text{Instantaneous rate of change }=\Lim{\Delta x \to 0} \frac{ \Delta y}{ \Delta x} =\Lim{x_2 \to x_1}\frac{f (x_{2}) -f (x_{1})}{x_{2} -x_{1}}$$
-\end{tcolorbox}
 
 %---------------------------------------------------
 % Derivatives from 1st Principles
@@ -83,11 +80,6 @@ Definition of the derivative:\qquad$\displaystyle f^{ \prime } (a) =\Lim{h \to 0
 The process of finding the derivative using the above definition is called finding the derivative \textit{from first principles}. So far we have found a derivative of a function $f$ at a fixed number $a$. If we replace $a$ in this equation with a variable $x$ we obtain 
 \[f^{ \prime } (x) =\Lim{h \to 0}\frac{f (x +h) -f (x)}{h}\tag*{*Note the difference from above}\]
 given any number $x$ for which this limit exists. We assign to $x$ the number $f^{ \prime } \left (x\right )$. So we can regard $f^{ \prime }$ as a new function which we call the derived function or the derivative of $x$. 
-
-\subsection*{Alternate Notation for the Derived Function}
-Given the notation $y =f (x)$ for the function the following alternative notations for $f^{ \prime } \left (x\right )$ are common: 
-$$f^{ \prime } (x) =y^{ \prime } =\frac{d y}{d x} =\frac{d f}{d x} =\frac{d}{d x} f (x) \text{, also } =D f (x) =D_{x} f (x)$$
-The symbols $D$ and $\frac{d}{d x}$ are called \textit{differential operators.} 
 
 \subsection*{Derivatives of Polynomial Functions}
 The constant function $f (x) =c$ is considered a polynomial of degree zero. Using the method of first principles we can find the derivative as follows: 
@@ -150,9 +142,9 @@ The natural exponential function is unique because \textbf{it has its own deriva
 \section{Maximums, Minimums, and Tangents}
 Turning points occur at the boundary between regions in a function.  A function that transitions from increasing to decreasing must have a turning point. In the function below, $f(-1)=2$ means the point $(-1,2)$ is a turning point. More specifically this is a local maximum of our function. It is the highest point in its \emph{local} neighbourhood. Notice that the other boundary has different properties: it is the lowest point. So $f(1)=-2$ means the point $(1,-2)$ is a local minimum.
 
+The boundary means that the slope of the \textit{tangent} has gone from increasing to decreasing. Or from positive to negative. During this transition it had to go through zero, and so a turning point can be found anywhere the slope is equal to zero: $f'(x)=0$. Remember that the first derivative represents the slope of the function.
+\clearpage
 \begin{multicols}{2}
-The boundary means that the slope of the \textit{tangent} has gone from increasing to decreasing. Or from positive to negative. During this transition it had to go through zero, and so a turning point can be found anywhere the slope is equal to zero: $f'(x)=0$. Remember that the first derivative represents the slope of the function.  \\
-
 \example Find the turning points for \[f(x)=x^3-3x\]
 \columnbreak
 	\begin{center}
@@ -293,6 +285,23 @@ So the derivative of the product of two functions is not the product of the deri
 	\end{tcolorbox}
 The Product rule is often seen in an abbreviated form as $\displaystyle \left(u v\right)^{\prime} =uv^{\prime} +vu^{\prime}$.
 
+\example Find the derivative of $f(x)=x^2e^x$.\medskip\\
+\solution Use the product rule:
+$$f'(x)=(2x)(e^x)+(x^2)(e^x)$$
+This could be simplified by factoring: $f'(x)=e^x(2x+x^2)$ but is not mandatory.
+\hrule
+\example Differentiate $f=4\pi x\sin x$.\medskip\\
+\solution Use the product rule. $4\pi$ is a constant.
+$$f'=(4\pi)(\sin x)+(4\pi x)(\cos x)$$.
+\hrule
+\example If $g(x)=\frac{e^x}{3}\sqrt{x+2}$, find $g'(x)$.\medskip\\
+\solution Convert the root to power form and use the product rule.
+\begin{align*}
+g(x)&=\frac{1}{3}e^x(x+2)^{\frac{1}{2}}\\
+g'(x)&=\left[\frac{1}{3}e^x\right]\left[(x+2)^{\frac{1}{2}}\right]+\left[\frac{1}{3}e^x\right]\left[\frac{1}{2}(x+2)^{-\frac{1}{2}}\right]\\
+&=\frac{e^x}{3}\sqrt{x+2}+\frac{e^x}{6\sqrt{x+2}}
+\end{align*}
+
 %-----------------------------------------------
 \subsection*{The Quotient Rule}
 Let $u =f (x)$ and $v =g (x)$ be differentiable functions of $x$ then we can show that
@@ -303,8 +312,24 @@ Let $u =f (x)$ and $v =g (x)$ be differentiable functions of $x$ then we can sho
 or in abbreviated form as
 \begin{equation*}\genfrac{(}{)}{}{}{u}{v}^{ \prime } =\frac{v u^{ \prime } -u v^{ \prime }}{v^{2}}
 \end{equation*}
+\hrule
+\example Differentiate with the quotient rule: $y=\frac{(s-1)(s+3)}{e^{2s}}$\medskip\\
+\solution Expand the numerator first and then differentiate\\
+\begin{align*}y&=\frac{s^2+2s-3}{e^{2s}}\\
+y'&=\frac{(2s+2)(e^{2s})-(s^2+2s-3)(e^{2s})\cdot2}{(e^{2s})^2}\\
+y'&=\frac{-2(s^2+s-4)}{e^{2s}}
+\end{align*}
+\hrule
+\example Find $f'$, given $f=\frac{\sin x}{x}$\medskip\\
+\solution $$f'=\frac{\cos(x)\cdot x-\sin(x))}{x^2}=\frac{x\cos(x)-\sin(x))}{x^2}$$
+\hrule
+\example Find $f'$, given $\displaystyle f=\frac{\ln x}{e^x}$\medskip\\
+\solution $$f'=\frac{(\frac{1}{x})(e^x)-(\ln x)(e^x)}{e^{x^2}}$$
+$$=\frac{1-x\ln x}{xe^x}$$
 
-\example See blackboard course notes for examples of the product and quotient rules.
+
+
+
 %-----------------------------------------------
 \subsection*{Chain Rule}
 When functions are combined with other functions, they are often called composite functions. These require special treatment when differentiating.
@@ -406,9 +431,67 @@ Parametric Curves $x$ and $y$ are both given as functions of a third variable $t
 \begin{equation*}x =f (t)\text{ and }y =g (t)
 \end{equation*}
 
-Each value of $t$ gives a point $(x ,y)$. As $t$ varies the point $(x ,y) =(f (t) ,g (t))$ traces out a curve in the coordinate plane called a \emph{parametric curve}. 
+Each value of $t$ gives a point $(x ,y)$. As $t$ varies the point $(x ,y) =(f (t) ,g (t))$ traces out a curve in the coordinate plane called a \emph{parametric curve}. This is useful for functions that violate the vertical line test (see Section~\ref{sec:functions}) such as a circle, $x^2+y^2=r^2$, because only proper functions can be differentiated.
 
-
+Both the fish and atomic-looking-thingy below can be plotted using parametric equations.
+\begin{figure}[H]
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\resizebox{\linewidth}{!}{
+			\begin{tikzpicture}
+			\begin{axis}[
+			scale=1.2,
+			axis lines=center,%width=4cm,height=4cm,
+			ymax=2,ymin=-2,
+			xmax=2,xmin=-2,
+			xtick={-2,-1.5,-1,1,2},
+			xlabel=$x$,ylabel=$y$,%	ytick=\empty,	
+			]
+			\addplot[domain=0:4*360, samples=200, thick] ({1.5*cos(x)},{-0.667*cos(1.5*x)});
+			\addplot[mark=*] coordinates {(-1.5,0)};	
+			\addplot[mark=*] coordinates {(1.5,-0.667)};
+			\draw[->,ultra thick](axis cs:1.4,0.57) -- (axis cs:1.5,0.667);
+			\node[anchor=south] at (axis cs:1.5,-1.1) {$t=0$};
+			\node[anchor=south] at (axis cs:-1.5,-0.8) {$t=\pi$};		
+			\end{axis}
+			\end{tikzpicture}	
+		}  \caption{fish: $\displaystyle x=\frac{3\cdot\cos t}{2},\, y=-\frac{2}{3}\cos\left(\frac{3t}{2}\right)$}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\resizebox{\linewidth}{!}{
+			\begin{tikzpicture}
+				\begin{axis}[
+				scale=1.2,
+				axis lines=center,%width=4cm,height=4cm,
+				ymax=2,ymin=-2,
+				xmax=2,xmin=-2,
+				xtick={-2,-1,1,2},
+				xlabel=$x$,ylabel=$y$,%	ytick=\empty,	
+				]
+				\addplot[domain=0:4*360, samples=200, thick] ({-1.5*sin(x)},{cos(1.5*x)});	
+				\end{axis}
+		\end{tikzpicture}	
+		}  \caption{superhero logo: $\displaystyle x=-\frac{3}{2}\sin(t),\,y=\sin\left(\frac{3t}{2}\right)$}
+	\end{subfigure}
+\end{figure}
+To find the point at the mouth of the fish in terms of $t$, we must solve the equations for $x=-1.5$, or $y=0$. As $t$ increases, the plot is drawn. 
+\begin{equation*}
+	\begin{aligned}[c]
+x&=\frac{3\cdot\cos t}{2}\\
+-1.5&=\frac{3\cdot\cos t}{2}\\
+-1&=\cos t \\
+t&=\pi\\
+	\end{aligned}\qquad\qquad
+	\begin{aligned}[c]
+	 \text{check that }y&=0\\
+	 y&=-\frac{2}{2}\cos\left(\frac{3\pi}{2}\right)\\
+	y&=-\frac{2}{3}\cdot 0\\
+	y&=0\\
+	\end{aligned}
+\end{equation*}
+The point $t=0$ corresponds to $x=1.5$, and $y=-\frac{2}{3}=$ which is shown as a point on the tail.
+\exercise In which direction is the superhero logo drawn? Where does it start?\\
 \subsection*{Using the Chain Rule to find the Derivative $\frac{d y}{d x}$}
 Given\ the parametric equations $x =f (t)$ and $y =g (t)$ define a parametric curve. If $f$ and $g$ are both differentiable the Chain Rule gives
 \begin{equation*}\frac{d y}{d t} =\frac{d y}{\cancel{d x}} \cdot \frac{\cancel{d x}}{d t}
@@ -419,51 +502,41 @@ provided $y$ is also a differentiable function of $x$. So provided $\frac{d x}{d
 When dividing fractions remember to `invert and multiply'\\
 \[\frac{d y}{d t} \times \frac{d t}{d x}=\frac{dy}{dx}\]
 
-\example See blackboard course notes for examples of parametric differentiation.
+\example Find the derivative, $\frac{dy}{dx}$, of the fish in part (a).\medskip\\
+\solution Differentiate each equation and combine with the chain rule to find $\frac{dy}{dx}$.\\
+\begin{align*}x&=\frac{3\cos t}{2} &y=-\frac{2}{3}\cos\left({\frac{3t}{2}}\right)\\
+\frac{dx}{dt}&=-\frac{3}{2}\sin t &\frac{dy}{dt}=-\frac{2}{3}\cdot-\sin \left({\frac{3t}{2}}\right)\cdot\frac{3}{2}\\
+&&\frac{dy}{dt}=\sin \left({\frac{3t}{2}}\right)\\
+\end{align*}
+Now, using the chain rule, note $\frac{dx}{dt}$ must be inverted:\\
+\begin{align*}\frac{dy}{dx}&=\frac{dy}{dt}\cdot\frac{dt}{dx}\\
+&=\sin \left({\frac{3t}{2}}\right)\cdot \frac{1}{-\frac{3}{2}\sin t }\\
+&=\frac{-2\sin \frac{3t}{2}}{3\sin t}
+\end{align*}
+Compare your derivatives, $y'$ and $x'$, with the superhero logo plot from part (b).
 %---------------------------------------------------
 % Related Rates
 %---------------------------------------------------
 \section{Related Rates}
 The concept of related rates is best understood by exploring some examples. 
 
-\example 1. Air is being pumped into a spherical balloon so that its volume is increasing at a rate of 100 $cm^{3}$/$\mbox{s}$. How fast is the radius of
-the balloon increasing when the diameter is 50 $\mbox{cm}$? 
-
-You have to find the related rates in the question. Let
-$V$ be the volume and $r$ be the radius at time $t$. The volume is increasing at the rate of 100 $cm^{3}$/$\mbox{s}$ so $\frac{d V}{d t} =100$. The question asks how fast is the radius increasing. In
-other words what is $\frac{d r}{d t}$? 
-
-\solution We need a formula that connects $V$ and $r$ if we are to find the relationship between $\frac{d V}{d t}$ and $\frac{d r}{d t}$. 
-
-The formula
-\begin{equation*}V =\frac{4}{3} \pi  r^{3}
-\end{equation*}
-
-is of the form $V =f (r)$ so we can find $\frac{d V}{d r}$
-\begin{equation}\frac{d V}{d r} =4 \pi  r^{2}\tag{1}
-\end{equation}
-
-From the Chain Rule we can write
-\begin{equation}\frac{d V}{d t} =\frac{d V}{d r} \cdot \frac{d r}{d t}\tag{2}
-\end{equation}
-
-Substituting $\frac{d V}{d t} =100$ and $\frac{d V}{d r} =4 \pi  r^{2}$ in equation (2) we get
-\begin{align*}100 &  = 4 \pi  r^{2} \cdot \frac{d r}{d t} \\
-\frac{d r}{d t} &  = \frac{100}{4 \pi  r^{2}} \\
- &  = \frac{25}{\pi  r^{2}}\end{align*}
-
+\examq Air is being pumped into a spherical balloon so that its volume is increasing at a rate of 50 $cm^{3}$/$\mbox{s}$. How fast is the radius of the balloon increasing when the diameter is 50 $\mbox{cm}$? \\
+\solution The volume of a sphere is $\frac{4}{3}\pi r^3$. Find the derivative with respect to radius.
+\[\frac{d V}{d r} =4 \pi r^2\]
+We are looking for ``how fast'' (time) and radius ($r$), or $\frac{dr}{dt}$. From the Chain Rule we can write
+\[\frac{d V}{d t} =\frac{d V}{d r} \cdot \frac{d r}{d t}\]
+Substituting $\frac{d V}{d t} =50$ and $\frac{d V}{d r} =4 \pi  r^{2}$ we get
+\begin{align*}50 &  = 4 \pi  r^{2} \cdot \frac{d r}{d t} \\
+\frac{d r}{d t} &  = \frac{50}{4 \pi  r^{2}} \\
+\end{align*}
 Now we substitute $r =25$. (Diameter $ =50$ so radius $ =25$)
-\begin{align*}\frac{d r}{d t}_{r =25} &  = \frac{25}{\pi  \times 25^{2}} \\
- &  = \frac{1}{25 \pi }\end{align*}
+\begin{align*}\frac{d r}{d t}_{r =25} &  = \frac{50}{4\pi(25)^2} \\
+&  = \frac{1}{50 \pi }\approx 0.00637\end{align*}
+Therefore the radius is increasing at the rate of $\displaystyle\frac{1}{50 \pi } \mbox{cm}$/$\mbox{s}$ 
 
-So the radius is increasing at the rate of $\frac{1}{25 \pi } \mbox{cm}$/$\mbox{s}$ 
+\example A ladder $5$ $\mbox{m}$ long rests against a vertical wall. If the bottom of the ladder slides away from the wall at the rate of $0.5$ $\mbox{m}$/$\mbox{s}$ how fast is the top of the ladder sliding down the wall when the bottom of the ladder is $3$ $\mbox{m}$ from the wall? 
 
-\example 2. A ladder $5$ $\mbox{m}$ long rests against a vertical wall. If
-the bottom of the ladder slides away from the wall at the rate of $0.5$ $\mbox{m}$/$\mbox{s}$ how fast is the top of the ladder sliding down the wall when the bottom
-of the ladder is $3$ $\mbox{m}$ from the wall? 
-
-\solution Let the origin be placed at the corner where the wall meets the floor, let $x$ be the distance of the foot of the ladder from the wall and let $y$ be the distance of the top of the ladder from the corner. The ladder forms a right
-angled triangle whose sides are $x$, $y$ and with hypotenuse $5$. We are given that $\frac{d x}{d t} =0.5$ and are asked to find $\frac{d y}{d t}$ when $x =3$. 
+\solution Let the origin be placed at the corner where the wall meets the floor, let $x$ be the distance of the foot of the ladder from the wall and let $y$ be the distance of the top of the ladder from the corner. The ladder forms a right angled triangle whose sides are $x$, $y$ and with hypotenuse $5$. We are given that $\frac{d x}{d t} =0.5$ and are asked to find $\frac{d y}{d t}$ when $x =3$. 
 
 Pythagoras' theorem gives
 \begin{equation}x^{2} +y^{2} =5^{2}\tag{1}
@@ -485,7 +558,7 @@ Substitute $\frac{d x}{d t} =0.5$, $x =3$ and $y =4$
 
 The top of the ladder is moving vertically downwards at the rate of 0.375 $\mbox{m}$/$\mbox{s}$ 
 
-\example 3. A water tank has the shape of an inverted circular cone with a base radius of $2$ $\mbox{m}$ and height of $4$ $\mbox{m}$. If water is being pumped into
+\example A water tank has the shape of an inverted circular cone with a base radius of $2$ $\mbox{m}$ and height of $4$ $\mbox{m}$. If water is being pumped into
 the tank at a rate of $2$ $\mathrm{m}^{3}$/$\mbox{min}$ find the rate at which the water level is rising when the water is $3$ $\mbox{m}$ deep. 
 
 \solution Let $V$, $r$ and $h$ be the volume of water the radius of the surface and the height at time $t$. We are given
@@ -627,9 +700,12 @@ r^3&=\frac{2000}{4\pi}\\
 r&=5.419 \,\textrm{cm}
 \end{align*}
 Therefore the final dimensions of the can optimised for minimum cost are radius$=5.42$ cm, and height$=10.8$ cm. 
+
+
+
 %---------------------------------------------------
 % Chapter Exercises in a separate file
 %---------------------------------------------------
- \clearpage
+% \clearpage
  \section{Chapter Exercises}
  \subimport{}{differentiationExercises}

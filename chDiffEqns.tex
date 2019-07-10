@@ -67,20 +67,36 @@ problem of finding the particular solution given the differential equation is re
 
 \example For the differential equation $y^{ \prime } = -y^{2}$ \medskip\\
 (a) Verify that $y =\frac{1}{t +C}$ is the general solution \\
-(b) Find the solution of the initial-value problem $y^{ \prime } = -y^{2}$ and $y \left (0\right ) =0.5$ \\
-\solution\medskip\\
-(a) Given $y =\frac{1}{t +C} =\left (t +C\right )^{ -1}$
+(b) Find the solution of the initial-value problem $y^{ \prime } = -y^{2}$ and $y \left (0\right ) =0.5$ 
+\clearpage
+\solution
+\begin{tasks}(2)
+\task Given $y =\frac{1}{t +C} =\left (t +C\right )^{ -1}$
 \begin{align*}y^{ \prime } &    =  -\left (t +C\right )^{ -2} \\
  &    = \frac{ -1}{\left (t +C\right )^{2}} \\
  &    =  -\genfrac{(}{)}{}{}{1}{t +C}^{2} = -y^{2}\end{align*}
 
 So $y =\frac{1}{t +C}$ is the general solution of $y^{ \prime } = -y^{2}$ 
 
-(b) Substitute $\left (0 ,0.5\right )$ in $y =\frac{1}{t +C}$
+\task Substitute $\left (0 ,0.5\right )$ in $y =\frac{1}{t +C}$
 \begin{align*}0.5 &    = \frac{1}{0 +C} \\
 \frac{1}{2} &    = \frac{1}{C} \\
 C &    = 2\end{align*}
-The particular solution is $y =\frac{1}{t +2}$ 
+The particular solution is $y =\frac{1}{t +2}$
+\end{tasks}
+\rule{\textwidth}{0.5pt}
+\examq\\ Find the particular solution to the differential equation $1+x^2\frac{dy}{dx}=x^3$ given that $y(1)=\frac{5}{2}$.\\
+\solution Isolate the derivative, $\frac{dy}{dx}$, and integrate to find the function $y$:\\
+\begin{align*}
+\frac{dy}{dx}&=\frac{x^3-1}{x^2}\\
+\int\frac{dy}{dx}&=\int xdx-\int\frac{1}{x^2}dx\\	
+y&=\frac{x^2}{2}+\frac{1}{x}+C
+\end{align*}
+Use the initial condition $y(1)=\frac{5}{2}$ to solve for the unknown constant:\\
+	\begin{align*}\frac{5}{2}&=\frac{1^2}{2}+\frac{1}{1}+C\\
+	C&=1
+	\end{align*}
+Therefore the particular solution is $\qquad\displaystyle y=\frac{x^2}{2}+\frac{1}{x}+1$
 
 %---------------------------------------------------
 % Separable Equations
@@ -104,7 +120,7 @@ To solve $\frac{d y}{d x} =\frac{f (x)}{g (y)}$ we rewrite the equation as
 \begin{align*}\frac{d}{d y} \int g (y) d y \times \frac{d y}{d x} &    = \frac{d}{d x} \int f (x) d x \\
 g (y) \times \frac{d y}{d x} &    = f (x) \\
 \text{or\  \  \ }\frac{d y}{d x} &    = \frac{f (x)}{g (y)}\end{align*}
-\rule{6.8cm}{0.5pt}\\
+\rule{\textwidth}{0.5pt}\\
 \example Solve $\displaystyle \frac{d y}{d x} =\frac{x^{2}}{y^{2}}$\medskip\\
 \solution
 \begin{align*}y^{2} d y &    = x^{2} d x \\
@@ -117,7 +133,7 @@ y^{3} &    = x^{3} +3 C \\
 \begin{align*}2 &    = \sqrt[{3}]{0^{3} +C_{1}} \\
 C_{1} &    = 8 \\
 y &    = \sqrt[{3}]{x^{3} +8}\end{align*}
-\rule{6.8cm}{0.5pt}\\
+\rule{\textwidth}{0.5pt}\\
 \example Solve $\displaystyle y^{ \prime } =3 x^{2} y$ \medskip\\
 \solution First write $y^{ \prime } =\frac{d y}{d x}$ 
 \begin{equation*}\frac{d y}{d x} =3 x^{2} y
