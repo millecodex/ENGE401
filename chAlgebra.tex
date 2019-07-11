@@ -38,7 +38,7 @@ This can easily be verified by expanding the brackets.\\
 \section*{Solving Equations}
 An equation is a mathematical expression separated by two lines of \textit{equal} length ($=$). There must be symbols (either numbers or algebraic letters) on both sides of the equality. For example, $5x=25$ is an equation, however, $5(1)+25$ is just an expression. An equation can be solved; in the previous example, $x=5$ is a solution, whereas an expression may be simplified ($5(1)+25=30$). Conversely, factoring the quadratic $x^2-4x+4=(x-2)^2$ is \textit{not} solving the expression.
 
-When solving an equation the order of operations is important. The acronym \textbf{BEDMAS} is used for simplifying expressions starting with B=brackets, and ending with S=subtraction. The reverse is true for solving equations. First you must undo any subtraction or addition to isolate the variable.
+When solving an equation the order of operations is important. The acronym \textbf{BEDMAS} is used for simplifying expressions starting with B=brackets, Exponents, Division, Multiplication, Addition, and ending with S=subtraction. The \textit{reverse} is true for solving equations. First you must undo any subtraction or addition to isolate the variable.
 
 \example Solve the equation for $x$: $x-11=7$\medskip\\
 \solution To isolate $x$ we will add 11 to both sides: $x-11\textbf{+11}=7\textbf{+11}$\\
@@ -168,6 +168,86 @@ The dashed line in the figure represents what is called the \textit{vertical lin
 The domain of a function is the set of all inputs that are valid; usually these are the $x-$values. The range of a function is the set of all outputs that are valid; usually these are the $y-$values. For the line we plotted above, $f(x)=2x$, any value could be substituted into the function, therefore the domain was all the real numbers. This is written as: Domain $x \in \mathbb{R}$. Similarly the range was all the $y-$values, or  $y \in \mathbb{R}$. We will return to domain and range later.
 \end{multicols}
 
+\example What is the domain and range for the circle with equation $x^2+y^2=2^2$ ?\medskip\\
+\solution See the graph above. The domain is all the $x$-values that are included; this is everything between $-2$ and $+2$ inclusive. \medskip\\
+Therefore the domain is:
+\begin{flalign*}
+&&\{-2\le x\le 2,\,\, x&\in\mathbb{R}\}&\phantom{0000000000000}\\
+\text{And the range is similar:}&& \{-2\le y\le 2,\,\, y&\in\mathbb{R}\}&
+\end{flalign*}
+\rule{6.8cm}{0.5pt}\\
+\example Find the domain and range for the graphs:
+\begin{figure}[H]
+	\begin{subfigure}[b]{0.33\textwidth}
+		\centering
+		\resizebox{\linewidth}{!}{
+			\begin{tikzpicture}
+			\begin{axis}[
+			scale=1,
+			axis lines=center,
+			ymax=4,ymin=-4,
+			xmax=3,xmin=-5,
+			xlabel=$x$,ylabel=$y$,
+			]
+			\addplot [->,domain=-1:2,ultra thick, samples=50, black] {2*x};
+			\addplot [-,domain=-1:-3,ultra thick, samples=50, black] {-x-3};
+			\addplot [-,domain=-3:-4,ultra thick, samples=50, black] {0};
+			\addplot[mark=*] coordinates {(-1,-2)};
+			\addplot[mark=*] coordinates {(-3,0)};
+			%dirty hack to get an open dot!
+			\node [circle,inner sep=0.5pt] at (axis cs:-4,0) {o};
+			\end{axis}	
+			\end{tikzpicture}		
+		}  \caption{Piece-wise function}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.33\textwidth}
+		\centering
+		\resizebox{\linewidth}{!}{
+			\begin{tikzpicture}
+			\begin{axis}[
+			scale=1,
+			axis lines=center,
+			ymax=4,ymin=-4,
+			xmax=6,xmin=-2,
+			xlabel=$x$,ylabel=$y$,
+			]
+			\addplot [->,domain=0:6,ultra thick, samples=50, black] {sqrt(x)};
+			\addplot[mark=*] coordinates {(0,0)};
+			\end{axis}	
+			\end{tikzpicture}
+		}  \caption{Square root function}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.33\textwidth}
+		\centering
+		\resizebox{\linewidth}{!}{
+			\begin{tikzpicture}
+			\begin{axis}[
+			scale=1,
+			axis lines=center,
+			ymax=4,ymin=-4,
+			xmax=3,xmin=-3,
+			xlabel=$x$,ylabel=$y$,
+			]
+			\addplot [<->,domain=-1.4:1.4,ultra thick, samples=50, black] {x^2+2};
+			\addplot [<->,domain=-1.4:1.4,ultra thick, samples=50, black] {-(x^2+2)};
+			\end{axis}	
+			\end{tikzpicture}			
+		}  \caption{Parabolas}
+	\end{subfigure}
+\end{figure}
+\solution \\
+\begin{tasks}(3)
+	\task $x=-4$ is \textbf{not} included in the domain, but everything bigger than $-4$ is.\\ Domain: $\{x>-4,\,\, x\in\mathbb{R}\}$\\ Range: $\{y>-2,\,\, y\in\mathbb{R}\}$
+	\task The arm of a root function goes to infinity (one-half of a parabola) in both positive $x$ and $y$.\\ Domain: $\{x\ge0,\,\, x\in\mathbb{R}\}$\\ Range: $\{y\ge0,\,\, y\in\mathbb{R}\}$\\or:\\
+	$\{0\le x\le\infty,\, x\in\mathbb{R}\}$\\
+	$\{0\le y\le\infty,\, y\in\mathbb{R}\}$
+	\task Here there is a gap between $y=-2$ and $y=2$. This must be excluded from the range.\\
+	Domain: $\{x\in\mathbb{R}\}$\\ 
+	Range:$\{y\ge2,\text{ and } y\le-2,\\y\in\mathbb{R}\}$\\or:\\
+	Range: $(\infty<y<-2] \\\text{ and } [2<t<\infty)$	
+\end{tasks}
+We have shown some different notation in the last example. The round brackets are exclusive $(\infty,\infty)$ and the square brackets are inclusive $[-2,2]$. Infinity is not a number and does not behave like one, so it always gets a round bracket; you can never reach infinity to include it.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Linear Functions}
 Linear functions can represented nicely as a straight line on a standard Cartesian ($x,y$) coordinate system. The following are all examples of linear functions, and not surprisingly, can be drawn as a lines.
@@ -222,7 +302,7 @@ Linear functions have a few characteristics that we will get used to manipulatin
 
 Note that a vertical line has an \textit{undefined} slope. Using the formula above, a vertical line has a slope of $m=\frac{\Delta y}{0}$ because it has the same $x$ values everywhere. Dividing by zero is undefined (try on your calculator) and therefore a vertical line is not considered a function.
 
-\textbf{Question:} Does a vertical line pass or fail the vertical line test? Why?
+\exercise Does a vertical line pass or fail the vertical line test? Why?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Quadratic Functions}

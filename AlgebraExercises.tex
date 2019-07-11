@@ -206,7 +206,32 @@
 	\task 	$y =x^{2} ,\text{\quad \quad }y = -x^{2} ,\text{\quad \quad }y =x^{2} \sin  x$  %{L4SZ2818}
 	\task   $y =e^{x} ,\text{\quad \quad }y = -e^{x} ,\text{\quad \quad }y =e^{x} \sin  5 \pi  x$ %{L4SZ2819}
 \end{tasks}
-\Question Given $f(x)=x$ and $g(x)=\sin x$, graph $f$, $g$, and $f +g$ on a common screen to illustrate graphical addition. %{L4SZ2817}
+\Question \begin{tasks}(2)\task Sketch the piece-wise function:\\
+\[
+f(x) = \begin{cases} 
+0 & \mbox{for }x<-2 \\ 
+2 & \mbox{for } x>2 \\ 
+x& \mbox{for }-2\leq x \leq 2 \\
+\end{cases}
+\]
+\task Write the equation of the function:\\
+\begin{tikzpicture}
+\begin{axis}[grid=both,
+scale=1,
+unit vector ratio=1 1,
+ymin=-5,ymax=5,
+xmin=-5,xmax=5,
+minor tick num=1,
+axis lines = middle,
+xlabel=$x$,
+ylabel=$y$,
+]
+\addplot[->,domain=-2:3,samples=50,smooth,thick,black] {x+2};
+\addplot[<-,domain=-5:-2,samples=50,smooth,thick,black] {-x-2};
+%\draw[step=1,gray,thin,xshift=0cm,yshift=0cm] (0,0) grid (15,15);
+\end{axis}
+\end{tikzpicture}%$y=|x+2| $
+\end{tasks}
 \end{Exercise}%functions
 \begin{Answer}[ref={ex12}]%functions
 	\Question %Make $t$ the subject of the equation
@@ -266,11 +291,32 @@ $x-$intercepts $1.73$ and $ -1.73$ and $y-$intercept $ -3$
 \end{tabular}
 \Question %Graph the three functions on a common screen using \desmos. How are the graphs related? 
 \begin{tasks}
-	\task 	\includegraphics[width=4cm]{L4SZ2818}\\
-	\task   \includegraphics[width=4cm]{L4SZ2819}\\
+	\task 	\includegraphics[width=5cm]{L4SZ2818}\\
+	\task   \includegraphics[width=5cm]{L4SZ2819}\\
 \end{tasks}
-\Question %Given $f(x)=x$ and $g(x)=\sin x$
-\includegraphics[width=4cm]{L4SZ2817}
+\Question 
+	\begin{tasks}\task
+	\begin{tikzpicture}
+	\begin{axis}[grid=both,
+	scale=1,
+	unit vector ratio=1 1,
+	ymin=-5,ymax=5,
+	xmin=-5,xmax=5,
+	minor tick num=1,
+	axis lines = middle,
+	xlabel=$x$,
+	ylabel=$y$,
+	]
+	\addplot[<-,domain=-4.5:-2,samples=50,smooth,very thick,black] {0};
+	\addplot[->,domain=2:4.5,samples=50,smooth,thick,black] {2};
+	\addplot[-,domain=-2:2,samples=50,smooth,thick,black] {x};\\
+	\addplot[mark=*] coordinates {(-2,-2)};
+	%dirty hack to get an open dot!
+	\node [circle,inner sep=0.5pt] at (axis cs:-2,0) {o};
+	\end{axis}
+	\end{tikzpicture}
+	\task $y=|x+2| $
+	\end{tasks}
 \end{Answer}%functions
 
 %-------------------------------------------------------------------
