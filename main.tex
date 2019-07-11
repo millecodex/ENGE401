@@ -20,7 +20,7 @@
 \documentclass[a4paper,11pt,openany,oneside]{book}
 \usepackage{amssymb,amsmath,amsfonts,textcomp,siunitx}%
 \usepackage{xcolor,graphicx,xspace,colortbl,ragged2e,rotating}% 
-\usepackage{fancyhdr,titlesec,geometry}%
+\usepackage{fancyhdr,titlesec,geometry,pdfpages}%
 \usepackage{multicol,wrapfig,booktabs,tabulary,tcolorbox, tasks}%
 \usepackage{import}% may not work for answers
 \usepackage{sidecap,caption,subcaption,float}%
@@ -36,6 +36,9 @@
 	linkcolor={blue!50!black},
 	citecolor={blue!50!black},
 	urlcolor={blue!50!black}
+%	linkcolor=.,
+%	citecolor=.,
+%	urlcolor=.
 }
 \newcommand{\desmos}{\href{http://www.desmos.com/calculator}{\texttt{desmos\,}}}%
 \newcommand{\Desmos}{\href{http://www.desmos.com/calculator}{\texttt{Desmos\,}}}%
@@ -170,19 +173,21 @@ Version 1.0 by Peter Watson, 2010.
 
 \clearpage
 %\hypersetup{linkcolor={black}}
+%\includepdf{schedule.pdf}
+%\includepdf{FormulaSheetFinal.pdf}
 \tableofcontents
 \mainmatter
 %    Include main chapters here.
 \include{chAlgebra}
-%\include{chTrig}
-%\include{chExponentials}
-%\include{chDifferentiation}
-%\include{chIntegration}
-%\include{chDiffEqns}
-%\include{chAnswers}
-%\appendix
+\include{chTrig}
+\include{chExponentials}
+\include{chDifferentiation}
+\include{chIntegration}
+\include{chDiffEqns}
+\include{chAnswers}
+\appendix
 %    Include appendix "chapters" here.
-%\include{}
+\include{FormulaSheetFinal}
 
 \backmatter
 %\bibliographystyle{amsalpha}
