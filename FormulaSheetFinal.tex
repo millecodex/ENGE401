@@ -1,0 +1,80 @@
+\begin{center}\Large{Useful Formulae}
+\end{center}
+\begin{itemize}
+	%%%%%%%%%%
+	\item Equations of a Line: $y - y_1 = m(x - x_1);\qquad y=mx+b$
+	%%%%%%%%%%
+	\item Quadratic Formula:
+	If $ax^2+bx+c=0$,\,$a\ne0$, then $\displaystyle x = \frac{-b\pm \sqrt{b^2-4ac}}{2a}$
+	%%%%%%%%%%
+	\item Sine Law: $\frac{\sin A}{a}= \frac{\sin B}{b}=\frac{\sin C}{c}$; \hspace{0.2cm}Cosine Law: $a^2=b^2+c^2-2bc\cos(A)$
+	%%%%%%%%%%
+	\item Logarithms:\\
+	\begin{center}
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular}{lrclcrcl}
+			\toprule
+			&\multicolumn{3}{c}{Logarithms}& &\multicolumn{3}{c}{Exponents}\\
+			\cmidrule{1-4}\cmidrule{6-8}
+			Law 1: &$ \log_x(ab) $&$=$&$ \log_x(a)+\log_x(b)  $&\hspace{1cm} &$x^a$&$=$&$x^{a+b} $\\
+			Law 2: &$ \log_x\left(\frac{a}{b}\right) $&$=$&$  \log_x(a)-\log_x(b) $& &$\frac{x^a}{x^b}$&$=$&$x^{a-b}  $\\
+			Law 3: &$ \log_x(a^b) $&$=$&$ b\cdot\log_x(a)   $& &$(x^a)^b $&$=$&$x^{ab} $\\
+			\cmidrule{1-4}\cmidrule{6-8}
+			&$  \log_{x}\left(\frac{1}{x^a}\right) $&$=$&$-a   $& &$x^{-a} $&$=$&$\frac{1}{x^a} $\\
+			&$ \log_{x}1  $&$=$&$ 0  $& &$x^0 $&$=$&$1 $\\
+			&$ \log_x(x) $&$=$&$  1 $& &$x^1 $&$=$&$x $\\
+			\bottomrule
+			recall:&$ \log_a(x) $&$=$&$y$\hspace{0.5cm} converts to& $\Leftrightarrow$ &$x $&$=$&$a^y $\\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+	%%%%%%%%%%
+	\item Standard Derivatives
+	\renewcommand{\arraystretch}{1.1}
+	\setlength{\tabcolsep}{1.5em}
+	\begin{table}[h]\vspace{-0.6cm}
+		\centering
+		\begin{tabular}{ll}
+			\hline
+			$f(x)$ & $f'(x)$  \\ \hline
+			$x^n$ & $nx^{n-1}$ \\ 
+			$e^x$ & $e^x$  \\ 
+			$\ln(x)$ & $\frac{1}{x}$ \\ 
+			$\sin(x)$ & $\cos(x)$  \\ 
+			$\cos(x)$ & $-\sin(x)$  \\ 
+			$\tan(x)$ & $\sec^2(x)$  \\ \hline
+		\end{tabular}
+	\end{table}
+	
+	%%%%%%%%%%
+	\item Product Rule: $(f(x)g(x))' = f'(x)g(x) + f(x)g'(x)$
+	%%%%%%%%%%
+	\item Quotient Rule: $\displaystyle \left(\frac{f(x)}{g(x)}\right)' = \frac{f'(x)g(x) - f(x)g'(x)}{(g(x))^2}$
+	%%%%%%%%%%
+	\item Chain Rule: $f(g(x))' = f'(g(x)) \cdot g'(x)$
+	%%%%%%%%%%
+	\item Standard Integrals
+	\renewcommand{\arraystretch}{1.2}
+	\setlength{\tabcolsep}{1.5em}
+	\begin{table}[h]\vspace{-0.6cm}
+		\centering
+		\label{my-label}
+		\begin{tabular}{ll}
+			\hline
+			$f(x)$  &  $\int f(x)dx$ \\ \hline
+			$x^n, n \neq -1$ & $\frac{x^{n+1}}{n+1}+c$\\ 
+			$e^x$ & $e^x+c$\\ 
+			$\frac{1}{x}$ & $\ln|x|+c$\\ 
+			$\sin(x)$ & $-\cos(x)+c$ \\ 
+			$\cos(x)$ & $\sin(x)+c$ \\ 
+			$\sec^2(x)$ & $\tan(x)+c$ \\ \hline
+		\end{tabular}
+	\end{table}
+	%%%%%%%%%%
+	\item Integration By Parts: $\displaystyle \int fg' = fg-\int f'g \hspace{1cm} \text{or} \hspace{1cm} \int udv = uv - \int vdu$
+	%%%%%%%%%%
+	\item Area between the curve $f(x)$ and the $x$-axis: $\displaystyle A=\int_{a}^{b} f(x)dx$\\
+	%%%%%%%%%%
+	\item Volume of revolution about the $x$-axis:
+	$\displaystyle V= \int_{a}^{b} \pi y^2 dx = \int_{a}^{b} \pi (f(x))^2 dx$
+\end{itemize}
