@@ -262,26 +262,39 @@ Use Desmos to sketch the following. Describe in words how each curve is related 
 
 
 \subsection*{The Laws of Logarithms}
+
+The logarithmic laws are listed beside their equivalent exponent laws (see Section~\ref{sec:introAlgebra} Exponents) to show the symmetry between the two. The terms \textit{logarithm} and \textit{exponent} are very similar.
 \begin{tcolorbox}
-\begin{tasks}[label-width={10em}]
-	\task[Law 1:] $\qquad\log _{a} \left (X Y\right ) =\log _{a} X +\log _{a} Y$ 	
-	\task[Law 2:] $\qquad\log _{a} \left(\frac{X}{Y}\right) =\log _{a} X -\log _{a} Y$ 	
-	\task[Law 3:] $\qquad\log _{a} X^{c} =c \log _{a} X$ 
-\end{tasks}
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lrclcrcl}
+	\toprule
+	&\multicolumn{3}{c}{Logarithms}& &\multicolumn{3}{c}{Exponents}\\
+	\cmidrule{1-4}\cmidrule{6-8}
+	Law 1: &$ \log_x(ab) $&$=$&$ \log_x(a)+\log_x(b)  $&\hspace{1cm} &$x^a$&$=$&$x^{a+b} $\\
+	Law 2: &$ \log_x\left(\frac{a}{b}\right) $&$=$&$  \log_x(a)-\log_x(b) $& &$\frac{x^a}{x^b}$&$=$&$x^{a-b}  $\\
+	Law 3: &$ \log_x(a^b) $&$=$&$ b\cdot\log_x(a)   $& &$(x^a)^b $&$=$&$x^{ab} $\\
+	\cmidrule{1-4}\cmidrule{6-8}
+	&$  \log_{x}\left(\frac{1}{x^a}\right) $&$=$&$-a   $& &$x^{-a} $&$=$&$\frac{1}{x^a} $\\
+	&$ \log_{x}1  $&$=$&$ 0  $& &$x^0 $&$=$&$1 $\\
+	&$ \log_x(x) $&$=$&$  1 $& &$x^1 $&$=$&$x $\\
+	\bottomrule
+	recall:&$ \log_a(x) $&$=$&$y$\hspace{0.5cm} converts to& $\Leftrightarrow$ &$x $&$=$&$a^y $\\
+	\bottomrule
+\end{tabular}
+\end{center}
+For all of the above logarithms, $\log_x$ can be replaced with the natural logarithm, $\log_e$,  or $\ln$. So for example:
+\begin{center}
+	\renewcommand{\arraystretch}{1.2}
+	\begin{tabular}{lrcl}
+		\toprule
+		Law 1: &$ \ln(ab) $&$=$&$ \ln(a)+\ln(b)  $\\
+		Law 2: &$ \ln\left(\frac{a}{b}\right) $&$=$&$  \ln(a)-\ln(b) $\\
+		Law 3: &$ \ln(a^b) $&$=$&$ b\cdot\ln(a)$ \\
+		\bottomrule
+	\end{tabular}
+\end{center}
 \end{tcolorbox}
-
-It is a useful exercise to prove these laws as the proofs show the
-connection between the laws for exponents and the laws for logarithms. 
-
-\textbf{Proof of Law 1} \\
-Let $\log _{a} X =u$ so $a^{u} =X$ \\\relax and $\log _{a} Y =v$ so $a^{v} =Y$ \\\relax $X Y =a^{u} a^{v} =a^{u +v}$ \\\relax Take logarithms of both sides to the base $a$ \\\relax $\log _{a} X Y =\log _{a} a^{u +v} =u +v$ {\scriptsize (property 3)} $ =\log _{a} X +\log _{a} Y$ \\
-
-\textbf{Proof of Law 2} \\
-$\frac{X}{Y} =\frac{a^{u}}{a^{v}} =a^{u -v}$ \\\relax Take logarithms of both sides to the base $a$ \\\relax $\log _{a} \frac{X}{Y} =\log _{a} a^{u -v} =u -v$ {\scriptsize (property 3)} $ =\log _{a} X -\log _{a} Y$ \\
-
-\textbf{Proof of Law 3} \\
- $X^{c} =\left (a^{u}\right )^{c} =a^{u c} =a^{c u}$ \\\relax Take logarithms of both sides to the base $a$ \\\relax $\log _{a} X^{c} =\log _{a} a^{c u} =c u$ {\scriptsize (property 3)} $ =c \log _{a} X$ //
-
 \example
 Expand using the logarithm laws 
 \begin{description}
