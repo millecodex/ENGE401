@@ -24,8 +24,10 @@ We could continue this process. If we enter $2^{\pi }$ on the calculator the ans
 \begin{equation*}2^{\pi } =8.824977827
 \end{equation*}
 
-The graph of $y =2^{x}$, $ \forall x \in \mathbb{R}$ is shown. 
-\includegraphics[width=3.7758in, height=2.1378in,]{L4SZ282M}
+The graph of $y =2^{x}$ is shown below. Notice it will never go below $y=0$.\\ 
+\begin{center}
+	\includegraphics[width=3.7758in, height=2.1378in,]{L4SZ282M}
+\end{center}
 
 Recall $y =f (x)$ is a function and $y =f ( -x)$ is the same function with every $x$ replaced with $ -x$, i.e. $y =f ( -x)$ is the reflection of $y =f (x)$ in the $y$-axis. 
 
@@ -66,8 +68,7 @@ a &  = \sqrt[{3}]{125} =5\\
 \end{align*}
 
 \subsection*{Transformations of Exponential Functions}
-Recall the transformations we have met so far 
-
+Recall the transformations we have met so far:
 \begin{center}
 \begin{tabular}{ll}Vertical stretch of $a$  & $y =f (x) \leadsto y =a f (x)$  \\
 	Horizontal stretch of $\frac{1}{b}$  & $y =f (x) \leadsto y =f (b x)$  \\
@@ -77,39 +78,11 @@ Recall the transformations we have met so far
 	Reflection in $y$-axis  & $y =f (x) \leadsto y =f ( -x)$
 \end{tabular}
 \end{center}
-Each of these transformations can be applied to an exponential
-function. 
-
-\textbf{Graphing Exercise} Given $y =2^{x}$ apply the following transformations. Draw a sketch showing where the graph crosses the $y$-axis, its shape, its asymptote and one other point it passes through. 
-
-\columnseprule =0.4pt
-\begin {multicols}{2}
-\begin{enumerate}
-	\item Horizontal shift of $ +2\vspace{+2.000000cm}$ 
-	
-	\item Vertical shift of $ -3\vspace{+2.000000cm}$ 
-	
-	\item Horizontal stretch of $2\vspace{+2.000000cm}$ 
-	
-	\item Vertical stretch of $4\vspace{+2.000000cm}$ 
-	
-	\item Horizontal stretch of $\frac{1}{3}\vspace{+2.000000cm}$ 
-	
-	\item Vertical stretch of $\frac{1}{2}\vspace{+2.000000cm}$ 
-	
-	\item Reflection in the x-axis\vspace{2cm}
-	
-	
-	\item Reflection in the y-axis\vspace{2cm} 
-	
-	\item (Challenge) Reflection in $y = -1\vspace{+2.000000cm}$ 
-	
-	\item (Challenge) Reflection in $x =1\vspace{+4.000000cm}$ \end{enumerate}
-
-\end {multicols}
-\columnseprule =0pt
-\medskip\medskip\medskip\medskip
-
+Each of these transformations can be applied to an exponential function. Horizontal shifts are `attached' to the $x$ with brackets and opposite to convention. A shift to the right is represented by negative, e.g., $y=2^(x-3)$. Vertical shifts are positive to shift up and negative to shift down.
+\begin{center}\includegraphics[width=14cm]{expTrans1}\end{center}
+Reflections are accomplished by multiplying by negative one. To reflect in the $x$-axis, multiply the whole function by $-1$, e.g., $y=-2^x$. And for a reflection in the $y$-axis multiply the $x$ variable by $-1$, e.g., $y=2^{-x}$.
+\begin{center}\includegraphics[width=14cm]{expTrans2}\end{center}
+See the lecture notes for more examples.
 %---------------------------------------------------
 % the natural exponential function e^x
 %---------------------------------------------------
@@ -136,7 +109,7 @@ Lets say the interest is compounded monthly, then after 1 month you will receive
 	12 (monthly)& 1.613035&2.613035 \\\midrule
 	52 (weekly)&1.692597 &2.692597\\\midrule
 	365 (daily)&1.714567 &2.714567\\\midrule
-	continuous& 1.718282&\textbf{2.718282$\dots$}\\
+	continuous& 1.718282&\textbf{2.7182818}$...=$\textit{\textbf{e}}\\
 	\bottomrule
 \end{tabular}
 \end{center}
@@ -183,8 +156,7 @@ Problems involving logarithms will often require us to switch back and forth bet
 	\item [(c)] $\log _{10} 0.01 = -2$ because $10^{ -2} =0.01$ \end{description}
 
 \subsection*{The graph of $y =\log _{a} x$}
-The exponential function $y =a^{x}$ where $a >0$ is now known and its domain is $\mathbb{R}$ and its range is the positive real numbers. We often
-write $\mathbb{R}^{ +}$ instead of $\left (0 ,\infty \right )$. 
+The exponential function $y =a^{x}$ where $a >0$ is now known and its domain is $\mathbb{R}$ and its range is the positive real numbers. We can write $\mathbb{R}^{ +}$, meaning the positive real numbers, instead of $(0 ,\infty)$. 
 
 The graph of $f (x) =a^{x}$ can be reflected in the line $y =x$ and the result is $f^{ -1} (x) =\log _{a} x$. 
 
@@ -236,8 +208,8 @@ should in each case be looking for the point $\left (a ,1\right )$.
 of logarithms is $\log _{a} a^{x} =x$. This useful property must be understood if logarithm problems are to be mastered.
 \ You should understand what $\log _{a} a^{x}$ is saying. $a$ is the base so $\log _{a} a^{x} =x$ says ``The power to which $a$ must be raised to get $a^{x}$ is $x$." 
 
-\subsection*{Common Logarithms}
-When the base is $10$ we write $y =\log _{10} x =\log  x$. If you see no base you assume it is base $10$. $y =\log  x$ is called the \emph{common} logarithm of $x$. Desmos and other programs with mathematics incorporated recognise "$\log $" as "logarithm to the base $10$". The $\log $ key on the calculator gives the common logarithm of any positive number.
+\subsection*{Base-10}
+When the base is $10$ we write $y =\log  x$ which \textit{implies} that $y=\log _{10} x$. If you see no base you assume it is base $10$. \Desmos and other mathematics programs recognise ``$\log $'' as being ``logarithm of base $10$.'' The $\log $ key on the calculator gives the base-10 logarithm of any positive number.
 \begin{tcolorbox}
 \begin{equation*}y =\log  x \Leftrightarrow 10^{y} =x
 \end{equation*}
@@ -245,7 +217,7 @@ When the base is $10$ we write $y =\log _{10} x =\log  x$. If you see no base yo
 
 
 \subsection*{Natural Logarithms}
-When the base is $e$ we write $y =\log _{e} x =\ln  x$. If you see $\ln  x$ you assume it is $\log _{e} x$. $y =\ln  x$ is called the \emph{natural} logarithm of $x$. Desmos and other programs with mathematics incorporated recognise "$\ln $" as "logarithm to the base $e$". The $\ln $ key on the calculator gives the natural logarithm of any positive number.
+When the base is $e$ we write $y =\log _{e} x =\ln  x$. If you see $\ln  x$ you can assume it is $\log _{e} x$. This is sometimes called the \emph{natural} logarithm of $x$. Software should recognise ``$\ln $'' as meaning ``logarithm to the base $e$.'' The $\ln $ key on the calculator gives the natural logarithm of any positive number.
 \begin{tcolorbox}\begin{equation*}y =\ln  x \Leftrightarrow e^{y} =x
 \end{equation*}\end{tcolorbox}
 
@@ -261,15 +233,15 @@ Use Desmos to sketch the following. Describe in words how each curve is related 
 	\task $y =\ln  ( -1 -x)$ \end{tasks}
 
 
-\subsection*{The Laws of Logarithms}
+\section{The Laws of Logarithms}
 
 The logarithmic laws are listed beside their equivalent exponent laws (see Section~\ref{sec:introAlgebra} Exponents) to show the symmetry between the two. The terms \textit{logarithm} and \textit{exponent} are very similar.
 \begin{tcolorbox}
 \begin{center}
 \renewcommand{\arraystretch}{1.2}
 \begin{tabular}{lrclcrcl}
-	\toprule
-	&\multicolumn{3}{c}{Logarithms}& &\multicolumn{3}{c}{Exponents}\\
+	%\toprule
+	\multicolumn{4}{c}{Logarithms}& &\multicolumn{3}{c}{Exponents}\\
 	\cmidrule{1-4}\cmidrule{6-8}
 	Law 1: &$ \log_x(ab) $&$=$&$ \log_x(a)+\log_x(b)  $&\hspace{1cm} &$x^a$&$=$&$x^{a+b} $\\
 	Law 2: &$ \log_x\left(\frac{a}{b}\right) $&$=$&$  \log_x(a)-\log_x(b) $& &$\frac{x^a}{x^b}$&$=$&$x^{a-b}  $\\
@@ -287,11 +259,11 @@ For all of the above logarithms, $\log_x$ can be replaced with the natural logar
 \begin{center}
 	\renewcommand{\arraystretch}{1.2}
 	\begin{tabular}{lrcl}
-		\toprule
+		%\toprule
 		Law 1: &$ \ln(ab) $&$=$&$ \ln(a)+\ln(b)  $\\
 		Law 2: &$ \ln\left(\frac{a}{b}\right) $&$=$&$  \ln(a)-\ln(b) $\\
 		Law 3: &$ \ln(a^b) $&$=$&$ b\cdot\ln(a)$ \\
-		\bottomrule
+		%\bottomrule
 	\end{tabular}
 \end{center}
 \end{tcolorbox}
@@ -375,17 +347,17 @@ Solve $3^{2 x +1} =5$\\
 2 x +1 &  = \frac{\log  5}{\log  3} \\
 2 x &  = \frac{\log  5}{\log  3} -1 \\
 x &  = \frac{1}{2} \left (\frac{\log  5}{\log  3} -1\right ) \\
-&  \approx 0.23248676 \approx 0.23\text{(2 dp)}\end{align*}
+&  \approx 0.2325 \end{align*}
 
 \task[Example 3]
 Solve $4 \left (1 +10^{5 x}\right ) =9$\\
 \solution This must first be rearranged:
 \begin{align*}1 +10^{5 x} &  = \frac{9}{4} =2.25 \\
 10^{5 x} &  = 2.25 -1 =1.25 \\
-\text{}{\scriptsize 10}\text{}\log  10^{5 x} &  = \log  1.25 \\
+\log  10^{5 x} &  = \log  1.25 \\
 5 x &  = \log  1.25 \\
 x &  = \frac{1}{5} \log  1.25 \\
-&  \approx 0.019382002 \approx 0.019\text{(3 dp)}\end{align*}
+&  \approx 0.01938 \end{align*}
 \end{tasks}
 
 \textbf{Example 4} Solve $\frac{10}{1 +e^{ -x}} =3$.\medskip\\
@@ -399,19 +371,15 @@ x &  \approx  -0.85\text{(2 dp)}\end{align*}
 
 \subsection*{Solving Logarithmic Equations}
 Whereas exponential equations have the unknown variable in an exponent, logarithmic equations are equations containing the logarithm of an unknown variable. 
-
+\begin{tcolorbox}
 \begin{description}
-	\item [Step 1] You recognise you are dealing with a logarithmic equation
-	by inspecting the problem to see if you have a logarithm of a term containing the unknown variable. 
-	
-	\item [Step	2] Rearrange the equation until it is in the form
-	\begin{equation*}\log _{a} \left (\text{term containing unknown}\right ) =b
-	\end{equation*} where $b$ is a number. 
-	
-	\item [Step 3] Take	``antilogarithms ". That is if $\log _{a} X =b$ then $a^{b} =X$ 
-	
-	\item [Step 4] Solve the equation.
-	($a$ and $b$ are known and $X$ is an expression containing the unknown variable.) \end{description}
+	\item [Step 1] Recognise you are dealing with a logarithmic equation by inspecting the problem to see if you have a logarithm of a term containing the unknown variable. 	
+	\item [Step	2] Rearrange the equation until it is in the form $\log _{a} \left (\text{unknown}\right ) =b$. 	
+	\item [Step 3] Take	``antilogarithms.'' That is, use the conversion: $\log _{a}x=b$ then $a^b=x$. 	
+	\item [Step 4] Solve the equation for the unknown variable.
+\end{description}
+\end{tcolorbox}
+
 
 \textbf{Example 1} Solve $\ln  x =5$ .\medskip\\
 \solution Take antilogarithms with base $e$:
@@ -481,6 +449,27 @@ example is about the spread of an infectious disease in a small city whose popul
 \end{tasks}
 
 The graph has distinctive characteristics. It starts at a particular non-zero value (when $t =0$) and increases slowly at first then more rapidly. It slows down after a time and levels off because the exponential function in the denominator $ \leadsto 0$ when $t \leadsto \infty $. Graphs with these characteristics are called logistic curves. The particular model is called a logistic growth model. 
+\clearpage
+\examq\medskip \\In the winter of 2019 the number of people contracting the measles virus grew substantially in the Auckland region. The plot shows the number of confirmed cases with data indicating 546 cases as of August 20, 2019.
+\begin{center}
+	\includegraphics[width=11cm]{measles}
+\end{center}
+\begin{tasks}
+	\task What type of mathematical model (function) would you expect to fit the data?\\
+	\[\text{This data most closely resembles an exponential function.}\]
+	\task Using Excel, a mathematical formula has been fit to the data:	$\displaystyle f(t)=8.06e^{0.0272t}$ where $t$ is measured in days. How many cases were originally reported?\\
+	\[\text{Sub in $t=0$ to find the initial number of cases in the data.}\]
+	\[f(0)=8.06e^0=8.06 \text{ cases}\]
+	Remember the model is an approximation of the data so it is likely that there were 8 cases to start with.
+	
+	\task How many days have passed between the initial data point and August 20?\\
+	\begin{align*}\text{Solve for \textit{t} knowing that }f(t)&=546\\
+	546&=8.06e^{0.0272t}\\
+	\frac{546}{8.06}&=e^{0.0272t}\\
+	\ln\left(\frac{546}{8.06}\right)&=0.0272t\\
+	t&=\frac{4.2157}{0.0272}=154.989\approx 155\text{ days}\\
+	\end{align*}
+\end{tasks}
 
 %---------------------------------------------------
 % Chapter Exercises in a separate file
