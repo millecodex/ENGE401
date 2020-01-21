@@ -1,12 +1,92 @@
+%---------------------------------------------------
+% Introductory Algebra
+%---------------------------------------------------
 \chapter{Algebra}
 Engineering Mathematics begins by reviewing foundational algebra. Many of the skills used in this chapter are foundational mathematical tools that you will need to keep using repeatedly both in this course and beyond. Refer to the course website \url{blackboard.aut.ac.nz} for additional review material covering the basics of algebra.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introductory Algebra}\label{sec:introAlgebra}
+%---------------------------------------------------
+\section{Algebra Review}\label{sec:introAlgebra}
+%---------------------------------------------------
 Some of the foundational algebraic properties will be covered here. This section is not comprehensive, and the student should refer to an introductory algebra book if some of these properties are not clear.
+
+
+%---------------------------------------------------
+\section*{Solving Equations}
+%---------------------------------------------------
+An equation is a mathematical expression separated by two lines of \textit{equal} length ($=$). There must be symbols (either numbers or algebraic letters) on both sides of the equality. For example, $5x=25$ is an equation, however, $5(1)+25$ is just an expression. An equation can be solved; in the previous example, $x=5$ is a solution, whereas an expression may be simplified: $5(1)+25=30$. Conversely, factoring the quadratic $x^2-4x+4=(x-2)^2$ is \textit{not} solving the expression.
+
+When solving an equation the order of operations is important. The acronym \textbf{BEDMAS} is used for simplifying expressions starting with \textbf{B}rackets, \textbf{E}xponents, \textbf{D}ivision, \textbf{M}ultiplication, \textbf{A}ddition, and ending with \textbf{S}ubtraction. The \textit{reverse} is true for solving equations. First you must undo any subtraction or addition to isolate the variable.
+
+\example Solve the equation for $x$: $\phantom{a}x-11=7$\medskip\\
+\solution To isolate $x$ we will add 11 to both sides: $x-11\textbf{+11}=7\textbf{+11}$\\
+And simplify: $x=18$\\
+\rule{6.8cm}{0.5pt}\\
+\example Solve the equation: $2x+5=10$\medskip\\
+\solution To isolate $x$ first we have to subtract 5 from both sides: $2x=10-5$\\
+And then we divide both sides by 2: $\displaystyle\phantom{aa}\frac{\cancel{2}x}{\cancel{2}}=\frac{10-5}{2}$\\
+And simplify: $\displaystyle x=\frac{5}{2}$
+
+\begin{tcolorbox}
+A general rule for solving equations is that you can do any mathematical operation to the equation as long as you do it to both sides. For example, add 5 to both sides, divide both sides by 2, multiply both side by $\sin(x)$, raise to an exponent, and so on.
+\end{tcolorbox}
+
+\example Find $x$: $x^2+1=3$\medskip\\
+\solution Subtract 1 from both sides: $x^2=2$ Recall \textsc{bedmas} in reverse order, now we have an exponent. To solve for a power of 2, take the square root of both sides: $\sqrt{x^2}=\sqrt{2}$, and simplify to $x=\sqrt{2}$.
+%---------------------------------------------------
+\section*{Exponents}
+%---------------------------------------------------
+Indices go by a few different names, sometimes they are called powers or indices. In the expression $x^3$ the index, exponent, or power is $3$. This does not have to be an integer, or even a number: $x^n$ has index $n$; $x^{\frac{2}{3}}$ has a fractional exponent; $x^{-1}$ has a negative exponent; and $x^{\cos x}$ has another expression for its power.
+
+\subsection*{The Rules of Exponents}
+\begin{tcolorbox}
+	\begin{itemize}
+		\item $x^n$: $x$ is called the base and $n$ the exponent (or power)
+		\item When \textbf{multiplying} exponents of the same base, \textbf{add} the exponents: \[x^3\times x^4=x^{3+4}=x^7\qquad\text{ or }\qquad a^{-2} a^3=a^{-2+3}=a^1\]
+		\item When \textbf{dividing} exponents of the same base, \textbf{subtract} the exponents:\[\frac{x^6}{x^5}=x^{6-5}=x^1\qquad\text{ or }\qquad \frac{y^7}{y^{-2}}=y^{7-(-2)}=y^9\]
+		\item If an expression is raised to \textit{another} power, multiply the exponents:
+		\[ x^{3^4}=x^{3\times 4}=x^{12}\]
+	\end{itemize}
+\end{tcolorbox}	
+
+\subsection*{Negative Exponents}
+One of the most important rules for manipulating mathematics is the exponent of negative one. A negative power is equivalent to the inverse of the same expression with a positive power. (Inverse means one divided by the same expression.)\\
+
+\begin{tcolorbox}
+	\hspace{1cm}$\displaystyle x^{-1}=\frac{1}{x}$ \hspace{2cm}$\displaystyle x^{-4}=\frac{1}{x^4}$\hspace{2cm}$\displaystyle\frac{2}{7y^3}=\frac{2y^{-3}}{7} $\hspace{2cm}$\displaystyle 2^{-3}=\frac{1}{2^3}=\frac{1}{8} $
+\end{tcolorbox}	
+
+\subsection*{Fractional Exponents}
+Exponents can decimal numbers, integers, expressions, variables, and also fractions. Fractional exponents can written using a root sign, this is called surd form. $x^{\frac{1}{2}}$ is also known as the square root of $x$. Using rules of exponents you can see that $x^{\frac{1}{2}}\times x^{\frac{1}{2}}=x^{\frac{1}{2}+\frac{1}{2}}=x^1=x$. Converting between surd and index form is quite handy, especially when we get to differentiation using the power rule.
+\begin{tcolorbox}\begin{alignat*}{5}
+\textrm{Index form: }\qquad&x^{\frac{1}{2}}&\qquad\qquad x^{\frac{3}{4}} &\qquad\qquad 64^{\frac{1}{3}}&\qquad\qquad x^\frac{a}{b}\\
+\textrm{Surd form: }\qquad&\sqrt{x}&\qquad \sqrt[4]{x^3}&\qquad\qquad\sqrt[3]{64}&\qquad \sqrt[b]{x^a}
+\end{alignat*}\end{tcolorbox}
+
+\subsection*{Laws of Exponents Summary}
+%\renewcommand{\arraystretch}{1.3}
+%\begin{align*}
+%x^a x^b & =x^{a+b}  \\ 
+%\frac{x^a}{x^b} & =x^{a-b} \\ 
+%(x^a)^b & =x^{ab}  \\ 
+%x^{-a} & =\frac{1}{x^a} \\ 
+%x^{\frac{a}{b}} & =\sqrt[b]{x^a}\\
+%x^0 & =1  \\ 
+%\end{align*}
+\begin{tcolorbox}
+\begin{tasks}[style=itemize](2)
+	\task[] multiply: $ x^a x^b = x^{a+b}$
+	\task[] inverse: $x^{-a}  =\frac{1}{x^a} $
+	\task[] divide: $ \frac{x^a}{x^b}  =x^{a-b} $
+	\task[] root: $ x^{\frac{a}{b}}  =\sqrt[b]{x^a}$
+	\task[] power: $(x^a)^b  =x^{ab} $
+	\task[] zero: $x^0  =1 $
+\end{tasks}	
+\end{tcolorbox}
+	
+%---------------------------------------------------
 \section*{Expanding and Factorising}
-Multiplying algebraic expressions is usually called \emph{expanding}
-and the reverse process is called \emph{factorising}. We usually use the word factorising in New Zealand, however, most textbooks use the term factoring. We will use both terms interchangeably in this course. Factor(is)ing and expanding can be viewed as opposite operations; one undoes the other.  
+%---------------------------------------------------
+Multiplying algebraic expressions is called \emph{expanding} and the reverse process is called \emph{factorising}. We usually use the word factor\textbf{is}ing in New Zealand, however, most textbooks use the term factoring. We will use both terms interchangeably in this course. Factorising and expanding can be viewed as opposite operations; one undoes the other.  
 
 \example Expand the following algebraic expression (remove the brackets): $x(x-7)$\medskip\\
 \solution $x(x-7)=x^2-7x$\\
@@ -33,77 +113,14 @@ This can easily be verified by expanding the brackets.\\
 \rule{6.8cm}{0.5pt}\\
 \example Factor: $x^2-4x+4$\medskip\\
 \solution $=(x-2)(x-2)=(x-2)^2$
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-\section*{Solving Equations}
-An equation is a mathematical expression separated by two lines of \textit{equal} length ($=$). There must be symbols (either numbers or algebraic letters) on both sides of the equality. For example, $5x=25$ is an equation, however, $5(1)+25$ is just an expression. An equation can be solved; in the previous example, $x=5$ is a solution, whereas an expression may be simplified ($5(1)+25=30$). Conversely, factoring the quadratic $x^2-4x+4=(x-2)^2$ is \textit{not} solving the expression.
-
-When solving an equation the order of operations is important. The acronym \textbf{BEDMAS} is used for simplifying expressions starting with B=brackets, Exponents, Division, Multiplication, Addition, and ending with S=subtraction. The \textit{reverse} is true for solving equations. First you must undo any subtraction or addition to isolate the variable.
-
-\example Solve the equation for $x$: $x-11=7$\medskip\\
-\solution To isolate $x$ we will add 11 to both sides: $x-11\textbf{+11}=7\textbf{+11}$\\
-And simplify: $x=18$\\
-\rule{6.8cm}{0.5pt}\\
-\example Solve the equation: $2x+5=10$\medskip\\
-\solution To isolate $x$ first we have to subtract 5 from both sides: $2x=10-5$\\
-And then we divide both sides by 2: $\frac{2x}{2}=\frac{10-5}{2}$\\
-And simplify: $x=\frac{5}{2}$
-
-\begin{tcolorbox}
-A general rule for solving equations is that you can do any mathematical operation to the equation as long as you do it to both sides. For example, add 5 to both sides, divide both sides by 2, multiply both side by $\sin(x)$, and so on.
-\end{tcolorbox}
-
-\example Find $x$: $x^2+1=3$\medskip\\
-\solution Subtract 1 from both sides: $x^2=2$ Recall \textsc{bedmas} in reverse order, now we have an exponent. To solve for a power of 2, take the square root of both sides: $\sqrt{x^2}=\sqrt{2}$, and simplify to $x=\sqrt{2}$
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section*{Exponents}
-Indices go by a few different names, sometimes they are called powers or indices. In the expression $x^3$ the index, exponent, or power is $3$. This does not have to be an integer, or even a number: $x^n$ has index $n$; $x^{\frac{2}{3}}$ has a fractional exponent; $x^{-1}$ has a negative exponent; and $x^{\cos x}$ has another expression for its power.
-
-\subsection*{The Rules of Exponents}
-\begin{tcolorbox}
-	\begin{itemize}
-		\item $x^n$: $x$ is called the base and $n$ the exponent (or power)
-		\item When multiply exponents of the same base, add the exponents: $x^3\times x^4=x^{3+4}=x^7$
-		\item When dividing exponents of the same base, subtract the exponents:
-		$\frac{x^6}{x^5}=x^{6-5}=x^1$
-		\item If an expression is raised to \textit{another} power, multiply the exponents:
-		$x^{3^4}=x^{3\times 4}=x^{12}$
-	\end{itemize}
-\end{tcolorbox}	
-
-\subsection*{Negative Exponents}
-One of the most important rules for manipulating mathematics is the exponent of negative one. A negative power is equivalent to the inverse of the same expression with a positive power. (Inverse means one divided by the same expression.)\\
-
-\begin{tcolorbox}
-	\hspace{1cm}$x^{-1}=\frac{1}{x}$ \hspace{2cm}$x^{-4}=\frac{1}{x^4}$\hspace{2cm}$\frac{2}{7y^3}=\frac{2y^{-3}}{7} $\hspace{2cm}$2^{-3}=\frac{1}{2^3}=\frac{1}{8} $
-\end{tcolorbox}	
-
-\subsection*{Fractional Exponents}
-Exponents can decimal numbers, integers, expressions, variables, and also fractions. Fractional exponents can written using a root sign, this is called surd form. $x^{\frac{1}{2}}$ is also known as the square root of $x$. Using rules of exponents you can see that $x^{\frac{1}{2}}\times x^{\frac{1}{2}}=x^{\frac{1}{2}+\frac{1}{2}}=x^1=x$. Converting between surd and index form is quite handy, especially when we get to differentiation using the power rule.
-\begin{tcolorbox}\begin{alignat*}{5}
-\textrm{Index form: }\qquad&x^{\frac{1}{2}}&\qquad\qquad x^{\frac{3}{4}} &\qquad\qquad 64^{\frac{1}{3}}&\qquad\qquad x^\frac{a}{b}\\
-\textrm{Surd form: }\qquad&\sqrt{x}&\qquad \sqrt[4]{x^3}&\qquad\qquad\sqrt[3]{64}&\qquad \sqrt[b]{x^a}
-\end{alignat*}\end{tcolorbox}
-
-\subsection*{Laws of Exponents Summary}
-%\renewcommand{\arraystretch}{1.3}
-\begin{align*}
-x^a & =x^{a+b}  \\ 
-\frac{x^a}{x^b} & =x^{a-b} \\ 
-(x^a)^b & =x^{ab}  \\ 
-x^{-a} & =\frac{1}{x^a} \\ 
-x^{\frac{a}{b}} & =\sqrt[b]{x^a}\\
-x^0 & =1  \\ 
-\end{align*}
 	
-	
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%---------------------------------------------------
 \section{Functions}\label{sec:functions}	
+%---------------------------------------------------
 A function is a mathematical relationship between groups. Given an element in one group, the function says how to get to the other group. For example the function could be a formula that says if you have $x$, the output is $2x$. This can be written as $f(x)=2x$ where $f(x)$ is called function notation and in Cartesian coordinates also means $y=f(x)$. We can depict this function visually using $x$ and $y$ coordinates. Begin by selecting some inputs ($x$ values) and then calculate the outputs ($f(x)$ values) from the formula $f(x)=2x$.
 
 This method is called making a table of values and in this example any real number for $x$ produces exactly one output for $y$ (also a real number). The figure below plots the points on an $(x,y)$ grid. Connecting the points creates the line $y=2x$.
-\clearpage
+
 \begin{multicols}{2}
 \begin{center}
 \begin{tabular}{clr}  
@@ -260,8 +277,9 @@ Therefore the domain is:
 \end{tasks}
 We have shown some different notation in the last example. The round brackets are exclusive $(\infty,\infty)$ and the square brackets are inclusive $[-2,2]$. Infinity is not a number and does not behave like one, so it always gets a round bracket; you can never reach infinity to include it.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%---------------------------------------------------
 \section*{Linear Functions}
+%---------------------------------------------------
 Linear functions can represented nicely as a straight line on a standard Cartesian ($x,y$) coordinate system. The following are all examples of linear functions, and not surprisingly, can be drawn as a lines.
 
 %linear function examples here
@@ -312,18 +330,22 @@ Linear functions have a few characteristics that we will get used to manipulatin
  
  The standard form for an equation of a line is: $y =m x +c$ where $m$ is the slope described above, and $c$ is the $y-$intercept. Alternatively if you know the slope and any given point $(x_1,y_1)$, the equation of a line is $y -y_{1} =m (x -x_{1})$ where $x_1$ and $y_1$ are the coordinates of a point on the line.
 
-Note that a vertical line has an \textit{undefined} slope. Using the formula above, a vertical line has a slope of $m=\frac{\Delta y}{0}$ because it has the same $x$ values everywhere. Dividing by zero is undefined (try on your calculator) and therefore a vertical line is not considered a function.
+Note that a vertical line has an \textit{undefined} slope. Using the formula above, a vertical line has a slope of $m=\frac{\Delta y}{0}$ because it has the same $x$ values everywhere. Dividing by zero is \textit{undefined} (try on your calculator) and therefore a vertical line is not considered a function.
 
 \exercise Does a vertical line pass or fail the vertical line test? Why?
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%---------------------------------------------------
 \section*{Quadratic Functions}
- A quadratic relationship scales with the square of the input values. The following are all examples of quadratic functions:
- \begin{itemize}
- 	\item $ y=x^2-5$
- 	\item $ s(t)=-4.9t^2-15t+3$
- 	\item $ b^2+7b-1=0$
- \end{itemize}
+%---------------------------------------------------
+A quadratic relationship scales with the square of the input values. The following are all examples of quadratic functions:
+ \begin{tasks}[style=itemize](2)
+ 	\task $ y=x^2-5$
+	\task $ 3x^2+x-1=0$
+ 	\task $ s(t)=-4.9t^2-15t+3$
+ 	\task $ b^2+7b-1=0$
+ 	\task $ ax^2+bx+c=0$
+ 	\task $ 27=3x^2$
+ \end{tasks}
 Note that they all have a power of 2 in the equation, and that is the highest exponent. This type of relationship is also referred to as parabolic. When a parabola equation is plotted, the solutions represent where the function crosses the $x-$axis. These points are called roots.
  
  \example Find the roots of the following parabolas.
@@ -401,8 +423,10 @@ Note that they all have a power of 2 in the equation, and that is the highest ex
 The parabola from part (c) above was solved by factoring. Not all quadratic equations can be solved in this manner. The standard form of a quadratic equation is written $a x^{2} +b x +c =0$. If we solve this equation for $x$ we get the quadratic formula:
  $$x =\frac{ -b \pm \sqrt{b^{2} -4 a c}}{2 a}$$ 
  where $a,b,$ and $c$ are coefficients ($a\ne0$). Note here there are two possible solutions because of the plus-minus sign ($\pm$).
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%---------------------------------------------------
 \section{Polynomials}\label{sec:polynomials}
+%---------------------------------------------------
  A polynomial is a type of function that comes up a lot. The quadratic equations above are all examples of polynomials. The standard form of a quadratic equation is shown below with some of the terminology.
  \begin{center}
  \includegraphics[width=0.5\textwidth]{poly}
@@ -420,9 +444,10 @@ where the terms are written in decreasing powers of $x$, with
 \end{itemize}
  
  
- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- \section{Systems of Equations}\label{sec:systemsOfEquations}
- A system of equations means having more than one relationship represented within a common context. Revenue and costs may have different functions but both relate to the same product. We will study systems composed of two equations and two unknowns. Systems with more equations and more variables are possible and will be covered in future courses. Three approaches to solve systems of equations will be covered here:
+%---------------------------------------------------
+\section{Systems of Equations}\label{sec:systemsOfEquations}
+%---------------------------------------------------
+A system of equations means having more than one relationship represented within a common context. Revenue and costs may have different functions but both relate to the same product. We will study systems composed of two equations and two unknowns. Systems with more equations and more variables are possible and will be covered in future courses. Three approaches to solve systems of equations will be covered here:
  \begin{multicols}{3}
   \begin{itemize}
  	\setlength\itemsep{0em}
@@ -435,7 +460,8 @@ It helps if you can visualise the shape of the two functions so that the meaning
  
  We know that linear equations in two variables are represented by straight lines. Straight
  lines will always intersect unless they are parallel. The coordinates of the point of intersection of the straight lines is called the solution. you could use a graphical method or one of the two algebraic methods (substitution or elimination) to find the solution.  We will start with a graphical method. 
- 
+ %---------------------------------------------------
+ \subsection*{Solution by Graphing}
  \example Find the solution to the set of linear relationships given by:
  $$2y=x-4$$
  $$y=\frac{x}{4}$$
@@ -467,7 +493,9 @@ It helps if you can visualise the shape of the two functions so that the meaning
  \end{tikzpicture}			
 \end{center}
 \end{multicols}
- \subsection*{Solution by Substitution}
+
+%---------------------------------------------------
+\subsection*{Solution by Substitution}
  \example Consider the system of equations
  \begin{align}x^{2} +y^{2} &  = 25 \tag{1} \\
  3 y +x &  = 15 \tag{2}\end{align}
@@ -484,10 +512,46 @@ $$x =  15 -3 y $$
  
 Lastly, back-substitute the $y-$values into equation (2): 
  
- When $y =5$, $3 y +x =15 \leadsto 15 +x =15 \Longleftrightarrow x =0$. This means $\left (0 ,5\right )$ is a solution. 
+ When $y =5$, $3 y +x =15 \leadsto 15 +x =15 \Longleftrightarrow x =0$. This means $\left (0 ,5\right )$ is a solution. Similarly, when $y =4$, $x =3$ and so $(3 ,4)$ is the second solution. A system with a quadratic equation (degree 2) will have up to 2 solutions.
  
- When $y =4$, $3 y +x =15 \leadsto 12 +x =15 \Longleftrightarrow x =3$. This means $\left (3 ,4\right )$ is a solution. 
- Note there are two solutions here. Verify by graphing the functions.
+ \examq Find the points of intersection of the two parabolas shown on the plot.
+ \begin{center}
+ 	\begin{tikzpicture}
+ 	\begin{axis}[
+ 	axis on top=true,
+ 	ymin=-12,ymax=5,
+ 	xmin=-7,xmax=9,
+ 	minor tick num=1,
+ 	axis lines = middle,
+ 	xlabel=$x$,
+ 	ylabel=$y$,
+ 	label style ={at={(ticklabel cs:1.1)}},
+ 	width=10cm,
+ 	height=8cm,
+ 	]
+ 	\addplot[<->,domain=-7:4.8,samples=50,smooth,thick,black,name path=top] {0.1*x^2-1};
+ 	\addplot[<->,domain=-5:2.78,samples=50,smooth,thick,black,name path=bot] {x^2+2*x-10};
+ 	\addplot[gray!40]fill between[of=top and bot,soft clip={domain=-4.463:2.241}];
+ 	\addplot[mark=*] coordinates {(-4.463,0.992)};
+ 	\addplot[mark=*] coordinates {(2.241,-0.498)};
+ 	\node[anchor=south,fill=white] at (axis cs:5.5,3.3) {$y=(x+1)^2-11$};
+ 	\node[anchor=south,fill=white] at (axis cs:6.5,1.5) {$10y=x^2-10$};
+ 	\end{axis}
+ 	\end{tikzpicture}
+ \end{center}
+ \solution Divide the 2nd equation by 10 to isolate $y$. Now, set the equations equal and use the quadratic formula to solve:
+ \begin{align*}
+ (x+1)^2-11&=-\frac{x^2}{10}-1\tag{set eq1=eq2}\\
+ x^2+2x-10&=-\frac{1}{10}x^2-1\tag{expand the brackets}\\
+ 11x^2+20x-90&=0\tag{collect like terms}\\
+ x&=\frac{-20\pm\sqrt{400-4(11)(-90)}}{22}\\
+ x&=-4.463 \mbox{ or }2.241\\
+ \text{Substitute both }x\text{ values back into}& \text{ either equation to find the }y\text{ values}\\
+ y&=0.992 \mbox{ or } -0.498\\
+ \end{align*}
+ Therefore the points of intersection are $(-4.463,0.992)$, and $(2.241,-0.498)$.
+ 
+%---------------------------------------------------
 \subsection*{Solution by Elimination} 
 The third method is called elimination and works by eliminating one of the variables from the equation set, then solving for the other variable.
 
@@ -578,7 +642,8 @@ Back-substitute $b$ into equation (1) to solve for $a$: $3a-7(\frac{5}{6})=-3$. 
 \[-3y +6x = -9\]
 \solution We know these are both just different ways of writing the original equation $y -2 x =3$ or $y =2 x +3$. To say the system has an infinite number of solutions we are really saying every point on $y =2 x +3$ is a solution. 
  
- \section*{Guidelines for Solving Systems of Equations}
+%---------------------------------------------------
+\section*{Guidelines for Solving Systems of Equations}
  These guideline provide a useful way to tackle any problems where equations are involved. 
  \begin{tcolorbox}
  	
