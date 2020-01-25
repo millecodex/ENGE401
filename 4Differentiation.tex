@@ -3,24 +3,43 @@
 %---------------------------------------------------
 \chapter[Differentiation]{Differentiation}
 \begin{figure}[h]\begin{center}
-		\includegraphics[width=14cm]{smooth}
-		\caption{The function is smooth everywhere, there are no gaps or sharp transitions, and therefore it has a well defined tangent line at any point. One of these tangents is shown. The function that defines \textit{all} possible tangents is called the derivative.}\end{center}
+		\begin{tikzpicture}
+		\begin{axis}[
+		axis lines=center,
+		width=16cm,height=8cm,
+		ymax=6,ymin=-6,
+		xmax=5,xmin=-5,
+		xtick=\empty,ytick=\empty,
+		xlabel=$x$,ylabel=$y$,
+		]
+		\addplot [<->,domain=-4.9:4.75,thick, samples=400, black] {x*sin(deg(x+x^2))};
+		\addplot[mark=*] coordinates {(-1.915,-1.884)};
+%		\addplot [dashed,domain=0:2.5,thick, samples=200, black] {-2};
+		\addplot[dashed,domain=-2.5:-1.25,ultra thick,samples=50, black]{-1.884};
+		\addplot[mark=*] coordinates {(-1.915,0)};
+		\node[anchor=south] at (axis cs:-1.915,0.5) {$a$};
+		\node[anchor=south] at (axis cs:-1.5,-5) {tangent at point $x=a$};
+		\draw[<-](axis cs:-1.615,-2.1)--(axis cs:-1.5,-3.9);
+		\end{axis}
+		\end{tikzpicture}
+		\caption{The function is smooth everywhere, there are no gaps or sharp transitions, and therefore it has a well defined tangent line at any point. One of these tangents is shown at $x=a$. The function that defines \textit{all} possible tangents is called the derivative.}\end{center}
 \end{figure}
+
 \section*{Rate of Change}
 We will begin with the concept of average speed. If you travel a distance of 120 km in 2 hours then your average speed is 60 kph. 
 \begin{center}
-Average speed $ =\frac{\text{distance travelled}}{\text{time elapsed}}$
+Average speed $ =\displaystyle\frac{\text{distance travelled}}{\text{time elapsed}}$
 \end{center}\par
 A distance/time graph can be drawn. The average speed can be expressed using function notation 
 \begin{center}
-Average speed $ =\frac{s (b) -s (a)}{b -a}$
+Average speed $\displaystyle =\frac{s (b) -s (a)}{b -a}$
 \end{center}\par
 Finding the average rate of change is important in many contexts and in fact the average rate of change can be defined for any function. 
 
-The average rate of change of the function $y =f (x)$ is $\frac{\text{change in }y}{\text{change in }x}$ or $\frac{f (b) -f (a)}{b -a}$\hfill(1) 
+The average rate of change of the function $\displaystyle y =f (x)$ is $\displaystyle\frac{\text{change in }y}{\text{change in }x}$ or $\displaystyle\frac{f (b) -f (a)}{b -a}$.
 
 The average rate of change is the slope of the \textbf{secant line} between $x =a$ and $x =b$ on the graph of $f$,\ that is the slope of the line that passes through $(a ,f (a))$ and $(b ,f (b))$. 
-
+\clearpage
 \example Calculate the average rate of change for the function $f (x) =x^{2} +4$ between the following points:
 \begin{tasks}[counter-format=(tsk[1]),column-sep=3em](3)
 \task $x =2$ and $x =6$ \\
@@ -288,12 +307,12 @@ The Product rule is often seen in an abbreviated form as $\displaystyle \left(u 
 \example Find the derivative of $f(x)=x^2e^x$.\medskip\\
 \solution Use the product rule:
 $$f'(x)=(2x)(e^x)+(x^2)(e^x)$$
-This could be simplified by factoring: $f'(x)=e^x(2x+x^2)$ but is not mandatory.
-\hrule
+This could be simplified by factoring: $f'(x)=e^x(2x+x^2)$ but is not mandatory.\\\medskip
+\rule{6.8cm}{0.5pt}\\
 \example Differentiate $f=4\pi x\sin x$.\medskip\\
 \solution Use the product rule. $4\pi$ is a constant.
 $$f'=(4\pi)(\sin x)+(4\pi x)(\cos x)$$.
-\hrule
+\rule{6.8cm}{0.5pt}\\
 \example If $g(x)=\frac{e^x}{3}\sqrt{x+2}$, find $g'(x)$.\medskip\\
 \solution Convert the root to power form and use the product rule.
 \begin{align*}
@@ -312,26 +331,23 @@ Let $u =f (x)$ and $v =g (x)$ be differentiable functions of $x$ then we can sho
 or in abbreviated form as
 \begin{equation*}\genfrac{(}{)}{}{}{u}{v}^{ \prime } =\frac{v u^{ \prime } -u v^{ \prime }}{v^{2}}
 \end{equation*}
-\hrule
+\rule{6.8cm}{0.5pt}\\
 \example Differentiate with the quotient rule: $y=\frac{(s-1)(s+3)}{e^{2s}}$\medskip\\
 \solution Expand the numerator first and then differentiate\\
 \begin{align*}y&=\frac{s^2+2s-3}{e^{2s}}\\
 y'&=\frac{(2s+2)(e^{2s})-(s^2+2s-3)(e^{2s})\cdot2}{(e^{2s})^2}\\
 y'&=\frac{-2(s^2+s-4)}{e^{2s}}
 \end{align*}
-\hrule
+\rule{6.8cm}{0.5pt}\\
 \example Find $f'$, given $f=\frac{\sin x}{x}$\medskip\\
-\solution $$f'=\frac{\cos(x)\cdot x-\sin(x))}{x^2}=\frac{x\cos(x)-\sin(x))}{x^2}$$
-\hrule
+\solution $$f'=\frac{[\cos(x)\cdot x]-\sin(x)}{x^2}=\frac{x\cos(x)-\sin(x)}{x^2}$$
+\rule{6.8cm}{0.5pt}\\
 \example Find $f'$, given $\displaystyle f=\frac{\ln x}{e^x}$\medskip\\
 \solution $$f'=\frac{(\frac{1}{x})(e^x)-(\ln x)(e^x)}{e^{x^2}}$$
 $$=\frac{1-x\ln x}{xe^x}$$
 
-
-
-
 %-----------------------------------------------
-\subsection*{Chain Rule}
+\subsection*{The Chain Rule}
 When functions are combined with other functions, they are often called composite functions. These require special treatment when differentiating.
 
 Let $f (x) =x^{2}$ and $g (x) =2 x +1$ then $\left (f \circ g\right )$ This means $f$ `composed of' $g$ is $f \left (g \left (x\right )\right ) =f (2 x +1) =\left (2 x +1\right )^{2}$. 
@@ -369,8 +385,8 @@ Using function notation the Chain Rule states: If $f$ and $g$ are both different
 $\frac{d y}{d x} =\frac{d y}{d u} \cdot \frac{d u}{d x}$ gives the impression that the $d u$ could cancel but remember we have not defined $d u$. We have defined $\frac{d y}{d u}$ as the rate of change of $y$ with respect to $u$ and $\frac{d u}{d x}$ as the rate of change of $u$ with respect to $x$. However the apparent cancelling helps us to remember the way the differentials
 are arranged. it also helps us to accept the extension of the Chain Rule to cover a function of a function of
 a function etc. e.g.
-\begin{align*}\text{Let}y &  = f (u)\text{,}u =g (v)\text{and}v =h (x) \\
-\text{Then}\frac{d y}{d x} &  = \frac{d y}{d u} \cdot \frac{d u}{d v} \cdot \frac{d v}{d x}\end{align*}
+\begin{align*}\text{Let }y &  = f (u)\text{, }u =g (v)\text{ and }v =h (x) \\
+\text{Then }\frac{d y}{d x} &  = \frac{d y}{d u} \cdot \frac{d u}{d v} \cdot \frac{d v}{d x}\end{align*}
 
 \example Find $F^{ \prime } (x)$ when $F (x) =\frac{1}{x^{2} +1}$. \\
 \solution Using function notation $F (x) =\left (f \circ g\right ) (x) =f (g (x))$ \\
@@ -390,7 +406,7 @@ is recommended that you use the variable $u$ wherever possible so that you follo
 
 In summary: if $g$ is differentiable at $x$ and $f$ is differentiable at $g (x)$, then the composite function $F =f \circ g$ defined by $F (x) =f (g (x))$ is differentiable at $x$ and $F^{ \prime }$ is given by the product
 \begin{tcolorbox}
-\[F^{ \prime } (x) =f^{ \prime } (g (x)) \cdot g^{ \prime } (x)\]
+\[F^{ \prime } (x) =f^{ \prime } [g (x)] \cdot g^{ \prime } (x)\]
 \end{tcolorbox}
 In Leibniz notation, if $y =f (u)$ and $u =g (x)$ are both differentiable functions, then
 \begin{tcolorbox}
@@ -399,7 +415,7 @@ In Leibniz notation, if $y =f (u)$ and $u =g (x)$ are both differentiable functi
 
 The Chain Rule will be found in many situations where functions are added, subtracted, multiplied or divided. As an example we will focus on combining the Chain Rule with the Product Rule, however any combination of these rules could be found in a problem. 
 
-\example Differentiate $x e^{ -x^{2}}$. 
+\example Differentiate $\displaystyle xe^{-x^2}$. 
 
 \solution We can see that there is a product of two functions present in this example, i.e. $f (x) =x$ and $g (x) =e^{ -x^{2}}$. Also $g (x)$ is a composite function. 
 
@@ -422,6 +438,11 @@ Putting this all together
 \begin{align*}\left (f g\right )^{ \prime } &  = f g^{ \prime } +g f^{ \prime } \\
  &  = x \cdot  -2 x\; e^{ -x^{2}} +e^{ -x^{2}} \cdot 1 \\
  &  = e^{ -x^{2}} \left [1 -2 x^{2}\right ]\end{align*}
+%
+% more examples of chain rule here...
+%
+%
+
 
 %---------------------------------------------------
 % Parametric Differentiation
@@ -433,7 +454,7 @@ Parametric Curves $x$ and $y$ are both given as functions of a third variable $t
 
 Each value of $t$ gives a point $(x ,y)$. As $t$ varies the point $(x ,y) =(f (t) ,g (t))$ traces out a curve in the coordinate plane called a \emph{parametric curve}. This is useful for functions that violate the vertical line test (see Section~\ref{sec:functions}) such as a circle, $x^2+y^2=r^2$, because only proper functions can be differentiated.
 
-Both the fish and atomic-looking-thingy below can be plotted using parametric equations.
+Both the fish and the Pokemon-looking-thingy below can be plotted using parametric equations.
 \begin{figure}[H]
 	\begin{subfigure}[b]{0.5\textwidth}
 		\centering
@@ -472,7 +493,7 @@ Both the fish and atomic-looking-thingy below can be plotted using parametric eq
 				\addplot[domain=0:4*360, samples=200, thick] ({-1.5*sin(x)},{cos(1.5*x)});	
 				\end{axis}
 		\end{tikzpicture}	
-		}  \caption{superhero logo: $\displaystyle x=-\frac{3}{2}\sin(t),\,y=\sin\left(\frac{3t}{2}\right)$}
+		}  \caption{Pokemon: $\displaystyle x=-\frac{3}{2}\sin(t),\,y=\sin\left(\frac{3t}{2}\right)$}
 	\end{subfigure}
 \end{figure}
 To find the point at the mouth of the fish in terms of $t$, we must solve the equations for $x=-1.5$, or $y=0$. As $t$ increases, the plot is drawn. 
@@ -533,7 +554,7 @@ Now we substitute $r =25$. (Diameter $ =50$ so radius $ =25$)
 \begin{align*}\frac{d r}{d t}_{r =25} &  = \frac{50}{4\pi(25)^2} \\
 &  = \frac{1}{50 \pi }\approx 0.00637\end{align*}
 Therefore the radius is increasing at the rate of $\displaystyle\frac{1}{50 \pi } \mbox{cm}$/$\mbox{s}$ 
-
+\rule{6.8cm}{0.5pt}\\
 \example A ladder $5$ $\mbox{m}$ long rests against a vertical wall. If the bottom of the ladder slides away from the wall at the rate of $0.5$ $\mbox{m}$/$\mbox{s}$ how fast is the top of the ladder sliding down the wall when the bottom of the ladder is $3$ $\mbox{m}$ from the wall? 
 
 \solution Let the origin be placed at the corner where the wall meets the floor, let $x$ be the distance of the foot of the ladder from the wall and let $y$ be the distance of the top of the ladder from the corner. The ladder forms a right angled triangle whose sides are $x$, $y$ and with hypotenuse $5$. We are given that $\frac{d x}{d t} =0.5$ and are asked to find $\frac{d y}{d t}$ when $x =3$. 
@@ -557,7 +578,7 @@ Substitute $\frac{d x}{d t} =0.5$, $x =3$ and $y =4$
  &  =  -0.375\end{align*}
 
 The top of the ladder is moving vertically downwards at the rate of 0.375 $\mbox{m}$/$\mbox{s}$ 
-
+\rule{6.8cm}{0.5pt}\\
 \example A water tank has the shape of an inverted circular cone with a base radius of $2$ $\mbox{m}$ and height of $4$ $\mbox{m}$. If water is being pumped into
 the tank at a rate of $2$ $\mathrm{m}^{3}$/$\mbox{min}$ find the rate at which the water level is rising when the water is $3$ $\mbox{m}$ deep. 
 
