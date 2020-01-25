@@ -12,9 +12,8 @@
 		xtick=\empty,ytick=\empty,
 		xlabel=$x$,ylabel=$y$,
 		]
-		\addplot [<->,domain=-4.9:4.75,thick, samples=400, black] {x*sin(deg(x+x^2))};
+		\addplot [<->,domain=-4.9:4.75,thick, samples=800, black] {x*sin(deg(x+x^2))};
 		\addplot[mark=*] coordinates {(-1.915,-1.884)};
-%		\addplot [dashed,domain=0:2.5,thick, samples=200, black] {-2};
 		\addplot[dashed,domain=-2.5:-1.25,ultra thick,samples=50, black]{-1.884};
 		\addplot[mark=*] coordinates {(-1.915,0)};
 		\node[anchor=south] at (axis cs:-1.915,0.5) {$a$};
@@ -22,7 +21,7 @@
 		\draw[<-](axis cs:-1.615,-2.1)--(axis cs:-1.5,-3.9);
 		\end{axis}
 		\end{tikzpicture}
-		\caption{The function is smooth everywhere, there are no gaps or sharp transitions, and therefore it has a well defined tangent line at any point. One of these tangents is shown at $x=a$. The function that defines \textit{all} possible tangents is called the derivative.}\end{center}
+		\caption{The function is smooth everywhere; there are no gaps or sharp transitions, and therefore it has a well defined tangent line at any point. One of these tangents is shown at $x=a$. The function that defines \textit{all} possible tangents is called the derivative.}\end{center}
 \end{figure}
 
 \section*{Rate of Change}
@@ -36,7 +35,7 @@ Average speed $\displaystyle =\frac{s (b) -s (a)}{b -a}$
 \end{center}\par
 Finding the average rate of change is important in many contexts and in fact the average rate of change can be defined for any function. 
 
-The average rate of change of the function $\displaystyle y =f (x)$ is $\displaystyle\frac{\text{change in }y}{\text{change in }x}$ or $\displaystyle\frac{f (b) -f (a)}{b -a}$.
+The average rate of change of the function $\displaystyle y =f (x)$ is $\displaystyle\frac{\text{change in }y}{\text{change in }x}$ or $\displaystyle\frac{f (b) -f (a)}{b -a}$\hfill(1)
 
 The average rate of change is the slope of the \textbf{secant line} between $x =a$ and $x =b$ on the graph of $f$,\ that is the slope of the line that passes through $(a ,f (a))$ and $(b ,f (b))$. 
 \clearpage
@@ -62,12 +61,14 @@ Can this be simplified further?
 \end{figure}
 
 %---------------------------------------------------
-% 
+% tangents
 %---------------------------------------------------
 \subsection*{Tangents}
-We now investigate the process of changing the value of $(b -a)$ in formula (1). As $(b -a)$ is made smaller and smaller the slope of the secant approaches the slope of the tangent at $x =a$. The notation for this process is as follows. 
-
-\textbf{Definition:} The tangent line to the curve $y =f (x)$ at the point $P (a ,f (a))$ is the line through $P$ with slope $m =\Lim{x\to a}\frac{f (x) -f (a)}{x -a}$ provided that the \textit{limit} exists. This means that as the value of $x$ gets close to $a$ the function remains smooth. Imagine zooming in on a function, from far away it may appear smooth, but up close it could have some gaps or discontinuities.  Limits do not exist at sharp transitions in a graph, or where the function does not exist (think of piecewise functions). 
+We now investigate the process of changing the value of $(b -a)$ in formula (1) the slope of the secant approaches the slope of the tangent at $x =a$. However, as $b -a$ is made smaller and smaller, eventually it will get to zero. This is necessary to find the exact tangent, except now the denominator of (1) is zero! A new definition can help us avoid this \textit{math error}. 
+\begin{tcolorbox}
+\textbf{Definition:} The tangent line to the curve $y =f (x)$ at the point $P (a ,f (a))$ is the line through $P$ with slope \[m =\Lim{x\to a}\frac{f (x) -f (a)}{x -a}\] provided that the \textit{limit} exists. $\Lim{x\to a}$ is the ``limit as $x$ approaches $a$.''
+\end{tcolorbox}
+This means that as the value of $x$ gets close to $a$ the function remains smooth. Imagine zooming in on a function, from far away it may appear smooth, but up close it could have some gaps or discontinuities.  Limits do not exist at sharp transitions in a graph, or where the function does not exist (think of piecewise functions). 
 
 We sometimes refer to the slope of the tangent line to a curve at a point as the slope of the curve at that point. The idea is that if we zoom in far enough towards the point then the curve looks almost like a straight line. The more we zoom in the more the parabola looks like a straight line. 
 
@@ -125,27 +126,7 @@ This pattern implies that $n$ must be a positive integer. It can be shown that f
 
 Similarly if the exponent is a fraction it can be shown that the power rule holds e.g. if $f (x) =\sqrt{x}$ then $f^{ \prime } (x) =\frac{1}{2 \sqrt{x}}$ or $f (x) =x^{\frac{1}{2}}$ then $f^{ \prime } (x) =\frac{1}{2} x^{ -\frac{1}{2}}$. It can be shown that the power rule holds for any real number $n$. 
 
-%---------------------------------------------------
-% Standard Derivatives
-%---------------------------------------------------
-\section{Standard Derivatives}
-The basic functions have easily repeatable patterns to find their derivatives. The common ones are summarized in the table below:
-\begin{center}
-\begin{tabular}{ccll}	
-	\toprule
-	Function& Derivative&&Notes\\\midrule
-	$f(x)$ & $f'(x)$  &&notation\\ \midrule
-	$x^n$ & $nx^{n-1}$ &&`power rule'\\ \midrule
-	$e^x$ & $e^x$  && exponential\\ \midrule
-	$\ln(x)$ & $\frac{1}{x}$ &&logarithmic\\ \midrule
-	$\sin(x)$ & $\cos(x)$  && \\ \cmidrule{1-2}
-	$\cos(x)$ & $-\sin(x)$ && trigonometric\\ \cmidrule{1-2}
-	$\tan(x)$ & $\sec^2(x)$ && \\ \bottomrule
-\end{tabular}
-\end{center}
-
-
-\subsection*{The Natural Exponential}
+\subsection*{The Natural Exponential Function}
 Recall the natural exponential function from section~\ref{sec:naturalExponential}. Here we can see why precisely it is so special. Using limit notation, we can say that $e$ is the number such that $\Lim{h\to 0}\frac{e^{h} -1}{h} =1$. The derivative is:
 
 \begin{tcolorbox}
@@ -156,18 +137,50 @@ $$\frac{d}{d x} \left (e^{x}\right ) =e^{x}$$
 The natural exponential function is unique because \textbf{it has its own derivative!} Geometrically this means that the slope of the tangent at any point is the same as the y-coordinate, $f(x)$, of that point. 
 
 %---------------------------------------------------
+% Standard Derivatives
+%---------------------------------------------------
+\section{Standard Derivatives}
+The basic functions have easily repeatable patterns to find their derivatives. The common ones are summarized in the table below:
+\begin{center}
+	\begin{tabular}{ccll}	
+		\toprule
+		Function& Derivative&&Notes\\
+		$f(x)$ & $f'(x)$  &&\\ \midrule
+		$A$&0&&$A$ is constant\\ \midrule
+		$x$&$1$&&power rule for $x^1$\\ \midrule
+		$Ax$&$x$&&$A$ is a constant multiple\\ \midrule
+		$x^n$ & $nx^{n-1}$ &&power rule - general form\\ \midrule
+		$e^x$ & $e^x$  && exponential\\ \midrule
+		$\ln(x)$ & $\frac{1}{x}$ &&logarithmic\\ \midrule
+		$\sin(x)$ & $\phantom{-}\cos(x)$  && \\ \cmidrule{1-2}
+		$\cos(x)$ & $-\sin(x)$ && trigonometric\\ \cmidrule{1-2}
+		$\tan(x)$ & $\phantom{-}\sec^2(x)$ && \\ \bottomrule
+	\end{tabular}
+\end{center}\clearpage
+\example Find the following derivatives:
+\begin{tasks}[column-sep=2em,after-item-skip=3ex](3)
+	\task $f(x)=7$\\ 7 is constant (no variables `$x$'), so $f'(x)=0$
+	\task $f(x)=7x$\\ 7 is a constant multiple: \\ $f'(x)=7$
+	\task $f=7x^2$\\ using the power rule:\\ $f'=7(2)x^1=14x$ 
+	\task $f(x)=\pi x^{-3}$\\pi is a constant: $f'(x)=-3\pi x^{-4}$
+	\task $\displaystyle g(x)=x^{\frac{3}{4}}$\\ use the power rule for fractional exponents: $\displaystyle g'(x)=\frac{3}{4}x^{-\frac{1}{4}}$
+	\task $f(x)=\displaystyle\frac{e^x}{3}$\\ the exponential always has its own derivative, $\frac{1}{3}$ is a constant: $f'(x)=\frac{1}{3}e^x$ 	
+	\task $s(t)=2\sin t$\\ 2 is a constant: $s'(t)=2\cos t$
+	\task $f=\displaystyle\frac{\cos r}{3}$\\ $\frac{1}{3}$ is a constant: $f'=-\frac{1}{3}\sin r$
+	\task $f(x)=\tan (\pi x)$\\ this requires the Chain Rule (\ref{sec:chainRule}): $f'(x)=\pi\sec^2 (\pi x)$
+\end{tasks}
+
+%---------------------------------------------------
 % max, min and tangents
 %---------------------------------------------------
 \section{Maximums, Minimums, and Tangents}
 Turning points occur at the boundary between regions in a function.  A function that transitions from increasing to decreasing must have a turning point. In the function below, $f(-1)=2$ means the point $(-1,2)$ is a turning point. More specifically this is a local maximum of our function. It is the highest point in its \emph{local} neighbourhood. Notice that the other boundary has different properties: it is the lowest point. So $f(1)=-2$ means the point $(1,-2)$ is a local minimum.
-
-The boundary means that the slope of the \textit{tangent} has gone from increasing to decreasing. Or from positive to negative. During this transition it had to go through zero, and so a turning point can be found anywhere the slope is equal to zero: $f'(x)=0$. Remember that the first derivative represents the slope of the function.
-\clearpage
 \begin{multicols}{2}
+The boundary means that the slope of the \textit{tangent} has gone from increasing to decreasing. Or from positive to negative. During this transition it had to go through zero, and so a turning point can be found anywhere the slope is equal to zero: $f'(x)=0$. Remember that the first derivative represents the slope of the function.\medskip\\
 \example Find the turning points for \[f(x)=x^3-3x\]
 \columnbreak
 	\begin{center}
-		\begin{tikzpicture}
+		\begin{tikzpicture}\label{fig:maxMin}
 		\begin{axis}[
 		axis lines=center,
 		ymax=4,ymin=-4,
@@ -189,9 +202,8 @@ The boundary means that the slope of the \textit{tangent} has gone from increasi
 		\end{tikzpicture}
 	\end{center}
 \end{multicols}
-\solution 
 \begin{multicols}{2}
-Set the derivative equal to zero and solve for values of $x$.
+\solution Set the derivative equal to zero and solve for values of $x$.
 \begin{align*}
 \frac{dy}{dx}&=3x^2-3\\
 0&=3x^2-3\\
@@ -206,8 +218,36 @@ f(1)&=(1)^3-3(1)\\
 \end{align*}
 Therefore $(1,-2)$ is the first turning point. Similarly, $(-1,2)$ is found as the other turning point. These are both shown in the figure above.\end{multicols}
 
+\examq Given the cubic function $\displaystyle f(x)=2x^3-3x^2-12x+1$, find\\ \textbf{(a)} the equation of the tangent line to $f(x)$ at the point $x=-2$, and \textbf{(b)} all turning points.\medskip\\
+\solution
+\begin{tasks}(2)
+\task Find the slope of the function at $x=-2$ by finding the derivative:
+\begin{align*}
+f'(x)&=6x^2-6x-12\\
+f'(-2)&=6(4)-6(-2)-12=24\\
+&\text{find the corresponding y-value:}\\
+f(-2)&=2(-8)-3(4)+24+1=-3\end{align*}
+Use the standard point-formula for an equation of a line:
+\begin{align*}
+y-y_1&=m(x-x_1)\\
+y-(-3)&=24(x--2)\\
+y=24x+45\end{align*}
+
+
+\task Set the derivative equal to zero and solve for the $x$-values:
+\begin{align*}
+0&=6x^2-6x-12\\
+0&=x^2-x-2\\
+0&=(x-2)(x+1)\\
+x&=2\text{, or }x=-1\\
+\text{find the y-values:}&\\
+f(2)&=-19\text{, and }f(-1)=8\\
+\end{align*}
+Therefore the two turning points are $(2,-19)$ and $(-1,8)$. Without a graph, we don't know the nature of these points -- are they concave-up or concave-down?
+\end{tasks}
+
 \subsection*{Second Derivative Test}\label{sec:2ndDerivativeTest}
-We know from the graph that these turning points are maximum and minimum. The graph is not always provided to identify maxima and minima, so it helps to have a test to determine if a point is a max or min. 
+Given a graph it is easy to determine if points are maxima or minima. However, the graph is not always available, so it  helps to have a test to determine if a point is a maximum or minimum. 
 
 We know first derivative represents the slope of the function. Looking at the parabola $y=x^2$ and following the function from left to right we can plot some values of the first derivative. The graph tells us that the turning point is at $(0,0)$ and is a minimum. The value of the 1st derivative is -2,-1,0,1,2 : these numbers are increasing. This trend is always true for a local minimum. 
 
@@ -223,8 +263,7 @@ This is called the second derivative test.\\
 	\end{itemize}
 \end{tcolorbox}
 
-
-%Example level: EASY
+\clearpage
 \example Use the second derivative test to determine if the turning point $(-1,2)$ is a maximum or minimum on the function $f(x)=x^3-3x$\\
 \solution Find the second derivative and substitute the turning point.
 \begin{align*}
@@ -232,10 +271,11 @@ f'(x)&=3x^2-3\\
 f''(x)&=6x\\
 f''(-1)&=6(-1)=-6\\
 -6&<0
-\end{align*}therefore the turning point $(-1,2)$ is a local maximum.
+\end{align*}therefore the turning point $(-1,2)$ is a local maximum. Confirm by looking at the graph on page~\pageref{fig:maxMin}.
 
 \subsection*{Points of Inflection}\label{sec:PointsOfInflection}
-There is one last feature of the initial function that can be found. There is a point in between the maximum and minimum points where the change in slopes of the function change from decreasing to increasing. This is called a point of inflection. It is where the concavity of the function changes between down and up.
+\begin{multicols}{2}
+There is one last feature of the initial function that can be found. There is a point in between the maximum and minimum points where the change in slopes of the function change from decreasing to increasing. This is called a point of inflection. It is where the concavity of the function changes between down and up.\columnbreak
 % include the plot file for
 % point of inflection graph
 \begin{center}
@@ -258,6 +298,8 @@ There is one last feature of the initial function that can be found. There is a 
 	\end{axis}
 	\end{tikzpicture}
 \end{center}
+\end{multicols}
+
 The second derivative test can be used to determine if a function is concave-up ($>0$) or concave down ($<0$). Note there is no $=$ in these inequalities. In between is where the point of inflection can be found:
 \begin{tcolorbox}
 	Second Derivative Test for Concavity
@@ -288,7 +330,7 @@ Therefore, the point $\left(\tfrac{4}{3},-7\frac{2}{9}\right)$ is a point of inf
 %---------------------------------------------------
 % The Product, quotient and chain rules
 %---------------------------------------------------
-\section{The Product, Quotient, and Chain Rules}
+\section{The Product, Quotient, and Chain Rules}\label{sec:chainRule}
 
 %-----------------------------------------------
 \subsection*{The Product Rule}
@@ -311,7 +353,7 @@ This could be simplified by factoring: $f'(x)=e^x(2x+x^2)$ but is not mandatory.
 \rule{6.8cm}{0.5pt}\\
 \example Differentiate $f=4\pi x\sin x$.\medskip\\
 \solution Use the product rule. $4\pi$ is a constant.
-$$f'=(4\pi)(\sin x)+(4\pi x)(\cos x)$$.
+$$f'=(4\pi)(\sin x)+(4\pi x)(\cos x)$$
 \rule{6.8cm}{0.5pt}\\
 \example If $g(x)=\frac{e^x}{3}\sqrt{x+2}$, find $g'(x)$.\medskip\\
 \solution Convert the root to power form and use the product rule.
@@ -438,11 +480,19 @@ Putting this all together
 \begin{align*}\left (f g\right )^{ \prime } &  = f g^{ \prime } +g f^{ \prime } \\
  &  = x \cdot  -2 x\; e^{ -x^{2}} +e^{ -x^{2}} \cdot 1 \\
  &  = e^{ -x^{2}} \left [1 -2 x^{2}\right ]\end{align*}
-%
-% more examples of chain rule here...
-%
-%
-
+\rule{6.8cm}{0.5pt}\\
+\example Find $a'(x)$.
+\[ a(x)= 4\pi x\tan (x-\frac{\pi}{4}) \]
+\solution Use the product and chain rules \\
+	\begin{align*}
+	a'&= 4\pi\tan\big(x-\frac{\pi}{4}\big)+4\pi x\sec^2\big(x-\frac{\pi}{4}\big)(1) \\
+	a'&= 4\pi\Big[xsec^2\big(x-\frac{\pi}{4}\big)+tan\big(x-\frac{\pi}{4}\big)\Big] \\
+	\end{align*}
+\rule{6.8cm}{0.5pt}\\
+\examq Find $\frac{dy}{dx}$.
+\[y=x^3e^{2x}\]
+\solution First use the product rule; there is a chain rule on 		$e^{2x}$:\begin{align*}\frac{dy}{dx}&=3x^2(e^{2x})+x^3(e^{2x})(2) \\
+	\frac{dy}{dx}&=2xe^{-2x}(1-x)\end{align*}\\
 
 %---------------------------------------------------
 % Parametric Differentiation
@@ -512,7 +562,7 @@ t&=\pi\\
 	\end{aligned}
 \end{equation*}
 The point $t=0$ corresponds to $x=1.5$, and $y=-\frac{2}{3}=$ which is shown as a point on the tail.
-\exercise In which direction is the superhero logo drawn? Where does it start?\\
+\exercise In which direction is the Pokemon drawn? Where does it start?\\
 \subsection*{Using the Chain Rule to find the Derivative $\frac{d y}{d x}$}
 Given\ the parametric equations $x =f (t)$ and $y =g (t)$ define a parametric curve. If $f$ and $g$ are both differentiable the Chain Rule gives
 \begin{equation*}\frac{d y}{d t} =\frac{d y}{\cancel{d x}} \cdot \frac{\cancel{d x}}{d t}
@@ -553,7 +603,7 @@ Substituting $\frac{d V}{d t} =50$ and $\frac{d V}{d r} =4 \pi  r^{2}$ we get
 Now we substitute $r =25$. (Diameter $ =50$ so radius $ =25$)
 \begin{align*}\frac{d r}{d t}_{r =25} &  = \frac{50}{4\pi(25)^2} \\
 &  = \frac{1}{50 \pi }\approx 0.00637\end{align*}
-Therefore the radius is increasing at the rate of $\displaystyle\frac{1}{50 \pi } \mbox{cm}$/$\mbox{s}$ 
+Therefore the radius is increasing at the rate of $\displaystyle\frac{1}{50 \pi }$ cm/s.\\ 
 \rule{6.8cm}{0.5pt}\\
 \example A ladder $5$ $\mbox{m}$ long rests against a vertical wall. If the bottom of the ladder slides away from the wall at the rate of $0.5$ $\mbox{m}$/$\mbox{s}$ how fast is the top of the ladder sliding down the wall when the bottom of the ladder is $3$ $\mbox{m}$ from the wall? 
 
@@ -577,11 +627,12 @@ Substitute $\frac{d x}{d t} =0.5$, $x =3$ and $y =4$
 \begin{align*}\frac{d y}{d t} &  =  -\frac{3}{4} \cdot 0.5 \\
  &  =  -0.375\end{align*}
 
-The top of the ladder is moving vertically downwards at the rate of 0.375 $\mbox{m}$/$\mbox{s}$ 
+The top of the ladder is moving vertically downwards at the rate of 0.375 m/s.\\ 
 \rule{6.8cm}{0.5pt}\\
 \example A water tank has the shape of an inverted circular cone with a base radius of $2$ $\mbox{m}$ and height of $4$ $\mbox{m}$. If water is being pumped into
 the tank at a rate of $2$ $\mathrm{m}^{3}$/$\mbox{min}$ find the rate at which the water level is rising when the water is $3$ $\mbox{m}$ deep. 
 
+\begin{multicols}{2}
 \solution Let $V$, $r$ and $h$ be the volume of water the radius of the surface and the height at time $t$. We are given
 \begin{equation*}\frac{d V}{d t} =2\text{}\mathrm{m}^{3}/\mbox{min}
 \end{equation*}
@@ -613,6 +664,8 @@ Substitute $h =3$ and $\frac{d V}{d t} =2$
  &  = \frac{8}{9 \pi }\end{align*}
 
 The water level is rising at the rate of $\frac{8}{9 \pi }$ $\mbox{m}$/$\mbox{min}$. 
+\end{multicols}
+
 
 %---------------------------------------------------
 % Optimisation
@@ -701,6 +754,7 @@ SA&=\pi r^2 + \pi r^2 + \left(\textrm{height}*\textrm{circumference}\right)\\
 &=2\pi r^2+2\pi rh
 \end{align*}
 Note that we have 2 variables that are unknown, $r$, and $h$. We need to express one variable in terms of the other in order to proceed. Use the additional information in the problem. The volume of the can must be 1000 cm$^3$.
+\begin{multicols}{2}
 \begin{align*}
 V&=\pi r^2 h\\
 1000&=\pi r^2 h\\
@@ -720,7 +774,9 @@ This function is now the surface area in terms of a single variable, $r$, and ca
 r^3&=\frac{2000}{4\pi}\\
 r&=5.419 \,\textrm{cm}
 \end{align*}
-Therefore the final dimensions of the can optimised for minimum cost are radius$=5.42$ cm, and height$=10.8$ cm. 
+Therefore the final dimensions of the can optimised for minimum cost are radius$=5.42$ cm, and height$=10.8$ cm. 	
+\end{multicols}
+
 
 
 
