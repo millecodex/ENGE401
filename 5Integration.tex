@@ -28,6 +28,7 @@ $x^{4}$  & $4 x^{3}$  \\
 \
 \begin{tabular}[c]{ll}\toprule
  $f$  & $f'$  \\
+ &\\
 \midrule
 $x$  & $1$  \\
 $\frac{1}{2} x^{2}$  & $x$  \\
@@ -56,15 +57,19 @@ $x^{3}$  & $\frac{1}{4} x^{4} +C$  \\
 All of the differentiation rules we have met so far lead to integration rules. For instance we can establish standards for $\sin  x$, $\cos  x$, and $\sec ^{2} x\text{.}$ The standard integrals are summarized in the table below.
 \renewcommand\arraystretch{1.5}
 \begin{center}
-	\begin{tabular}{cc}
+	\begin{tabular}{llcl}
 		\toprule
-		function&integral\\
+		function&integral&&notes\\
 		$f(x)$  &  $\int f(x)dx$ \\ \midrule
-		$x^n, n \neq -1$ & $\frac{x^{n+1}}{n+1}+C$\\ 
-		$e^x$ & $e^x+C$\\ 
-		$\frac{1}{x}$ & $\ln|x|+C$\\ 
-		$\sin(x)$ & $-\cos(x)+C$ \\ 
-		$\cos(x)$ & $\sin(x)+C$ \\ 
+		$1$&$x+C$&&constant\\
+		$A$&$Ax+C$&&$A$ is constant\\
+		$x^n, n \neq -1$ & $\displaystyle\frac{x^{n+1}}{n+1}+C$&&power rule general form\\ 
+		$e^x$ & $e^x+C$&&exponential\\ 
+		$\frac{1}{x}$ & $\ln|x|+C$&&special case: $x^{-1}$\\
+		$\ln x$&$x\ln |x|-x+C$&&\\\midrule
+		$\sin(x)$ & $-\cos(x)+C$&& trigonometric \\ 
+		$\cos(x)$ & $\sin(x)+C$\\ 
+		$\tan (x)$&$\ln |\sec x|+C$\\
 		$\sec^2(x)$ & $\tan(x)+C$ \\ \bottomrule
 	\end{tabular}
 \end{center}
@@ -80,6 +85,13 @@ This is easily extended to the sum or difference of a number of functions.
 \[\int c f (x)\; d x =c \int f (x)\; d x
 \]\end{tcolorbox}
 
+\subsection*{Indefinite Integrals}
+Although $\int f (x) d x$ looks very similar to $\int _{a}^{b}f (x)\; d x$ they are quite different and must not be confused or used in place of each other. $\int f (x)\; d x$ is a function of $x$ or a family of functions of $x$ and $\int _{a}^{b}f (x)\; d x$ is a number. They are connected of course, provided $f (x)$ is a continuous function of $x$ on $\left [a ,b\right ]$. In this case the Evaluation Theorem gives the connection between them.
+\begin{equation*}\int _{a}^{b}f (x)\; d x =\left .\int f (x)\; d x\right ]_{a}^{b}
+\end{equation*}
+
+The indefinite integral represents either a particular integral or a family of integrals. These will use a constant $C$ where $C$ takes a different value for each member of the family. $C$ is called the \emph{constant of integration}. 
+
 \example Integrate the following functions; find $\displaystyle\int f(x)$.
 \begin{tasks}(2)
 	\task $f(x) =3x^{2}$ \medskip\\
@@ -89,24 +101,19 @@ This is easily extended to the sum or difference of a number of functions.
 \task $f (x) =7$ \medskip \\
 \solution Here we are integrating a constant:\\
 \[\int 7\,dx=7x+C\]
-
 \task $f(x) =x^{\frac{2}{3}}$ \medskip\\
 \solution The power rule still applies to fractional indices:\\
 \begin{align*}\int x^{\frac{2}{3}}\,dx&=\frac{x^{\frac{2}{3}+1}}{\frac{2}{3}+1}+C\\
 &=\frac{3 x^{5/3}}{5}+C \end{align*}
-
 \task $f (x) =\frac{1}{2 \sqrt{x}} +\frac{1}{\sqrt{2}}$ \medskip\\
 \solution Here we need to combine the sum rule and the power rule:\\
 \begin{align*}
 \int f(x)\,dx &= \int(\frac{1}{2 \sqrt{x}}) \,dx+\int(\frac{1}{\sqrt{2}}) \,dx\\
 &=\frac{1}{2}\int x^{-\frac{1}{2}}+\frac{1}{\sqrt{2}}x+C\\
-&=\sqrt{x}+\frac{x}{\sqrt{2}}+C\\
+&=\sqrt{x}+\frac{x}{\sqrt{2}}+C
 \end{align*}
-
-\task! $f(x)=0$\medskip\\
-\solution Any constant differentiates to zero, so $\int 0\, dx=C$
 \end{tasks}
-
+These four examples are all \textit{indefinite} integrals and have an unknown constant in the answer. The following section will introduce definite integrals.\vspace{1cm}\\
 \rule{6.8cm}{0.5pt}\\
 \example Find $f (x)$ given $f^{ \prime  \prime } (x) =6$\medskip\\
 \solution Here we have a \textit{second} derivative, indicated by the double-prime symbol, $f''$. Knowing that $\int f'(x)=f(x)$ we can safely assume that 
@@ -119,61 +126,39 @@ We end up with two unknown values, $C$ and $D$ as opposed to just a single value
 
 The previous two examples of equations involving derivatives. Any equation involving derivatives of a function is called a \emph{differential equation}. We will look into this subject in the next chapter. 
 
- 
+\clearpage
 %---------------------------------------------------
 % Area
 %---------------------------------------------------
-\section{Area}
-In this section we attempt to find the area under a curve. That is the area that lies between a curve and the $x$-axis from $x =a$ to $x =b$. The area is bounded by the $x$-axis, a continuous curve $y =f (x)$ and the two vertical lines $x =a$ and $x =b$. This is shown in the figure below with the area shaded in.
-%\clearpage
-\begin{SCfigure}[1][h]
-	\includegraphics[width=0.6\textwidth]{area1}
-	\caption*{Figure: A parabola showing the area under the curve between $x=0$, and $x=1.5$. Note the area stops at the axis. Area as calculated by integration is always in reference to the axis.}
-\end{SCfigure}
+\section{Area}\begin{multicols}{2}
+In this section we attempt to find the area under a curve. That is the area that lies between a curve and the $x$-axis from $x =a$ to $x =b$. The area is bounded by the $x$-axis, a continuous curve $y =f (x)$ and the two vertical lines $x =a$ and $x =b$. This is shown in the figure with the area shaded in. Note the area stops at the axis. Area as calculated by integration is always in reference to the axis.\\
+\includegraphics[width=8cm]{area1}
+\end{multicols}
 
-Previously, when we wanted to find the slope of a tangent line we found the slope of a secant line and applied the limiting process $\Lim{h\to 0}$. A similar procedure will be used to find the area. We first approximate the area with rectangular strips then we take the limit of the areas of these rectangular strips by making the strips narrower and narrower and thus the number of strips between $x =a$ and $x =b$ greater and greater. 
+Previously, when we wanted to find the slope of a tangent line we found the slope of a secant line and applied the limiting process: $\Lim{h\to 0}$. A similar procedure will be used to find the area. We first approximate the area with rectangular strips then we take the limit of the areas of these rectangular strips by making the strips narrower and narrower and thus the number of strips between $x =a$ and $x =b$ greater and greater. 
 
+\subsection*{Area with Riemann Sums}
 \example Consider the curve $y =x^{2}$. Use rectangles to find the area under this curve between $0$ and $1$. 
 
-\solution Consider $4$ strips by constructing vertical lines at $x =\frac{1}{4}$, $x =\frac{1}{2}$, $x =\frac{3}{4}$ and $x =1$. Define the \emph{left sum} as the sum of the rectangles whose
-left side is formed using $x =\frac{1}{4}$, $x =\frac{1}{2}$, $x =\frac{3}{4}$ and $x =1$. Define the \emph{right sum} as the sum of the rectangles whose
-right side is formed by $x =\frac{1}{4}$, $x =\frac{1}{2}$, $x =\frac{3}{4}$ and $x =1$.
-\begin{align*}\text{Left sum} &  = \frac{1}{4} \cdot 0^{2} +\frac{1}{4} \genfrac{(}{)}{}{}{1}{4}^{2} +\frac{1}{4} \genfrac{(}{)}{}{}{1}{2}^{2} +\frac{1}{4} \genfrac{(}{)}{}{}{3}{4}^{2} \\
- &  = 0 +\frac{1}{64} +\frac{1}{16} +\frac{9}{64} =\frac{1 +4 +9}{64} =\frac{7}{32} =0.21875 \\
-\, &  &  \\
+\solution 
+\begin{multicols}{2}
+\includegraphics[width=8cm]{Area4}
+Consider $4$ strips by constructing vertical lines at $x =\frac{1}{4}, \frac{1}{2}, \frac{3}{4}, \text{and }1$ as shown in the diagram. Rectangles are constructed using the right-hand boundary and we know from inspection this will be larger than the actual area.
+\end{multicols}
+\begin{align*}
 \text{Right sum} &  = \frac{1}{4} \genfrac{(}{)}{}{}{1}{4}^{2} +\frac{1}{4} \genfrac{(}{)}{}{}{1}{2}^{2} +\frac{1}{4} \genfrac{(}{)}{}{}{3}{4}^{2} +\frac{1}{4} \left (1\right )^{2} \\
- &  = \frac{1}{64} +\frac{1}{16} +\frac{9}{64} +\frac{1}{4} =\frac{1 +4 +9 +16}{64} =\frac{15}{32} =0.46875\end{align*}
+ &  = \frac{1}{64} +\frac{1}{16} +\frac{9}{64} +\frac{1}{4} \frac{15}{32} =0.46875\end{align*}
 
-It is clear from a diagram that the actual area is larger that the left sum and smaller than the
-right sum.
-\begin{equation*}0.21875 <A <0.46875
-\end{equation*}
-
-We could repeat this process with a larger number of strips but it is clear the process
-would quickly become tedious. We can however simulate this process using a spreadsheet like Excel. 
-
-For the curve $y =x^{2}$ set up a spreadsheet to show 10 strips or 20 strips or
-30 strips etc. The table gives the results you should obtain for a selection of numbers of strips
-
+Repeating this process with a larger number of rectangles will improve the accuracy of the method. Using a spreadsheet like Excel shows a convergence on a value of $\frac{1}{3}$ as $n$ rectangles increase. The sum using the left-hand boundary is included for comparison.
 \begin{center}
-	\begin{tabular}[c]{ccc}\hline
-		$n$  & Left sum  & Right sum  \\
-		\hline
-		10
-		& 0.2850000  & 0.3850000  \\
-		\hline
-		20
-		& 0.3087500  & 0.3587500  \\
-		\hline
-		30
-		& 0.3168519  & 0.3501852  \\
-		\hline
-		100
-		& 0.3283500  & 0.3383500  \\
-		\hline
-		1000
-		& 0.3328335  & 0.3338335  \\
-		\hline
+	\begin{tabular}[c]{ccc}\toprule
+		$n$  & Left sum  & Right sum  \\\midrule
+		10		& 0.2850000  & 0.3850000  \\\midrule
+		20		& 0.3087500  & 0.3587500  \\\midrule
+		30		& 0.3168519  & 0.3501852  \\\midrule
+		100		& 0.3283500  & 0.3383500  \\\midrule
+		1000	& 0.3328335  & 0.3338335  \\\midrule
+		$\infty$& $\frac{1}{3}$&$\frac{1}{3}$\\\bottomrule
 \end{tabular}\end{center}
 It can be seen that a very accurate approximation to the area can be obtained as the number of rectangles increases. It should be clear that as $n \rightarrow \infty $ both the left sum and the right sum approach the area under the curve we write
 \begin{equation*}A =\Lim{n \to \infty}\text{ Left Sum } =\Lim{n \to \infty}\text{ Right Sum }
@@ -181,9 +166,7 @@ It can be seen that a very accurate approximation to the area can be obtained as
 This process can be generalised by selecting any height within each rectangular strip
 and finding the area of each strip using this height. Let there be $n$ strips and consider the $i^{t h}$ strip. Select a value of $x$ in the $i^{t h}$ strip call it $x_{i}$. The height of this rectangle will be $f (x_{i})$. Consider the situation described above where the area is bounded by the $x$-axis, a continuous curve $y =f (x)$ and the two vertical lines $x =a$ and $x =b$. 
 
-With $n$ rectangles the length of the base of each rectangle is $ \Delta x =\frac{b -a}{n}$ 
-
-The area of the $i^{t h}$ rectangle is $f (x_{i})  \Delta x$ 
+With $n$ rectangles the length of the base of each rectangle is $ \Delta x =\frac{b -a}{n}$. The area of the $i^{t h}$ rectangle is $f (x_{i})  \Delta x$.
 
 The sum of all the rectangles is
 \begin{equation*}\underset{i =1}{\sum ^{n}} f (x_{i})  \Delta x =f \left (x_{1}\right )  \Delta x +f \left (x_{2}\right )  \Delta x +\ldots  +f \left (x_{n}\right )  \Delta x
@@ -197,15 +180,13 @@ If $f$ is a continuous function defined on the interval $\left [a ,b\right ]$ th
 \begin{equation*}\int _{a}^{b}f (x) d x =\underset{n \rightarrow \infty }{\lim }\left [\underset{i =1}{\sum ^{n}} f (x_{i})  \Delta x\right ]
 \end{equation*}
 
-This process is called a \emph{Riemann sum} after the German mathematician Bernard Riemann (1826-1866) who defined the integral
-in this way. The symbol $\int $ was introduced by Leibniz and is called the \emph{integral sign}. 
+This process is called a \emph{Riemann sum} after the German mathematician Bernard Riemann (1826-1866) who defined the integral in this way. The symbol $\int $ was introduced by Leibniz and is called the \emph{integral sign}. 
 
 \subsection*{Definite Integrals}
-The method of computing Riemann sums is often long and to achieve a result that is accurate enough requires a computer. Both Sir Isaac Newton and Leibniz discovered a much simpler way based on the integral. This discovery is called \emph{The Evaluation Theorem}. 
+The method of computing Riemann sums is often long and to achieve a result that is accurate enough requires a computer. Both Isaac Newton and Gottfried Leibniz discovered a much simpler way based on the integral. This discovery is called \emph{The Evaluation Theorem}. 
 
-Given $F$ is an integral of $f$ i.e. $F^{ \prime } =f$, provided $f$ is continuous on the interval $\left [a ,b\right ]$ then 
 \begin{tcolorbox}
-\textbf{Evaluating definite integrals}
+\textbf{Evaluating Definite Integrals}\\Given $F$ is an integral of $f$ i.e. $F^{ \prime } =f$, provided $f$ is continuous on the interval $[a ,b]$ then 
 \[\int _{a}^{b}f (x) d x =F (b) -F (a)\]
 \end{tcolorbox}
 
@@ -225,36 +206,30 @@ These are some of the different notations for using the Evaluation Theorem
 \begin{equation*}F (b) -F (a) =F (x)\vert _{a}^{b} =\left [F (x)\right ]_{a}^{b} =\left .F (x)\right ]_{a}^{b}
 \end{equation*}
 
-\subsection*{Definite Integrals and Areas}
-Areas above the $x$-axis have \emph{positive} definite integrals and areas below the $x$-axis have \emph{negative} definite integrals. You need to be careful
-therefore to answer the question that is being asked. If the question is about definite integrals then they
-are evaluated by following the definition. If the question is about areas you must find the parts of the question
-that have areas above the $x$-axis and those parts that have areas below the $x$-axis and evaluate them separately. The definite integral calculates the result as
-the net sum of the positive and negative areas. To find the total area you drop the signs ($\left \vert A_{i}\right \vert $) and treat each area as if it is positive before adding them together
-\begin{equation*}\text{Total area} =\sum _{i}\left \vert A_{i}\right \vert 
-\end{equation*}
+\subsection*{Area with Definite Integrals}
+Areas above the $x$-axis have \emph{positive} definite integrals and areas below the $x$-axis have \emph{negative} definite integrals. If the context of the question is to evaluate a definite integral then use the definition. If the question is about \textbf{area} you must find the parts of the question that have areas above the $x$-axis and those parts that have areas below the $x$-axis and evaluate them separately. The definite integral calculates the result as the net sum of the positive and negative areas. To find the total area take the absolute value of the individual parts.
 
-To illustrate this point consider $y =x^{3} -x$. \medskip\\
 \example Find the area under the curve $y =x^{3} -x$ between $x = -1$ and $x =1$.\medskip\\
-\solution This can be factorised to give $y =x (x +1) (x -1)$. This cubic curve crosses the x-axis at $ -1$, $0$, and $1$. Here, this area must be found in two parts.
 \begin{SCfigure}[1][h]
 	\includegraphics[width=0.6\textwidth]{area3}
 	\caption*{Figure: A cubic showing how area `under' the curve is evaluated. The area for $-1\leq x\leq 0$ is positive (above the axis), and the area for $0\leq x\leq 1$ is negative.}
 \end{SCfigure}
-\begin{tasks}(3)
-	\task[\phantom{a}]\\ 
-	$\int _{0}^{1}(x^{3} -x) dx$\\
-	$=\frac{x^4}{4}-\frac{x^2}{2}\vert_{0}^1$\\
-	$=[\frac{1}{4}-\frac{1}{2}]-0$\\
-	$=-\frac{1}{4}$
-	\task[\phantom{a}]\\ 
-	$\int _{ -1}^{0}(x^{3} -x) d x$ \\
-	$=\frac{x^4}{4}-\frac{x^2}{2}\vert_{-1}^0$\\
-	$=0-[\frac{1}{4}-\frac{1}{2}]$\\
-	$=+\frac{1}{4}$
-	\task[\phantom{a}]\\ 
-	Therefore the total area is\\
-	 $|-\frac{1}{4}|+\frac{1}{4}=\frac{1}{2}$.
+
+\solution This can be factored to give $y =x (x +1) (x -1)$. This cubic curve crosses the x-axis at $ -1$, $0$, and $1$. Here, this area must be found in two parts.
+
+\begin{tasks}[column-sep=3ex,label-offset=-5em](3)
+	\task[]This is expected to be negative because it is below the axis:\\ 
+	$\displaystyle\int _{0}^{1}(x^{3} -x) dx$\\
+	$\displaystyle=\frac{x^4}{4}-\frac{x^2}{2}\Big\vert_{0}^1$\\
+	$\displaystyle=[\frac{1}{4}-\frac{1}{2}]-0$\\
+	$\displaystyle=-\frac{1}{4}$
+	\task[]This is expected to be positive:\\ 
+	$\displaystyle\int _{ -1}^{0}(x^{3} -x) d x$ \\
+	$\displaystyle=\frac{x^4}{4}-\frac{x^2}{2}\Big\vert_{-1}^0$\\
+	$\displaystyle=0-[\frac{1}{4}-\frac{1}{2}]$\\
+	$\displaystyle=+\frac{1}{4}$
+	\task[]Therefore the total area is:\medskip\\
+	 $\displaystyle\Big\vert-\frac{1}{4}\Big\vert+\frac{1}{4}=\frac{1}{2}\text{ units}^2$
 \end{tasks}
 We will compare with a single integral from $-1$ to $1$.	
 \[\int _{ -1}^{1}(x^{3} -x) d x=\frac{x^4}{4}-\frac{x^2}{2}\vert_{-1}^1 =-\frac{1}{4}-(-\frac{1}{4})=0\]
@@ -262,22 +237,23 @@ Area must be non-negative, and so this result is nonsensical given the context.\
 \rule{6.8cm}{0.5pt}\\
 \example 
 \begin{multicols}{2}
-The energy, or electrical charge, that a capacitor can discharge is found by taking the integral of the voltage-time function. This can neatly be represented as the area under the voltage-time curve. Find the total discharge from the capacitor after 5 seconds. The units for charge are coulombs.\\
+The energy, or electrical charge, that a capacitor can discharge is found by taking the integral of the voltage-time function. This can neatly be represented as the area under the voltage-time curve. Find the total discharge from the capacitor after 5 seconds. The units for charge are coulombs.\medskip\\
 \solution Integrate the $V(t)$ function to find the area:\\
 	\begin{align*}
-\mathrm{area}&=\int_{a}^{b}V(t)dt=8\int_{0}^{5}\left(e^{-t}\right)dt\\
+\mathrm{area}&=\int_{a}^{b}V(t)dt\\
+&=8\int_{0}^{5}\left(e^{-t}\right)dt\\
 &=8\left[\left(-1e^{-t}\right)\Big|_{0}^5\right]\\
 &=8\left[-e^{-5}-(-e^{0})\right]=8.054 \,\, \text{coulombs}\\
 \end{align*}
-\columnbreak
+%\columnbreak
 \begin{center}
 	\begin{tikzpicture}
 	\begin{axis}[
 	width=10cm,height=10cm,
 	axis lines=center,
 	axis on top=true,
-	ymax=9,ymin=-1,
-	xmax=6,xmin=-1,
+	ymax=9,ymin=0,
+	xmax=6,xmin=-.025,
 	xlabel=time($s$),
 	ylabel=voltage($V$),
 	]
@@ -289,14 +265,31 @@ The energy, or electrical charge, that a capacitor can discharge is found by tak
 	\end{tikzpicture}
 \end{center}
 \end{multicols}
-\rule{6.8cm}{0.5pt}\\
+The standard integral to calculate area is bounded by the axis as seen in the previous examples. In the following example we see that when finding area between intersecting curves, a new strategy can be applied. \medskip\\
+
+\example Find the area between the two curves: $f(x)=x$ and $g(x)=x^2-2x$. They intersect as shown at $(0,0)$, and $(3,3)$.
+\begin{center}\includegraphics[width=0.6\textwidth]{area5}\end{center}
+\solution When inspecting the shaded region, the straight line function, $y=x$ is above the parabola. We could handle this with two separate integrals: find $\int f(x)$ and then subtract $\int g(x)$, or we can simplify and find $\int f(x)-g(x)$:
+\begin{tasks}[label-offset=-5em](2)
+\task[]\begin{align*}
+\text{Area}&=\int_a^b[f(x)-g(x)]dx\\
+&=\int_0^3[x-(x^2-2x)]dx\\
+&=\int_0^3[-x^2+3x]dx\\
+\end{align*}
+\task[]\begin{align*}
+&=-\frac{x^3}{3}+\frac{3x^2}{2}\Big\vert_0^3\\
+&=\left(-9+\frac{27}{2}\right)-0=\frac{9}{2}\text{ units}^2\\
+\end{align*}
+\end{tasks}
+\clearpage
 \example A logo is formed by the shaded area between the cubic function  $ f(x)=4x -x^3$ and a parabola $g(x)=2x-x^2$. The two curves intersects at $x=0$ and $x=2$. Find the shaded area.\\
 \begin{multicols}{2}
 	\begin{tikzpicture}
 	\begin{axis}[
 	axis lines=center,
+	height=8cm,
 	axis on top=true,
-	ymax=5,ymin=-5,
+	ymax=4,ymin=-4,
 	xmax=3,xmin=0,
 	xlabel=$x$,
 	]
@@ -306,7 +299,7 @@ The energy, or electrical charge, that a capacitor can discharge is found by tak
 	\end{axis}
 	\end{tikzpicture}
 	\columnbreak
-\\	\solution
+\\	\solution Identify the top curve $f(x)$ and subtract the bottom $g(x)$:
 	\begin{align*}
 	\mathrm{Shaded \hspace{0.2cm}area}&=\int_{a}^{b}(f(x)-g(x))dx\\
 	&=\int_{0}^{2}\left((4x-x^3)-(2x-x^2)\right)dx\\
@@ -316,14 +309,6 @@ The energy, or electrical charge, that a capacitor can discharge is found by tak
 	&=\frac{8}{3} \,\, \mathrm{units}^2
 	\end{align*}
 \end{multicols}
-
-
-\subsection*{Indefinite Integrals}
-Although $\int f (x) d x$ looks very similar to $\int _{a}^{b}f (x)\; d x$ they are quite different and must not be confused or used in place of each other. $\int f (x)\; d x$ is a function of $x$ or a family of functions of $x$ and $\int _{a}^{b}f (x)\; d x$ is a number. They are connected of course, provided $f (x)$ is a continuous function of $x$ on $\left [a ,b\right ]$. In this case the Evaluation Theorem gives the connection between them.
-\begin{equation*}\int _{a}^{b}f (x)\; d x =\left .\int f (x)\; d x\right ]_{a}^{b}
-\end{equation*}
-
-The indefinite integral represents either a particular integral or a family of integrals. These will use a constant $C$ where $C$ takes a different value for each member of the family. $C$ is called the \emph{constant of integration}. Our ability to find indefinite integrals depends on the number of derivatives we have met so far and as we meet more and more different functions and learn how to differentiate them we add to our list. 
 
 %---------------------------------------------------
 % Volume
