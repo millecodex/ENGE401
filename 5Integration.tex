@@ -138,11 +138,11 @@ In this section we attempt to find the area under a curve. That is the area that
 Previously, when we wanted to find the slope of a tangent line we found the slope of a secant line and applied the limiting process: $\Lim{h\to 0}$. A similar procedure will be used to find the area. We first approximate the area with rectangular strips then we take the limit of the areas of these rectangular strips by making the strips narrower and narrower and thus the number of strips between $x =a$ and $x =b$ greater and greater. 
 
 \subsection*{Area with Riemann Sums}
-\example Consider the curve $y =x^{2}$. Use rectangles to find the area under this curve between $0$ and $1$. 
+\example Given the parabola $y =x^{2}$, use rectangles to find the area under this curve between $0$ and $1$. 
 
 \solution 
 \begin{multicols}{2}
-\includegraphics[width=8cm]{Area4}
+\includegraphics[width=8cm]{Area4}\label{fig:riemann}
 Consider $4$ strips by constructing vertical lines at $x =\frac{1}{4}, \frac{1}{2}, \frac{3}{4}, \text{and }1$ as shown in the diagram. Rectangles are constructed using the right-hand boundary and we know from inspection this will be larger than the actual area.
 \end{multicols}
 \begin{align*}
@@ -281,6 +281,12 @@ The standard integral to calculate area is bounded by the axis as seen in the pr
 &=\left(-9+\frac{27}{2}\right)-0=\frac{9}{2}\text{ units}^2\\
 \end{align*}
 \end{tasks}
+\begin{tcolorbox}
+\textbf{Area between functions}\\
+Let $f(x)$ be the upper function and $g(x)$ be the lower function, then\\
+\[\text{Area }=\int_a^b[f(x)-g(x)]dx\]
+\end{tcolorbox}
+
 \clearpage
 \example A logo is formed by the shaded area between the cubic function  $ f(x)=4x -x^3$ and a parabola $g(x)=2x-x^2$. The two curves intersects at $x=0$ and $x=2$. Find the shaded area.\\
 \begin{multicols}{2}
@@ -314,24 +320,36 @@ The standard integral to calculate area is bounded by the axis as seen in the pr
 % Volume
 %---------------------------------------------------
 \section{Volume}
-If a function is revolved around an axis it creates a volume between the axis and the function. Similar to how if we integrate a function, it results in an area --- if we integrate and \textit{area} it results in a volume.
+If a function is revolved around an axis it creates a volume between the axis and the function. Similar to how if we integrate a function, it results in an area --- if we integrate an \textit{area} it results in a volume.
 
+\begin{multicols}{2}
+	\example A connector was obtained by revolving the function $f(x)={0.3x+1}$ around the $x$-axis for $0\leq x \leq 5$. Calculate the volume of the connector.
+\begin{center}\includegraphics[width=8cm]{solids1}\end{center}
+\columnbreak
+\solution\\ Given the function of the outer boundary of the shape, we must square the function and integrate this result.\\
+\begin{align*}
+\mathrm{volume}&=\int_{a}^{b}\pi[f(x)]^2 dx\\
+&=\pi\int_0^5\left(0.3x+1\right)^2 dx\end{align*}
+Use the power rule and chain rule to integrate:\\
+\[=\pi \frac{ (0.3x+1)^3}{0.3(3)} \Big|_0^5\]
+Evaluate at the boundary points:\\
+\begin{align*}
+&=\frac{10\pi}{9}\left[\left(\frac{5}{2}\right)^3-1\right]=\frac{65\pi}{4}\\
+&\approx 51.05 \text{ units}^3
+\end{align*}
+\end{multicols}
+
+\clearpage
+The previous example used the disc-method to calculate a volume. Beginning with a rectangular section of width $\Delta x$, and length $f(x)$, just like the Riemann Sum for calculating area on page~\pageref{fig:riemann}. This height becomes a radius when rotated around an axis of revolution, labelled $R$ below. The \textit{volume} of a single disc is $\pi R^2\Delta x$. 
+\begin{center}\includegraphics[width=\textwidth]{discMethod}\end{center}
+Finding the volume of all the discs involves integrating over the length of the axis from $a$ to $b$.\[\text{Volume}=\int \pi R^2 \Delta x\] As the radius is the function evaluation, $f(x)$, and lowercase delta, $\delta$, meaning infinitesimal thin discs, we can generalize the formula for volume:
 \begin{tcolorbox}
-\textbf{Volume rotated around the $x$-axis}
-\[ \text{Volume} = \int_{a}^{b} \pi y^2 dx = \int_{a}^{b} \pi (f(x))^2 dx\]
-\textbf{Volume rotated around the $y$-axis}
-\[ \text{Volume} = \int_{c}^{d} \pi x^2 dy =\int_{c}^{d} \pi (f(y))^2 dy  \]
+	\textbf{Volume rotated around the $x$-axis}
+	\[ \text{Volume} = \int_{a}^{b} \pi y^2 dx = \int_{a}^{b} \pi (f(x))^2 dx\]
+	\textbf{Volume rotated around the $y$-axis}
+	\[ \text{Volume} = \int_{c}^{d} \pi x^2 dy =\int_{c}^{d} \pi (f(y))^2 dy  \]
 \end{tcolorbox}
 
-\example A connector was obtained by revolving the function $f(x)={3x+1}$ around \textbf{the $x-$axis} for $1\leq x \leq \frac{5}{3}$. Calculate the volume of the connector.
-\begin{multicols}{2}
-\begin{center}\includegraphics[width=8cm]{volumeConnector}\end{center}
-\columnbreak
-\solution\\ $\mathrm{volume}=\int_{a}^{b}\pi[f(x)]^2 dx$\medskip\\
-$=\pi\int_{1}^{\frac{5}{3}}\left(3x+1\right)^2 dx$\medskip\\
-$=\pi \frac{ (3x+1)^3}{3\cdot 3} \Big|_{1}^\frac{5}{3}$\medskip\\
-$=\frac{\pi}{9}\left[6^3-4^3\right]=\frac{152\pi}{9}\approx 53.058\, \mathrm{units}^3$
-\end{multicols}
 
 \example Fluorescent and incandescent light bulbs are often filled with the inert gas krypton. Find the volume of krypton gas required to fill the bulb shown.\vspace{0.4cm}\\ 
 \includegraphics[width=15cm]{bulb}\\
