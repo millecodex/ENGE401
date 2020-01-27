@@ -1,5 +1,5 @@
-\begin{center}\Large{Useful Formulae}
-\end{center}
+\addcontentsline{toc}{chapter}{Useful Formulae}
+\chapter*{Useful Formula}
 \begin{itemize}
 	%%%%%%%%%%
 	\item Equations of a Line:
@@ -16,26 +16,24 @@
 \begin{center}
 		\renewcommand{\arraystretch}{1.2}
 		\begin{tabular}{lrclcrcl}
-			\toprule
 			&\multicolumn{3}{c}{Logarithms}& &\multicolumn{3}{c}{Exponents}\\
 			\cmidrule{1-4}\cmidrule{6-8}
-			Law 1: &$ \log_x(ab) $&$=$&$ \log_x(a)+\log_x(b)  $&\hspace{1cm} &$x^a$&$=$&$x^{a+b} $\\
-			Law 2: &$ \log_x\left(\frac{a}{b}\right) $&$=$&$  \log_x(a)-\log_x(b) $& &$\frac{x^a}{x^b}$&$=$&$x^{a-b}  $\\
+			Law 1: &$ \log_x(ab) $&$=$&$ \log_x(a)+\log_x(b)  $&\hspace{1cm} &$x^a x^b$&$=$&$x^{a+b} $\\
+			Law 2: &$ \log_x\left(\frac{a}{b}\right) $&$=$&$  \log_x(a)-\log_x(b) $& &$\dfrac{x^a}{x^b}$&$=$&$x^{a-b}  $\\
 			Law 3: &$ \log_x(a^b) $&$=$&$ b\cdot\log_x(a)   $& &$(x^a)^b $&$=$&$x^{ab} $\\
 			\cmidrule{1-4}\cmidrule{6-8}
 			&$  \log_{x}\left(\frac{1}{x^a}\right) $&$=$&$-a   $& &$x^{-a} $&$=$&$\frac{1}{x^a} $\\
 			&$ \log_{x}1  $&$=$&$ 0  $& &$x^0 $&$=$&$1 $\\
 			&$ \log_x(x) $&$=$&$  1 $& &$x^1 $&$=$&$x $\\
 			\bottomrule
-			recall:&$ \log_a(x) $&$=$&$y$\hspace{0.5cm} converts to& $\Leftrightarrow$ &$x $&$=$&$a^y $\\
+			&$ \log_a(x) $&$=$&$y$\hspace{0.5cm} converts to& $\Leftrightarrow$ &$x $&$=$&$a^y $\\
 			\bottomrule
 		\end{tabular}
 \end{center}
 	%%%%%%%%%%
 \begin{center}
 	\renewcommand{\arraystretch}{1.2}
-		\begin{tabular}{llll}	
-			\toprule
+		\begin{tabular}{llll}
 			\multicolumn{4}{c}{Standard Derivatives}\\\midrule
 			$f(x)$ & $f'(x)$  &&Notes\\ \midrule
 			$A$&0&&$A$ is constant\\ 
@@ -57,13 +55,11 @@
 	%%%%%%%%%%
 	\item Chain Rule: $f[g(x)]' = f'[g(x)] \cdot g'(x)$
 	%%%%%%%%%%
-\clearpage	\item Standard Integrals
-	%\renewcommand{\arraystretch}{1.2}
-	%\setlength{\tabcolsep}{1.5em}
+\clearpage
+\thispagestyle{empty}
 	\begin{center}
 		\renewcommand{\arraystretch}{1.2}
 		\begin{tabular}{llcl}
-			\toprule
 			\multicolumn{4}{c}{Standard Integrals}\\\midrule
 			$f(x)$  &  $\int f(x)dx$&&Notes \\ \midrule
 			$1$&$x+C$&&constant\\
