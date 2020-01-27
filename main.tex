@@ -5,23 +5,25 @@
 %                            COURSE MANUAL                             %
 %                         LATEX SOURCE FILES                           %
 %                                                                      %
-% version 2.2 by Jeff Nijsse, 2019                                     %
+% version 2.3 by Jeff Nijsse, 2020                                     %
 % <jeff.nijsse@aut.ac.nz>                                              %
-% last updated in July, 2019                                           %
+% last updated in January, 2020                                        %
 % based on version 1.0 by Peter Watson, 2010                           %  
 %                                                                      %
 % This project is on GitHub, find it and download the source files at: %
 % <https://github.com/millecodex/ENGE401/>                             % 
 %                                                                      %
-% Licenced under MIT General License (c) 2019                          %
+% Licenced under MIT General License (c) 2020                          %
 %                                                                      % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % for published book output; can use oneside/twoside depending on situation
+%\documentclass[a4paper,11pt,openany,twoside,hidelinks]{book}
 \documentclass[a4paper,11pt,openany,oneside]{book}
 \usepackage{amssymb,amsmath,amsfonts,textcomp,siunitx}%
 \usepackage{xcolor,graphicx,xspace,colortbl,ragged2e,rotating}% 
-\usepackage{fancyhdr,titlesec,geometry,pdfpages}%
-\usepackage{multicol,wrapfig,booktabs,tabulary,tcolorbox, tasks}%
+\usepackage{fancyhdr,titlesec,geometry,pdfpages,afterpage}%
+\usepackage{wrapfig,booktabs,tabulary,tcolorbox,tasks}%
+\usepackage{multicol}
 \setlength{\columnsep}{20pt}
 \usepackage{import}% may not work for answers
 \usepackage{sidecap,caption,subcaption,float}%
@@ -31,15 +33,13 @@
 \pgfplotsset{colormap/blackwhite}
 \usepackage{courier}%
 \usepackage[makeroom]{cancel}% math strikethrough for fractions
-\usepackage{hyperref}% exclude for book printing?
+\usepackage{hyperref}% use hidelinks for book printing
 \hypersetup{
 	colorlinks,
 	linkcolor={blue!50!black},
 	citecolor={blue!50!black},
 	urlcolor={blue!50!black}
-%	linkcolor=.,
-%	citecolor=.,
-%	urlcolor=.
+%	urlcolor={black}
 }
 \newcommand{\dydx}{\frac{\mathrm{d}y}{\mathrm{d}x}}
 \newcommand{\ddydx}{\frac{\mathrm{d}^2y}{\mathrm{d}x^2}}
@@ -153,7 +153,7 @@
  \vspace{1cm}
 {\huge ENGE 401} \\
  \vspace{1cm}
-{\huge 2019 Semester 2} \\
+{\huge 2020 Semester 1} \\
 % ----------------------------------------------------------------
  \vfill
 \end{center}
@@ -169,17 +169,17 @@ This project is on GitHub, find it \\
 and download the source files at: \\
 \url{https://github.com/millecodex/ENGE401} \\                            
 
-Licenced under MIT General License \copyright \,2019 \\   
+Licenced under MIT General License \copyright \,2020 \\   
 
-Version 2.2 by Jeff Nijsse, 2019.\\
+Version 2.3 by Jeff Nijsse, 2020.\\
 \href{mailto:Jeff.Nijsse@aut.ac.nz}{\texttt{Jeff.Nijsse@aut.ac.nz}}\\
 Version 1.0 by Peter Watson, 2010.
 
-
 \clearpage
-%\hypersetup{linkcolor={black}}
+\hypersetup{linkcolor={black}}
+
+%\afterpage{\null\newpage}
 %\includepdf{schedule.pdf}
-%\includepdf{FormulaSheetFinal.pdf}
 \tableofcontents
 \mainmatter
 %    Include main chapters here.
@@ -190,20 +190,9 @@ Version 1.0 by Peter Watson, 2010.
 \include{5Integration}
 \include{6DiffEqns}
 \include{7Answers}
-%\appendix
-%%    Include appendix "chapters" here.
-%\include{FormulaSheetFinal}
+\include{UsefulFormula}
 %
-%\backmatter
-%\bibliographystyle{amsalpha}
-%\bibliography{}
-%\printindex
-
 \end{document}
-%
-%
-%
-%
 %
 %---------------------------------------------------------
 % //end main
