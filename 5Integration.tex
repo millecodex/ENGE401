@@ -342,7 +342,7 @@ Evaluate at the boundary points:\\
 \clearpage
 The previous example used the disc-method to calculate a volume. Beginning with a rectangular section of width $\Delta x$, and length $f(x)$, just like the Riemann Sum for calculating area on page~\pageref{fig:riemann}. This height becomes a radius when rotated around an axis of revolution, labelled $R$ below. The \textit{volume} of a single disc is $\pi R^2\Delta x$. 
 \begin{center}\includegraphics[width=\textwidth]{discMethod}\end{center}
-Finding the volume of all the discs involves integrating over the length of the axis from $a$ to $b$.\[\text{Volume}=\int \pi R^2 \Delta x\] As the radius is the function evaluation, $f(x)$, and lowercase delta, $\delta$, meaning infinitesimal thin discs, we can generalize the formula for volume:
+Finding the volume of all the discs involves integrating over the length of the axis from $a$ to $b$.\[\text{Volume}=\int \pi R^2 \Delta x\] The radius is the function evaluation, $f(x)$, and lowercase delta, $\delta$, means infinitesimal thin discs as the number of them goes to infinity, $n\rightarrow\infty$,  we can generalize the formula for volume:
 \begin{tcolorbox}
 	\textbf{Volume rotated around the $x$-axis}
 	\[ \text{Volume} = \int_{a}^{b} \pi y^2 dx = \int_{a}^{b} \pi (f(x))^2 dx\]
@@ -353,7 +353,7 @@ Finding the volume of all the discs involves integrating over the length of the 
 
 \example Fluorescent and incandescent light bulbs are often filled with the inert gas krypton. Find the volume of krypton gas required to fill the bulb shown.\vspace{0.4cm}\\ 
 \includegraphics[width=15cm]{bulb}\\
-You have estimated the function to be:\\
+The function has been estimated to be:\\
 \[f(x)=1-\frac{x^2}{5}\qquad\text{ for } -1.5\leq x \leq 2\text{ cm}\] 
 \solution You will have to calculate $\left(1-\frac{x^2}{5}\right)^2$ before integrating\\
 	\begin{align*}
@@ -486,7 +486,7 @@ Recall the rule for the differentiation of a product
 \begin{equation*}\frac{d}{d x} \left (f (x) \cdot g (x)\right ) =f (x) \cdot g^{ \prime } (x) +g (x) \cdot f^{ \prime } (x)
 \end{equation*}
 
-We can antidifferentiate each side and write the process as follows
+We can integrate each side and write the process as follows
 \begin{align*}f (x) \cdot g (x) &  = \int \left [f (x) \cdot g^{ \prime } (x) +g (x) \cdot f^{ \prime } (x)\right ]\; d x \\
  &  = \int f (x) \cdot g^{ \prime } (x)\; d x +\int g (x) \cdot f^{ \prime } (x)\; d x\end{align*}
 
@@ -570,77 +570,81 @@ we assume $f^{ \prime }$ and $g^{ \prime }$ are continuous then we can use the E
 We will use integration to analyse the motion of an object moving in a straight line. Let
 the position function for the object be $s =f (t)$ where $t$ is the time. The velocity function is $v (t) =s^{ \prime } (t)$. Therefore the position function is the integral of the velocity function. Also
 the acceleration function is $a (t) =v^{ \prime } (t)$ so the velocity function is the integral of the acceleration function. We can obtain
-the position function from the acceleration function by antidifferentiating twice. This process will generate
+the position function from the acceleration function by integrating twice. This process will generate
 two constants of integration so we need two additional pieces of information to find the particular solution. Usually
 $s (0)$ and $v (0)$ are given. 
 
 \example A particle moves in a straight line with an acceleration of $a (t) =4 t +2$. If the initial velocity is $ -4 \mbox{cm}$/$\mbox{s}$ and the initial displacement is $5 \mbox{cm}$, find the position function. 
 
-\solution Because $v^{ \prime } (t) =a (t) =4 t +2$ we can antidifferentiate $a (t)$ to obtain $v (t)$
-\begin{equation*}v (t) =4 \frac{t^{2}}{2} +2 t +C_{1} =2 t^{2} +2 t +C_{1}
-\end{equation*}
+\solution \begin{multicols}{2}
+As $v^{ \prime } (t) =a (t) =4 t +2$ we can integrate $a (t)$ to obtain $v (t)$
+\begin{align*}v(t)&=\int a(t)dt\\
+&=\int (4t+2)dt\\
+&=4 \frac{t^{2}}{2} +2 t +C_{1} \\
+&=2 t^{2} +2 t +C_{1}
+\end{align*}
 
-Substitute $t =0$ because we are given the initial velocity i.e. $v (0) = -4$
-\begin{align*}v (0) &  = 2 \cdot 0^{2} +2 \cdot 0 +C_{1} = -4 \\
-\text{So}C_{1} &  =  -4\text{and therefore} \\
+Substitute $t =0$ since we know the initial velocity $v(0)=-4$:
+\begin{align*}v (0) &  = 2 \cdot 0^{2} +2 \cdot 0 +C_{1}\\
+C_{1} &  =  -4\text{ and therefore} \\
 v (t) &  = 2 t^{2} +2 t -4\end{align*}
 
-Because $s^{ \prime } (t) =v (t)$ we can antidifferentiate $v (t)$ to obtain $s (t)$.
-\begin{align*}s (t) &  = 2 \frac{t^{3}}{3} +2 \frac{t^{2}}{2} -4 t +C_{2} \\
+Integrate $v (t)$ to obtain $s (t)$:
+\begin{align*}s(t)&=\int v(t)dt\\
+&=2 \frac{t^{3}}{3} +2 \frac{t^{2}}{2} -4 t +C_{2} \\
  &  = \frac{2}{3} t^{3} +t^{2} -4 t +C_{2}\end{align*}
 
 Substitute $t =0$ because we are given the initial displacement i.e. $s (0) =5$
-\begin{align*}s (0) &  = \frac{2}{3} \cdot 0^{3} +0^{2} -4 \cdot 0 +C_{2} =5 \\
-\text{So}C_{2} &  = 5\text{and therefore} \\
+\begin{align*}s (0) &  = \frac{2}{3} \cdot 0^{3} +0^{2} -4 \cdot 0 +C_{2}\\
+C_{2} &  = 5\text{ and therefore} \\
 s (t) &  = \frac{2}{3} t^{3} +t^{2} -4 t +5\end{align*}
+\end{multicols}
 
-You should know about the gravitational force near the earth that produces a downwards acceleration
-given the symbol $g$. We assume $g$ is constant and about $9.8 \mbox{m}$/$\mathrm{s}^{2}$ \\
 \rule{6.8cm}{0.5pt}\\
+
+The gravitational force near the Earth's surface that produces a downwards acceleration is about $-9.8$ m/s$^2$, represented by the vector quantity, $\vec{g}$.\\
 \example A ball is thrown vertically upwards with a speed of $24.5 \mbox{m}$/$\mbox{s}$ from the edge of a cliff that is $147 \mbox{m}$ above the ground. 
-\begin{tasks}(2)
+\begin{tasks}[column-sep=30pt](2)
 \task Find the position function. 
 \task Find the time when the ball reaches its maximum height. 
 \task Find the maximum height above the ground. 
 \task When does the ball hit the ground? \end{tasks}
 
-\solution
-\begin{tasks}(2)
-	\task! It is usual to choose the positive direction
-to be upwards this means that the acceleration due to gravity must be $ -9.8 \mbox{m}$/$\mathrm{s}^{2}$.
-\begin{align*}\text{So}a (t) &  = v^{ \prime } (t) = -9.8\text{ therefore} \\
-v (t) &  =  -9.8 t +C_{1}\end{align*}
-Substituting $v (0) =24.5$ we get that $C_{1} =24.5$ so
+\clearpage\solution
+\begin{multicols}{2} \textbf{(a)} It is usual to choose the positive direction
+to be upwards this means that $\vec{g}=-9.8$ m/s$^2$. Integrating the acceleration function yields the velocity function.
+\begin{align*}v(t)&=\int a(t)dt\\
+&  =\int -9.8dt\\
+&=-9.8t +C_{1}\end{align*}
+Substituting $v (0) =24.5$ we get that $C_{1} =24.5$
 \begin{equation*}v (t) = -9.8 t +24.5
 \end{equation*}
 Because $s^{ \prime } (t) =v (t)$ we integrate $v (t)$
-\begin{equation*}s (t) = -9.8 \frac{t^{2}}{2} +24.5 t +C_{2}
+\begin{equation*}\int v(t)=s(t)=-9.8 \frac{t^{2}}{2} +24.5 t +C_{2}
 \end{equation*}
 Substitute $s (0) =147$. We get $C_{2} =147$.
-\begin{equation*}s(t) = -4.9 t^{2} +24.5 t +147
+\begin{equation*}\therefore s(t) = -4.9 t^{2} +24.5 t +147
 \end{equation*}
-This expression will hold true until the ball hits the ground provided you assume the ball continues on its trajectory without striking the cliff. 
+This expression will hold true until the ball is acted on by an external force (hits the ground).
 
-\task The maximum height is reached when\\ $v (t) =0$.
+\textbf{(b)} The maximum height is reached when\\ $v (t) =0$; for a moment the vertical velocity will be zero before it begins to fall.
 \begin{align*} -9.8 t +24.5 &  = 0 \\
 24.5 &  = 9.8 t \\
-t &  = \frac{24.5}{9.8} \\
- &  = 2.5\text{ s}\end{align*}
+t &  = \frac{24.5}{9.8}=2.5\text{ s}\end{align*}
 
-\task The maximum height is found by substituting
-$t =2.5$ in $s (t)$
+\textbf{(c)} The maximum height is found by substituting $t =2.5$ into $s(t)$
 \begin{align*}s (2.5) &  =  -4.9 \cdot 2.5^{2} +24.5 \cdot 2.5 +147 \\
- &  =  -30.625 +61.25 +147 =177.625 \mbox{m}\end{align*}
+ &=177.6 \text{ m}\end{align*}
 
-\task! The ball hits the ground when $s (t) =0$
-\begin{align*}\text{So} -4.9 t^{2} +24.5 t +147 &  = 0 \\
+\textbf{(d)} The ball hits the ground when the displacement, $s(t) =0$.
+\begin{align*}-4.9 t^{2} +24.5 t +147 &  = 0 \\
 t^{2} -5 t -30 &  = 0\end{align*}
 Solve for $t$ using the quadratic formula: 
 \begin{align*}t &  = \frac{5 \pm \sqrt{25 -4 \times 1 \times  -30}}{2} \\
  &  = \frac{5 \pm \sqrt{145}}{2} \\
- &  \approx 8.5\text{}\mbox{s}\text{ or } -3.5\text{}\mbox{s}\end{align*}\end{tasks}
-You will be aware that the position function is a parabola so it is not surprising that the theoretical result shows a solution about $3.5 \mbox{ s}$ before the ball is thrown. The
-answer is that the ball hits the ground about $8.5 \mbox{ s}$ after it is thrown. You will also be aware that we did not test whether the value of $t$ when $v (t) =0$ gives a maximum or minimum. This is also because we are aware of the behaviour of a parabola with a negative $t^{2}$ coefficient. 
+ &  =8.5\text{ s, or }-3.5\text{s}\end{align*}
+The negative result will be discarded, however, represents a solution to the parabola in an algebraic sense. We did not test whether the value of $t$ when $v (t) =0$ gives a maximum or minimum. A maximum can be assumed knowing that $-9.8$ m/s$^2$ has a negative coefficient. 
+\end{multicols}
 
 \subsection*{Work}
 The strategy we use to allow us to apply calculus to a problem in engineering is the same as we used to evaluate areas. The
@@ -654,22 +658,19 @@ will recall that from Newton's Second Law of Motion
 
 Where $s (t)$ is the position function, $m$ is the mass of an object and $F$ is the force required to produce an acceleration of $a$. (Where $a =\frac{d^{2} s}{d t^{2}}$). 
 
-We usually measure mass in kilograms ($\mbox{kg}$), distance in metres ($\mbox{m}$) and force in Newtons ($\mbox{N}$) \linebreak\relax ($N =k g \cdot m/s^{2}$). If the acceleration is constant then the force to produce that acceleration will also
+We usually measure mass in kilograms ($\mbox{kg}$), distance in metres ($\mbox{m}$) and force in newtons ($\mbox{N}$) \linebreak\relax ($N =k g \cdot m/s^{2}$). If the acceleration is constant then the force to produce that acceleration will also
 be constant. 
 
 Work = force $ \times $ distance or
 \begin{equation}W =F d\tag{2}
-\end{equation}If $F$ is in Newtons and $d$ is in metres then $W$ is in Newton-metres. One Newton-metre is called a\linebreak\relax Joule
-($\mbox{J}$). 
+\end{equation}If $F$ is in newtons and $d$ is in metres then $W$ is in newton-metres. One newton-metre is called a\linebreak\relax joule ($\mbox{J}$).
 
-\example A mass of $3.5 \mbox{kg}$ lifted $0.5 \mbox{m}$ requires a force of $\displaystyle F =m a =3.5 \times 9.8 =34.3 \mbox{N}$. This is the force required to counter the force exerted by gravity. Calculate the work done.\\
+\example A mass of 3.5 kg lifted 0.5 m requires a force of $\displaystyle F =m a =3.5 \times 9.8 =34.3 \mbox{N}$. This is the force required to counter the force exerted by gravity. Calculate the work done.\\
 \solution The work done is calculated using equation 2
-\begin{equation*}W =F d =34.3 \times 0.5 =17.15 \mbox{J}
+\begin{equation*}W =F d =34.3 \times 0.5 =17.15 \text{ J}
 \end{equation*}
 
-If the force is variable this formula can no longer be applied. Let
-the force acting on an object as it moves along the $x$-axis in a positive direction from $a$ to $b$ be $f (x)$, where $f$ is a continuous function of $x$. Divide the interval from $a$ to $b$ into $n$ subintervals of width $ \Delta x$ where $ \Delta x =\frac{b -a}{n}$. For
-simplicity we let the end points of these subintervals be $x_{0}$, $x_{1}$, $x_{2}$, ..., $x_{n}$ We select the $i^{t h}$ subinterval and select a representative $x$-value in this interval $x_{i}^{ \ast }$. The work done when we move the object from $x_{i -1}$ to $x_{i}$ is
+If the force is variable this formula can no longer be applied. Let the force acting on an object as it moves along the $x$-axis in a positive direction from $a$ to $b$ be $f (x)$, where $f$ is a continuous function of $x$. Divide the interval from $a$ to $b$ into $n$ subintervals of width $ \Delta x$ where $ \Delta x =\frac{b -a}{n}$. For simplicity we let the end points of these subintervals be $x_{0}$, $x_{1}$, $x_{2}$, ..., $x_{n}$ We select the $i^{t h}$ subinterval and select a representative $x$-value in this interval $x_{i}^{ \ast }$. The work done when we move the object from $x_{i -1}$ to $x_{i}$ is
 \begin{equation*}W_{i} \approx f (x_{i}^{ \ast })  \Delta x
 \end{equation*}
 
@@ -680,7 +681,8 @@ The total work done is
 As we did with area we find the limit as $n \rightarrow \infty $ of this sum. As this is a Riemann sum the limit is a definite integral
 \begin{equation}W =\sum _{i =1}^{n}f (x_{i}^{ \ast })  \Delta x =\int _{a}^{b}f (x)\; d x\tag{4}
 \end{equation}
-\example If the force on a particle is given by the equation $f (x) =3 x^{2} -2 x \mbox{N}$, how much work is done moving the particle from $x =2$ to $x =3$?
+\rule{6.8cm}{0.5pt}\\
+\example If the force on a particle is given by the equation $f (x) =3 x^{2} -2 x \text{ N}$, how much work is done moving the particle from $x =2$ to $x =3$?
 
 \solution The graph of $f (x) =3 x^{2} -2 x$ shows that for the interval $\left [2 ,3\right ]$ the area is above the $x$-axis.
 \begin{align*}W &  = \int _{a}^{b}f (x)\; d x \\
@@ -688,27 +690,30 @@ As we did with area we find the limit as $n \rightarrow \infty $ of this sum. As
  &  = \left .3 \frac{x^{3}}{3} -2 \frac{x^{2}}{2}\right ]_{2}^{3} \\
  &  = \left .x^{3} -x^{2}\right ]_{2}^{3} \\
  &  = \left (3^{3} -3^{2}\right ) -\left (2^{3} -2^{2}\right ) \\
- &  = 18 -4 =14\text{ joules}\end{align*}
-\rule{6.8cm}{0.5pt}\\
-\example Hooke's Law states that the force required to maintain a spring stretched $x$ units beyond its natural length is proportional to $x$, the spring displacement, such that $f (x) =k x$ where $k$ is the spring constant. This law holds provided $x$ does not get too large. A force of $20 \mbox{N}$ is required to stretch a spring from its natural length of $5 \mbox{cm}$ to a length of $7 \mbox{cm}$. How much work is required to stretch the spring from a length of $12 \mbox{cm}$ to $13 \mbox{cm}$? \\
-
-\solution As the force is measured in Newtons we convert all lengths to metres. Our first step is to use Hooke's Law to evaluate the spring constant
-\begin{align*}f (x) &  = k x \\
-\text{So}20 &  = k \cdot 0.02 \\
-k &  = 1000 \\
-\text{So}f (x) &  = 1000 x\end{align*}
-
-The work done in stretching the spring from $12 \mbox{cm}$ to $13 \mbox{cm}$ is
-\begin{align*}W &  = \int _{0.07}^{0.08}1000 x\; d x \\
- &  = \left .500 x^{2}\right ]_{0.07}^{0.08} \\
- &  = 500 \left (0.08^{2} -0.07^{2}\right ) \\
- &  = 500 \left (0.0064 -0.0049\right ) =500 \times 0.0015 \\
- &  = 0.75\text{}\mbox{J}\end{align*}
-
+ &  = 18 -4 =14\text{ J}\end{align*}
+\clearpage
+%\rule{6.8cm}{0.5pt}\\
+\examq Hooke's Law states that the force required to maintain a spring stretched $x$ units beyond its natural length is proportional to $x$, the spring displacement in meters, such that $f (x) =k x$ where $k$ is the spring constant and $f$ the force. This law holds provided $x$ does not get too large. \medskip\\
+The work required to stretch the spring can be calculated by integrating the force function:
+\[W=\int_{a}^{b}f(x) \, dx\,. \]
+Find the work done in stretching a spring from 12 cm to 17 cm given that it takes 4 newtons of force to stretch the spring from 10 cm to 12 cm. \\
+\solution\medskip\\
+First you will need to find the spring constant $k$:
+\begin{align*}f(x)&=kx\\
+4\,\text{N}&=k(0.12-0.10)\\
+k&=\frac{4}{0.02}=200\,\,\frac{\text{newtons}}{\text{meter}}
+\end{align*}
+Integrate the force function for find the work done in stretching the spring:
+\begin{align*}
+W&=\int_{0.12}^{0.17}200x\,dx\\
+&=100x^2\Big\vert_{0.12}^{0.17}\\
+&=100(0.17^2-0.12^2)\\
+&=1.45 \text{ J}
+\end{align*}
+\clearpage
 %---------------------------------------------------
 % Chapter Exercises in a separate file
 %---------------------------------------------------
-\clearpage
 \section{Chapter Exercises}
 \subimport{}{5IntegrationExercises}
 
