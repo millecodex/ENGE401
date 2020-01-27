@@ -22,6 +22,7 @@
 \usepackage{xcolor,graphicx,xspace,colortbl,ragged2e,rotating}% 
 \usepackage{fancyhdr,titlesec,geometry,pdfpages}%
 \usepackage{multicol,wrapfig,booktabs,tabulary,tcolorbox, tasks}%
+\setlength{\columnsep}{20pt}
 \usepackage{import}% may not work for answers
 \usepackage{sidecap,caption,subcaption,float}%
 \usepackage{pgfplots,tikz}%
@@ -40,6 +41,10 @@
 %	citecolor=.,
 %	urlcolor=.
 }
+\newcommand{\dydx}{\frac{\mathrm{d}y}{\mathrm{d}x}}
+\newcommand{\ddydx}{\frac{\mathrm{d}^2y}{\mathrm{d}x^2}}
+\newcommand{\dxdt}{\frac{\mathrm{d}x}{\mathrm{d}t}}
+\newcommand{\ddxdt}{\frac{\mathrm{d}^2x}{\mathrm{d}t^2}}
 \newcommand{\desmos}{\href{http://www.desmos.com/calculator}{\texttt{desmos\,}}}%
 \newcommand{\Desmos}{\href{http://www.desmos.com/calculator}{\texttt{Desmos\,}}}%
 \newcommand{\example}{
@@ -178,18 +183,18 @@ Version 1.0 by Peter Watson, 2010.
 \tableofcontents
 \mainmatter
 %    Include main chapters here.
-\include{chAlgebra}
-\include{chTrig}
-\include{chExponentials}
-\include{chDifferentiation}
-\include{chIntegration}
-\include{chDiffEqns}
-\include{chAnswers}
-\appendix
-%    Include appendix "chapters" here.
-\include{FormulaSheetFinal}
-
-\backmatter
+\include{1Algebra}
+\include{2Trig}
+\include{3Exponentials}
+\include{4Differentiation}
+\include{5Integration}
+\include{6DiffEqns}
+\include{7Answers}
+%\appendix
+%%    Include appendix "chapters" here.
+%\include{FormulaSheetFinal}
+%
+%\backmatter
 %\bibliographystyle{amsalpha}
 %\bibliography{}
 %\printindex
