@@ -8,7 +8,7 @@ This version (2.3) by Jeff Nijsse, 2020\
 based on\
 version 1.0 by Peter Watson, 2010
 ***
-The pdf file [ENGE401 Manual S2 2019.pdf](https://github.com/millecodex/ENGE401/blob/master/ENGE401%20Manual%20S2%202019.pdf) is the single sided version with hyperlinks for electronic viewing.
+The pdf file [ENGE401 Manual S1 2020.pdf](https://github.com/millecodex/ENGE401/blob/master/ENGE401%20Manual%20S1%202020.pdf) is the single sided version with hyperlinks for electronic viewing.
 ***
 ### Course Contents:
 1. Foundation Algebra Review
