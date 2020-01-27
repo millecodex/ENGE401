@@ -9,7 +9,6 @@ Engineering Mathematics begins by reviewing foundational algebra. Many of the sk
 %---------------------------------------------------
 Some of the foundational algebraic properties will be covered here. This section is not comprehensive, and the student should refer to an introductory algebra book if some of these properties are not clear.
 
-
 %---------------------------------------------------
 \section*{Solving Equations}
 %---------------------------------------------------
@@ -29,7 +28,7 @@ And simplify: $\displaystyle x=\frac{5}{2}$
 \begin{tcolorbox}
 A general rule for solving equations is that you can do any mathematical operation to the equation as long as you do it to both sides. For example, add 5 to both sides, divide both sides by 2, multiply both side by $\sin(x)$, raise to an exponent, and so on.
 \end{tcolorbox}
-
+\clearpage
 \example Find $x$: $x^2+1=3$\medskip\\
 \solution Subtract 1 from both sides: $x^2=2$ Recall \textsc{bedmas} in reverse order, now we have an exponent. To solve for a power of 2, take the square root of both sides: $\sqrt{x^2}=\sqrt{2}$, and simplify to $x=\sqrt{2}$.
 %---------------------------------------------------
@@ -63,22 +62,13 @@ Exponents can decimal numbers, integers, expressions, variables, and also fracti
 \end{alignat*}\end{tcolorbox}
 
 \subsection*{Laws of Exponents Summary}
-%\renewcommand{\arraystretch}{1.3}
-%\begin{align*}
-%x^a x^b & =x^{a+b}  \\ 
-%\frac{x^a}{x^b} & =x^{a-b} \\ 
-%(x^a)^b & =x^{ab}  \\ 
-%x^{-a} & =\frac{1}{x^a} \\ 
-%x^{\frac{a}{b}} & =\sqrt[b]{x^a}\\
-%x^0 & =1  \\ 
-%\end{align*}
 \begin{tcolorbox}
 \begin{tasks}[style=itemize](2)
 	\task[] multiply: $ x^a x^b = x^{a+b}$
-	\task[] inverse: $x^{-a}  =\frac{1}{x^a} $
-	\task[] divide: $ \frac{x^a}{x^b}  =x^{a-b} $
-	\task[] root: $ x^{\frac{a}{b}}  =\sqrt[b]{x^a}$
-	\task[] power: $(x^a)^b  =x^{ab} $
+	\task[] inverse: $x^{-a}  =\dfrac{1}{x^a} $
+	\task[] divide: $ \dfrac{x^a}{x^b}  =x^{a-b} $
+	\task[] root: $ x^{\dfrac{a}{b}}  =\sqrt[b]{x^a}$
+	\task[] power: $\displaystyle (x^a)^b  =x^{ab} $
 	\task[] zero: $x^0  =1 $
 \end{tasks}	
 \end{tcolorbox}
@@ -145,7 +135,7 @@ $2$ & $f(2)=2(2)$&$=4$ \\
 \begin{center}
 \begin{tikzpicture}
 \begin{axis}[
-scale=1.2,
+scale=1.1,
 axis lines=center,
 ymax=4,ymin=-4,
 xmax=4,xmin=-4,
@@ -163,39 +153,36 @@ xlabel=$x$,ylabel=$y$,
 \captionof*{tikzpicture}{A \textbf{plot of the points} showing a linear relationship}
 \end{center}
 \end{multicols}
-
+\vspace{-0.5cm}
 Lets write a precise definition of a function:
 \begin{tcolorbox}\begin{center}
 	A function $f(x)$ has exactly one output value, $y$, for any given input value, $x$.
 \end{center}\end{tcolorbox}
 In the line plotted above, we see that every $x$ value has only one corresponding $y$ value. This means that $y=2x$ is a function. Conversely, a relationship that has two or more output values is \textbf{not} a function. \\ 
-\begin{multicols}{2}
-	\begin{center}
-\resizebox{0.5\textwidth}{0.5\textwidth}{%
-	\begin{tikzpicture}
-	\begin{axis}[
-	scale=1.2,
-	axis lines=center,%width=4cm,height=4cm,
-	ymax=3,ymin=-3,
-	xmax=3,xmin=-3,
-	xlabel=$x$,ylabel=$y$,%	ytick=\empty,	
-	]
-	\addplot[domain=-180:180, samples=100] ({2*cos(x)},{2*sin(x)});
-	\addplot[mark=*] coordinates {(1,1.732)};
-	\addplot[mark=*] coordinates {(1,-1.732)};
-	\addplot [mark=none,dashed] coordinates {(1, -3) (1, 3)};
-	\end{axis}
-	\end{tikzpicture}
-}
-	\end{center}
-\columnbreak
+	
 The circle has two output values at $x=1$: both $y=+\sqrt{3}$ and $y=-\sqrt{3}$ are points on the circle.
-
+\begin{center}
+	\resizebox{0.5\textwidth}{0.5\textwidth}{%
+		\begin{tikzpicture}
+		\begin{axis}[
+		scale=1.2,
+		axis lines=center,%width=4cm,height=4cm,
+		ymax=3,ymin=-3,
+		xmax=3,xmin=-3,
+		xlabel=$x$,ylabel=$y$,%	ytick=\empty,	
+		]
+		\addplot[domain=-180:180, samples=100] ({2*cos(x)},{2*sin(x)});
+		\addplot[mark=*] coordinates {(1,1.732)};
+		\addplot[mark=*] coordinates {(1,-1.732)};
+		\addplot [mark=none,dashed] coordinates {(1, -3) (1, 3)};
+		\end{axis}
+		\end{tikzpicture}
+	}
+\end{center}
 The dashed line in the figure represents what is called the \textit{vertical line test}. If a vertical line passes through more than one point on a curve, then it is not considered a function.
 
 \subsection*{Domain \& Range}
 The domain of a function is the set of all inputs that are valid; usually these are the $x-$values. The range of a function is the set of all outputs that are valid; usually these are the $y-$values. For the line we plotted above, $f(x)=2x$, any value could be substituted into the function, therefore the domain was all the real numbers. This is written as: Domain $x \in \mathbb{R}$. Similarly the range was all the $y-$values, or  $y \in \mathbb{R}$. We will return to domain and range later.
-\end{multicols}
 
 \example What is the domain and range for the circle with equation $x^2+y^2=2^2$ ?\medskip\\
 \solution See the graph above. The domain is all the $x$-values that are included; this is everything between $-2$ and $+2$ inclusive. \medskip\\
@@ -204,7 +191,8 @@ Therefore the domain is:
 &&\{-2\le x\le 2,\,\, x&\in\mathbb{R}\}&\phantom{0000000000000}\\
 \text{And the range is similar:}&& \{-2\le y\le 2,\,\, y&\in\mathbb{R}\}&
 \end{flalign*}
-\rule{6.8cm}{0.5pt}\\
+\clearpage
+%\rule{6.8cm}{0.5pt}\\
 \example Find the domain and range for the graphs:
 \begin{figure}[H]
 	\begin{subfigure}[b]{0.33\textwidth}
@@ -607,7 +595,8 @@ Now calculate (4) $-$ (3).
 
 Back-substitute $b$ into equation (1) to solve for $a$: $3a-7(\frac{5}{6})=-3$. Verify that $a=\frac{17}{18}$.	
 	
- \section*{Special Cases}
+\clearpage
+\section*{Special Cases}
   \begin{multicols}{2}
   Consider the parallel lines shown. What is the solution to this system? Parallel lines will never meet by definition and so will have no point of intersection. In this case the system has no solution -- which is a perfectly valid solution! Notice the slope of both lines is $\frac{1}{3}$ which means they are parallel.
   
@@ -655,7 +644,7 @@ Back-substitute $b$ into equation (1) to solve for $a$: $3a-7(\frac{5}{6})=-3$. 
  	problem. Write a sentence describing the answer to the original problem.  
  \end{enumerate}
 \end{tcolorbox}
- 
+ \clearpage
  \example It takes a boat travelling downstream 1 hour to cover the 20 mile distance. On the return trip it take the boat 2.5 hours. What is the speed of the boat and the speed of the current?\medskip\\
  \solution This is about a boat travelling with the current and against the current and depends on you knowing that velocities are vectors that can be added and subtracted. Let the speed of the boat be $x$ \mbox{mi}$/$\mbox{h} and the speed of the current be $y$ \mbox{mi}$/$\mbox{h}. 
  	\begin{align*}\text{Upstream speed} &  =  x -y \\
@@ -674,8 +663,8 @@ Back-substitute $b$ into equation (1) to solve for $a$: $3a-7(\frac{5}{6})=-3$. 
  \begin{align*}\text{Total time} &  =  \frac{\text{Total distance}}{\text{Speed}} \\
  &  =  \frac{20}{8} =\frac{5}{2} \text{ h}\end{align*}
  
- Therefore the speed of the boat is 14 $\mbox{mi}$/$\mbox{h}$ and the speed of the current is 6 $\mbox{mi}$/$\mbox{h}$. 
-
+ Therefore the speed of the boat is 14 $\mbox{mi}$/$\mbox{h}$ and the speed of the current is 6 $\mbox{mi}$/$\mbox{h}$.
+ \clearpage
 %------------------------------------------------------------------- 
 % Algebra Exercises in a separate file
 %-------------------------------------------------------------------
