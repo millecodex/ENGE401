@@ -14,11 +14,12 @@
 		]
 		\addplot [<->,domain=-4.9:4.75,thick, samples=800, black] {x*sin(deg(x+x^2))};
 		\addplot[mark=*] coordinates {(-1.915,-1.884)};
-		\addplot[dashed,domain=-2.5:-1.25,ultra thick,samples=50, black]{-1.884};
+		\addplot[<->,domain=-2.5:-1.25, thick,samples=50, black]{-1.884};
 		\addplot[mark=*] coordinates {(-1.915,0)};
 		\node[anchor=south] at (axis cs:-1.915,0.5) {$a$};
 		\node[anchor=south] at (axis cs:-1.5,-5) {tangent at point $x=a$};
 		\draw[<-](axis cs:-1.615,-2.1)--(axis cs:-1.5,-3.9);
+		\draw[dashed](axis cs:-1.915,0)--(axis cs:-1.915,-2);
 		\end{axis}
 		\end{tikzpicture}
 		\caption{The function is smooth everywhere; there are no gaps or sharp transitions, and therefore it has a well defined tangent line at any point. One of these tangents is shown at $x=a$. The function that defines \textit{all} possible tangents is called the derivative.}\end{center}
@@ -52,7 +53,7 @@ The average rate of change is the slope of the \textbf{secant line} between $x =
 \task $x =a$ and $x =a +h$\\ ($h \neq 0$) \\
 \solution\\
 \[\frac{f(a)-f(a+h)}{a-(a+h)}\]
-\[=\frac{a^2+4-([a+h]^2-4)}{a+h}\]
+\[=\frac{a^2+4-([a+h]^2+4)}{-h}\]
 Can this be simplified further?
 \end{tasks}
 \begin{figure}\begin{center}
@@ -64,7 +65,7 @@ Can this be simplified further?
 % tangents
 %---------------------------------------------------
 \subsection*{Tangents}
-We now investigate the process of changing the value of $(b -a)$ in formula (1) the slope of the secant approaches the slope of the tangent at $x =a$. However, as $b -a$ is made smaller and smaller, eventually it will get to zero. This is necessary to find the exact tangent, except now the denominator of (1) is zero! A new definition can help us avoid this \textit{math error}. 
+We now investigate the process of changing the value of $(b -a)$ in formula (1) the slope of the secant approaches the slope of the tangent at $x =a$. However, as $b -a$ is made smaller and smaller, eventually it will get to zero. This is necessary to find the exact tangent, except now the denominator of equation (1) is zero! A new definition can help us avoid this \textit{math error}. 
 \begin{tcolorbox}
 \textbf{Definition:} The tangent line to the curve $y =f (x)$ at the point $P (a ,f (a))$ is the line through $P$ with slope \[m =\Lim{x\to a}\frac{f (x) -f (a)}{x -a}\] provided that the \textit{limit} exists. $\Lim{x\to a}$ is the ``limit as $x$ approaches $a$.''
 \end{tcolorbox}
@@ -148,7 +149,7 @@ The basic functions have easily repeatable patterns to find their derivatives. T
 		$f(x)$ & $f'(x)$  &&\\ \midrule
 		$A$&0&&$A$ is constant\\ \midrule
 		$x$&$1$&&power rule for $x^1$\\ \midrule
-		$Ax$&$x$&&$A$ is a constant multiple\\ \midrule
+		$Ax$&$A$&&$A$ is a constant multiple\\ \midrule
 		$x^n$ & $nx^{n-1}$ &&power rule - general form\\ \midrule
 		$e^x$ & $e^x$  && exponential\\ \midrule
 		$\ln(x)$ & $\frac{1}{x}$ &&logarithmic\\ \midrule
@@ -491,7 +492,7 @@ Putting this all together
 %\rule{6.8cm}{0.5pt}\\
 \examq Find $\frac{dy}{dx}$ given $y=x^3e^{2x}$\medskip\\
 \solution First use the product rule; there is a chain rule on 		$e^{2x}$:\begin{align*}\frac{dy}{dx}&=3x^2(e^{2x})+x^3(e^{2x})(2) \\
-	\frac{dy}{dx}&=2xe^{-2x}(1-x)\end{align*}
+	\frac{dy}{dx}&=x^2e^{2x}(3+2x)\end{align*}
 \end{multicols}
 
 %---------------------------------------------------
