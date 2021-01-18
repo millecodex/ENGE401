@@ -3,7 +3,7 @@
 ## Course Manual
 ## AUT (Auckland University of Technology)
 ***
-This version (2.4) by Jeff Nijsse, 2020\
+This version (2.5) by Jeff Nijsse, 2021\
 <jeff.nijsse@aut.ac.nz>
 based on\
 version 1.0 by Peter Watson, 2010
