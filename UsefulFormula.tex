@@ -13,10 +13,10 @@
 	%%%%%%%%%%
 	\item Sine Law: $\frac{\sin A}{a}= \frac{\sin B}{b}=\frac{\sin C}{c}$; \hspace{0.2cm}Cosine Law: $a^2=b^2+c^2-2bc\cos(A)$
 \end{itemize}
-\begin{center}
+{\hspace*{0.55cm}
 		\renewcommand{\arraystretch}{1.2}
 		\begin{tabular}{lrclcrcl}
-			&\multicolumn{3}{c}{Logarithms}& &\multicolumn{3}{c}{Exponents}\\
+			&\multicolumn{3}{l}{\phantom{aaaa}$\bullet$ Logarithms}& &\multicolumn{3}{c}{$\bullet$ Exponents}\\
 			\cmidrule{1-4}\cmidrule{6-8}
 			Law 1: &$ \log_x(ab) $&$=$&$ \log_x(a)+\log_x(b)  $&\hspace{1cm} &$x^a x^b$&$=$&$x^{a+b} $\\
 			Law 2: &$ \log_x\left(\frac{a}{b}\right) $&$=$&$  \log_x(a)-\log_x(b) $& &$\dfrac{x^a}{x^b}$&$=$&$x^{a-b}  $\\
@@ -28,25 +28,25 @@
 			\bottomrule
 			&$ \log_a(x) $&$=$&$y$\hspace{0.5cm} converts to& $\Leftrightarrow$ &$x $&$=$&$a^y $\\
 			\bottomrule
-		\end{tabular}
-\end{center}
-	%%%%%%%%%%
-\begin{center}
+		\end{tabular}\\
+}
+\newline\phantom{blank line here please}\\
+{\hspace*{0.55cm}	
 	\renewcommand{\arraystretch}{1.2}
 		\begin{tabular}{llll}
-			\multicolumn{4}{c}{Standard Derivatives}\\\midrule
+			\multicolumn{4}{c}{$\bullet$ Standard Derivatives}\\\midrule
 			$f(x)$ & $f'(x)$  &&Notes\\ \midrule
 			$A$&0&&$A$ is constant\\ 
 			$x$&$1$&&power rule for $x^1$\\ 
 			$Ax$&$A$&&$A$ is a constant multiple\\ \midrule
-			$x^n$ & $nx^{n-1}$ &&power rule - general form\\ 
+			$x^n$ & $nx^{n-1}$ &&power rule general form\\ 
 			$e^x$ & $e^x$  && exponential\\ 
 			$\ln(x)$ & $\frac{1}{x}$ &&logarithmic\\ \midrule
 			$\sin(x)$ & $\phantom{-}\cos(x)$  &&trigonometric \\ 
 			$\cos(x)$ & $-\sin(x)$ && \\ 
 			$\tan(x)$ & $\phantom{-}\sec^2(x)$ && \\ \bottomrule
 		\end{tabular}
-	\end{center}
+}
 \begin{itemize}
 	%%%%%%%%%%
 	\item Product Rule: $[f(x)g(x)]' = f'(x)g(x) + f(x)g'(x)$
@@ -57,10 +57,9 @@
 	%%%%%%%%%%
 \clearpage
 \thispagestyle{empty}
-	\begin{center}
 		\renewcommand{\arraystretch}{1.2}
 		\begin{tabular}{llcl}
-			\multicolumn{4}{c}{Standard Integrals}\\\midrule
+			\multicolumn{4}{c}{$\bullet$ Standard Integrals}\\\midrule
 			$f(x)$  &  $\int f(x)dx$&&Notes \\ \midrule
 			$1$&$x+C$&&constant\\
 			$A$&$Ax+C$&&$A$ is constant\\\midrule
@@ -73,12 +72,15 @@
 			$\tan (x)$&$\ln |\sec x|+C$\\
 			$\sec^2(x)$ & $\tan(x)+C$ \\ \bottomrule
 		\end{tabular}
-	\end{center}
 	%%%%%%%%%%
-	\item Integration By Parts: $\displaystyle \int fg' = fg-\int f'g \hspace{1cm} \text{or} \hspace{1cm} \int udv = uv - \int vdu$
+	\item Integration By Parts: $\displaystyle \int fg' = fg-\int f'g \qquad \text{or} \qquad \int udv = uv - \int vdu$
 	%%%%%%%%%%
 	\item Area between the curve $f(x)$ and the $x$-axis: $\displaystyle A=\int_{a}^{b} f(x)dx$\\
 	%%%%%%%%%%
+	\item Area between two curves $f(x)$ and $g(x)$: $\displaystyle A=\int_{a}^{b} \left[f(x)-g(x)\right]dx$\\
+	%%%%%%%%%%
 	\item Volume of revolution about the $x$-axis:
-	$\displaystyle V= \int_{a}^{b} \pi y^2 dx = \int_{a}^{b} \pi (f(x))^2 dx$
+	$\displaystyle V= \int_{a}^{b} \pi y^2 dx = \pi\int_{a}^{b}  [f(x)]^2 dx$
+	\item Volume of revolution about the $y$-axis:
+	$\displaystyle V= \int_{a}^{b} \pi x^2 dy = \pi\int_{a}^{b}  [f(y)]^2 dy$
 \end{itemize}
