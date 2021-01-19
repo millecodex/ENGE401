@@ -48,13 +48,13 @@
 \newcommand{\desmos}{\href{http://www.desmos.com/calculator}{\texttt{desmos\,}}}%
 \newcommand{\Desmos}{\href{http://www.desmos.com/calculator}{\texttt{Desmos\,}}}%
 \newcommand{\example}{
-	\tcbox[nobeforeafter,tcbox raise base, boxrule=0pt, colback=gray!20, size=fbox]{\textsc{Example}}\quad}%
+	\tcbox[nobeforeafter,tcbox raise base, boxrule=0pt, colback=gray!20, size=fbox]{\textsc{Example}}\quad\smallskip}%
 \newcommand{\exercise}{
-	\tcbox[nobeforeafter,tcbox raise base, boxrule=0pt, colback=gray!20, size=fbox]{\textsc{Exercise}}\quad}%
+	\tcbox[nobeforeafter,tcbox raise base, boxrule=0pt, colback=gray!20, size=fbox]{\textsc{Exercise}}\quad\smallskip}%
 \newcommand{\examq}{
-	\tcbox[nobeforeafter,tcbox raise base, boxrule=0pt, colback=gray!20, size=fbox]{\textsc{Exam Question}}\quad}%
+	\tcbox[nobeforeafter,tcbox raise base, boxrule=0pt, colback=gray!20, size=fbox]{\textsc{Exam Question}}\quad\smallskip}%
 \newcommand{\solution}{
-	\tcbox[nobeforeafter,tcbox raise base, boxrule=0pt, colback=gray!20, size=fbox]{\textsc{Solution}}\quad}%
+	\smallskip\tcbox[nobeforeafter,tcbox raise base, boxrule=0pt, colback=gray!20, size=fbox]{\textsc{Solution}}\quad\smallskip}%
 \newcommand{\Lim}[1]{\raisebox{0.5ex}{\scalebox{0.8}{$\displaystyle \lim_{#1}\;$}}}
 \usepackage[]{tocloft} %
 \graphicspath{{./graphics/}} %
@@ -109,10 +109,15 @@
 \usepackage{stackengine}
 \newlength{\longestlabel}
 \settowidth{\longestlabel}{\bfseries 1111}
-\settasks{counter-format=(tsk[a]), label-format={\bfseries}, label-width=\longestlabel,
-	item-indent=0pt, label-offset=2pt, column-sep={10pt}, before-skip = {0pt} , after-item-skip={0ex}}
+\settasks{
+	label=(\bfseries\alph*), 
+	label-width=\longestlabel,
+	label-align=left,
+	%item-indent=0pt, 
+	label-offset=0pt, 
+	column-sep=10pt
+}
 %
-\usepackage[lastexercise,answerdelayed]{exercise}
 \counterwithin{Exercise}{chapter}
 \counterwithin{Answer}{chapter}
 \renewcounter{Exercise}[chapter]
@@ -183,13 +188,13 @@ Version 1.0 by Peter Watson, 2010.
 \tableofcontents
 \mainmatter
 %    Include main chapters here.
-\include{1Algebra}
-\include{2Trig}
-\include{3Exponentials}
+%\include{1Algebra}
+%\include{2Trig}
+%\include{3Exponentials}
 \include{4Differentiation}
-\include{5Integration}
-\include{6DiffEqns}
-\include{7Answers}
+%\include{5Integration}
+%\include{6DiffEqns}
+%\include{7Answers}
 \include{UsefulFormula}
 %
 \end{document}
