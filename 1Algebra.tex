@@ -26,15 +26,15 @@ And then we divide both sides by 2: $\displaystyle\phantom{aa}\frac{\cancel{2}x}
 And simplify: $\displaystyle x=\frac{5}{2}$
 
 \begin{tcolorbox}
-A general rule for solving equations is that you can do any mathematical operation to the equation as long as you do it to both sides. For example, add 5 to both sides, divide both sides by 2, multiply both side by $\sin(x)$, raise to an exponent, and so on.
+A general rule for solving equations is that you can do any mathematical operation to the equation as long as you do it to both sides. For example, add 5 to both sides, divide both sides by 2, multiply both sides by $\sin(x)$, raise to an exponent, and so on.
 \end{tcolorbox}
 \clearpage
 \example Find $x$: $x^2+1=3$\medskip\\
-\solution Subtract 1 from both sides: $x^2=2$ Recall \textsc{bedmas} in reverse order, now we have an exponent. To solve for a power of 2, take the square root of both sides: $\sqrt{x^2}=\sqrt{2}$, and simplify to $x=\sqrt{2}$.
+\solution Subtract 1 from both sides: $x^2=2$. Recall \textsc{bedmas} in reverse order, now we have an exponent. To solve for a power of 2, take the square root of both sides: $\sqrt{x^2}=\sqrt{2}$, and simplify to $x=\sqrt{2}$.
 %---------------------------------------------------
 \section*{Exponents}
 %---------------------------------------------------
-Indices go by a few different names, sometimes they are called powers or indices. In the expression $x^3$ the index, exponent, or power is $3$. This does not have to be an integer, or even a number: $x^n$ has index $n$; $x^{\frac{2}{3}}$ has a fractional exponent; $x^{-1}$ has a negative exponent; and $x^{\cos x}$ has another expression for its power.
+Indices go by a few different names, sometimes they are called powers or exponents. In the expression $x^3$ the index, exponent, or power is $3$. This does not have to be an integer, or even a number: $x^n$ has index $n$; $x^{\frac{2}{3}}$ has a fractional exponent; $x^{-1}$ has a negative exponent; and $x^{\cos x}$ has another expression for its power.
 
 \subsection*{The Rules of Exponents}
 \begin{tcolorbox}
@@ -48,16 +48,17 @@ Indices go by a few different names, sometimes they are called powers or indices
 \end{tcolorbox}	
 
 \subsection*{Negative Exponents}
-One of the most important rules for manipulating mathematics is the exponent of negative one. A negative power is equivalent to the inverse of the same expression with a positive power. (Inverse means one divided by the same expression.)\\
+One of the most important rules for manipulating mathematics is the exponent of $-1$. A negative power is equivalent to the inverse of the same expression with a positive power. (Inverse means one divided by the same expression.)\\
 
 \begin{tcolorbox}
+	Examples:
+	
 	\hspace{1cm}$\displaystyle x^{-1}=\frac{1}{x}$ \hspace{2cm}$\displaystyle x^{-4}=\frac{1}{x^4}$\hspace{2cm}$\displaystyle\frac{2}{7y^3}=\frac{2y^{-3}}{7} $\hspace{2cm}$\displaystyle 2^{-3}=\frac{1}{2^3}=\frac{1}{8} $
 \end{tcolorbox}	
 
 \subsection*{Fractional Exponents}
 Exponents can be decimal numbers, integers, expressions, variables, and also fractions. Fractional exponents can written using a root sign, this is called surd form. $x^{\frac{1}{2}}$ is also known as the square root of $x$. Using rules of exponents you can see that $x^{\frac{1}{2}}\times x^{\frac{1}{2}}=x^{\frac{1}{2}+\frac{1}{2}}=x^1=x$. Converting between surd and index form is quite handy, especially when we get to differentiation using the power rule.
-\begin{tcolorbox}\begin{alignat*}{5}
-\textrm{Index form: }\qquad&x^{\frac{1}{2}}&\qquad\qquad x^{\frac{3}{4}} &\qquad\qquad 64^{\frac{1}{3}}&\qquad\qquad x^\frac{a}{b}\\
+\begin{tcolorbox}\begin{alignat*}{5}\textrm{Index form: }\qquad&x^{\frac{1}{2}}&\qquad\qquad x^{\frac{3}{4}} &\qquad\qquad 64^{\frac{1}{3}}&\qquad\qquad x^\frac{a}{b}\\
 \textrm{Surd form: }\qquad&\sqrt{x}&\qquad \sqrt[4]{x^3}&\qquad\qquad\sqrt[3]{64}&\qquad \sqrt[b]{x^a}
 \end{alignat*}\end{tcolorbox}
 
@@ -96,7 +97,8 @@ Factoring involves removing common terms from expressions and then writing them 
 \solution Remove a common factor of $2x$: $\,2x-4x^2+6x^3=2x(1-2x^2+3x^3)$\\
 \rule{6.8cm}{0.5pt}\\
 \example Factorise: $x^{2} -5 x -6$. Note that this is a quadratic equation and will factor into two sets of brackets.\\
-\solution For these examples you are required to find a pair of numbers that add together to give $ -5$ and multiply together to give $ -6$. In this case the numbers are $ -6$ and $ +1$. So the answer is
+\solution \\
+For these examples you are required to find a pair of numbers that add together to give $ -5$ and multiply together to give $ -6$. In this case the numbers are $ -6$ and $ +1$. So the answer is
 \begin{equation*}x^{2} -5 x -6 =\left (x -6\right ) \left (x +1\right )
 \end{equation*}
 This can easily be verified by expanding the brackets.\\
@@ -158,41 +160,81 @@ Lets write a precise definition of a function:
 \begin{tcolorbox}\begin{center}
 	A function $f(x)$ has exactly one output value, $y$, for any given input value, $x$.
 \end{center}\end{tcolorbox}
-In the line plotted above, we see that every $x$ value has only one corresponding $y$ value. This means that $y=2x$ is a function. Conversely, a relationship that has two or more output values is \textbf{not} a function. \\ 
-	
-The circle has two output values at $x=1$: both $y=+\sqrt{3}$ and $y=-\sqrt{3}$ are points on the circle.
-\begin{center}
-	\resizebox{0.5\textwidth}{0.5\textwidth}{%
-		\begin{tikzpicture}
-		\begin{axis}[
-		scale=1.2,
-		axis lines=center,%width=4cm,height=4cm,
-		ymax=3,ymin=-3,
-		xmax=3,xmin=-3,
-		xlabel=$x$,ylabel=$y$,%	ytick=\empty,	
-		]
-		\addplot[domain=-180:180, samples=100] ({2*cos(x)},{2*sin(x)});
-		\addplot[mark=*] coordinates {(1,1.732)};
-		\addplot[mark=*] coordinates {(1,-1.732)};
-		\addplot [mark=none,dashed] coordinates {(1, -3) (1, 3)};
-		\end{axis}
-		\end{tikzpicture}
-	}
-\end{center}
-The dashed line in the figure represents what is called the \textit{vertical line test}. If a vertical line passes through more than one point on a curve, then it is not considered a function.
+In the line plotted above, we see that every $x$ value has only one corresponding $y$ value. This means that $y=2x$ is a function. Conversely, a relationship that has two or more output values is \textbf{not} a function. In the figure below the circle has two output values at $x=1$; $a$ and $b$, and this violates the definition of a function.
+
+\begin{figure}[h]
+	\begin{subfigure}[b]{0.33\textwidth}
+		\centering
+		\resizebox{\linewidth}{!}{
+			\begin{tikzpicture}
+				\begin{axis}[
+					scale=1,
+					axis lines=center,
+					ymax=2,ymin=-2,
+					xmax=2,xmin=-2,
+					xlabel=$x$,ylabel=$y$,
+					xtick=\empty,ytick=\empty,
+					]
+					\addplot [<->,domain=-2:2, thick, samples=50, black] {-0.5*x-0.25};
+					\addplot [mark=none,dashed] coordinates {(1,-2) (1,2)};
+				\end{axis}	
+			\end{tikzpicture}		
+		}  \caption{linear function}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.33\textwidth}
+		\centering
+		\resizebox{\linewidth}{!}{
+			\begin{tikzpicture}
+				\begin{axis}[
+					scale=1,
+					axis lines=center,
+					ymax=1.5,ymin=-1.5,
+					xmax=180,xmin=-240,
+					xlabel=$x$,ylabel=$y$,
+					xtick=\empty,ytick=\empty,
+					]
+					\addplot[<->,thick,domain=-240:180, samples=100] {cos(x)};
+					\addplot [mark=none,dashed] coordinates {(100,-1.5) (100,1.5)};
+				\end{axis}	
+			\end{tikzpicture}
+		}  \caption{cosine function}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.33\textwidth}
+		\centering
+		\resizebox{\linewidth}{!}{
+			\begin{tikzpicture}
+				\begin{axis}[
+					scale=1.2,
+					axis lines=center,%width=4cm,height=4cm,
+					ymax=2.55,ymin=-2.55,
+					xmax=3,xmin=-3,
+					xlabel=$x$,ylabel=$y$,%	
+					%xtick=\empty,ytick=\empty,
+					]
+					\addplot[domain=-180:180, samples=100, thick] ({2*cos(x)},{2*sin(x)});
+					\addplot[mark=*] coordinates {(1,1.732)};
+					\addplot[mark=*] coordinates {(1,-1.732)};
+					\node[anchor=south] at (axis cs:1.7,1.732) {$f(x)=a$};
+					\node[anchor=south] at (axis cs:1.7,-2.2) {$f(x)=b$};
+					\addplot [mark=none,dashed] coordinates {(1, -3) (1, 3)};
+				\end{axis}
+			\end{tikzpicture}			
+		}  \caption{circle}
+	\end{subfigure}
+\end{figure}
+
+The dashed line in the figures represents what is called the \textit{vertical line test}. If a vertical line passes through more than one point on a curve, then it is not considered a function. The linear and cosine functions both pass the test and are considered \textit{functions}.
 
 \subsection*{Domain \& Range}
-The domain of a function is the set of all inputs that are valid; usually these are the $x-$values. The range of a function is the set of all outputs that are valid; usually these are the $y-$values. For the line we plotted above, $f(x)=2x$, any value could be substituted into the function, therefore the domain was all the real numbers. This is written as: Domain $x \in \mathbb{R}$. Similarly the range was all the $y-$values, or  $y \in \mathbb{R}$. We will return to domain and range later.
+The domain of a function is the set of all inputs that are valid; usually these are the $x-$values. The range of a function is the set of all outputs that are valid; usually these are the $y-$values. For the line we plotted above, $f(x)=2x$, any value could be substituted into the function, therefore the domain was all the real numbers. This is written as: Domain $x \in \mathbb{R}$. Similarly the range was all the $y-$values, or  $y \in \mathbb{R}$.
 
-\example What is the domain and range for the circle with equation $x^2+y^2=2^2$ ?\medskip\\
-\solution See the graph above. The domain is all the $x$-values that are included; this is everything between $-2$ and $+2$ inclusive. \medskip\\
+\example What is the domain and range for the circle with equation $x^2+y^2=2^2$?\medskip\\
+\solution See the graph for the circle (c) above. The domain is all the $x$-values that are included; this is everything between $-2$ and $+2$ inclusive. \medskip\\
 Therefore the domain is:
 \begin{flalign*}
 &&\{-2\le x\le 2,\,\, x&\in\mathbb{R}\}&\phantom{0000000000000}\\
 \text{And the range is similar:}&& \{-2\le y\le 2,\,\, y&\in\mathbb{R}\}&
 \end{flalign*}
-\clearpage
-%\rule{6.8cm}{0.5pt}\\
 \example Find the domain and range for the graphs:
 \begin{figure}[H]
 	\begin{subfigure}[b]{0.33\textwidth}
@@ -252,18 +294,36 @@ Therefore the domain is:
 		}  \caption{Parabolas}
 	\end{subfigure}
 \end{figure}
-\solution \\
+\solution
 \begin{tasks}(3)
-	\task $x=-4$ is \textbf{not} included in the domain, but everything bigger than $-4$ is.\\ Domain: $\{x>-4,\,\, x\in\mathbb{R}\}$\\ Range: $\{y\ge-2,\,\, y\in\mathbb{R}\}$
+	\task $x=-4$ is \textbf{not} included in the domain, but everything bigger than $-4$ is.\\ Domain:\\ $\{x>-4,\,\, x\in\mathbb{R}\}$\\ Range: $\{y\ge-2,\,\, y\in\mathbb{R}\}$
 	\task The arm of a root function goes to infinity (one-half of a parabola) in both positive $x$ and $y$.\\ Domain: $\{x\ge0,\,\, x\in\mathbb{R}\}$\\ Range: $\{y\ge0,\,\, y\in\mathbb{R}\}$\\or:\\
-	$\{0\le x\le\infty,\, x\in\mathbb{R}\}$\\
-	$\{0\le y\le\infty,\, y\in\mathbb{R}\}$
+	D: $\{0\le x\le\infty,\, x\in\mathbb{R}\}$\\
+	R: $\{0\le y\le\infty,\, y\in\mathbb{R}\}$
 	\task Here there is a gap between $y=-2$ and $y=2$. This must be excluded from the range.\\
 	Domain: $\{x\in\mathbb{R}\}$\\ 
-	Range:$\{y\ge2,\text{ and } y\le-2,\\y\in\mathbb{R}\}$\\or:\\
+	Range:\\$\{y\ge2,\text{ and } y\le-2,\\y\in\mathbb{R}\}$, or:\\
 	Range: $(\infty,-2] \text{ and } [2,\infty)$	
 \end{tasks}
 We have shown some different notation in the last example. The round brackets are exclusive $(\infty,\infty)$ and the square brackets are inclusive $[-2,2]$. Infinity is not a number and does not behave like one, so it always gets a round bracket; you can never reach infinity to include it.
+
+%---------------------------------------------------
+\subsection*{Number Classification}
+%---------------------------------------------------
+In the preceding examples for domain and range we said the set included ``all the real numbers'', denoted by the symbol $\mathbb{R}$. This includes all the rational and irrational numbers. Rational numbers are those can be expressed as a \textit{ratio}, or a fraction: $\frac{a}{b}$. The irrational numbers are those that cannot be expressed as a fraction, such as $\pi=3.14159265\dots$ because the decimal numbers never repeat. There are many other categories of numbers, for example:
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{@{}lll@{}}
+		\toprule
+		real     &$\mathbb{R}$& includes all rational and irrational numbers; the number line             \\
+		natural  &$\mathbb{N}$  & the ``counting'' numbers: starting at 1,2,3,$\dots$             \\
+		integers & $\mathbb{Z}$ & the plus/neg natural number and zero: $\dots, -2,-1,0,1,2,\dots$ \\
+		rational & $\mathbb{Q}$ & can be written as a fraction: $\frac{a}{b}, b\neq 0$\\
+		complex  & $\mathbb{C}$ & numbers in the complex plane including imaginary numbers: $\sqrt{-1}=i$ \\ \bottomrule
+	\end{tabular}
+\end{table}
+
 
 %---------------------------------------------------
 \section*{Linear Functions}
