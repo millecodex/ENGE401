@@ -10,11 +10,15 @@ Engineering Mathematics begins by reviewing foundational algebra. Many of the sk
 Some of the foundational algebraic properties will be covered here. This section is not comprehensive, and the student should refer to an introductory algebra book if some of these properties are not clear.
 
 %---------------------------------------------------
-\section*{Solving Equations}
+\section*{Order of Operations}
 %---------------------------------------------------
 An equation is a mathematical expression separated by two lines of \textit{equal} length ($=$). There must be symbols (either numbers or algebraic letters) on both sides of the equality. For example, $5x=25$ is an equation, however, $5(1)+25$ is just an expression. An equation can be solved; in the previous example, $x=5$ is a solution, whereas an expression may be simplified: $5(1)+25=30$. Conversely, factoring the quadratic $x^2-4x+4=(x-2)^2$ is \textit{not} solving the expression.
 
-When solving an equation the order of operations is important. The acronym \textbf{BEDMAS} is used for simplifying expressions starting with \textbf{B}rackets, \textbf{E}xponents, \textbf{D}ivision, \textbf{M}ultiplication, \textbf{A}ddition, and ending with \textbf{S}ubtraction. The \textit{reverse} is true for solving equations. First you must undo any subtraction or addition to isolate the variable.
+When evaluating a mathematical expression the order of operations is important. The acronym \textbf{BEDMAS} is used for simplifying expressions starting with \textbf{B}rackets, \textbf{E}xponents, \textbf{D}ivision, \textbf{M}ultiplication, \textbf{A}ddition, and ending with \textbf{S}ubtraction. This means you must resolve any brackets before evaluating exponents, e.g. $(3-1)^2=2^2=4$, and handle multiplication before addition, e.g. $3*4+2=12+2=14$.  
+%---------------------------------------------------
+\section*{Solving Equations}
+%---------------------------------------------------
+The \textit{reverse} is true for solving equations. First you must ``undo'' any subtraction or addition to isolate the variable.
 
 \example Solve the equation for $x$: $\phantom{a}x-11=7$\medskip\\
 \solution To isolate $x$ we will add 11 to both sides: $x-11\textbf{+11}=7\textbf{+11}$\\
@@ -28,9 +32,34 @@ And simplify: $\displaystyle x=\frac{5}{2}$
 \begin{tcolorbox}
 A general rule for solving equations is that you can do any mathematical operation to the equation as long as you do it to both sides. For example, add 5 to both sides, divide both sides by 2, multiply both sides by $\sin(x)$, raise to an exponent, and so on.
 \end{tcolorbox}
-\clearpage
 \example Find $x$: $x^2+1=3$\medskip\\
 \solution Subtract 1 from both sides: $x^2=2$. Recall \textsc{bedmas} in reverse order, now we have an exponent. To solve for a power of 2, take the square root of both sides: $\sqrt{x^2}=\sqrt{2}$, and simplify to $x=\sqrt{2}$.
+%---------------------------------------------------
+\section*{Rearranging Equations}
+%---------------------------------------------------
+Rearranging equations is a handy tool in analysis to see how variables influence relationship. Sometimes this is called isolating for $x$ or solving for some variable. The equation for a straight line is $y = mx + c$ (see page~\pageref{sec:linearFunction}) with two variables $x$ and $y$. The equation is arranged so that variable $y$ is alone on the left-hand side. This makes $y$ the subject. The equation can also be written where $x$ is the subject. Steps to rearrange are steps where all operations on the new subject are undone in reverse order of operations.\\
+\begin{center}
+\begin{tabular}{rcll}
+	\toprule
+	$y$&=&$ mx + c$&Operations on the \textit{new} subject $x$ are multiply by $m$ first then add $c$\\\medskip
+	$y-x$&=&$mx$&First, we undo `add $c$' by subtracting $c$ from both sides\\
+	$\displaystyle\frac{y-c}{m}$&=&$\displaystyle\frac{\cancel{m}x}{\cancel{m}}$&Then, we undo `multiply $m$' by dividing both sides by $m$\vspace{1em}\\
+	$x$&=&$\displaystyle\frac{y-c}{m}$&By convention, the subject is on the left-hand side of the equals sign\\
+	\bottomrule
+\end{tabular}
+\end{center}
+\example Make $v$ (velocity) the subject in the formula for kinetic energy: $E_k=\frac{1}{2}mv^2$\medskip\\
+\solution There is no addition or subtraction to handle here. First we will decouple (remove) the $\frac{1}{2}$ and the mass, $m$. Lastly we will take care of the exponent by using a square root.
+\begin{center}
+	\begin{tabular}{rc}
+		multiply both sides by 2:&$2E_k=mv^2$\vspace{1em}\\
+		divide both sides by $m$:&$\displaystyle\frac{2E_k}{m}=v^2$\vspace{1em}\\
+		square root both sides to isolate $v$:&$\displaystyle\sqrt{\frac{2E_k}{m}}=v$\\
+	\end{tabular}
+\end{center}
+
+
+
 %---------------------------------------------------
 \section*{Exponents}
 %---------------------------------------------------
@@ -294,6 +323,7 @@ Therefore the domain is:
 		}  \caption{Parabolas}
 	\end{subfigure}
 \end{figure}
+\clearpage
 \solution
 \begin{tasks}(3)
 	\task $x=-4$ is \textbf{not} included in the domain, but everything bigger than $-4$ is.\\ Domain:\\ $\{x>-4,\,\, x\in\mathbb{R}\}$\\ Range: $\{y\ge-2,\,\, y\in\mathbb{R}\}$
@@ -326,7 +356,7 @@ In the preceding examples for domain and range we said the set included ``all th
 
 
 %---------------------------------------------------
-\section*{Linear Functions}
+\section*{Linear Functions}\label{sec:linearFunction}
 %---------------------------------------------------
 Linear functions can represented nicely as a straight line on a standard Cartesian ($x,y$) coordinate system. The following are all examples of linear functions, and not surprisingly, can be drawn as a lines.
 
