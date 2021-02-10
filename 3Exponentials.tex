@@ -325,25 +325,26 @@ Where $a$ and $b$ are real numbers, $x$ is the unknown variable we are trying to
 	\item [Step 4]
 	Solve the equation you obtain. \end{description}
 \clearpage
-\textbf{Example 1} Solve $3^{x} =5$. This is an example of case $3$ above.\medskip\\ 
+\textbf{Example 1} Solve $3^{x} =5$. This is an example of case $3$ above.\medskip\\
 \solution Two methods will be explored below:
-\begin{tasks}[label-width={5em}](2)
-\task[Method 1] \\Take logarithms to the base $10$\\
+\begin{multicols}{2}
+Method 1: Take logarithms to the base $10$
 \begin{align*}\log  3^{x} &  = \log  5 \\
 x \log  3 &  = \log  5 \\
 x &  = \frac{\log  5}{\log  3} \\
-&  \approx 1.464973521 \approx 1.46\text{(2 dp)}\end{align*}
-\task[Method 2] \\Take logarithms to the base $e$\\
-\begin{align*}\ln  3^{x} &  = \ln  5 \\
+&  \approx 1.46497\end{align*}\\
+
+% multicols is so frustrating!
+\columnbreak{Method 2: Take logarithms to the base $e$ \begin{align*}\ln  3^{x} &  = \ln  5 \\
 x \ln  3 &  = \ln  5 \\
 x &  = \frac{\ln  5}{\ln  3} \\
-&  \approx 1.464973521 \approx 1.46\text{(2 dp)}\end{align*}
-\end{tasks}
-This shows it is immaterial whether you take logarithms to base $10$ or logarithms to base $e$. 
-\begin{tasks}[label-width={6em}](2)
-\task[Example 2]
-Solve $3^{2 x +1} =5$\\
-\solution Take logarithms to the base 10:
+&  \approx 1.46497\end{align*}}
+\end{multicols}
+This shows the same result whether you take logarithms to base $10$ or logarithms to base $e$. 
+\begin{multicols}{2}
+\textbf{Example 2}\medskip
+\phantom{1}Solve $3^{2 x +1} =5$\\
+\solution Take logarithms to base 10:
 \begin{align*}\log  3^{2 x +1} &  = \log  5 \\
 \left (2 x +1\right ) \log  3 &  = \log  5 \\
 2 x +1 &  = \frac{\log  5}{\log  3} \\
@@ -351,8 +352,8 @@ Solve $3^{2 x +1} =5$\\
 x &  = \frac{1}{2} \left (\frac{\log  5}{\log  3} -1\right ) \\
 &  \approx 0.2325 \end{align*}
 
-\task[Example 3]
-Solve $4 \left (1 +10^{5 x}\right ) =9$\\
+\textbf{Example 3}\medskip
+\phantom{1}Solve $4 \left (1 +10^{5 x}\right ) =9$\\
 \solution This must first be rearranged:
 \begin{align*}1 +10^{5 x} &  = \frac{9}{4} =2.25 \\
 10^{5 x} &  = 2.25 -1 =1.25 \\
@@ -360,49 +361,49 @@ Solve $4 \left (1 +10^{5 x}\right ) =9$\\
 5 x &  = \log  1.25 \\
 x &  = \frac{1}{5} \log  1.25 \\
 &  \approx 0.01938 \end{align*}
-\end{tasks}
+\end{multicols}
 
-\textbf{Example 4} Solve $\frac{10}{1 +e^{ -x}} =3$.\medskip\\
+\textbf{Example 4} Solve \[\frac{10}{1 +e^{ -x}} =3\]
 \solution
 \begin{align*}1 +e^{ -x} &  = \frac{10}{3} \\
 e^{ -x} &  = \frac{10}{3} -1 \\
 &  = \frac{10 -3}{3} =\frac{7}{3} \\
 -x &  = \ln  7 -\ln  3 \\
-x &  \approx  -0.85\text{(2 dp)}\end{align*}
+x &  \approx  -0.85\text{ (2 dp)}\end{align*}
 
-
+\clearpage
 \subsection*{Solving Logarithmic Equations}
 Whereas exponential equations have the unknown variable in an exponent, logarithmic equations are equations containing the logarithm of an unknown variable. 
 \begin{tcolorbox}
 \begin{description}
 	\item [Step 1] Recognise you are dealing with a logarithmic equation by inspecting the problem to see if you have a logarithm of a term containing the unknown variable. 	
 	\item [Step	2] Rearrange the equation until it is in the form $\log _{a} \left (\text{unknown}\right ) =b$. 	
-	\item [Step 3] Take	``antilogarithms.'' That is, use the conversion: $\log _{a}x=b$ then $a^b=x$. 	
+	\item [Step 3] Take	`antilogarithms.' That is, use the conversion: $\log _{a}x=b$ then $a^b=x$. 	
 	\item [Step 4] Solve the equation for the unknown variable.
 \end{description}
 \end{tcolorbox}
 
 
-\textbf{Example 1} Solve $\ln  x =5$ .\medskip\\
+\textbf{Example 1} Solve $\ln  x =5$\medskip\\
 \solution Take antilogarithms with base $e$:
 \begin{align*}e^{5} &  = x \\
-x &  \approx 148.4131591 \approx 148.4\text{(1 dp)}\end{align*}
+x &  \approx 148.4131\end{align*}
 
-\textbf{Example 2} Solve $5 +4 \log  \left (5 x\right ) =17$.\medskip\\
-\solution Isolate the log and solve:
+\textbf{Example 2} Solve $5 +4 \log  \left (5 x\right ) =17$
+\begin{multicols}{2}\solution Isolate the log and solve:
 \begin{align*}4 \log  \left (5 x\right ) &  = 17 -5 =12 \\
 \log  5 x &  = 3 \\
 \text{}10^{3} &  = 5 x \\
 x &  = \frac{1000}{5} =200\end{align*}
 
-Check:\ Substitute $x =200$
+Check: Substitute $x =200$
 \begin{align*}\text{LHS} &  = 5 +4 \log  \left (5 \times 200\right ) \\
 &  = 5 +4 \log  1000 =5 +4 \log  10^{3} \\
 &  = 5 +4 \times 3 =5 +12 =17 =\text{RHS}\end{align*}
+\end{multicols}
 
-\begin{tasks}[label-width={6em}](2)
-	\task[Example 3]\\
-Solve $\log  x +\log  \left (x -1\right ) =\log  4 x$\\ \solution
+\begin{multicols}{2}
+\textbf{Example 3} Solve $\log  x +\log  \left (x -1\right ) =\log  4 x$\\ \solution
 \begin{align*}\log  x +\log  \left (x -1\right ) -\log  4 x &  = 0 \\
 \log  \frac{x \left (x -1\right )}{4 x} &  = 0 \\
 \log  \frac{1}{4} \left (x -1\right ) &  = 0 \\
@@ -411,18 +412,19 @@ x -1 &  = 4;\, x=5\end{align*}
 Check:
 \begin{align*}\text{LHS} &  = \log  5 +\log  4 =\log  \left (5 \times 4\right ) =\log  20 \\
 \text{RHS} &  = \log  4 \times 5 =\log  20 =\text{LHS}\end{align*}
+\columnbreak
 
-\task[Example 4] The velocity of a sky diver $t$ \\seconds after jumping is given by
+\textbf{Example 4} The velocity of a sky diver $t$ seconds after jumping is given by
 \begin{equation*}v \left (t\right ) =80 \left (1 -e^{ -0.2 t}\right )
 \end{equation*}
-After how many seconds is the velocity $70$ $\mbox{ft}$/$\mbox{s}$?\solution
-\begin{align*}70 &  = 80 \left (1 -e^{ -0.2 t}\right ) \\
+After how many seconds is the velocity $70$ $\mbox{ft}$/$\mbox{s}$?\\
+\solution\begin{align*}70 &  = 80 \left (1 -e^{ -0.2 t}\right ) \\
 \frac{70}{80} &  = 1 -e^{ -0.2 t} \\
 e^{ -0.2 t} &  = 1 -\frac{70}{80} \\
 &  = 1 -\frac{7}{8} =\frac{1}{8} =0.125 \\
 \text{} -0.2 t &  = \ln  0.125 \\
 t &  = \frac{\ln  0.125}{ -0.2} \approx 10.39\text{}\mbox{s}\end{align*}
-\end{tasks}
+\end{multicols}
 
 %---------------------------------------------------
 % Exponential Modelling
