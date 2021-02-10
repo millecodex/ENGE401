@@ -77,7 +77,7 @@ A right angled triangle is a three-sided figure (`tri-gon') with one of the inte
 %---------------------------------------------------
 % Pythagorean theorem
 %---------------------------------------------------
-\section*{Pythagoras}
+\section*{Pythagoras}\label{sec:pythagoras}
 Pythagoras is one of the most well known historical figures in mathematics and philosophy, primarily for his eponymous theorem. Given a right-angled triangle, the square of the hypotenuse equals the sum of the squares of the other sides.
 \begin{tcolorbox}[colback=white]
 	\begin{multicols}{2}
@@ -327,7 +327,8 @@ You will be aware that these curves repeat this pattern every $2 \pi $ where $x$
 Aside: instead of ``for any integer $n$" we can write $ \forall n \in \mathbb{Z}$. A function that displays this characteristic is described as \emph{periodic} and for $y =\sin x$ and $y =\cos x$ the \emph{period} is $2 \pi $. 
 
 \subsection*{Transformations}
-The following six transformations can be applied to any function including sine, cosine, and tangent. 
+The following six transformations can be applied to any function including sine, cosine, and tangent.
+% can't get bullets to show up here...future work
 \begin{tasks}[style=itemize](3)
 \task Vertical shift 
 \task Horizontal shift 
@@ -537,7 +538,7 @@ c &  = \frac{a \sin  C}{\sin  A} \\
 \end{tasks}
 
 \subsection*{The Cosine Rule}
-In this section we will state and prove the Cosine Rule (which is called "The Law of Cosines" in the textbook). The proof is given here for completeness. You will not be tested on your ability to reproduce it. The section will give examples where the Cosine Rule is used to solve problems using the \emph{triangle of vectors} and we will include revision of \emph{bearings} and the use of trigonometry in \emph{navigation}. 
+The Cosine Rule, sometimes called `The Law of Cosines', is useful for a non-right triangle when we know all three side lengths without an angle, or two sides and the angle between them.
 
 \begin{tcolorbox}
 	For any triangle side sides $a$, $b$, and $c$ and angle $A$ opposite side $a$:\\
@@ -545,6 +546,7 @@ In this section we will state and prove the Cosine Rule (which is called "The La
 		$a^{2} =b^{2} +c^{2} -2 b c \cos  A$
 	\end{center}	
 \end{tcolorbox}
+Note the similarity to the Pythagorean theorem (see page~\pageref{sec:pythagoras}).
 
 \subsection*{Proof of The Cosine Rule}
 \textbf{To prove:} For any triangle $ \Delta A B C\text{,}$ $a^{2} =b^{2} +c^{2} -2 b c \cos  A$ \\ 
