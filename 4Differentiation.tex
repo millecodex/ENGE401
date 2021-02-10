@@ -468,22 +468,21 @@ We have from the Product Rule
 \begin{equation*}\left (f g\right )^{ \prime } =f g^{ \prime } +g f^{ \prime }
 \end{equation*}
 
-By inspection we can see that of the four expressions on the right side of this equation $f$, $g$ and $f^{ \prime }$ can be put into the equation immediately and only $g^{ \prime }$ requires some effort to be worked out. 
-
-$g (x)$ is a composite function so $g^{ \prime } (x)$ is computed using the Chain Rule. 
+We can see that $f$, $g$ and $f^{ \prime }=1$ can be substituted immediately and only $g^{ \prime }$ requires some effort to be worked out. $g (x)$ is a composite function so $g^{ \prime } (x)$ is computed using the Chain Rule. 
 
 Let $u = -x^{2}$ then $\frac{d u}{d x} = -2 x$. Also $g (u) =e^{u}$ so $\frac{d g}{d u} =e^{u}$.
+\begin{multicols}{2}
 \begin{align*}\frac{d g}{d x} &  = \frac{d g}{\cancel{d u}}\cdot \frac{\cancel{d u}}{d x} \\
  &  = e^{u} \cdot  -2 x \\
  &  = e^{ -x^{2}} \cdot  -2 x \\
  &  =  -2 x\; e^{ -x^{2}} \\
 \text{So }g^{ \prime } (x) &  =  -2 x\; e^{ -x^{2}}\end{align*}
-
 Putting this all together
 \begin{align*}\left (f g\right )^{ \prime } &  = f g^{ \prime } +g f^{ \prime } \\
  &  = x \cdot  -2 x\; e^{ -x^{2}} +e^{ -x^{2}} \cdot 1 \\
  &  = e^{ -x^{2}} \left [1 -2 x^{2}\right ]\end{align*}
-\rule{6.8cm}{0.5pt}\\
+\end{multicols}
+
 \begin{multicols}{2}
 \example Find $a'(x)$ given \\$a(x)= 4\pi x\tan (x-\frac{\pi}{4})$\medskip\\
 \solution Use the product and chain rules \\
