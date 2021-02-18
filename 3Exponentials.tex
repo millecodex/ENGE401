@@ -2,62 +2,83 @@
 % Exponential (& Logarithmic) Functions
 %---------------------------------------------------
 \chapter[Exponential Functions]{Exponential \& Logarithmic \\Functions}
-We defined the polynomial $a^{x}$ in chapter 1, however $x$ was restricted to rational numbers. We now want to explore $a^{x}$ where and $x$ is any real number. 
+We defined the polynomial $a^{x}$ in Chapter 1 (page~\pageref{sec:polynomials}), however $x$ was restricted to rational numbers. (Recall rational numbers can be expressed as a fraction: $\frac{a}{b}$.) We now want to explore $a^{x}$ where and $x$ is any real number. Consider $y =2^{x}$. This is an \textit{exponential} function because the variable, $x$, is in the exponent. The graph is shown below. Notice it will never go below $y=0$.
 
-We can show that values exist simply by pressing buttons on the calculator or drawing a graph using \desmos, however an intuitive understanding can be obtained by considering appropriate values. 
-
-Consider $2^{\pi }$. We know $\pi  =3.141592654 \ldots $. $2^{\pi }$ should be between $2^{3}$\ and $2^{4}$. That is between $8$ and $16$. We can evaluate 
-
-\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
-\begin{tabular}[c]{ll}$2^{3.1}$  & $8.5741877$  \\
-	$2^{3.14}$  & $8.815240927$  \\
-	$2^{3.141}$  & $8.821353305$  \\
-	$2^{3.1415}$  & $8.824411082$  \\
-	$2^{3.14159}$  & $8.824961595$  \\
-	$2^{3.141592}$  & $8.824973829$  \\
-	$2^{3.1415926}$  & $8.824977499$  \\
-	$2^{3.14159265}$  & $8.824977805$  \\
-	$2^{3.141592654}$  & $8.82497783$
-\end{tabular}
-
-We could continue this process. If we enter $2^{\pi }$ on the calculator the answer obtained is
-\begin{equation*}2^{\pi } =8.824977827
-\end{equation*}
-
-The graph of $y =2^{x}$ is shown below. Notice it will never go below $y=0$.\\ 
-\begin{center}
-	\includegraphics[width=3.7758in, height=2.1378in,]{L4SZ282M}
-\end{center}
-
-Recall $y =f (x)$ is a function and $y =f ( -x)$ is the same function with every $x$ replaced with $ -x$, i.e. $y =f ( -x)$ is the reflection of $y =f (x)$ in the $y$-axis. 
-
-If $y =2^{x}$ then $y =2^{ -x}$ is the reflection of $y =2^{x}$ in the $y$-axis. But $y =2^{ -x} =\left (2^{ -1}\right )^{x} =\genfrac{(}{)}{}{}{1}{2}^{x}$. 
-
-\textbf{Graphing Exercise} Use Desmos to verify that $y =2^{-x}$ and $y =\frac{1}{2}^x$ are equivalent. 
+\begin{multicols}{2}
+	\begin{center}{\renewcommand{\arraystretch}{1.25}%
+		\begin{tabular}{clr}  
+			\toprule
+			variable&function&\\
+			$x$&$f(x)=2^x$& \\
+			\midrule
+			$-4$    & $f(-4)=2^{-4}$&$=0.0625$\\
+			$-3$    & $f(-3)=2^{-3}$&$=0.125$\\
+			$-2$    & $f(-2)=2^{-2}$&$=0.25$\\
+			$-1$ & $f(-1)=2^{-1}$&$=0.5$ \\
+			$0$ & $f(0)=2^0$&$=1$ \\
+			$1$ & $f(1)=2^1$&$=2$ \\
+			$2$ & $f(2)=2^2$&$=4$ \\
+			\bottomrule
+		\end{tabular}}
+		\captionof*{tabular}{A \textbf{table of values} for the function $f(x)=2^x$}
+	\end{center}
+	\columnbreak
+	\begin{center}
+		\begin{tikzpicture}\label{fig:y2x}
+			\begin{axis}[
+				scale=1,
+				axis lines=center,
+				ymax=4.5,ymin=0,
+				xmax=4.5,xmin=-4.5,
+				xlabel=$x$,ylabel=$y$,
+				]
+				\addplot [<->,domain=-4.5:2.1,thick, samples=100, black] {2^x};
+				\node[anchor=south] at (axis cs:1.8,0.5) {$f(x)=2^x$};
+				\addplot[mark=*] coordinates {(-4,0.0625)};
+				\addplot[mark=*] coordinates {(-3,0.125)};
+				\addplot[mark=*] coordinates {(-2,0.25)};
+				\addplot[mark=*] coordinates {(-1,0.5)};
+				\addplot[mark=*] coordinates {(0,1)};
+				\addplot[mark=*] coordinates {(1,2)};
+				\addplot[mark=*] coordinates {(2,4)};
+			\end{axis}
+		\end{tikzpicture}
+		\captionof*{tikzpicture}{A \textbf{plot of the points} showing an exponential relationship}
+	\end{center}
+\end{multicols}
 
 \subsection*{The Exponential Function $f(x)=a^x$}
-Let $y =a^{x}$ where $a >0$ 
+Let $y =a^{x}$ where $a >0$. Here, $f(x) =a^{x}$ is called an \emph{exponential} function where $a$ is called the \emph{base}. The domain is the set of real numbers, $\mathbb{R}$. The range is $\left (0 ,\infty \right )$. The $x$-axis forms an asymptote. 
+\begin{multicols}{2}
+	\begin{center}
+		\begin{tikzpicture}\pgfplotsset{ticks=none}
+			\begin{axis}[
+				scale=0.8,
+				axis lines=center,
+				ymax=10,ymin=-0.5,
+				xmax=6,xmin=-4,
+				xlabel=$x$,ylabel=$y$,
+				]
+				\addplot [->,domain=-3.2:5,thick, samples=100, black] {(0.5)^x};
+				\node[anchor=south] at (axis cs:2,2) {decay};
+			\end{axis}
+		\end{tikzpicture}\end{center}\captionof*{tikzpicture}{When $0<a<1$, $y=a^{x}$ `decays' as $x$ gets big}\columnbreak
+	\begin{center}
+		\begin{tikzpicture}\pgfplotsset{ticks=none}
+			\begin{axis}[
+				scale=0.8,
+				axis lines=center,
+				ymax=10,ymin=-0.5,
+				xmax=5,xmin=-5,
+				xlabel=$x$,ylabel=$y$,
+				]
+				\addplot [->,domain=-5:3.2,thick, samples=100, black] {2^x};
+				\node[anchor=south] at (axis cs:3,1) {growth};
+			\end{axis}
+		\end{tikzpicture}\end{center}
+	\captionof*{tikzpicture}{When $a>1$, $y=a^{x}$ `grows' as $x$ gets big}
+\end{multicols}
 
-\begin{center}
-\begin{tabular}{lcl}
-	\toprule
-	When $0 <a <1$  & $y =a^{x}$ looks like  &    
-	\includegraphics[ width=1.9086in, height=1.0853in,]{L4SZ282O}
-	\\
-	\midrule
-	When $a =1$  & $y =a^{x} =1^{x} =1$ looks like  &    
-	\includegraphics[ width=1.9095in, height=1.1234in,]{L4SZ282P}
-	\\
-	\midrule
-	When $a >1$  & $y =a^{x}$ looks like  &    
-\includegraphics[ width=1.9372in, height=1.0741in,]{L4SZ282Q}
-	\\
-	\bottomrule
-\end{tabular}
-\end{center}
-
-$f (x) =a^{x}$ is called an \emph{exponential} function. $a$ is called the \emph{base} of the exponential function. The domain
-is $\mathbb{R}$. the range is $\left (0 ,\infty \right )$. The $x$-axis is an asymptote. 
 
 \example Find the equation of the exponential function that passes through $\left (0 ,1\right )$ and $\left (3 ,125\right )$. 
 
@@ -69,20 +90,22 @@ a &  = \sqrt[{3}]{125} =5\\
 
 \subsection*{Transformations of Exponential Functions}
 Recall the transformations we have met so far:
-\begin{center}
+\begin{center}{\renewcommand{\arraystretch}{1.3}
 \begin{tabular}{ll}Vertical stretch of $a$  & $y =f (x) \leadsto y =a f (x)$  \\
 	Horizontal stretch of $\frac{1}{b}$  & $y =f (x) \leadsto y =f (b x)$  \\
 	Vertical shift of $c$ $\uparrow $  & $y =f (x) \leadsto y =f (x) +c$  \\
 	Horizontal shift of $d$ $ \longrightarrow $  & $y =f (x) \leadsto y =f (x -d)$  \\
 	Reflection in $x$-axis  & $y =f (x) \leadsto y = -f (x)$  \\
 	Reflection in $y$-axis  & $y =f (x) \leadsto y =f ( -x)$
-\end{tabular}
+\end{tabular}}
 \end{center}
 Each of these transformations can be applied to an exponential function. Horizontal shifts are `attached' to the $x$ with brackets and opposite to convention. A shift to the right is represented by negative, e.g., $y=2^(x-3)$. Vertical shifts are positive to shift up and negative to shift down.
 \begin{center}\includegraphics[width=14cm]{expTrans1}\end{center}
 Reflections are accomplished by multiplying by negative one. To reflect in the $x$-axis, multiply the whole function by $-1$, e.g., $y=-2^x$. And for a reflection in the $y$-axis multiply the $x$ variable by $-1$, e.g., $y=2^{-x}$.
 \begin{center}\includegraphics[width=14cm]{expTrans2}\end{center}
-See the lecture notes for more examples.
+See the lecture notes for more examples.\\
+
+\exercise Use Desmos to verify that $y =2^{-x}$ and $y =\left(\frac{1}{2}\right)^x$ are equivalent. 
 %---------------------------------------------------
 % the natural exponential function e^x
 %---------------------------------------------------
@@ -115,11 +138,32 @@ Repeat this process for shorter and shorter time intervals. What is the most mon
 	\bottomrule
 \end{tabular}
 \end{center}
+\clearpage
+\begin{multicols}{2}
+As a function, $f(x)=e^x$, is plotted. Note the similarity to $y=2^x$ (page~\pageref{fig:y2x}). 
 
-As a function, $f(x)=e^x$, is plotted below:
+The exponential function, $e$, is naturally occurring, and useful mathematically as we will see in the next chapter on differentiation.
+
+Replacing the $x$ axis with time we can imagine the compounding benefits (or detriments) of the exponential function as time increases.
+\columnbreak
 \begin{center}
-	\includegraphics[width=8cm]{exp1}
-\end{center}
+	\begin{tikzpicture}\pgfplotsset{ticks=none}
+		\begin{axis}[
+			scale=1,
+			axis lines=center,
+			ymax=9.5,ymin=-0.5,
+			xmax=5,xmin=-5,
+			xlabel=$x$,ylabel=$y$,
+			]
+			\addplot [<->,domain=-5:2.2,thick, samples=100, black] {e^x};
+			\node[anchor=south] at (axis cs:3,5) {$y=e^x$};
+			\addplot[mark=*] coordinates {(0,1)};
+			\node[anchor=south] at (axis cs:-1,1) {$(0,1)$};
+			\addplot[mark=*] coordinates {(1,2.718)};
+			\node[anchor=south] at (axis cs:2,2.5) {$(1,e)$};
+		\end{axis}
+\end{tikzpicture}\end{center}
+\end{multicols}
 %---------------------------------------------------
 % Logarithmic Functions
 %---------------------------------------------------
@@ -324,7 +368,7 @@ Where $a$ and $b$ are real numbers, $x$ is the unknown variable we are trying to
 	
 	\item [Step 4]
 	Solve the equation you obtain. \end{description}
-\clearpage
+
 \textbf{Example 1} Solve $3^{x} =5$. This is an example of case $3$ above.\medskip\\
 \solution Two methods will be explored below:
 \begin{multicols}{2}
@@ -362,7 +406,7 @@ x &  = \frac{1}{2} \left (\frac{\log  5}{\log  3} -1\right ) \\
 x &  = \frac{1}{5} \log  1.25 \\
 &  \approx 0.01938 \end{align*}
 \end{multicols}
-
+\clearpage
 \textbf{Example 4} Solve \[\frac{10}{1 +e^{ -x}} =3\]
 \solution
 \begin{align*}1 +e^{ -x} &  = \frac{10}{3} \\
@@ -371,7 +415,6 @@ e^{ -x} &  = \frac{10}{3} -1 \\
 -x &  = \ln  7 -\ln  3 \\
 x &  \approx  -0.85\text{ (2 dp)}\end{align*}
 
-\clearpage
 \subsection*{Solving Logarithmic Equations}
 Whereas exponential equations have the unknown variable in an exponent, logarithmic equations are equations containing the logarithm of an unknown variable. 
 \begin{tcolorbox}
@@ -401,7 +444,7 @@ Check: Substitute $x =200$
 &  = 5 +4 \log  1000 =5 +4 \log  10^{3} \\
 &  = 5 +4 \times 3 =5 +12 =17 =\text{RHS}\end{align*}
 \end{multicols}
-
+\clearpage
 \begin{multicols}{2}
 \textbf{Example 3} Solve $\log  x +\log  \left (x -1\right ) =\log  4 x$\\ \solution
 \begin{align*}\log  x +\log  \left (x -1\right ) -\log  4 x &  = 0 \\
@@ -453,7 +496,7 @@ example is about the spread of an infectious disease in a small city whose popul
 \end{tasks}
 
 The graph has distinctive characteristics. It starts at a particular non-zero value (when $t =0$) and increases slowly at first then more rapidly. It slows down after a time and levels off because the exponential function in the denominator $ \leadsto 0$ when $t \leadsto \infty $. Graphs with these characteristics are called logistic curves. The particular model is called a logistic growth model. 
-\clearpage
+
 \examq\medskip \\In the winter of 2019 the number of people contracting the measles virus grew substantially in the Auckland region. The plot shows the number of confirmed cases with data indicating 546 cases as of August 20, 2019.
 \begin{center}
 	\includegraphics[width=11cm]{measles}
