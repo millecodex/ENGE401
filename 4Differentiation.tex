@@ -2,6 +2,8 @@
 % Differentiation
 %---------------------------------------------------
 \chapter[Differentiation]{Differentiation}
+
+
 \begin{figure}[h]\begin{center}
 		\begin{tikzpicture}
 		\begin{axis}[
@@ -25,20 +27,46 @@
 		\caption{The function is smooth everywhere; there are no gaps or sharp transitions, and therefore it has a well defined tangent line at any point. One of these tangents is shown at $x=a$. The function that defines \textit{all} possible tangents is called the derivative.}\end{center}
 \end{figure}
 
+\vspace{1cm}
+Before sharpening our pencil consider the \href{https://calculusmadeeasy.org/prologue.html}{Prologue} to a book titled ``\emph{Calculus Made Easy\footnote{The full and verbose title: Calculus Made Easy: Being a Very-Simplest Introduction to Those Beautiful Methods of Reckoning Which are Generally Called by the Terrifying Names of the Differential Calculus and the Integral Calculus.}}" by Silvanus P. Thompson published in 1910:
+
+\begin{quotation}
+	Considering how many fools can calculate, it is surprising that it should be thought either a difficult or a tedious task for any other fool to learn how to master the same tricks.
+
+	Some calculus-tricks are quite easy. Some are enormously difficult. The fools who write the textbooks of advanced mathematics — and they are mostly clever fools — seldom take the trouble to show you how easy the easy calculations are. On the contrary, they seem to desire to impress you with their tremendous cleverness by going about it in the most difficult way.
+
+	Being myself a remarkably stupid fellow, I have had to unteach myself the difficulties, and now beg to present to my fellow fools the parts that are not hard. Master these thoroughly, and the rest will follow. What one fool can do, another can.
+\end{quotation}
+\clearpage
+Thompson goes on to describe the differential operator, `d':
+
+\begin{quotation}
+	The preliminary terror, which chokes off most fifth-form boys from even attempting to learn how to calculate, can be abolished once for all by simply stating what is the meaning–in common-sense terms–of the two principal symbols that are used in calculating.
+
+	These dreadful symbols are:\medskip
+
+	(1) \textbf{d} which merely means “a little bit of.”\medskip
+
+	Thus d$x$ means a little bit of $x$; or d$u$ means a little bit of $u$. Ordinary mathematicians think it more polite to say “an element of,” instead of “a little bit of.” Just as you please. But you will find that these little bits (or elements) may be considered to be indefinitely small.
+\end{quotation}
+
+For the second symbol, the integrand, $\int$, you will have to jump to the next Chapter.\\
+\rule{\textwidth}{0.4pt}
+
 \section*{Rate of Change}
-We will begin with the concept of average speed. If you travel a distance of 120 km in 2 hours then your average speed is 60 kph. 
+We will begin with the concept of average speed. If you travel a distance of 120 km in 2 hours then your average speed is 60 kph.
 \begin{center}
 Average speed $ =\displaystyle\frac{\text{distance travelled}}{\text{time elapsed}}$
 \end{center}\par
-A distance/time graph can be drawn. The average speed can be expressed using function notation 
+A distance/time graph can be drawn. The average speed can be expressed using function notation
 \begin{center}
 Average speed $\displaystyle =\frac{s (b) -s (a)}{b -a}$
 \end{center}\par
-Finding the average rate of change is important in many contexts and in fact the average rate of change can be defined for any function. 
+Finding the average rate of change is important in many contexts and in fact the average rate of change can be defined for any function.
 
 The average rate of change of the function $\displaystyle y =f (x)$ is $\displaystyle\frac{\text{change in }y}{\text{change in }x}$ or $\displaystyle\frac{f (b) -f (a)}{b -a}$\hfill(1)
 
-The average rate of change is the slope of the \textbf{secant line} between $x =a$ and $x =b$ on the graph of $f$,\ that is the slope of the line that passes through $(a ,f (a))$ and $(b ,f (b))$. 
+The average rate of change is the slope of the \textbf{secant line} between $x =a$ and $x =b$ on the graph of $f$,\ that is the slope of the line that passes through $(a ,f (a))$ and $(b ,f (b))$.
 \clearpage
 \example Calculate the average rate of change for the function $f (x) =x^{2} +4$ between the following points:
 \begin{tasks}(3)
@@ -65,13 +93,13 @@ Can this be simplified further?
 % tangents
 %---------------------------------------------------
 \subsection*{Tangents}
-We now investigate the process of changing the value of $(b -a)$ in formula (1) the slope of the secant approaches the slope of the tangent at $x =a$. However, as $b -a$ is made smaller and smaller, eventually it will get to zero. This is necessary to find the exact tangent, except now the denominator of equation (1) is zero! A new definition can help us avoid this \textit{math error}. 
+We now investigate the process of changing the value of $(b -a)$ in formula (1) the slope of the secant approaches the slope of the tangent at $x =a$. However, as $b -a$ is made smaller and smaller, eventually it will get to zero. This is necessary to find the exact tangent, except now the denominator of equation (1) is zero! A new definition can help us avoid this \textit{math error}.
 \begin{tcolorbox}
 \textbf{Definition:} The tangent line to the curve $y =f (x)$ at the point $P (a ,f (a))$ is the line through $P$ with slope \[m =\Lim{x\to a}\frac{f (x) -f (a)}{x -a}\] provided that the \textit{limit} exists. $\Lim{x\to a}$ is the ``limit as $x$ approaches $a$.''
 \end{tcolorbox}
-This means that as the value of $x$ gets close to $a$ the function remains smooth. Imagine zooming in on a function, from far away it may appear smooth, but up close it could have some gaps or discontinuities.  Limits do not exist at sharp transitions in a graph, or where the function does not exist (think of piecewise functions). 
+This means that as the value of $x$ gets close to $a$ the function remains smooth. Imagine zooming in on a function, from far away it may appear smooth, but up close it could have some gaps or discontinuities.  Limits do not exist at sharp transitions in a graph, or where the function does not exist (think of piecewise functions).
 
-We sometimes refer to the slope of the tangent line to a curve at a point as the slope of the curve at that point. The idea is that if we zoom in far enough towards the point then the curve looks almost like a straight line. The more we zoom in the more the parabola looks like a straight line. 
+We sometimes refer to the slope of the tangent line to a curve at a point as the slope of the curve at that point. The idea is that if we zoom in far enough towards the point then the curve looks almost like a straight line. The more we zoom in the more the parabola looks like a straight line.
 
 \begin{figure}\begin{center}
 		\includegraphics[width=12cm]{secant2tangent}
@@ -91,23 +119,23 @@ This is limit notation, $\Lim{h\to 0} $, and we would say `the limit as $h$ appr
 % Derivatives from 1st Principles
 %---------------------------------------------------
 \section{Derivatives from 1st Principles}
-Because the expression $\Lim{h \to 0}\frac{f (a +h) -f (a)}{h}$ occurs so widely it is given a special name and notation. 
+Because the expression $\Lim{h \to 0}\frac{f (a +h) -f (a)}{h}$ occurs so widely it is given a special name and notation.
 
-The derivative of a function at a number $a$, denoted by $f^{ \prime } (a)$ is 
+The derivative of a function at a number $a$, denoted by $f^{ \prime } (a)$ is
 \begin{tcolorbox}
 Definition of the derivative:\qquad$\displaystyle f^{ \prime } (a) =\Lim{h \to 0}\frac{f (a +h) -f (a)}{h}$
 \end{tcolorbox}
 
-The process of finding the derivative using the above definition is called finding the derivative \textit{from first principles}. So far we have found a derivative of a function $f$ at a fixed number $a$. If we replace $a$ in this equation with a variable $x$ we obtain 
+The process of finding the derivative using the above definition is called finding the derivative \textit{from first principles}. So far we have found a derivative of a function $f$ at a fixed number $a$. If we replace $a$ in this equation with a variable $x$ we obtain
 \[f^{ \prime } (x) =\Lim{h \to 0}\frac{f (x +h) -f (x)}{h}\tag*{*Note the difference from above}\]
-given any number $x$ for which this limit exists. We assign to $x$ the number $f^{ \prime } \left (x\right )$. So we can regard $f^{ \prime }$ as a new function which we call the derived function or the derivative of $x$. 
+given any number $x$ for which this limit exists. We assign to $x$ the number $f^{ \prime } \left (x\right )$. So we can regard $f^{ \prime }$ as a new function which we call the derived function or the derivative of $x$.
 
 \subsection*{Derivatives of Polynomial Functions}
-The constant function $f (x) =c$ is considered a polynomial of degree zero. Using the method of first principles we can find the derivative as follows: 
+The constant function $f (x) =c$ is considered a polynomial of degree zero. Using the method of first principles we can find the derivative as follows:
 $$f^{ \prime } (x) =\Lim{h\to 0}\frac{f (x +h) -f (x)}{h} =\Lim{h\to 0}\frac{c -c}{h} =\Lim{h\to 0}0 =0$$
 
 \subsection*{Higher Power Polynomials}
-When $f (x) =x$ it can be shown from first principles that $f^{ \prime } (x) =1$. Similarly when $f (x) =x^{2\text{}}$it can be shown that $f^{ \prime } (x) =2 x$ and when $f (x) =x^{3}$ it can be shown that $f^{ \prime } (x) =3 x^{2}$. 
+When $f (x) =x$ it can be shown from first principles that $f^{ \prime } (x) =1$. Similarly when $f (x) =x^{2\text{}}$it can be shown that $f^{ \prime } (x) =2 x$ and when $f (x) =x^{3}$ it can be shown that $f^{ \prime } (x) =3 x^{2}$.
 
 \example Find $f'(x)$ for $f (x) =x^{4}$ from first principles.
 
@@ -118,14 +146,14 @@ When $f (x) =x$ it can be shown from first principles that $f^{ \prime } (x) =1$
  &  = \Lim{h\to 0}(4 x^{3} +6 x^{2} h +4 x h^{2} +h^{3})\text{ here, substitute }h=0 \\
  f'(x)&  = 4 x^{3}\end{align*}
 
-This pattern will follow for any similar polynomial: If $f (x) =x^{n}$ then $f^{ \prime } (x) =n x^{n -1}$. Or alternatively 
+This pattern will follow for any similar polynomial: If $f (x) =x^{n}$ then $f^{ \prime } (x) =n x^{n -1}$. Or alternatively
 \begin{tcolorbox}
 The Power Rule for Differentiation:\qquad$\displaystyle \frac{d}{d x} (x^{n}) =n x^{n -1}$
 \end{tcolorbox}
-	
-This pattern implies that $n$ must be a positive integer. It can be shown that from the definition of a derivative $\frac{d}{d x} \genfrac{(}{)}{}{}{1}{x} = -\frac{1}{x^{2}}$ or $y =x^{ -1}$ then $\frac{d y}{d x} = -1 \times x^{ -2}$, which proves the power rule for $n = -1$. 
 
-Similarly if the exponent is a fraction it can be shown that the power rule holds e.g. if $f (x) =\sqrt{x}$ then $f^{ \prime } (x) =\frac{1}{2 \sqrt{x}}$ or $f (x) =x^{\frac{1}{2}}$ then $f^{ \prime } (x) =\frac{1}{2} x^{ -\frac{1}{2}}$. It can be shown that the power rule holds for any real number $n$. 
+This pattern implies that $n$ must be a positive integer. It can be shown that from the definition of a derivative $\frac{d}{d x} \genfrac{(}{)}{}{}{1}{x} = -\frac{1}{x^{2}}$ or $y =x^{ -1}$ then $\frac{d y}{d x} = -1 \times x^{ -2}$, which proves the power rule for $n = -1$.
+
+Similarly if the exponent is a fraction it can be shown that the power rule holds e.g. if $f (x) =\sqrt{x}$ then $f^{ \prime } (x) =\frac{1}{2 \sqrt{x}}$ or $f (x) =x^{\frac{1}{2}}$ then $f^{ \prime } (x) =\frac{1}{2} x^{ -\frac{1}{2}}$. It can be shown that the power rule holds for any real number $n$.
 
 \subsection*{The Natural Exponential Function}
 Recall the natural exponential function from section~\ref{sec:naturalExponential}. Here we can see why precisely it is so special. Using limit notation, we can say that $e$ is the number such that $\Lim{h\to 0}\frac{e^{h} -1}{h} =1$. The derivative is:
@@ -135,7 +163,7 @@ The Derivative of the Natural Exponential Function
 $$\frac{d}{d x} \left (e^{x}\right ) =e^{x}$$
 \end{tcolorbox}
 
-The natural exponential function is unique because \textbf{it has its own derivative!} Geometrically this means that the slope of the tangent at any point is the same as the y-coordinate, $f(x)$, of that point. 
+The natural exponential function is unique because \textbf{it has its own derivative!} Geometrically this means that the slope of the tangent at any point is the same as the y-coordinate, $f(x)$, of that point.
 
 %---------------------------------------------------
 % Standard Derivatives
@@ -145,18 +173,18 @@ The basic functions have easily repeatable patterns to find their derivatives. T
 % have to see how the array stretch looks
 \renewcommand\arraystretch{1.2}
 \begin{center}
-	\begin{tabular}{ccll}	
+	\begin{tabular}{ccll}
 		\toprule
 		Function& Derivative&&Notes\\
 		$f(x)$ & $f'(x)$  &&\\ \midrule
-		$A$&0&&$A$ is constant\\ 
-		$x$&$1$&&power rule for $x^1$\\ 
+		$A$&0&&$A$ is constant\\
+		$x$&$1$&&power rule for $x^1$\\
 		$Ax$&$A$&&$A$ is a constant multiple\\ \midrule
-		$x^n$ & $nx^{n-1}$ &&power rule - general form\\ 
-		$e^x$ & $e^x$  && exponential\\ 
+		$x^n$ & $nx^{n-1}$ &&power rule - general form\\
+		$e^x$ & $e^x$  && exponential\\
 		$\ln(x)$ & $\frac{1}{x}$ &&logarithmic\\ \midrule
-		$\sin(x)$ & $\phantom{-}\cos(x)$  && trigonometric\\ 
-		$\cos(x)$ & $-\sin(x)$ && \\ 
+		$\sin(x)$ & $\phantom{-}\cos(x)$  && trigonometric\\
+		$\cos(x)$ & $-\sin(x)$ && \\
 		$\tan(x)$ & $\phantom{-}\sec^2(x)$ && \\ \bottomrule
 	\end{tabular}
 \end{center}\clearpage
@@ -164,10 +192,10 @@ The basic functions have easily repeatable patterns to find their derivatives. T
 \begin{tasks}[after-item-skip=3ex](3)
 	\task $f(x)=7$\\ 7 is constant (no variables: `$x$'), so $f'(x)=0$
 	\task $f(x)=7x$\\ 7 is a constant multiple: \\ $f'(x)=7$
-	\task $f=7x^2$\\ using the power rule:\\ $f'=7(2)x^1=14x$ 
+	\task $f=7x^2$\\ using the power rule:\\ $f'=7(2)x^1=14x$
 	\task $f(x)=\pi x^{-3}$\\pi is a constant:\\ $f'(x)=-3\pi x^{-4}$
 	\task $\displaystyle g(x)=x^{\frac{3}{4}}$\\ use the power rule for fractional exponents:\\ $\displaystyle g'(x)=\frac{3}{4}x^{-\frac{1}{4}}$
-	\task $f(x)=\displaystyle\frac{e^x}{3}$\\ the exponential always has its own derivative, $\frac{1}{3}$ is a constant: $f'(x)=\frac{1}{3}e^x$ 	
+	\task $f(x)=\displaystyle\frac{e^x}{3}$\\ the exponential always has its own derivative, $\frac{1}{3}$ is a constant: $f'(x)=\frac{1}{3}e^x$
 	\task $s(t)=2\sin t$\\ 2 is a constant: \\$s'(t)=2\cos t$
 	\task $f=\displaystyle\frac{\cos r}{3}$\\ $\frac{1}{3}$ is a constant:\\ $f'=-\frac{1}{3}\sin r$
 	\task $f(x)=\tan (\pi x)$\\ this requires the Chain Rule (\ref{sec:chainRule}): $f'(x)=\pi\sec^2 (\pi x)$
@@ -250,9 +278,9 @@ Therefore the two turning points are $(2,-19)$ and $(-1,8)$. Without a graph, we
 \end{tasks}
 
 \subsection*{Second Derivative Test}\label{sec:2ndDerivativeTest}
-Given a graph it is easy to determine if points are maxima or minima. However, the graph is not always available, so it  helps to have a test to determine if a point is a maximum or minimum. 
+Given a graph it is easy to determine if points are maxima or minima. However, the graph is not always available, so it  helps to have a test to determine if a point is a maximum or minimum.
 
-We know first derivative represents the slope of the function. Looking at the parabola $y=x^2$ and following the function from left to right we can plot some values of the first derivative. The graph tells us that the turning point is at $(0,0)$ and is a minimum. The value of the 1st derivative is -2,-1,0,1,2 : these numbers are increasing. This trend is always true for a local minimum. 
+We know first derivative represents the slope of the function. Looking at the parabola $y=x^2$ and following the function from left to right we can plot some values of the first derivative. The graph tells us that the turning point is at $(0,0)$ and is a minimum. The value of the 1st derivative is -2,-1,0,1,2 : these numbers are increasing. This trend is always true for a local minimum.
 
 How do we test for this trend of increasing slopes? The rate of change of the \emph{slopes} is the second derivative, and if this number (at the point $(0,0)$) is positive, then the point is a minimum.
 
@@ -262,7 +290,7 @@ This is called the second derivative test.\\
 	Second Derivative Test
 	\begin{itemize}
 		\item If $f'(x)=0$, and $f''(x)>0$, then the point $(x,f(x))$ is a local minimum. The graph in this neighbourhood is concave up.\\
-		\item If $f'(x)=0$, and $f''(x)<0$, then the point $(x,f(x))$ is a local maximum. The graph in this neighbourhood is concave down.\\                          
+		\item If $f'(x)=0$, and $f''(x)<0$, then the point $(x,f(x))$ is a local maximum. The graph in this neighbourhood is concave down.\\
 	\end{itemize}
 \end{tcolorbox}
 
@@ -307,7 +335,7 @@ The second derivative test can be used to determine if a function is concave-up 
 \begin{tcolorbox}
 	Second Derivative Test for Concavity
 	\begin{itemize}
-		\item If $f''(x)=0$, then the point $(x,f(x))$ is a point of inflection.\\                         
+		\item If $f''(x)=0$, then the point $(x,f(x))$ is a point of inflection.\\
 	\end{itemize}
 \end{tcolorbox}
 
@@ -337,13 +365,13 @@ Therefore, the point $\left(\tfrac{4}{3},-7\frac{2}{9}\right)$ is a point of inf
 
 %-----------------------------------------------
 \subsection*{The Product Rule}
-Let $f (x) =x$ and $g (x) =x^{2}$. What is the derivative of $f (x) \times g (x)$? The question helps to show that the answer is NOT $f^{ \prime } (x) \times g^{ \prime } (x)$ 
+Let $f (x) =x$ and $g (x) =x^{2}$. What is the derivative of $f (x) \times g (x)$? The question helps to show that the answer is NOT $f^{ \prime } (x) \times g^{ \prime } (x)$
 
-$f (x) \times g (x) =x \times x^{2} =x^{3}$ and we know the derivative of $x^{3}$ is $3 x^{2}$. Also we know that $f^{ \prime } (x) =1$ and $g^{ \prime } (x) =2 x$ so $f^{ \prime } (x) \times g^{ \prime } (x) =1 \times 2 x =2 x$ not $3 x^{2}$. 
+$f (x) \times g (x) =x \times x^{2} =x^{3}$ and we know the derivative of $x^{3}$ is $3 x^{2}$. Also we know that $f^{ \prime } (x) =1$ and $g^{ \prime } (x) =2 x$ so $f^{ \prime } (x) \times g^{ \prime } (x) =1 \times 2 x =2 x$ not $3 x^{2}$.
 
-So the derivative of the product of two functions is not the product of the derivatives of each function. In symbols this can be written 
+So the derivative of the product of two functions is not the product of the derivatives of each function. In symbols this can be written
 \[\left (f g\right )^{ \prime } \neq f^{ \prime } g^{ \prime }\]
-\textbf{Theorem} If $f$ and $g$ are both differentiable then 
+\textbf{Theorem} If $f$ and $g$ are both differentiable then
 \begin{tcolorbox}
 	\[\frac{d}{d x} \left [f (x) g (x)\right ] =f (x) \frac{d}{d x} \left [g (x)\right ] +g (x) \frac{d}{d x} \left [f (x)\right ]\]
 	\end{tcolorbox}
@@ -395,36 +423,36 @@ $$=\frac{1-x\ln x}{xe^x}$$
 \subsection*{The Chain Rule}
 When functions are combined with other functions, they are often called composite functions. These require special treatment when differentiating.
 
-Let $f (x) =x^{2}$ and $g (x) =2 x +1$ then $\left (f \circ g\right )$ This means $f$ `composed of' $g$ is $f \left (g \left (x\right )\right ) =f (2 x +1) =\left (2 x +1\right )^{2}$. 
+Let $f (x) =x^{2}$ and $g (x) =2 x +1$ then $\left (f \circ g\right )$ This means $f$ `composed of' $g$ is $f \left (g \left (x\right )\right ) =f (2 x +1) =\left (2 x +1\right )^{2}$.
 
-Also, $g$ `composed of' $f$ would be: $\left (g \circ f\right ) (x) =g \left (x^{2}\right ) =2 \left (x^{2}\right ) +1 =2 x^{2} +1$. 
+Also, $g$ `composed of' $f$ would be: $\left (g \circ f\right ) (x) =g \left (x^{2}\right ) =2 \left (x^{2}\right ) +1 =2 x^{2} +1$.
 
 The differentiation rules we have met so far allow us to differentiate pairs of functions that have been added, subtracted, multiplied or divided. They do not allow us to differentiate an expression that is made from a function that is within another function.
 
-The following are all examples of composite functions. 
+The following are all examples of composite functions.
 \begin{enumerate}
 \item We can differentiate $x^{2}$ but we can't use the same procedure to differentiate $\left (1 -x\right )^{2}$. Here we can imagine if  $f (x) =x^{2}$ and $g (x) =1 -x$ then $\left (f \circ g\right ) (x) =f (1 -x) =\left (1 -x\right )^{2}$.
 
-\item We can differentiate $\frac{1}{x^{2}}$ but we can't use the same procedure to differentiate $\frac{1}{x^{2} +1}$. 
+\item We can differentiate $\frac{1}{x^{2}}$ but we can't use the same procedure to differentiate $\frac{1}{x^{2} +1}$.
 
-\item We can differentiate e$^{x}$ but we can't use the same procedure to differentiate $e^{x^{2}}$. 
+\item We can differentiate e$^{x}$ but we can't use the same procedure to differentiate $e^{x^{2}}$.
 \end{enumerate}
 
-A name often used for functions of this type is \emph{function of a function.} 
+A name often used for functions of this type is \emph{function of a function.}
 
-Once we recognise we are dealing with a composite function we need a procedure to differentiate it. You will find that you are far more likely to be required to differentiate a composite function in a practical situation than a simple one. It can be proved that the derivative of the composite function $f \circ g$ is the product of the derivatives of $f$ and $g$. This important rule is given the name the \emph{Chain Rule}. A substitution method is often used to add clarity to the differentiation process. 
+Once we recognise we are dealing with a composite function we need a procedure to differentiate it. You will find that you are far more likely to be required to differentiate a composite function in a practical situation than a simple one. It can be proved that the derivative of the composite function $f \circ g$ is the product of the derivatives of $f$ and $g$. This important rule is given the name the \emph{Chain Rule}. A substitution method is often used to add clarity to the differentiation process.
 
 Let
-$y =u^{2}$ and let $u =1 -x$. Then $\frac{d y}{d u} =2 u$ and $\frac{d u}{d x} = -1$. Now $\frac{d y}{d x} =\frac{d y}{d u} \cdot \frac{d u}{d x} =2 u \times ( -1) = -2 u = -2 (1 -x) =2 (x -1)$. 
+$y =u^{2}$ and let $u =1 -x$. Then $\frac{d y}{d u} =2 u$ and $\frac{d u}{d x} = -1$. Now $\frac{d y}{d x} =\frac{d y}{d u} \cdot \frac{d u}{d x} =2 u \times ( -1) = -2 u = -2 (1 -x) =2 (x -1)$.
 
 The Leibniz form of the Chain Rule $\displaystyle \frac{d y}{d x} =\frac{d y}{\cancel{d u}} \frac{\cancel{d u}}{d x}$ is what gives the rule its name. Because of the apparent cancelling it is particularly
-easy to learn in this form. 
+easy to learn in this form.
 
 As an aside let us verify the rule for this example. Given
 $y =(1 -x)^{2}$. We will expand the right hand side of the equation. It
-becomes $y =x^{2} -2 x +1$. So $y^{ \prime } =2 x -2 =2 (x -1)$ as before. 
+becomes $y =x^{2} -2 x +1$. So $y^{ \prime } =2 x -2 =2 (x -1)$ as before.
 
-Using function notation the Chain Rule states: If $f$ and $g$ are both differentiable and $F =f \circ g$ is the\ composite function $F (x) =f (g (x))$, then $F$ is differentiable and $F^{ \prime } =f^{ \prime } (g (x)) g^{ \prime } (x)$. 
+Using function notation the Chain Rule states: If $f$ and $g$ are both differentiable and $F =f \circ g$ is the\ composite function $F (x) =f (g (x))$, then $F$ is differentiable and $F^{ \prime } =f^{ \prime } (g (x)) g^{ \prime } (x)$.
 
 \subsection*{A Comment on the Leibniz form of the Chain Rule}
 $\frac{d y}{d x} =\frac{d y}{d u} \cdot \frac{d u}{d x}$ gives the impression that the $d u$ could cancel but remember we have not defined $d u$. We have defined $\frac{d y}{d u}$ as the rate of change of $y$ with respect to $u$ and $\frac{d u}{d x}$ as the rate of change of $u$ with respect to $x$. However the apparent cancelling helps us to remember the way the differentials
@@ -438,7 +466,7 @@ a function etc. e.g.
 where $$f (u) =u^{ -1} \text{ and }g (x) =x^{2} +1$$
 \begin{equation*}f^{ \prime } (u) = -u^{ -2}\text{and}g^{ \prime } (x) =2 x
 \end{equation*}
-and 
+and
 \begin{align*}F^{ \prime } (x) &  = f^{ \prime } (g (x)) g^{ \prime } (x) \\
  &  = \frac{ -1}{(x^{2} +1)^{2}} \cdot 2 x \\
  &  = \frac{ -2 x}{\left (x^{2} +1\right )^{2}}\end{align*}
@@ -447,7 +475,7 @@ Using the Leibniz notation let $u =x^{2} +1$ and $y =u^{ -1}$ then
  &  = \frac{ -1}{\left (x^{2} +1\right )^{2}} \left (2 x\right ) =\frac{ -2 x}{\left (x^{2} +1\right )^{2}}\end{align*}
 
 To use the method we need to bring a new variable into the problem we are trying to solve. It
-is recommended that you use the variable $u$ wherever possible so that you follow through using a pattern you are familiar with. 
+is recommended that you use the variable $u$ wherever possible so that you follow through using a pattern you are familiar with.
 
 In summary: if $g$ is differentiable at $x$ and $f$ is differentiable at $g (x)$, then the composite function $F =f \circ g$ defined by $F (x) =f (g (x))$ is differentiable at $x$ and $F^{ \prime }$ is given by the product
 \begin{tcolorbox}
@@ -458,17 +486,17 @@ In Leibniz notation, if $y =f (u)$ and $u =g (x)$ are both differentiable functi
 \[\frac{d y}{d x} =\frac{d y}{d u} \cdot \frac{d u}{d x}\]
 \end{tcolorbox}
 
-The Chain Rule will be found in many situations where functions are added, subtracted, multiplied or divided. As an example we will focus on combining the Chain Rule with the Product Rule, however any combination of these rules could be found in a problem. 
+The Chain Rule will be found in many situations where functions are added, subtracted, multiplied or divided. As an example we will focus on combining the Chain Rule with the Product Rule, however any combination of these rules could be found in a problem.
 
-\example Differentiate $\displaystyle xe^{-x^2}$. 
+\example Differentiate $\displaystyle xe^{-x^2}$.
 
-\solution We can see that there is a product of two functions present in this example, i.e. $f (x) =x$ and $g (x) =e^{ -x^{2}}$. Also $g (x)$ is a composite function. 
+\solution We can see that there is a product of two functions present in this example, i.e. $f (x) =x$ and $g (x) =e^{ -x^{2}}$. Also $g (x)$ is a composite function.
 
 We have from the Product Rule
 \begin{equation*}\left (f g\right )^{ \prime } =f g^{ \prime } +g f^{ \prime }
 \end{equation*}
 
-We can see that $f$, $g$ and $f^{ \prime }=1$ can be substituted immediately and only $g^{ \prime }$ requires some effort to be worked out. $g (x)$ is a composite function so $g^{ \prime } (x)$ is computed using the Chain Rule. 
+We can see that $f$, $g$ and $f^{ \prime }=1$ can be substituted immediately and only $g^{ \prime }$ requires some effort to be worked out. $g (x)$ is a composite function so $g^{ \prime } (x)$ is computed using the Chain Rule.
 
 Let $u = -x^{2}$ then $\frac{d u}{d x} = -2 x$. Also $g (u) =e^{u}$ so $\frac{d g}{d u} =e^{u}$.
 \begin{multicols}{2}
@@ -518,16 +546,16 @@ Both the fish and the Pokemon-looking-thingy below can be plotted using parametr
 			ymax=2,ymin=-2,
 			xmax=2,xmin=-2,
 			xtick={-2,-1.5,-1,1,2},
-			xlabel=$x$,ylabel=$y$,%	ytick=\empty,	
+			xlabel=$x$,ylabel=$y$,%	ytick=\empty,
 			]
 			\addplot[domain=0:4*360, samples=200, thick] ({1.5*cos(x)},{-0.667*cos(1.5*x)});
-			\addplot[mark=*] coordinates {(-1.5,0)};	
+			\addplot[mark=*] coordinates {(-1.5,0)};
 			\addplot[mark=*] coordinates {(1.5,-0.667)};
 			\draw[->,ultra thick](axis cs:1.4,0.57) -- (axis cs:1.5,0.667);
 			\node[anchor=south] at (axis cs:1.5,-1.1) {$t=0$};
-			\node[anchor=south] at (axis cs:-1.5,-0.8) {$t=\pi$};		
+			\node[anchor=south] at (axis cs:-1.5,-0.8) {$t=\pi$};
 			\end{axis}
-			\end{tikzpicture}	
+			\end{tikzpicture}
 		}  \caption{fish: $\displaystyle x=\frac{3\cdot\cos t}{2},\, y=-\frac{2}{3}\cos\left(\frac{3t}{2}\right)$}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.5\textwidth}
@@ -540,15 +568,15 @@ Both the fish and the Pokemon-looking-thingy below can be plotted using parametr
 				ymax=2,ymin=-2,
 				xmax=2,xmin=-2,
 				xtick={-2,-1,1,2},
-				xlabel=$x$,ylabel=$y$,%	ytick=\empty,	
+				xlabel=$x$,ylabel=$y$,%	ytick=\empty,
 				]
-				\addplot[domain=0:4*360, samples=200, thick] ({-1.5*sin(x)},{cos(1.5*x)});	
+				\addplot[domain=0:4*360, samples=200, thick] ({-1.5*sin(x)},{cos(1.5*x)});
 				\end{axis}
-		\end{tikzpicture}	
+		\end{tikzpicture}
 		}  \caption{Pokemon: $\displaystyle x=-\frac{3}{2}\sin(t),\,y=\sin\left(\frac{3t}{2}\right)$}
 	\end{subfigure}
 \end{figure}
-To find the point at the mouth of the fish in terms of $t$, we must solve the equations for $x=-1.5$, or $y=0$. As $t$ increases, the plot is drawn. 
+To find the point at the mouth of the fish in terms of $t$, we must solve the equations for $x=-1.5$, or $y=0$. As $t$ increases, the plot is drawn.
 \begin{equation*}
 	\begin{aligned}[c]
 x&=\frac{3\cdot\cos t}{2}\\
@@ -591,7 +619,7 @@ Compare your derivatives, $y'$ and $x'$, with the superhero logo plot from part 
 % Related Rates
 %---------------------------------------------------
 \section{Related Rates}
-The concept of related rates is best understood by exploring some examples. 
+The concept of related rates is best understood by exploring some examples.
 
 \examq Air is being pumped into a spherical balloon so that its volume is increasing at a rate of 50 $cm^{3}$/$\mbox{s}$. How fast is the radius of the balloon increasing when the diameter is 50 $\mbox{cm}$? \\
 \solution The volume of a sphere is $\frac{4}{3}\pi r^3$. Find the derivative with respect to radius.
@@ -605,17 +633,17 @@ Substituting $\frac{d V}{d t} =50$ and $\frac{d V}{d r} =4 \pi  r^{2}$ we get
 Now we substitute $r =25$. (Diameter $ =50$ so radius $ =25$)
 \begin{align*}\frac{d r}{d t}_{r =25} &  = \frac{50}{4\pi(25)^2} \\
 &  = \frac{1}{50 \pi }\approx 0.00637\end{align*}
-Therefore the radius is increasing at the rate of $\displaystyle\frac{1}{50 \pi }$ cm/s.\\ 
+Therefore the radius is increasing at the rate of $\displaystyle\frac{1}{50 \pi }$ cm/s.\\
 \rule{6.8cm}{0.5pt}\\
-\example A ladder $5$ $\mbox{m}$ long rests against a vertical wall. If the bottom of the ladder slides away from the wall at the rate of $0.5$ $\mbox{m}$/$\mbox{s}$ how fast is the top of the ladder sliding down the wall when the bottom of the ladder is $3$ $\mbox{m}$ from the wall? 
+\example A ladder $5$ $\mbox{m}$ long rests against a vertical wall. If the bottom of the ladder slides away from the wall at the rate of $0.5$ $\mbox{m}$/$\mbox{s}$ how fast is the top of the ladder sliding down the wall when the bottom of the ladder is $3$ $\mbox{m}$ from the wall?
 
-\solution Let the origin be placed at the corner where the wall meets the floor, let $x$ be the distance of the foot of the ladder from the wall and let $y$ be the distance of the top of the ladder from the corner. The ladder forms a right angled triangle whose sides are $x$, $y$ and with hypotenuse $5$. We are given that $\frac{d x}{d t} =0.5$ and are asked to find $\frac{d y}{d t}$ when $x =3$. 
+\solution Let the origin be placed at the corner where the wall meets the floor, let $x$ be the distance of the foot of the ladder from the wall and let $y$ be the distance of the top of the ladder from the corner. The ladder forms a right angled triangle whose sides are $x$, $y$ and with hypotenuse $5$. We are given that $\frac{d x}{d t} =0.5$ and are asked to find $\frac{d y}{d t}$ when $x =3$.
 
 Pythagoras' theorem gives
 \begin{equation}x^{2} +y^{2} =5^{2}\tag{1}
 \end{equation}
 
-Differentiate equation (1) with respect to $t$. Note that this derivative uses a technique called implicit differentiation. 
+Differentiate equation (1) with respect to $t$. Note that this derivative uses a technique called implicit differentiation.
 \begin{equation*}2 x \frac{d x}{d t} +2 y \frac{d y}{d t} =0
 \end{equation*}
 
@@ -623,23 +651,23 @@ Solve for $\frac{d y}{d t}$
 \begin{equation*}\frac{d y}{d t} = -\frac{x}{y} \cdot \frac{d x}{d t}
 \end{equation*}
 
-Using the Pythagorean theorem with $x=3$ and the hypotenuse $=5$, $y=4$ 
+Using the Pythagorean theorem with $x=3$ and the hypotenuse $=5$, $y=4$
 
 Substitute $\frac{d x}{d t} =0.5$, $x =3$ and $y =4$
 \begin{align*}\frac{d y}{d t} &  =  -\frac{3}{4} \cdot 0.5 \\
  &  =  -0.375\end{align*}
 
-The top of the ladder is moving vertically downwards at the rate of 0.375 m/s.\\ 
+The top of the ladder is moving vertically downwards at the rate of 0.375 m/s.\\
 \rule{6.8cm}{0.5pt}\\
 \example A water tank has the shape of an inverted circular cone with a base radius of $2$ $\mbox{m}$ and height of $4$ $\mbox{m}$. If water is being pumped into
-the tank at a rate of $2$ $\mathrm{m}^{3}$/$\mbox{min}$ find the rate at which the water level is rising when the water is $3$ $\mbox{m}$ deep. 
+the tank at a rate of $2$ $\mathrm{m}^{3}$/$\mbox{min}$ find the rate at which the water level is rising when the water is $3$ $\mbox{m}$ deep.
 
 \begin{multicols}{2}
 \solution Let $V$, $r$ and $h$ be the volume of water the radius of the surface and the height at time $t$. We are given
 \begin{equation*}\frac{d V}{d t} =2\text{}\mathrm{m}^{3}/\mbox{min}
 \end{equation*}
 
-We are asked to find $\frac{d h}{d t}$ when $h =3$. 
+We are asked to find $\frac{d h}{d t}$ when $h =3$.
 
 Draw a diagram to show that the relationship between $r$ and $h$ can be found by similar triangles.
 \begin{align}\frac{r}{h} &  = \frac{2}{4} \nonumber  \\
@@ -665,7 +693,7 @@ Substitute $h =3$ and $\frac{d V}{d t} =2$
 \begin{align*}\frac{d h}{d t} &  = \frac{4}{\pi  \left (3\right )^{3}} \cdot 2 \\
  &  = \frac{8}{9 \pi }\end{align*}
 
-The water level is rising at the rate of $\frac{8}{9 \pi }$ $\mbox{m}$/$\mbox{min}$. 
+The water level is rising at the rate of $\frac{8}{9 \pi }$ $\mbox{m}$/$\mbox{min}$.
 \end{multicols}
 
 
@@ -676,7 +704,7 @@ The water level is rising at the rate of $\frac{8}{9 \pi }$ $\mbox{m}$/$\mbox{mi
 Optimisation is the process of using calculus to find the best result for a situation involving a changing quantity (variable). Examples include  maximizing profit, minimizing cost, maximizing volume, minimizing amount materials used, and so on. As long as the quantities in question can be represented by a function, calculus can used to find the special points of the function and their nature.
 
 \begin{tcolorbox}
-	A general method to approach an optimisation problem             
+	A general method to approach an optimisation problem
 	\begin{enumerate}
 		\item Write down the known variables and draw a diagram
 		\item Form an equation of the situation by placing the unknown variable in terms of the known variables
@@ -701,9 +729,9 @@ Optimisation is the process of using calculus to find the best result for a situ
 	\draw [<->,thick] (0,3.3)--(5,3.3);
 	\node at (2.5,3.7){fence length 2};
 	\node [text width=2cm, fill=white]at (2.5,1.5){area of the paddock};
-	\end{tikzpicture}	
+	\end{tikzpicture}
 \end{center}
-\solution Following the steps outlined above, draw a diagram and label the variables. Let $T$ represent the total fence length which cannot be more than 100m. Write this as an equation: $T=100$. There are 3 individual lengths that make up the total, so let $l$ represent the long side of the paddock, and $w$ represent the short side. 
+\solution Following the steps outlined above, draw a diagram and label the variables. Let $T$ represent the total fence length which cannot be more than 100m. Write this as an equation: $T=100$. There are 3 individual lengths that make up the total, so let $l$ represent the long side of the paddock, and $w$ represent the short side.
 \begin{align*}
 T&=l+2w\\
 100&=l+2w
@@ -744,9 +772,9 @@ Therefore the paddock width is 25 meters to maximize the total area. Going back 
 		\draw[->,thick](-1.5,1.5)--(-0.25,2.3);
 		\node at (-.9,1.5){$r$};
 		\filldraw (-1.5,1.5) circle (2pt) ;
-		\end{tikzpicture}	
+		\end{tikzpicture}
 	\end{subfigure}
-\end{figure}	
+\end{figure}
 
 \solution The minimum cost of the aluminium will be the minimum surface area of the cylinder. The can can be deconstructed into two circles and a rectangle. We will label the variables required to calculate area.
 
@@ -776,7 +804,7 @@ This function is now the surface area in terms of a single variable, $r$, and ca
 r^3&=\frac{2000}{4\pi}\\
 r&=5.419 \,\textrm{cm}
 \end{align*}
-Therefore the final dimensions of the can optimised for minimum cost are radius$=5.42$ cm, and height$=10.8$ cm. 	
+Therefore the final dimensions of the can optimised for minimum cost are radius$=5.42$ cm, and height$=10.8$ cm.
 \end{multicols}
 
 

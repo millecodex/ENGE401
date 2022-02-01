@@ -5,22 +5,22 @@
 %                            COURSE MANUAL                             %
 %                         LATEX SOURCE FILES                           %
 %                                                                      %
-% version 2.6 by Jeff Nijsse, 2021                                     %
+% version 2.7 by Jeff Nijsse, 2022                                     %
 % <jeff.nijsse@aut.ac.nz>                                              %
-% last updated in July, 2021                                        %
-% based on version 1.0 by Peter Watson, 2010                           %  
+% last updated in January, 2022                                        %
+% based on version 1.0 by Peter Watson, 2010                           %
 %                                                                      %
 % This project is on GitHub, find it and download the source files at: %
-% <https://github.com/millecodex/ENGE401/>                             % 
+% <https://github.com/millecodex/ENGE401/>                             %
 %                                                                      %
-% Licenced under MIT General License (c) 2021                          %
-%                                                                      % 
+% Licenced under MIT General License (c) 2022                          %
+%                                                                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % for published book output; can use oneside/twoside depending on situation
-\documentclass[a4paper,11pt,openany,oneside,hidelinks]{book}
-%\documentclass[a4paper,11pt,openany,oneside]{book}
+%\documentclass[a4paper,11pt,openany,oneside,hidelinks]{book}
+\documentclass[a4paper,11pt,openany,oneside]{book}
 \usepackage{amssymb,amsmath,amsfonts,textcomp,siunitx}%
-\usepackage{xcolor,graphicx,xspace,colortbl,ragged2e,rotating}% 
+\usepackage{xcolor,graphicx,xspace,colortbl,ragged2e,rotating}%
 \usepackage{fancyhdr,titlesec,geometry,pdfpages,afterpage}%
 \usepackage{wrapfig,booktabs,tabulary,tcolorbox,tasks}%
 \usepackage{multicol}
@@ -38,7 +38,8 @@
 	colorlinks,
 	linkcolor={blue!50!black},
 	citecolor={blue!50!black},
-	urlcolor={blue!50!black}
+	urlcolor={blue!50!black},
+	bookmarks=true
 %	urlcolor={black}
 }
 \newcommand{\dydx}{\frac{\mathrm{d}y}{\mathrm{d}x}}
@@ -98,23 +99,23 @@
 \setcounter{tocdepth}{1}
 %
 %---------------------------------------------------------
-% exercise package code 
+% exercise package code
 % adapted from: https://tex.stackexchange.com/questions/
 % 369265/math-book-how-to-write-exercise-and-answers
 %---------------------------------------------------------
 \usepackage[lastexercise,answerdelayed]{exercise}
 \usepackage{ifthen}
-\newboolean{firstanswerofthechapter} 
+\newboolean{firstanswerofthechapter}
 \usepackage{chngcntr}
 \usepackage{stackengine}
 \newlength{\longestlabel}
 \settowidth{\longestlabel}{\bfseries 1111}
 \settasks{
-	label=(\bfseries\alph*), 
+	label=(\bfseries\alph*),
 	label-width=\longestlabel,
 	label-align=left,
-	%item-indent=0pt, 
-	label-offset=0pt, 
+	%item-indent=0pt,
+	label-offset=0pt,
 	column-sep=10pt
 }
 %
@@ -132,7 +133,7 @@
 \renewcommand{\AnswerName}{\hspace{-0.7cm}\ExerciseHeaderTitle}
 \renewcommand{\AnswerHeader}{\ifthenelse{\boolean{firstanswerofthechapter}}%
 	{\bigskip\noindent{\textbf{CHAPTER \thechapter}}\newline%
-%	
+%
 		\noindent\bfseries \tcbox[boxrule=0pt, colback=gray!20, colframe=gray!20,  size=fbox,  arc=0pt, outer arc=0pt]{\textsection \ExerciseHeaderNB, p.\pageref{\AnswerRef},\AnswerName}\smallskip}
 	   {\noindent\bfseries\tcbox[boxrule=0pt, colback=gray!20, colframe=gray!20,  size=fbox,  arc=0pt, outer arc=0pt]{\textsection \ExerciseHeaderNB, p.\pageref{\AnswerRef},\AnswerName}\smallskip}}
 %
@@ -140,14 +141,14 @@
 \setlength{\QuestionBefore}{-5pt}
 \setlength{\AnswerSkipBefore}{-10pt}
 %---------------------------------------------------------
-% END exercise package code 
+% END exercise package code
 %---------------------------------------------------------
 \makeindex
 \begin{document}
 \frontmatter
 \begin{titlepage}
+\phantomsection\pdfbookmark{Title Page}{firstpage}
 \begin{center}
-
 \includegraphics[width=7cm]{AUTlogo}\\
 {\vspace{2cm}}
  {\Large School of Engineering, Computer, and Mathematical Sciences}
@@ -158,7 +159,7 @@
  \vspace{1cm}
 {\huge ENGE 401} \\
  \vspace{1cm}
-{\huge 2021 Semester 2} \\
+{\huge 2022 Semester 1} \\
 % ----------------------------------------------------------------
  \vfill
 \end{center}
@@ -172,11 +173,11 @@ Auckland University Of Technology\\
 
 This project is on GitHub, find it \\
 and download the source files at: \\
-\url{https://github.com/millecodex/ENGE401} \\                            
+\url{https://github.com/millecodex/ENGE401} \\
 
-Licenced under MIT General License \copyright \,2021 \\   
+Licenced under MIT General License \copyright \,2022 \\
 
-Version 2.6 by Jeff Nijsse, 2021.\\
+Version 2.7 by Jeff Nijsse, 2022.\\
 \href{mailto:Jeff.Nijsse@aut.ac.nz}{\texttt{Jeff.Nijsse@aut.ac.nz}}\\
 Version 1.0 by Peter Watson, 2010.
 
@@ -185,6 +186,7 @@ Version 1.0 by Peter Watson, 2010.
 
 %\afterpage{\null\newpage}
 %\includepdf{schedule.pdf}
+\phantomsection\pdfbookmark{Contents}{contents}
 \tableofcontents
 \mainmatter
 %    Include main chapters here.
@@ -203,3 +205,5 @@ Version 1.0 by Peter Watson, 2010.
 % //end main
 % Have a good day :-)
 % -Jeff---------------------------------------------------
+% What One Fool Can Do, Another Can.
+% (Ancient Simian Proverb.)
