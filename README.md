@@ -3,12 +3,12 @@
 ## Course Manual
 ## AUT (Auckland University of Technology)
 ***
-This version (2.6) by Jeff Nijsse, 2021\
+This version (2.7) by Jeff Nijsse, 2022\
 <jeff.nijsse@aut.ac.nz>
 based on\
 version 1.0 by Peter Watson, 2010
 ***
-The pdf file [ENGE401 Manual S2 2021.pdf](https://github.com/millecodex/ENGE401/blob/master/ENGE401%20Manual%20S2%202021.pdf) is the single sided version with hyperlinks for electronic viewing.
+The pdf file [ENGE401 Manual S1 2022.pdf](https://github.com/millecodex/ENGE401/blob/master/ENGE401%20Manual%20S1%202022.pdf) is the single sided version with hyperlinks for electronic viewing.
 ***
 ### Course Contents:
 1. Foundation Algebra Review
@@ -20,4 +20,4 @@ The pdf file [ENGE401 Manual S2 2021.pdf](https://github.com/millecodex/ENGE401/
 
 Including chapter exercises and answers.
 
-The lecture notes are presently maintained on [Blackboard](https://blackboard.aut.ac.nz/). These may be posted to github in the future.
+The lecture notes are presently maintained on [Canvas](https://canvas.aut.ac.nz/). These may be posted to github in the future.
