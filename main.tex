@@ -5,9 +5,9 @@
 %                            COURSE MANUAL                             %
 %                         LATEX SOURCE FILES                           %
 %                                                                      %
-% version 2.7 by Jeff Nijsse, 2022                                     %
+% version 2.8 by Jeff Nijsse, 2023                                     %
 % <jeff.nijsse@aut.ac.nz>                                              %
-% last updated in January, 2022                                        %
+% last updated in February, 2023                                       %
 % based on version 1.0 by Peter Watson, 2010                           %
 %                                                                      %
 % This project is on GitHub, find it and download the source files at: %
@@ -17,8 +17,8 @@
 %                                                                      %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % for published book output; can use oneside/twoside depending on situation
-%\documentclass[a4paper,11pt,openany,oneside,hidelinks]{book}
-\documentclass[a4paper,11pt,openany,oneside]{book}
+\documentclass[a4paper,11pt,openany,twoside,hidelinks]{book}
+%\documentclass[a4paper,11pt,openany,oneside]{book}
 \usepackage{amssymb,amsmath,amsfonts,textcomp,siunitx}%
 \usepackage{xcolor,graphicx,xspace,colortbl,ragged2e,rotating}%
 \usepackage{fancyhdr,titlesec,geometry,pdfpages,afterpage}%
@@ -159,7 +159,7 @@
  \vspace{1cm}
 {\huge ENGE 401} \\
  \vspace{1cm}
-{\huge 2022 Semester 1} \\
+{\huge 2023} \\
 % ----------------------------------------------------------------
  \vfill
 \end{center}
@@ -175,17 +175,18 @@ This project is on GitHub, find it \\
 and download the source files at: \\
 \url{https://github.com/millecodex/ENGE401} \\
 
-Licenced under MIT General License \copyright \,2022 \\
+Licenced under \href{https://creativecommons.org/licenses/by/4.0/}{\texttt{CC-BY-4.0}}\\
 
-Version 2.7 by Jeff Nijsse, 2022.\\
+Version 2.8 by Jeff Nijsse, 2023.\\
 \href{mailto:Jeff.Nijsse@aut.ac.nz}{\texttt{Jeff.Nijsse@aut.ac.nz}}\\
 Version 1.0 by Peter Watson, 2010.
 
 \clearpage
 \hypersetup{linkcolor={black}}
 
-%\afterpage{\null\newpage}
-%\includepdf{schedule.pdf}
+\afterpage{\null\newpage}
+\includepdf{schedule.pdf}
+%
 \phantomsection\pdfbookmark{Contents}{contents}
 \tableofcontents
 \mainmatter
