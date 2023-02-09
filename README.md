@@ -7,7 +7,7 @@ This version (2.8) by Jeff Nijsse, 2023\
 based on\
 version 1.0 by Peter Watson, 2010
 ***
-The pdf file [ENGE401_manual_S1_2023.pdf](ENGE401_manual_S1_2023_oneside.pdf) is the single sided version with hyperlinks for electronic viewing.
+The pdf file [ENGE401_S1_2023.pdf](ENGE401_S1_2023.pdf) is the single sided version with hyperlinks for electronic viewing.
 ***
 ### Course Contents:
 1. Foundation Algebra Review
